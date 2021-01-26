@@ -1,2 +1,2 @@
 # CSC289
-Personal GitHub repository to store work performed in CSC289
+Personal GitHub repository for general storage of work performed in CSC289.
