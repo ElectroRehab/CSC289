@@ -1,0 +1,160 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 2, 2021, 6:43:16 PM
+    Author     : Anthony
+*/
+html{
+ 
+    overflow: scroll;
+    border: 25px ridge white;   
+    height: 1000px;
+    width: 1855px;
+    font-family: sans-serif;
+}    
+  
+body
+{    
+   background-image: url("mainPageBackground.png");
+   border-color: white;
+   background-size: cover;
+   background-repeat: no-repeat;
+} 
+body h1{
+    color:  #cccccc;
+    position: relative;
+    
+    left:5%;
+    font-size: 45px;
+     
+}
+button{
+    background-color: black;
+    
+    border-width: 4px;
+    border-color: gold;
+    border-radius: 10px;
+    font-size: 25px;
+    color: gold;
+}
+button a{  
+    text-decoration: none;    
+    color: white;
+}
+.reg-box {
+    height: 800px;
+    width:600px;
+    box-sizing: border-box;
+    background:#cccccc ;     
+    border: 25px ridge white;      
+    position: absolute;
+    top:60%;
+    left:18%;
+    transform: translate(-50%,-50%);        
+}
+.reg-box  h1
+{
+    color: black;
+    position: absolute;
+    font-size: 32px;
+    left:5%;  
+}
+.reg-box  .section-one {
+    color:white;
+    position: absolute;
+    border-color: red;
+    height: 500px;
+    width: 250px;
+    top:40%;
+    left:25%;
+    transform: translate(-50%,-50%);
+    text-align: left;
+    font-size: 20px;
+    color: black;
+}
+ .reg-box .section-two{
+    color:white;
+    position: absolute;
+    border-color: red;
+    height: 500px;
+    width: 250px;
+    top:40%;
+    left:75%;
+    transform: translate(-50%,-50%);
+    text-align: left;
+    font-size: 20px;
+    color: black;
+}
+ 
+.reg-box input[type="text"] {
+    
+     border: none;
+     border-bottom: 2px solid black;
+     background: transparent;
+     color: black;
+     font-size: 15px;
+    
+}
+ .passwordControl {
+     
+    position:absolute;
+    top:75%;     
+    border-width:2px;   
+}
+ .passwordControl h1{     
+    position:relative;  
+    font-size: 25px;       
+}
+ .passwordControl p{     
+    position:relative;  
+}
+ .reg-box .passwordControl  input[type="password"]{
+       
+     position:relative;
+    
+     border: none;
+     border-bottom: 3px solid black;
+     background: transparent;
+      color: black;
+     font-size: 15px; 
+      
+     text-align: left;
+}
+.image-control{
+    position:relative;   
+    top:5%;   
+    border-width:2px;
+    
+     
+ 
+}
+ .image-control h1{     
+    position:relative;  
+    font-size: 25px;
+   
+}  
+ .image-control input[type="file"]
+ {     
+    position:relative;  
+    font-size: 15px;
+   
+}  
+
+.reg-box  button[type="submit"]{
+    
+    position: relative;
+    background: black;
+    top:15%;
+    left:5%;
+    height: 50px;
+    border-width: 4px;
+    border-color: gold;
+    border-radius: 10px;
+    width: 200px; 
+    color:white;	
+    font-size: 36px;
+    text-align: center;
+}
