@@ -1,0 +1,168 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Feb 2, 2021, 10:45:59 AM
+    Author     : Anthony
+*/
+
+nav{
+	 overflow: hidden;          
+ 	 background-color: #333;
+} 
+
+html,body
+{
+ 
+  margin: 0;
+  padding:0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: transparent;
+  text-align: center;
+ 
+}
+nav a.active{
+	  
+  	 color: white;
+} 
+nav a:hover {
+ 	 background-color: #ddd;
+  	 color: black;
+}
+ 
+nav a {
+  	float: left;
+  	color: #f2f2f2;
+  	text-align: center;
+  	padding: 14px 16px;
+  	text-decoration: none;
+  	font-size: 20px;
+}
+
+body,h1{
+    top: 50%;
+  
+}
+
+ .login-clean  {
+   margin: 0;
+   padding:0;
+   background-image: url("images/mainPageBackgroundv2.png");
+   height: 1000px;     
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: static ;  
+   padding: 80px 0;
+}
+ 
+
+.login-clean form {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  width: 20%; 
+  top:-20%;
+  right:35%;
+  
+  margin: 200px  0px 0px 800px;
+  background-color: activecaption;  
+  border-radius: 10px;
+  color:  #282d32;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+}
+.login-clean form a {
+    text-decoration: none;
+    color: blue;
+    font-size: 22px;
+}
+.login-clean form a.forgot {
+    text-decoration: none;
+    color:  #6f7a85;
+    font-size: 20px;
+}
+.login-clean .illustration {
+ 
+  height:20%;
+  color: rgb(244,71,107);
+}
+
+.login-clean form .form-control {
+  background: #f7f9fc;
+  position: relative;
+  height: 100px;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #dfe7f1;
+  border-radius: 4px;
+  box-shadow: none;
+  outline: none;
+   font-size: 15px;
+  color: inherit;
+  text-indent: 8px;
+  height: 42px;
+}
+
+.login-clean form .btn-primary {
+  background:  #278c9b;
+  border: none;
+  height:50px;
+  width: 200px;
+  border-radius: 4px;
+  padding: 11px;
+  box-shadow: none;
+  margin-top: 26px;
+  text-shadow: none;
+  font-size: 25px;
+  outline: none !important;
+}
+
+.login-clean form .btn-primary:hover, .login-clean form .btn-primary:active {
+  background:  #36b9cc;
+}
+
+.login-clean form .btn-primary:active {
+  transform: translateY(1px);
+}
+
+.login-clean form .forgot {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #6f7a85;
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.login-clean form .forgot:hover, .login-clean form .forgot:active {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.sticky-footer{
+    margin:-10px;
+    padding:0;
+    position: relative;
+    top:100%;      
+    background-color: #333;     
+   
+    text-align: center;
+}
+ 
+.sticky-footer p {
+   
+    font-size: 18px;
+    color: white;
+    font-family: Courier New, monospace;
+    text-align: center;
+}
+ 
+ 
+ 
+
+
+
