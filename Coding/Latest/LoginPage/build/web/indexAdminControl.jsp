@@ -3,6 +3,7 @@
     Created on : Feb 3, 2021, 6:40:30 AM
     Author     : Anthony
 --%>
+<%@page import="readfile.ReadFile"%>
 <%@page import ="java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -152,11 +153,24 @@
                                             <div class="text-uppercase text-primary font-weight-bold text-xs mb-1"><span>Total Number of Employees</span></div>
                                             <div class="text-dark font-weight-bold h5 mb-0"> 
                                                 <%    
-    try
-    {
-        Class.forName("com.mysql.jdbc.Driver");
-        Connection con=(Connection)DriverManager.getConnection(
-            "jdbc:mysql://sql5.freemysqlhosting.net:3306/sql5391908","sql5391908","FpyLREFiQE");
+    try{
+        // Create a new clean conneciton.
+        Connection con = null;
+        // Create object
+        ReadFile rf = new ReadFile();
+        // Run the CSV Reader Class
+        rf.ReadFile();
+        // String for the JBDC Driver Info
+        String classDriver = rf.getClassDriver();
+        // String used for link to the Remote Database
+        String link = rf.getLink();
+        // String used for username of the Remote Database
+        String user = rf.getUser();
+        // String used for password to the Remote Database
+        String pass = rf.getPass();
+        // Coneect to Database
+        Class.forName(classDriver);
+        con = DriverManager.getConnection(link,user,pass);
         Statement st=con.createStatement();
         ResultSet rs=st.executeQuery("select COUNT(*) from userdatamain;");
    
@@ -191,11 +205,25 @@
                                         <div class="col mr-2">
                                             <div class="text-uppercase text-success font-weight-bold text-xs mb-1"><span>Number of Employees Working</span></div>
                                             <div class="text-dark font-weight-bold h5 mb-0">                                            <%    
-    try
-    {
-        Class.forName("com.mysql.jdbc.Driver");
-        Connection con=(Connection)DriverManager.getConnection("jdbc:mysql://sql5.freemysqlhosting.net:3306/sql5391908","sql5391908","FpyLREFiQE");
-        //Connection con=DriverManager.getConnection("jdbc:mysql://sql5.freemysqlhosting.net:3306/sql5391930","sql5391930","ZWDuzeTXhR");
+    try{
+        
+        // Create a new clean conneciton.
+        Connection con = null;
+        // Create object
+        ReadFile rf = new ReadFile();
+        // Run the CSV Reader Class
+        rf.ReadFile();
+        // String for the JBDC Driver Info
+        String classDriver = rf.getClassDriver();
+        // String used for link to the Remote Database
+        String link = rf.getLink();
+        // String used for username of the Remote Database
+        String user = rf.getUser();
+        // String used for password to the Remote Database
+        String pass = rf.getPass();
+        // Coneect to Database
+        Class.forName(classDriver);
+        con = DriverManager.getConnection(link,user,pass);
         Statement st=con.createStatement();
         ResultSet rs=st.executeQuery("select COUNT(*) from employeetimetracker where status = 'In';");
    

@@ -3,6 +3,7 @@
     Created on : Feb 11, 2021, 6:13:48 PM
     Author     : Anthony
 --%> 
+<%@page import="readfile.ReadFile"%>
 <%@page import ="java.sql.*"%>
 <%@page import ="java.time.LocalDateTime"%>
 <%@page import ="java.time.format.DateTimeFormatter"%>
@@ -32,14 +33,27 @@ else
 {
     //Make changes to the connection string(database name, user/password)
     //Make changes to the String query(change table name)
-    try{
-    Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection con=DriverManager.getConnection("jdbc:mysql://sql5.freemysqlhosting.net:3306/sql5391908","sql5391908","FpyLREFiQE");
-    //Connection con=DriverManager.getConnection("jdbc:mysql://sql5.freemysqlhosting.net:3306/sql5391930","sql5391930","ZWDuzeTXhR");
+    try{// Create a new clean conneciton.
+        Connection con = null;
+        // Create object
+        ReadFile rf = new ReadFile();
+        // Run the CSV Reader Class
+        rf.ReadFile();
+        // String for the JBDC Driver Info
+        String classDriver = rf.getClassDriver();
+        // String used for link to the Remote Database
+        String link = rf.getLink();
+        // String used for username of the Remote Database
+        String user = rf.getUser();
+        // String used for password to the Remote Database
+        String pass = rf.getPass();
+        // Coneect to Database
+        Class.forName(classDriver);
+        con = DriverManager.getConnection(link,user,pass);
      
-    String query1 = "update employeetimetracker set timeOut=?, status=?  where userID=?";    
-    String queryTimDif = "update employeetimetracker set totalTime = CAST(totalTime as time) + timediff (timeIn,timeOut) where userID=?";
-    //String queryTimDif = "update employeetimetracker set totalTime = totalTime + timeDiff( timeIn,timeOut)";
+        String query1 = "update employeetimetracker set timeOut=?, status=?  where userID=?";    
+        String queryTimDif = "update employeetimetracker set totalTime = CAST(totalTime as time) + timediff (timeIn,timeOut) where userID=?";
+        //String queryTimDif = "update employeetimetracker set totalTime = totalTime + timeDiff( timeIn,timeOut)";
         PreparedStatement ps = con.prepareStatement(query1);   
         ps.setTimestamp(1,timeOut);
         ps.setString(2,status);               
@@ -52,8 +66,8 @@ else
         //Close connections
         ps.close();        
         con.close();
-    }catch(Exception e)
-    {     
+    }
+    catch(Exception e){     
         out.println(e); 
     }   
 }

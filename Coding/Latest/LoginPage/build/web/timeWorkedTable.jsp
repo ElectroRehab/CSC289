@@ -3,6 +3,7 @@
     Created on : Feb 13, 2021, 8:05:37 PM
     Author     : Anthony
 --%>
+<%@page import="readfile.ReadFile"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -186,13 +187,24 @@
     try
     {
         java.util.Date date=new java.util.Date();			
-        Date sqlDate=new java.sql.Date(date.getTime());
-        Timestamp timeIn =new java.sql.Timestamp(date.getTime());
-        Class.forName("com.mysql.jdbc.Driver");
-        Connection con=(Connection)DriverManager.getConnection("jdbc:mysql://sql5.freemysqlhosting.net:3306/sql5391908","sql5391908","FpyLREFiQE");
-        //Connection con=DriverManager.getConnection("jdbc:mysql://sql5.freemysqlhosting.net:3306/sql5391930","sql5391930","ZWDuzeTXhR");//Test Connection
+        // Create a new clean conneciton.
+        Connection con = null;
+        // Create object
+        ReadFile rf = new ReadFile();
+        // Run the CSV Reader Class
+        rf.ReadFile();
+        // String for the JBDC Driver Info
+        String classDriver = rf.getClassDriver();
+        // String used for link to the Remote Database
+        String link = rf.getLink();
+        // String used for username of the Remote Database
+        String user = rf.getUser();
+        // String used for password to the Remote Database
+        String pass = rf.getPass();
+        // Coneect to Database
+        Class.forName(classDriver);
+        con = DriverManager.getConnection(link,user,pass);
         Statement st=con.createStatement();
-        //ResultSet rs=st.executeQuery("select * from userdatamain where userID = userID in employeetimetracker;");
         ResultSet rs=st.executeQuery("select userdatamain.firstName, userdatamain.lastName,employeetimetracker.userID, totalTime, status from userdatamain,employeetimetracker where employeetimetracker.userID = userdatamain.userID ");
     %>
                             <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">

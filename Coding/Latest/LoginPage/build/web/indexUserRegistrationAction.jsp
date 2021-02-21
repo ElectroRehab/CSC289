@@ -3,6 +3,7 @@
     Created on : Feb 7, 2021, 7:21:53 PM
     Author     : Anthony
 --%>
+<%@page import="readfile.ReadFile"%>
 <%@page import="java.util.Random"%>
 <%@page import ="java.sql.*"%>
 <%@page import ="com.itextpdf.text.pdf.BarcodeEAN"%>
@@ -29,22 +30,36 @@
     String password=request.getParameter("password_confirm");    
     String image="https://drive.google.com/uc?export=view&id=1AhrTHw6xzWn-AOOxnNsPlKyZLX3l9g3i";
     String ident = "user";
-    Connection con = null;
-    PreparedStatement statement = null;
 
     //Make changes to the connection string(database name, user/password)
     //Make changes to the String query(change table name)
-try
-{
-     Class.forName("com.mysql.jdbc.Driver");     
-    con = DriverManager.getConnection("jdbc:mysql://sql5.freemysqlhosting.net:3306/sql5391908","sql5391908","FpyLREFiQE");
-    //con=DriverManager.getConnection("jdbc:mysql://sql5.freemysqlhosting.net:3306/sql5391930","sql5391930","ZWDuzeTXhR");
-    Statement st=con.createStatement();     
-    st.executeUpdate("insert into userdatamain(userID,firstName,lastName,address,city,state,zipcode,phoneNumber,email,pinNum,imageID,identifier)values('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"')");
-    response.sendRedirect("save.jsp");   
-}catch(Exception e)
-{   
-   out.println(e); 
-}
+    try{
+        // Create a new clean conneciton.
+        Connection con = null;
+        // Create object
+        ReadFile rf = new ReadFile();
+        // Run the CSV Reader Class
+        rf.ReadFile();
+        // String for the JBDC Driver Info
+        String classDriver = rf.getClassDriver();
+        // String used for link to the Remote Database
+        String link = rf.getLink();
+        // String used for username of the Remote Database
+        String user = rf.getUser();
+        // String used for password to the Remote Database
+        String pass = rf.getPass();
+        // Coneect to Database
+        Class.forName(classDriver);
+        con = DriverManager.getConnection(link,user,pass);
+        Statement st=con.createStatement();
+        // Execute SQL Code to add information to Database
+        st.executeUpdate("insert into userdatamain(userID,firstName,lastName,address,city,state,zipcode,phoneNumber,email,pinNum,imageID,identifier)values('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"')");
+        // Show user that the information has been saved and display some
+        // of that information.
+        response.sendRedirect("save.jsp");
+    }
+    catch(Exception e){
+        out.println(e); 
+    }
 %>
 </html>

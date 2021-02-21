@@ -3,6 +3,7 @@
     Created on : Feb 13, 2021, 8:02:32 PM
     Author     : Anthony
 --%>
+<%@page import="readfile.ReadFile"%>
 <%@page import ="java.sql.*"%>
 <%@page import ="java.time.LocalDateTime"%>
 <%@page import ="java.time.format.DateTimeFormatter"%>
@@ -25,25 +26,39 @@
     //Make changes to the String query(change table name)
     try
     {
-    Class.forName("com.mysql.jdbc.Driver").newInstance();
-    Connection con=DriverManager.getConnection("jdbc:mysql://sql5.freemysqlhosting.net:3306/sql5391908","sql5391908","FpyLREFiQE");
-    //Connection con=DriverManager.getConnection("jdbc:mysql://sql5.freemysqlhosting.net:3306/sql5391930","sql5391930","ZWDuzeTXhR");
-    String query = "update employeetimetracker set totalTime =  timediff(totalTime,totalTime)";
-    //String query2 = "update * employeetimetracker set totalTime = '"+totalTime+"'";
-    //String query2 = "update employeetimetracker set userID =?,timeIn=?,timeOut=?,totalTime=?,pincode=?, status=? where userID=? && pincode=?";
-    //String query2 = "update employeetimetracker (userID,timeIn,pincode ) values(?,?,?)";
-    Statement st=con.createStatement();
-    PreparedStatement ps = con.prepareStatement(query);         
+    // Create a new clean conneciton.
+        Connection con = null;
+        // Create object
+        ReadFile rf = new ReadFile();
+        // Run the CSV Reader Class
+        rf.ReadFile();
+        // String for the JBDC Driver Info
+        String classDriver = rf.getClassDriver();
+        // String used for link to the Remote Database
+        String link = rf.getLink();
+        // String used for username of the Remote Database
+        String user = rf.getUser();
+        // String used for password to the Remote Database
+        String pass = rf.getPass();
+        // Coneect to Database
+        Class.forName(classDriver);
+        con = DriverManager.getConnection(link,user,pass);
+        Statement st=con.createStatement();
+        String query = "update employeetimetracker set totalTime =  timediff(totalTime,totalTime)";
+        //String query2 = "update * employeetimetracker set totalTime = '"+totalTime+"'";
+        //String query2 = "update employeetimetracker set userID =?,timeIn=?,timeOut=?,totalTime=?,pincode=?, status=? where userID=? && pincode=?";
+        //String query2 = "update employeetimetracker (userID,timeIn,pincode ) values(?,?,?)";
+
+        PreparedStatement ps = con.prepareStatement(query);         
      
-    ps.executeUpdate();  
-    
-    response.sendRedirect("indexAdminControl.jsp");   
-    ps.close();     
-    con.close();
+        ps.executeUpdate();  
+
+        response.sendRedirect("indexAdminControl.jsp");   
+        ps.close();     
+        con.close();
     
     }
-    catch(Exception e)
-    {     
+    catch(Exception e){     
         out.println(e); 
     } 
 %>
