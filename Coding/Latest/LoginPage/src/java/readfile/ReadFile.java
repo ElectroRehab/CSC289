@@ -54,12 +54,9 @@ public class ReadFile {
                     else if(p == 7){
                         pass = readBlock[j];
                     }
-                    // Row Count, Item, and element count
-                    System.out.println(" " + i +readBlock[j]+ " " + p);
                     p++;
                 }
                 else{
-                    System.out.println(" <b>" + i +readBlock[j]+ "</b> " + p);
                     p++;
                 }
             }
