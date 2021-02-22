@@ -34,8 +34,8 @@
                     <a href="indexUserRegistration.jsp">Create User Account</a>
    	        </div>
 		</div>     
-                    <a href="about">About</a>
-                    <a href="contact">Contact</a>
+                    <a href="ohNo.jsp">About</a>
+                    <a href="ohNo.jsp">Contact</a>
 		<div class="dropdown" id="wrapper">
                     <button class="dropbtn">Blank
       			<i class="fa fa-caret-down"></i>
