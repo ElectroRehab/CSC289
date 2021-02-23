@@ -16,7 +16,8 @@ public class ReadSQL {
     // Individual Element Count
     int p = 0;
     
-    public void ReadFile() throws FileNotFoundException, IOException{
+    public void ReadFile(int choice) throws FileNotFoundException, IOException{
+        p = choice;
         // File URL Location
         String fName = "https://dl.dropboxusercontent.com/s/05nufbydxhs6tg0/sqlread.csv";
         // URL Object 
@@ -28,26 +29,23 @@ public class ReadSQL {
         // Iterate through CSV File to find the proper connection information.
         while((thisLine = reader.readLine()) != null){
             // Array to store all elements seperated by @ symbols
-            String readBlock[] = thisLine.split("@");
+            String readBlock[] = thisLine.split(",");
             // For loop to read through the array
             for(int j = 0; j < readBlock.length; j++){
                 // If not Title row of the CSV file, write to variables to be 
                 // passed back to JSP files. 
                 if(i != 0){
-                    // Class Driver information storage.
-                    if(p == 2){
+                    // Set first SQL Statement for successfully created account.
+                    if(p == 1){
                         sqlOne = readBlock[j];
                     }
                     // Remote Database Link information storage.
                     else if(p == 3){
                         sqlTwo = readBlock[j];
                     }
-                    // Row Count, Item, and element count
-                    System.out.println(" " + i +readBlock[j]+ " " + p);
                     p++;
                 }
                 else{
-                    System.out.println(" <b>" + i +readBlock[j]+ "</b> " + p);
                     p++;
                 }
             }

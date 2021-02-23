@@ -3,6 +3,7 @@
     Created on : Feb 3, 2021, 6:43:26 AM
     Author     : Anthony
 --%>
+<%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <%@page import="java.util.Random"%>
 <%@page import ="java.sql.*"%>
@@ -22,7 +23,8 @@
     <body>    
         <nav>
             <div class= "main_home" >                    
-                <a href="index.jsp">Home</a>             
+                <a href="index.jsp">Home</a> 
+                
             </div>           
         </nav> 
             <h1><br>Registration Accepted</h1>
@@ -55,7 +57,7 @@
                     while(rs.next()){
                         userBarCode = rs.getString("userID");
 %>
-                        <table style="width:35%">
+                        <table style="width:35%" border="1">
                             <tr>
                                 <th>Unique ID</th>
                                 <th>First Name</th>
@@ -88,6 +90,7 @@
                  <script>
                  JsBarcode("#barcode", "<%out.print(userBarCode);%>");
                  </script>
+                 <p></p><button TYPE="button" style="height: 25px; width: 100px" onClick="window.print()">Print</button>
     </body>
 </html>
 
