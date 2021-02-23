@@ -61,7 +61,7 @@
                             <li><a href="https://myaccount.google.com/intro/profile" target="blank"><i class="fa  fa-google-plus"></i></a></li>
                             <li><a href="https://www.youtube.com/" target="blank"><i class="fa  fa-youtube"></i></a></li>               
                         </ul>
-                        <p>&copy; KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p>            
+                    <div class="copy-right"><p>&nbsp; &copy; KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p></div>            
                 </div>
             </footer>              
         </div>      

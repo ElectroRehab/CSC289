@@ -7,15 +7,17 @@ and open the template in the editor.
     Created on : Feb 2, 2021, 10:45:59 AM
     Author     : Anthony
 */
-
-nav{
-	 overflow: hidden;          
- 	 background-color: #333;
-} 
-
-html,body
-{
  
+
+* {
+  box-sizing: border-box;
+}
+html{
+    position: fixed;
+    min-height: 100%;
+}
+ body
+{ 
   margin: 0;
   padding:0;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -26,6 +28,22 @@ html,body
   text-align: center;
  
 }
+nav{
+    top: 0;   
+    position:fixed;	
+    text-decoration: none;
+    width: 100%;
+    background-color: #333; 
+    
+}
+.image{
+    position:fixed;
+    top: 0; 
+    background-position: center;   
+    height:100%;
+    width:100%;
+} 
+
 nav a.active{
 	  
   	 color: white;
@@ -33,6 +51,7 @@ nav a.active{
 nav a:hover {
  	 background-color: #ddd;
   	 color: black;
+         text-decoration: none;
 }
  
 nav a {
@@ -41,59 +60,76 @@ nav a {
   	text-align: center;
   	padding: 14px 16px;
   	text-decoration: none;
-  	font-size: 20px;
+  	font-size: 25px;
 }
 
 body,h1{
     top: 50%;
+    right: 15%;
   
+}
+h1{
+    position:relative;
+    font-family: microsoft-himalayan;
+    top:0%;
+    left: 7%;
 }
 
  .login-clean  {
    margin: 0;
    padding:0;
-   background-image: url("images/mainPageBackgroundv2.png");
+   bottom:-15%;
+   top:-5%;
+   right: 43%;
    height: 1000px;     
    background-size: cover;
    background-repeat: no-repeat;
-   position: static ;  
-   padding: 80px 0;
+   position: absolute; 
+  
+  
 }
  
 
 .login-clean form {
-  position: relative;
-  width: 300px;
+    
+  width: 275px;
   height: 450px;
-  width: 20%; 
-  top:-20%;
-  right:35%;
-  
+  width: 27%; 
+  bottom:-15%;
+   right:70%;
   margin: 200px  0px 0px 800px;
   background-color: activecaption;  
   border-radius: 10px;
   color:  #282d32;
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+  box-shadow: 1px 1px 5px rgba(0,0,0,.3);
+  opacity: .95;
+  
 }
 .login-clean form a {
+    position: relative;
+    right: -10%;  
     text-decoration: none;
     color: blue;
-    font-size: 22px;
+    font-size: 20px;
 }
 .login-clean form a.forgot {
+    position: relative;
+    right:1%;
     text-decoration: none;
     color:  #6f7a85;
     font-size: 20px;
 }
 .login-clean .illustration {
- 
-  height:20%;
+  right:-38%; 
+  top:-2%;
+  position: relative; 
   color: rgb(244,71,107);
 }
 
 .login-clean form .form-control {
   background: #f7f9fc;
   position: relative;
+  right:-10%;
   height: 100px;
   width: 200px;
   border: none;
@@ -105,10 +141,13 @@ body,h1{
   color: inherit;
   text-indent: 8px;
   height: 42px;
+  
 }
 
 .login-clean form .btn-primary {
   background:  #278c9b;
+  position: relative;
+  right:-10%;
   border: none;
   height:50px;
   width: 200px;
@@ -119,6 +158,7 @@ body,h1{
   text-shadow: none;
   font-size: 25px;
   outline: none !important;
+ 
 }
 
 .login-clean form .btn-primary:hover, .login-clean form .btn-primary:active {
@@ -130,6 +170,8 @@ body,h1{
 }
 
 .login-clean form .forgot {
+  position: relative;
+  right:-4%;
   display: block;
   text-align: center;
   font-size: 12px;
@@ -144,10 +186,11 @@ body,h1{
 }
 
 .sticky-footer{
-    margin:-10px;
-    padding:0;
-    position: relative;
-    top:100%;      
+     position: fixed;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 150px;   
     background-color: #333;     
    
     text-align: center;
@@ -162,7 +205,3 @@ body,h1{
 }
  
  
- 
-
-
-

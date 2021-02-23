@@ -65,40 +65,30 @@ public final class save_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <script type=\"text/javascript\" src=\"jsBarcode.all.min.js\"></script>\r\n");
       out.write("    </head>  \r\n");
       out.write("    <body>    \r\n");
-      out.write("        <div class=\"image\">            \r\n");
-      out.write("            <div><img src=\"assetsJSP/css/images/mainPageBackgroundv3.png\" class=\"image \" alt=”K&OLogo” >    </div>              \r\n");
+      out.write("          <div class=\"image\">            \r\n");
+      out.write("            <div><img src=\"assetsJSP/css/images/mainPageBackgroundv3.png\" class=\"image \" alt=”K&OLogo”>    </div>              \r\n");
       out.write("        </div>\r\n");
       out.write("        <div class= \"flex-container\"> \r\n");
-      out.write("        <nav>\r\n");
-      out.write("            <script>\r\n");
-      out.write(" \r\n");
-      out.write(" \r\n");
-      out.write("\r\n");
-      out.write("function printDiv(divName) {\r\n");
-      out.write("     var printContents = document.getElementById(divName).innerHTML;\r\n");
-      out.write("     var originalContents = document.body.innerHTML;\r\n");
-      out.write("\r\n");
-      out.write("     document.body.innerHTML = printContents;\r\n");
-      out.write("\r\n");
-      out.write("     window.print();\r\n");
-      out.write("\r\n");
-      out.write("     document.body.innerHTML = originalContents;\r\n");
-      out.write("}\r\n");
+      out.write("        <nav style=\"height: 65px\">\r\n");
+      out.write("        <script>\r\n");
+      out.write("            function printDiv(divName) {\r\n");
+      out.write("                var printContents = document.getElementById(divName).innerHTML;\r\n");
+      out.write("                var originalContents = document.body.innerHTML;\r\n");
+      out.write("                document.body.innerHTML = originalContents;                \r\n");
+      out.write("                window.print();\r\n");
+      out.write("                \r\n");
+      out.write("            }\r\n");
       out.write("            \r\n");
-      out.write("            \r\n");
-      out.write("            \r\n");
-      out.write("            </script>\r\n");
-      out.write("            \r\n");
-      out.write("        <div class= \"main_home\" >   \r\n");
-      out.write("                              \r\n");
-      out.write("            <a href=\"index.jsp\">Home</a>   \r\n");
-      out.write("            <a><input type=\"button\" onclick=\"printDiv('printableArea')\" value=\"Print Barcode\" /></a>  \r\n");
-      out.write("        </div>        \r\n");
+      out.write("        </script>\r\n");
+      out.write("        <div class= \"main_home\" >                              \r\n");
+      out.write("                <a href=\"index.jsp\" style=\"text-decoration: none\">Home</a>                 \r\n");
+      out.write("                <a><input class=\"btn-print\" type=\"button\" name=\"btn\" onclick=\"printDiv('printableArea')\" value=\"Print Barcode\" /></a>  \r\n");
+      out.write("        </div>         \r\n");
       out.write("        </nav> \r\n");
       out.write("            <div class=\"form-container\">             \r\n");
       out.write("                <div id=\"printableArea\" class=\"reg-box\"> \r\n");
-      out.write("            <h1><br>Registration Accepted</h1>\r\n");
-      out.write("            <p>Check your email for further instructions. <i class=\"fas fa-exclamation-triangle\"></i></p>   \r\n");
+      out.write("                     <h1><br>Registration Accepted</h1>\r\n");
+      out.write("           \r\n");
 
                 // Create string to be used after reading through database.
                 String userBarCode = "";
@@ -128,7 +118,7 @@ public final class save_jsp extends org.apache.jasper.runtime.HttpJspBase
                         userBarCode = rs.getString("userID");
 
       out.write("\r\n");
-      out.write("                        <table class=\"table my-0\" id=\"dataTable\">  \r\n");
+      out.write("            <table class=\"table my-0\" id=\"dataTable\">  \r\n");
       out.write("                \r\n");
       out.write("                <div><img src=\"assetsJSP/css/images/formBG_Image.png\" class=\"image \" alt=”K&OLogo” style=\"opacity: .1\" >    </div> \r\n");
       out.write("                <h1><br>Registration Accepted</h1>\r\n");
@@ -163,7 +153,7 @@ public final class save_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</td>\r\n");
       out.write("                        </tr>\r\n");
       out.write("                </thead>\r\n");
-      out.write("                        </table>\r\n");
+      out.write("            </table>\r\n");
 
                     }
                     con.close();
@@ -177,11 +167,11 @@ public final class save_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                 <br><br>\r\n");
       out.write("                 <img id=\"barcode\"/>\r\n");
       out.write("                 <script>\r\n");
-      out.write("                 JsBarcode(\"#barcode\", \"");
+      out.write("                    JsBarcode(\"#barcode\", \"");
 out.print(userBarCode);
       out.write("\");\r\n");
       out.write("                 </script>\r\n");
-      out.write("                 <p>Check your email for further instructions. <i class=\"fas fa-exclamation-triangle\" style=\"color: red\"></i></p> \r\n");
+      out.write("                  <div class=\"email-ins\"><p>Check your email for further instructions. <i class=\"fas fa-exclamation-triangle\" style=\"color: red\"></i></p></div>        \r\n");
       out.write("             </div>\r\n");
       out.write("            </div>\r\n");
       out.write("    <div class=\"flex-container\">        \r\n");

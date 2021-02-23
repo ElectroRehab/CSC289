@@ -11,17 +11,20 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Login</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="assetsJSP/css/adminLoginStyleSheet.css">
+        <link rel="stylesheet" href="assetsJSP/css/loginStyleSheet.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
     </head>       
     <body>
-           <nav>
-               <div  >                    
-                        <a href="index.jsp">Home</a>             
-               </div>           
-           </nav>   
-          <div class="login-clean">          
+        <div class="image">
+            
+            <div><img src="assetsJSP/css/images/mainPageBackgroundv2.png" class="image " alt=”K&OLogo” >    </div> 
+             
+        </div>
+        <div class="flex-container">
+        <div class="login-clean">          
             <form action="indexAdminLoginAction.jsp" method="post" >  
                 <h1>Admin Login</h1>                
                 <div class="illustration">                       
@@ -39,7 +42,15 @@
                 <a href="indexAdminRegistration.jsp"> Create an Admin Account</a>
                         <a class="forgot" href="indexAdminRegistration.jsp"> Forgot username or pin?</a>
             </form>        
-        </div>        
+        </div> 
+        </div >
+        <div class="flex-container">
+           <nav>
+               <div  >                    
+                        <a href="index.jsp">Home</a>             
+               </div>           
+           </nav>   
+       </div>          
         <div class="sticky-footer">
          <footer>      
                 <p>&copy; KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p>           

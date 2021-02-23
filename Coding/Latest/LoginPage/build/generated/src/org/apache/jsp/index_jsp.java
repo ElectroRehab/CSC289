@@ -100,7 +100,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            <li><a href=\"https://myaccount.google.com/intro/profile\" target=\"blank\"><i class=\"fa  fa-google-plus\"></i></a></li>\r\n");
       out.write("                            <li><a href=\"https://www.youtube.com/\" target=\"blank\"><i class=\"fa  fa-youtube\"></i></a></li>               \r\n");
       out.write("                        </ul>\r\n");
-      out.write("                        <p>&copy; KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p>            \r\n");
+      out.write("                    <div class=\"copy-right\"><p>&nbsp; &copy; KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p></div>            \r\n");
       out.write("                </div>\r\n");
       out.write("            </footer>              \r\n");
       out.write("        </div>      \r\n");

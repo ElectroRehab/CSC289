@@ -31,8 +31,7 @@
             function printDiv(divName) {
                 var printContents = document.getElementById(divName).innerHTML;
                 var originalContents = document.body.innerHTML;
-                document.body.innerHTML = originalContents;
-                
+                document.body.innerHTML = originalContents;                
                 window.print();
                 
             }
