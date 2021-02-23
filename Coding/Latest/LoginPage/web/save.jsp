@@ -14,6 +14,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assetsJSP/css/saveStyleSheet.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
         <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
         <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css"> 
@@ -21,14 +22,31 @@
         <script type="text/javascript" src="jsBarcode.all.min.js"></script>
     </head>  
     <body>    
-        <nav>
-            <div class= "main_home" >                    
-                <a href="index.jsp">Home</a> 
+          <div class="image">            
+            <div><img src="assetsJSP/css/images/mainPageBackgroundv3.png" class="image " alt=”K&OLogo”>    </div>              
+        </div>
+        <div class= "flex-container"> 
+        <nav style="height: 65px">
+        <script>
+            function printDiv(divName) {
+                var printContents = document.getElementById(divName).innerHTML;
+                var originalContents = document.body.innerHTML;
+                document.body.innerHTML = originalContents;
                 
-            </div>           
+                window.print();
+                
+            }
+            
+        </script>
+        <div class= "main_home" >                              
+                <a href="index.jsp" style="text-decoration: none">Home</a>                 
+                <a><input class="btn-print" type="button" name="btn" onclick="printDiv('printableArea')" value="Print Barcode" /></a>  
+        </div>         
         </nav> 
-            <h1><br>Registration Accepted</h1>
-            <p>Check your email for further instructions. <i class="fas fa-exclamation-triangle"></i></p>   
+            <div class="form-container">             
+                <div id="printableArea" class="reg-box"> 
+                     <h1><br>Registration Accepted</h1>
+           
 <%
                 // Create string to be used after reading through database.
                 String userBarCode = "";
@@ -57,25 +75,30 @@
                     while(rs.next()){
                         userBarCode = rs.getString("userID");
 %>
-                        <table style="width:35%" border="1">
+            <table class="table my-0" id="dataTable">  
+                
+                <div><img src="assetsJSP/css/images/formBG_Image.png" class="image " alt=”K&OLogo” style="opacity: .1" >    </div> 
+                <h1><br>Registration Accepted</h1>
+                <thead>
                             <tr>
                                 <th>Unique ID</th>
                                 <th>First Name</th>
                                 <th>Last Name</th>
                                 <th>Email</th>
-                                <th>PIN #</th>
-                                <th>Identifier</th>
+                                <th>&nbsp;&nbsp;PIN#</th>
+                                <th>&nbsp;&nbsp;&nbsp;&nbsp;Identifier</th>
                             </tr><br>
                         <tr>
                             
-                            <td><%=rs.getString("userID") %></td>
-                            <td><%=rs.getString("firstName") %></td>
-                            <td><%=rs.getString("lastName") %></td>
-                            <td><%=rs.getString("email") %></td>
-                            <td><%=rs.getString("pinNum") %></td>
-                            <td><%=rs.getString("identifier") %></td>
+                            <td>&nbsp;&nbsp;<%=rs.getString("userID") %></td>
+                            <td>&nbsp;&nbsp;<%=rs.getString("firstName") %></td>
+                            <td>&nbsp;&nbsp;<%=rs.getString("lastName") %></td>
+                            <td>&nbsp;&nbsp;<%=rs.getString("email") %></td>
+                            <td>&nbsp;&nbsp;<%=rs.getString("pinNum") %></td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=rs.getString("identifier") %></td>
                         </tr>
-                        </table>
+                </thead>
+            </table>
 <%
                     }
                     con.close();
@@ -88,9 +111,18 @@
                  <br><br>
                  <img id="barcode"/>
                  <script>
-                 JsBarcode("#barcode", "<%out.print(userBarCode);%>");
+                    JsBarcode("#barcode", "<%out.print(userBarCode);%>");
                  </script>
-                 <p></p><button TYPE="button" style="height: 25px; width: 100px" onClick="window.print()">Print</button>
+                  <div class="email-ins"><p>Check your email for further instructions. <i class="fas fa-exclamation-triangle" style="color: red"></i></p></div>        
+             </div>
+            </div>
+    <div class="flex-container">        
+        <footer>            
+            <div class = "sticky-footer">               
+                <p>&copy; KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p>                
+            </div>            
+        </footer>              
+    </div>
     </body>
 </html>
 
