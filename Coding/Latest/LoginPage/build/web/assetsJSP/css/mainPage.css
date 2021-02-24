@@ -7,6 +7,7 @@ and open the template in the editor.
     Created on : Feb 3, 2021, 6:46:20 AM
     Author     : Anthony
 */
+
 * {
   box-sizing: border-box;
 }
@@ -123,14 +124,15 @@ nav a {
     color: white;
     font-family: Courier New, monospace;
     text-align: center;
-}
+} 
 .sticky-footer p {
-   
+    position: absolute;
+    top:75%;
+    left:30%;
     font-size: 18px;
     color: white;
     font-family: Courier New, monospace;
-    text-align: center;
-}
+}    
 .sticky-footer ul li{
   display: inline-block;  
    margin: 0;
@@ -191,7 +193,7 @@ nav a {
 /*MOBILE DEVICES/////////////////////////////////////////////////////*/
 /*APPLE DEVICES///////////////////////////////////////////////////////*/
 /*IPHONE12 PRO PORTRAIT*/
- @media (max-device-width:390px)and (max-device-height:844px) {
+ @media (width:390px)and (height:844px) {
   
  
 html{
@@ -399,7 +401,7 @@ nav a {
  }
  
 /*IPHONE12 PRO LANDSCAPE*/
- @media (max-device-width:844px)and (max-device-height:390px) {
+ @media (width:844px)and (height:390px) {
   
  
 html{
@@ -607,7 +609,7 @@ nav a {
  }
 /*IPHONE 11 PRO, IPHONE X///////////////////////////////////////////////////*/
  
- @media (max-device-width:375px)and (max-device-height:812px) {  
+ @media (width:375px)and (height:812px) {  
  
 html{
     position: relative;
@@ -813,7 +815,7 @@ nav a {
  }
 /*IPHONE 11 PRO, IPHONE X///////////////////////////////////////////////////*/
  /*LANDSCAPE*/
- @media (max-device-width:812px)and (max-device-height:375px) {  
+ @media (width:812px)and (height:375px) {  
  
 html{
     position: relative;
@@ -1024,7 +1026,7 @@ nav a {
 
 /*IPHONE 11 PRO MAX, IPHONE 11///////////////////////////////////////////////////*/
  /*PORTRAIT*/
- @media (max-device-width:414px)and (max-device-height:896px) {  
+ @media (width:414px)and (height:896px) {  
  
 html{
     position: relative;
@@ -1230,7 +1232,7 @@ nav a {
  }
 /*IPHONE 11 PRO MAX, IPHONE 11///////////////////////////////////////////////////*/
  /*LANDSCAPE*/
- @media (max-device-width:896px)and (max-device-height:414px) {  
+ @media (width:896px)and (height:414px) {  
  
 html{
     position: relative;
@@ -1436,7 +1438,7 @@ nav a {
  }
 /*IPADS ////////////////////////////////////////////////////////////////*/
 /*PORTRAIT///////////////////////////////////////////////////////*/
-@media  (min-device-height:1024px) {  
+@media  (width:768) and (height:1024px) {  
 
 html{
     position: relative;
@@ -1642,7 +1644,7 @@ nav a {
  }
 /*IPADS///////////////////////////////////////////////////*/
  /*LANDSCAPE*/
- @media (min-device-width:1024px)  {  
+ @media (width:1024px)and(height:768)  {  
  
 html{
     position: relative;
@@ -1847,7 +1849,7 @@ nav a {
 }
  } 
 /*IPADPRO ////////////////////////////////////////////////////////////////*/
-@media (min-device-width:1024px)and (min-device-height:1366px) {  
+@media (width:1024px)and (height:1366px) {  
  
 html{
     position: relative;
@@ -2051,7 +2053,7 @@ nav a {
  }
 /*IPADS///////////////////////////////////////////////////*/
  /*LANDSCAPE*/
- @media (min-device-width:1366px)and (min-device-height:1024px) {  
+ @media (width:1366px)and (height:1024px) {  
  
 html{
     position: relative;
@@ -2259,7 +2261,7 @@ nav a {
  
  /*Note20 Ultra///////////////////////////////////////////////////*/
  
- @media (max-device-width:412px)and (max-device-height:883px) {  
+ @media (width:412px)and (height:883px) {  
  
 html{
     position: relative;
@@ -2465,7 +2467,7 @@ nav a {
  }
 /*Note 20 Ultra///////////////////////////////////////////////////*/
  /*LANDSCAPE*/
- @media (min-device-width:883px)and (max-device-height:412px) {  
+ @media (width:883px)and (height:412px) {  
  
 html{
     position: relative;

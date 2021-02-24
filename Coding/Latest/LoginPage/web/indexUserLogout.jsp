@@ -11,31 +11,45 @@
         <title>Login</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="assetsJSP/css/loginStyleSheet.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>     
-    <body class="body2">
-        <nav>
-            <div class= "main_home" >                    
-                <a href="index.jsp">Home</a>             
-            </div>           
-        </nav>  
-        <div class="login-clean">            
-            <form action="indexUserLogoutAction.jsp" method="post" >  
+    </head>       
+    <body>
+        <div class="image">
+            
+            <div><img src="assetsJSP/css/images/mainPageBackgroundv2.png" class="image " alt=”K&OLogo” >    </div> 
+             
+        </div>
+        <div class="login-clean">          
+            <form action="indexUserLoginAction.jsp" method="post" >  
                 <h1>User Logout</h1>                
-                <div class="illustration">                    
-                    <img src="assetsJSP/css/images/iconfinder_Account_1891016.png" width="60" height="60">
+                <div class="illustration">                       
+                    <img src="assetsJSP/css/images/iconfinder_Account_1891016.png" alt="accountIcon" width= "60"  height="60" >
                 </div>
-                <div class="form-group">                  
-                    <input class="form-control" type="text" name="userID" placeholder="Scan ID"><br>
+                <div class="form-group" >                  
+                    <input class="form-control" type="text" name="adminID" placeholder="Scan ID"><br>
                 </div>   
                 <div class="form-group">
-                    <input class="form-control"  type="password" name="pinCode" placeholder="Enter pin"  required=""><br>                    
+                    <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
                 </div>  
                 <div class="form-group">
-                    <button class="btn btn-primary btn-block" type="submit">Log Out</button>             
+                    <button class=" btn-primary" type="submit">Login</button>             
                 </div>                        
-            </form>   
-        </div>          
+                <a href="indexUserRegistration.jsp"> Create a User Account</a>
+                        <a class="forgot" href="indexUserRegistration.jsp"> Forgot username or pin?</a>
+            </form>        
+        </div> 
+           <nav>
+               <div  >                    
+                        <a href="index.jsp">Home</a>             
+               </div>           
+           </nav>   
+                 
+        <div class="sticky-footer">
+         <footer>      
+                <p>&copy; KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p>           
+        </footer>             
+        </div>        
     </body>
 </html>
