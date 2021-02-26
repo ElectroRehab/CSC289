@@ -75,26 +75,22 @@ h1{
     left: 7%;
 }
 
- .login-clean  {
+ .login-clean   {
    margin: 0;
    padding:0;
    bottom:-15%;
    top:-5%;
-   right: 43%;
+   right: 42.5%;
    height: 1000px;     
    background-size: cover;
    background-repeat: no-repeat;
    position: absolute; 
-  
-  
 }
- 
-
 .login-clean form {
     
   width: 275px;
   height: 450px;
-  width: 27%; 
+  width: 26%; 
   bottom:-15%;
    right:70%;
   margin: 200px  0px 0px 800px;
@@ -110,7 +106,7 @@ h1{
     right: -10%;  
     text-decoration: none;
     color: blue;
-    font-size: 20px;
+    font-size: 18px;
 }
 .login-clean form a.forgot {
     position: relative;

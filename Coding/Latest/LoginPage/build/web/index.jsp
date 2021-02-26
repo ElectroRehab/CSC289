@@ -12,10 +12,12 @@
         <title>Login</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">        
         <link rel="stylesheet" href="assetsJSP/css/mainPage.css">
+        
         <meta charset="UTF-8">        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>       
     <body> 
+         
         <div class="image">            
             <div><img src="assetsJSP/css/images/mainPageBackgroundv2.png" class="image " alt=”K&OLogo” ></div>              
         </div>
@@ -54,7 +56,7 @@
              
                 <div class = "sticky-footer">
              
-                    <h4 > Connect via social media</h4>
+                    <h4 > Connect with us via social media</h4>
                         <ul>                
                             <li><a  href="https://www.facebook.com/" target="blank"><i class="fa  fa-facebook"></i></a></li>
                             <li><a href="https://twitter.com/?lang=en" target="blank"><i class="fa  fa-twitter"></i></a></li>
@@ -64,6 +66,7 @@
                      <p> &copy; KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p>            
                 </div>
             </footer>              
-        </div>      
+        </div> 
+            
     </body>
 </html>

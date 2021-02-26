@@ -15,6 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Dashboard - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+     <link rel="stylesheet" href="assetsJSP/css/adminControl.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
@@ -25,9 +26,10 @@
     <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
             <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
-                    <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-database"></i></div>
-                    <div class="sidebar-brand-text mx-3"><span>K&O</span></div>
+                    <div><img src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60"></div>
+                    
                 </a>
+                <div class="sidebar-brand-text mx-3" style="color: white"><span><b>Personnel Management</b></span></div>
                 <hr class="sidebar-divider my-0">
                 <ul class="nav navbar-nav text-light" id="accordionSidebar">
                     <li class="nav-item"><a class="nav-link active" href="indexAdminControl.jsp"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
@@ -41,6 +43,7 @@
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
             </div>
+            
         </nav>
         <div class="d-flex flex-column" id="content-wrapper">
             <div id="content">
@@ -322,12 +325,15 @@
                             </div>
                         </div>
                     </div>
+                                        
                     <div class="row">
                         <div class="col-lg-6 mb-4">
+                      
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="text-primary font-weight-bold m-0">Projects</h6>
+                                    <h6 class="text-primary font-weight-bold m-0">Taskings</h6>
                                 </div>
+                                 
                                 <div class="card-body">
                                     <h4 class="small font-weight-bold">Server migration<span class="float-right">20%</span></h4>
                                     <div class="progress mb-4">
@@ -350,11 +356,28 @@
                                         <div class="progress-bar bg-success" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"><span class="sr-only">100%</span></div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> 
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="text-primary font-weight-bold m-0">Todo List</h6>
                                 </div>
+                                <div class="flex-container">
+        <div class="task-form">          
+            <form >  
+                <h1>&nbsp; Task</h1>                
+                                                         
+
+                <div class="form-group" >                  
+                    <input class="form-control" type="text" name="adminID" placeholder="Enter Task" style="height:50px; width:500px"><br>
+                </div>   
+                 
+                <div class="form-group">
+                    <button class=" btn-primary" type="submit">Add</button>             
+                </div>                        
+                 
+            </form>        
+        </div> 
+        </div>         
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item">
                                         <div class="row align-items-center no-gutters">
@@ -363,6 +386,16 @@
                                             </div>
                                             <div class="col-auto">
                                                 <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-1"><label class="custom-control-label" for="formCheck-1"></label></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="row align-items-center no-gutters">
+                                            <div class="col mr-2">
+                                                <h6 class="mb-0"><strong>Lunch meeting</strong></h6><span class="text-xs">11:30 AM</span>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="custom-control custom-checkbox"><input class="custom-control-input" type="checkbox" id="formCheck-2"><label class="custom-control-label" for="formCheck-2"></label></div>
                                             </div>
                                         </div>
                                     </li>
@@ -389,6 +422,7 @@
                                 </ul>
                             </div>
                         </div>
+                         
                         <div class="col">
                             <div class="row">
                                 <div class="col-lg-6 mb-4">
@@ -440,13 +474,15 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> 
                     </div>
                 </div>
+                                        <img class="company-logo" src="assetsJSP/css/images/CompanyLogo.png" height="375" width="375">
             </div>
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>Copyright © Brand 2021</span></div>
+                <div class="text-center my-auto copyright"><span>Copyright © KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</span></div>
+
                 </div>
             </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>

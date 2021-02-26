@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Profile - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assetsJSP/css/adminControl.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
@@ -20,9 +21,10 @@
     <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
             <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
-                    <div class="sidebar-brand-icon rotate-n-15"><i class="fas fa-database"></i></div>
-                    <div class="sidebar-brand-text mx-3"><span>K&O</span></div>
+                    <div><img src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60"></div>
+                    
                 </a>
+                <div class="sidebar-brand-text mx-3" style="color: white"><span><b>Personnel Management</b></span></div>
                 <hr class="sidebar-divider my-0">
                 <ul class="nav navbar-nav text-light" id="accordionSidebar">
                     <li class="nav-item"><a class="nav-link active" href="indexAdminControl.jsp"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
@@ -273,6 +275,7 @@
                     </div>
                 </div>
             </div>
+            <img class="company-logo-profile-table" src="assetsJSP/css/images/CompanyLogo.png" height="280" width="280">
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
                     <div class="text-center my-auto copyright"><span>Copyright © Brand 2021</span></div>

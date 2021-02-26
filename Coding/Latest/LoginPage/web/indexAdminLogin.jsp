@@ -26,7 +26,7 @@
         <div class="flex-container">
         <div class="login-clean">          
             <form action="indexAdminLoginAction.jsp" method="post" >  
-                <h1>Admin Login</h1>                
+                <div style="text-align: left"><h1>Admin Login</h1></div>              
                 <div class="illustration">                       
                     <img src="assetsJSP/css/images/iconfinder_Account_1891016.png" alt="accountIcon" width= "60"  height="60" >
                 </div>
@@ -39,8 +39,8 @@
                 <div class="form-group">
                     <button class=" btn-primary" type="submit">Login</button>             
                 </div>                        
-                <a href="indexAdminRegistration.jsp"> Create an Admin Account</a>
-                        <a class="forgot" href="indexAdminRegistration.jsp"> Forgot username or pin?</a>
+                    <a href="indexAdminRegistration.jsp"> Create a Admin Account</a>
+                    <a class="forgot" href="indexAdminRegistration.jsp"> Forgot username or pin?</a>
             </form>        
         </div> 
         </div >
