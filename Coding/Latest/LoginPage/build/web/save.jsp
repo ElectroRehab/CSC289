@@ -55,8 +55,12 @@
                     Connection con = null;
                     // Create object
                     ReadFile rf = new ReadFile();
+                    // Create object
+                    ReadSQL s = new ReadSQL();
                     // Run the CSV Reader Class
                     rf.ReadFile();
+                    // run the CSV Reader Class
+                    s.ReadSQL();
                     // String for the JBDC Driver Info
                     String classDriver = rf.getClassDriver();
                     // String used for link to the Remote Database
@@ -65,11 +69,13 @@
                     String user = rf.getUser();
                     // String used for password to the Remote Database
                     String pass = rf.getPass();
-                    // Coneect to Database
+                    // String used for SQL Query
+                    String sqlText = s.getSQLOne();
+                    // Connect to Database
                     Class.forName(classDriver);
                     con = DriverManager.getConnection(link,user,pass);
                     Statement st=con.createStatement();
-                    ResultSet rs = st.executeQuery("SELECT * FROM userdatamain WHERE ID = (SELECT MAX(ID) FROM userdatamain)");
+                    ResultSet rs = st.executeQuery(sqlText);
                     
                     while(rs.next()){
                         userBarCode = rs.getString("userID");

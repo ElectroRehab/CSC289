@@ -1,4 +1,5 @@
- <%@page import="readfile.ReadFile"%>
+ <%@page import="readfile.ReadSQL"%>
+<%@page import="readfile.ReadFile"%>
 <%-- 
     Document   : indexMain.jsp
     Created on : Feb 3, 2021, 6:40:30 AM
@@ -29,8 +30,12 @@
             Connection con = null;
             // Create object
             ReadFile rf = new ReadFile();
+            // Create object
+            ReadSQL s = new ReadSQL();
             // Run the CSV Reader Class
             rf.ReadFile();
+            // run the CSV Reader Class
+            s.ReadSQL();
             // String for the JBDC Driver Info
             String classDriver = rf.getClassDriver();
             // String used for link to the Remote Database
@@ -39,11 +44,13 @@
             String user = rf.getUser();
             // String used for password to the Remote Database
             String pass = rf.getPass();
+            // String used for SQL Query
+            String sqlText = s.getSQLTwo();
             // Coneect to Database
             Class.forName(classDriver);
             con = DriverManager.getConnection(link,user,pass);
             
-            String query = "select * From adminuserdata where adminID=? && pinNum=?";
+            String query = sqlText;
             PreparedStatement ps = con.prepareStatement(query);
             ps.setString(1,adminID );
             ps.setString(2,pinNum );    
