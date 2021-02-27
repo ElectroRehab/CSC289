@@ -3,6 +3,7 @@
     Created on : Feb 7, 2021, 7:21:53 PM
     Author     : Anthony
 --%>
+<%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <%@page import="java.util.Random"%>
 <%@page import ="java.sql.*"%>
@@ -30,6 +31,7 @@
     String password=request.getParameter("password_confirm");    
     String image="https://drive.google.com/uc?export=view&id=1AhrTHw6xzWn-AOOxnNsPlKyZLX3l9g3i";
     String ident = "user";
+    String timeBase = "00:00:00";
 
     //Make changes to the connection string(database name, user/password)
     //Make changes to the String query(change table name)
@@ -38,8 +40,12 @@
         Connection con = null;
         // Create object
         ReadFile rf = new ReadFile();
+        // Create object
+        ReadSQL s = new ReadSQL();
         // Run the CSV Reader Class
         rf.ReadFile();
+        // Run the CSV Reader Class
+        s.ReadSQL();
         // String for the JBDC Driver Info
         String classDriver = rf.getClassDriver();
         // String used for link to the Remote Database
@@ -53,7 +59,8 @@
         con = DriverManager.getConnection(link,user,pass);
         Statement st=con.createStatement();
         // Execute SQL Code to add information to Database
-        st.executeUpdate("insert into userdatamain(userID,firstName,lastName,address,city,state,zipcode,phoneNumber,email,pinNum,imageID,identifier)values('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"')");
+        st.executeUpdate(s.getSQLTen() + "('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"')");
+        st.executeUpdate(s.getSQLEleven() + "('"+idNum+"','"+timeBase+"','"+timeBase+"','"+timeBase+"','"+password+"','"+"Out"+"')");
         // Show user that the information has been saved and display some
         // of that information.
         response.sendRedirect("save.jsp");

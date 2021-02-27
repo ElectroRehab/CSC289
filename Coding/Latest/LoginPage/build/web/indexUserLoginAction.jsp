@@ -3,6 +3,7 @@
     Created on : Feb 7, 2021, 5:39:52 PM
     Author     : Anthony
 --%> 
+<%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <%@page import ="java.sql.*"%>
 <%@page import ="java.time.LocalDateTime"%>
@@ -38,8 +39,12 @@
             Connection con = null;
             // Create object
             ReadFile rf = new ReadFile();
+            // Create object
+            ReadSQL s = new ReadSQL();
             // Run the CSV Reader Class
             rf.ReadFile();
+            // Run the CSV Reader Class
+            s.ReadSQL();
             // String for the JBDC Driver Info
             String classDriver = rf.getClassDriver();
             // String used for link to the Remote Database
@@ -51,18 +56,15 @@
             // Coneect to Database
             Class.forName(classDriver);
             con = DriverManager.getConnection(link,user,pass);
-            // SQL Query Statements
-            String query = "select * From userdatamain where userID=? && pinNum=?";
-            String query2 = "update employeetimetracker set userID =?,timeIn=?,timeOut=?, pinCode=?, status=? where userID=? && pinCode=?";     
             // Create a Prepared Statement to run query from database.
-            PreparedStatement ps = con.prepareStatement(query);
+            PreparedStatement ps = con.prepareStatement(s.getSQLThree());
             // Set Strings to locations in the database.
             ps.setString(1,userID );
             ps.setString(2,pinCode );
             // Iterate through database to set new fields
-            ResultSet rs = ps.executeQuery( );
+            ResultSet rs = ps.executeQuery();
             if(rs.next()){
-                ps = con.prepareStatement(query2);
+                ps = con.prepareStatement(s.getSQLFour());
                 ps.setString(1,userID );
                 ps.setTimestamp(2,timeIn ); 
                 ps.setString(3,timeOut ); 

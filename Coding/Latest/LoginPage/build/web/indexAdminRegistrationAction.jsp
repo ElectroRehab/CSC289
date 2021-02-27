@@ -32,14 +32,19 @@
     String password=request.getParameter("password_confirm");
     String image="https://drive.google.com/uc?export=view&id=1dYZ2xxA1DIwNcwdEwqRypTDkc4danQos";
     String ident = "admin";
+    String timeBase = "00:00:00";
     
     try{
         // Create a new clean conneciton.
         Connection con = null;
         // Create object
         ReadFile rf = new ReadFile();
+        // Create object
+        ReadSQL s = new ReadSQL();
         // Run the CSV Reader Class
         rf.ReadFile();
+        // Run the CSV Reader Class
+        s.ReadSQL();
         // String for the JBDC Driver Info
         String classDriver = rf.getClassDriver();
         // String used for link to the Remote Database
@@ -53,8 +58,9 @@
         con = DriverManager.getConnection(link,user,pass);
         Statement st=con.createStatement();
         // Execute SQL Code to add information to Databases
-        st.executeUpdate("insert into userdatamain(userID,firstName,lastName,address,city,state,zipcode,phoneNumber,email,pinNum,imageID,identifier)values('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"')");
-        st.executeUpdate("insert into adminuserdata(adminID,firstName,lastName,address,city,state,zipcode,phoneNumber,email,pinNum,imageID,identifier)values('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"')");
+        st.executeUpdate(s.getSQLSeven() + "('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"')");
+        st.executeUpdate(s.getSQLEight() + "('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"')");
+        st.executeUpdate(s.getSQLNine() + "('"+idNum+"','"+timeBase+"','"+timeBase+"','"+timeBase+"','"+password+"','"+"Out"+"')");
         // Show user that the information has been saved and display some
         // of that information. 
         response.sendRedirect("save.jsp");    

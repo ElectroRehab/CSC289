@@ -11,10 +11,24 @@ public class ReadSQL {
     String sqlOne;
     // String used for SQL Code Two to link database info
     String sqlTwo;
-    // String used for SQL Code One to link database info
+    // String used for SQL Code Three to link database info
     String sqlThree;
-    // String used for SQL Code Two to link database info
+    // String used for SQL Code Four to link database info
     String sqlFour;
+    // String used for SQL Code Five to link database info
+    String sqlFive;
+    // String used for SQL Code Six to link database info
+    String sqlSix;
+    // String used for SQL Code Seven to link database info
+    String sqlSeven;
+    // String used for SQL Code Eight to link database info
+    String sqlEight;
+    // String used for SQL Code Nine to link database info
+    String sqlNine;
+    // String used for SQL Code Ten to link database info
+    String sqlTen;
+    // String used for SQL Code Eleven to link database info
+    String sqlEleven;
     // Row Count
     int i = 0;
     // Individual Element Count
@@ -41,20 +55,36 @@ public class ReadSQL {
                     // Set first SQL Statement for successfully created account.
                     if(p == 1){
                         sqlOne = readBlock[j];
-                        System.out.println("Here is p1: " + sqlOne);
                     }
-                    // Remote Database Link information storage.
                     else if(p == 2){
                         sqlTwo = readBlock[j];
-                        System.out.println("Here is p2: " + sqlTwo);
                     }
                     else if(p == 3){
                         sqlThree = readBlock[j];
-                        System.out.println("Here is p3: " + sqlThree);
                     }
                     else if(p == 4){
-                        sqlFour = readBlock[j];
-                        System.out.println("Here is p4: " + sqlFour);
+                        sqlFour = readBlock[j].replace("\"","");
+                    }
+                    else if(p == 5){
+                        sqlFive = readBlock[j].replace("\"","");
+                    }
+                    else if(p == 6){
+                        sqlSix = readBlock[j].replace("\"","");
+                    }
+                    else if(p == 7){
+                        sqlSeven = readBlock[j].replace("\"","");
+                    }
+                    else if(p == 8){
+                        sqlEight = readBlock[j].replace("\"","");
+                    }
+                    else if(p == 9){
+                        sqlNine = readBlock[j].replace("\"","");
+                    }
+                    else if(p == 10){
+                        sqlTen = readBlock[j].replace("\"","");
+                    }
+                    else if(p == 11){
+                        sqlEleven = readBlock[j].replace("\"","");
                     }
                     p++;
                 }
@@ -77,6 +107,27 @@ public class ReadSQL {
     }
     public String getSQLFour(){
         return sqlFour;
+    }
+    public String getSQLFive(){
+        return sqlFive;
+    }
+    public String getSQLSix(){
+        return sqlSix;
+    }
+    public String getSQLSeven(){
+        return sqlSeven;
+    }
+    public String getSQLEight(){
+        return sqlEight;
+    }
+    public String getSQLNine(){
+        return sqlNine;
+    }
+    public String getSQLTen(){
+        return sqlTen;
+    }
+    public String getSQLEleven(){
+        return sqlEleven;
     }
 }
 

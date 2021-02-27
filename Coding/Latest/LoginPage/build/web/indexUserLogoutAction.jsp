@@ -3,6 +3,7 @@
     Created on : Feb 11, 2021, 6:13:48 PM
     Author     : Anthony
 --%> 
+<%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <%@page import ="java.sql.*"%>
 <%@page import ="java.time.LocalDateTime"%>
@@ -37,8 +38,12 @@ else
         Connection con = null;
         // Create object
         ReadFile rf = new ReadFile();
+        // Create object
+        ReadSQL s = new ReadSQL();
         // Run the CSV Reader Class
         rf.ReadFile();
+        // Run the CSV Reader Class
+        s.ReadSQL();
         // String for the JBDC Driver Info
         String classDriver = rf.getClassDriver();
         // String used for link to the Remote Database
@@ -50,16 +55,13 @@ else
         // Coneect to Database
         Class.forName(classDriver);
         con = DriverManager.getConnection(link,user,pass);
-     
-        String query1 = "update employeetimetracker set timeOut=?, status=?  where userID=?";    
-        String queryTimDif = "update employeetimetracker set totalTime = CAST(totalTime as time) + timediff (timeIn,timeOut) where userID=?";
         //String queryTimDif = "update employeetimetracker set totalTime = totalTime + timeDiff( timeIn,timeOut)";
-        PreparedStatement ps = con.prepareStatement(query1);   
+        PreparedStatement ps = con.prepareStatement(s.getSQLFive());   
         ps.setTimestamp(1,timeOut);
         ps.setString(2,status);               
         ps.setString(3,userID);           
         ps.executeUpdate();       
-        ps = con.prepareStatement(queryTimDif); 
+        ps = con.prepareStatement(s.getSQLSix()); 
         ps.setString(1,userID);  
         ps.executeUpdate();       
         response.sendRedirect("indexUserLogin.jsp");            
