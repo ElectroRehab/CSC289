@@ -15,6 +15,90 @@ and open the template in the editor.
   display: flex;
   flex-direction: row;
 }
+/*Applies to indexAboutCompany.jsp*/
+.flex-container-about{
+    word-wrap: break-word; /* Forces to wrap the word and cut it*/
+    width: 800px;
+    margin: 0 auto;
+    
+    
+    
+}
+/*Applies to indexCompanyMission.jsp*/
+.flex-container-mission{
+    word-wrap: break-word; /* Forces to wrap the word and cut it*/
+    width: 800px;
+    margin: 0 auto;   
+}
+/*Applies to indexCompanyMission.jsp*/
+.flex-container-mission h1{
+    position: absolute;
+    word-wrap: break-word; 
+     width: 800px;
+    top:15%;
+    left:7%;
+    font-size: 65px;
+    text-align: center;
+}
+/*Applies to indexCompanyMission.jsp*/
+.flex-container-mission p{
+    position: absolute;
+    word-wrap: break-word; 
+     width: 700px;
+     top:25%;
+    left:10%;
+    font-size: 45px;
+     text-align: center;
+}
+/*Applies to indexCompanyMission.jsp*/
+.flex-container-vision{
+    word-wrap: break-word; /* Forces to wrap the word and cut it*/
+    width: 800px;
+    margin: 0 auto;
+    
+    
+    
+}
+/*Applies to indexCompanyMission.jsp*/
+.flex-container-vision h1{
+    position: absolute;
+    word-wrap: break-word; 
+     width: 800px;
+    top:15%;
+    left:50%;
+    font-size: 65px;
+    text-align: center;
+}
+/*Applies to indexCompanyMission.jsp*/
+.flex-container-vision p{
+    position: absolute;
+    word-wrap: break-word; 
+     width: 600px;
+     top:25%;
+    left:55%;
+    font-size: 45px;
+     text-align: center;
+}
+/*Applies to indexAboutCompany.jsp*/
+.flex-container-about h1{
+    position: absolute;
+    word-wrap: break-word; 
+     width: 1000px;
+    top:15%;
+    left:25%;
+    font-size: 65px;
+    text-align: center;
+}
+/*Applies to indexAboutCompany.jsp*/
+.flex-container-about p{
+    position: absolute;
+    word-wrap: break-word; 
+     width: 1000px;
+     top:25%;
+    left:25%;
+    font-size: 45px;
+     text-align: center;
+}
 html{
     position: relative;
     min-height: 100%;

@@ -9,14 +9,15 @@
 <html>
     <head>
         <link rel="stylesheet" href="assetsJSP/css/registrationStyleSheet.css">
+          <link rel="stylesheet" href="assetsJSP/css/mainPage.css">  
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
+         
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
     </head>
        
     <body>
-        
+        <div><img src="assetsJSP/css/images/25511.jpg" class="image " alt=”K&OLogo” style="opacity: 1"></div>     
         <nav>
             <div class= "main_home" >                    
                 <a href="index.jsp">Home</a> 

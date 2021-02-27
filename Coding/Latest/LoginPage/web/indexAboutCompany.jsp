@@ -1,9 +1,9 @@
 <%-- 
-    Document   : index
-    Created on : Feb 3, 2021, 6:43:26 AM
+    Document   : indexAboutCompany
+    Created on : Feb 26, 2021, 7:26:29 PM
     Author     : Anthony
 --%>
-
+ 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -11,19 +11,18 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Login</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">        
-        <link rel="stylesheet" href="assetsJSP/css/mainPage.css">
-        
+        <link rel="stylesheet" href="assetsJSP/css/mainPage.css">        
         <meta charset="UTF-8">        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>       
     <body> 
          
         <div class="image">            
-            <div><img src="assetsJSP/css/images/mainPageBackgroundv2.png" class="image " alt=”K&OLogo” ></div>              
+            <div><img src="assetsJSP/css/images/mainPageBackgroundv2.png" class="image " alt=”K&OLogo” style="opacity: .2"></div>              
         </div>
         <div class="flex-container" >            
             <nav>              
-                <a class="active" href="">Home</a>                
+                <a class="active" href="index.jsp">Home</a>                
 		<div class="dropdown">
 		    <button class="dropbtn">Account
       		        <i class="fa fa-caret-down"></i>
@@ -49,7 +48,16 @@
    		</div>
 		</div>                
             </nav>         
-        </div>        
+        </div>   
+        <div class="flex-container-about">
+            <h1> <b>About</b></h1>
+            <div class="flex-column">
+                
+                <p>K&O Personnel Management System is a web-based application that uses a database to access  
+                    and store user data, so organizations can better track and monitor their employees.</p>
+
+            </div>         
+        </div>
         <div class="flex-container"> 
             
             <footer>

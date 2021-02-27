@@ -36,16 +36,16 @@
                     <a href="indexUserRegistration.jsp">Create User Account</a>
    	        </div>
 		</div>     
-                    <a href="ohNo.jsp">About</a>
-                    <a href="ohNo.jsp">Contact</a>
+                    
 		<div class="dropdown" id="wrapper">
-                    <button class="dropbtn">Blank
+                    <button class="dropbtn">Info
       			<i class="fa fa-caret-down"></i>
                     </button>
     		<div class="dropdown-content">
-      	            <a href="https://www.udemy.com/">Udemy </a>
-      		    <a href="https://www.w3schools.com/">W3Schools</a>
-      		    <a href="https://www.codecademy.com/">Code Academy</a>
+                    <a href="indexAboutCompany.jsp">About</a>
+                    <a href="indexCompanyMission.jsp">Mission</a>
+                    <a href="ohNo.jsp">Contact</a>
+      	             
    		</div>
 		</div>                
             </nav>         
