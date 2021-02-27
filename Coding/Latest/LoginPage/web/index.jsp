@@ -25,14 +25,23 @@
             <nav>              
                 <a class="active" href="">Home</a>                
 		<div class="dropdown">
-		    <button class="dropbtn">Account
+		    <button class="dropbtn">Access
       		        <i class="fa fa-caret-down"></i>
     		    </button>                    
     	        <div class="dropdown-content">
-      		    <a href="indexAdminLogin.jsp">Admin Login </a>
-                    <a href="indexUserLogin.jsp">User Login</a>
-                    <a href="indexUserLogout.jsp">User LogOut</a>
-                    <a href="indexAdminRegistration.jsp">Create Admin Account</a>
+      		    <a href="indexUserLogin.jsp">Clock-In</a>
+                    <a href="indexUserLogout.jsp">Clock-Out</a>
+                    <a href="indexAdminLogin.jsp">Admin Login</a>
+                    
+   	        </div>
+		</div>
+                
+                <div class="dropdown">
+		    <button class="dropbtn">Create Account
+      		        <i class="fa fa-caret-down"></i>
+    		    </button>                    
+    	        <div class="dropdown-content">
+      		    <a href="indexAdminRegistration.jsp">Create Admin Account</a>
                     <a href="indexUserRegistration.jsp">Create User Account</a>
    	        </div>
 		</div>     

@@ -21,6 +21,7 @@
             <div><img src="assetsJSP/css/images/mainPageBackgroundv2.png" class="image " alt=”K&OLogo” >    </div> 
              
         </div>
+        
         <div class="flex-container">        
         <div class="login-clean">    
             <form action="indexUserLoginAction.jsp" method="post" >  
