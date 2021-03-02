@@ -17,6 +17,7 @@
     
 </head>
 <%
+    int sqlInt = 0;
     //Get Current date and time   
     java.util.Date date=new java.util.Date();
     // Date and Time Check 
@@ -43,28 +44,22 @@
             ReadSQL s = new ReadSQL();
             // Run the CSV Reader Class
             rf.ReadFile();
-            // Run the CSV Reader Class
-            s.ReadSQL();
-            // String for the JBDC Driver Info
-            String classDriver = rf.getClassDriver();
-            // String used for link to the Remote Database
-            String link = rf.getLink();
-            // String used for username of the Remote Database
-            String user = rf.getUser();
-            // String used for password to the Remote Database
-            String pass = rf.getPass();
-            // Coneect to Database
-            Class.forName(classDriver);
-            con = DriverManager.getConnection(link,user,pass);
+            // Connect to Database
+            Class.forName(rf.getClassDriver());
+            con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
             // Create a Prepared Statement to run query from database.
-            PreparedStatement ps = con.prepareStatement(s.getSQLThree());
+            sqlInt = 3;
+            s.ReadSQL(sqlInt);
+            PreparedStatement ps = con.prepareStatement(s.getSQLAll());
             // Set Strings to locations in the database.
             ps.setString(1,userID );
             ps.setString(2,pinCode );
             // Iterate through database to set new fields
             ResultSet rs = ps.executeQuery();
             if(rs.next()){
-                ps = con.prepareStatement(s.getSQLFour());
+                sqlInt = 4;
+                s.ReadSQL(sqlInt);
+                ps = con.prepareStatement(s.getSQLAll());
                 ps.setString(1,userID );
                 ps.setTimestamp(2,timeIn ); 
                 ps.setString(3,timeOut ); 

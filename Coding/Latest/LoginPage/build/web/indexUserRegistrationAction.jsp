@@ -18,7 +18,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">    
     <title>Dashboard - Brand</title>    
 </head> 
-<%  
+<%
+    int sqlInt = 0;
     String idNum=request.getParameter("rand_num");    
     String fname=request.getParameter("fname");
     String lname=request.getParameter("lname");
@@ -44,23 +45,18 @@
         ReadSQL s = new ReadSQL();
         // Run the CSV Reader Class
         rf.ReadFile();
-        // Run the CSV Reader Class
-        s.ReadSQL();
-        // String for the JBDC Driver Info
-        String classDriver = rf.getClassDriver();
-        // String used for link to the Remote Database
-        String link = rf.getLink();
-        // String used for username of the Remote Database
-        String user = rf.getUser();
-        // String used for password to the Remote Database
-        String pass = rf.getPass();
-        // Coneect to Database
-        Class.forName(classDriver);
-        con = DriverManager.getConnection(link,user,pass);
+        // Connect to Database
+        Class.forName(rf.getClassDriver());
+        con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
         Statement st=con.createStatement();
         // Execute SQL Code to add information to Database
-        st.executeUpdate(s.getSQLTen() + "('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"')");
-        st.executeUpdate(s.getSQLEleven() + "('"+idNum+"','"+timeBase+"','"+timeBase+"','"+timeBase+"','"+password+"','"+"Out"+"')");
+        sqlInt = 10;
+        s.ReadSQL(sqlInt);
+        st.executeUpdate(s.getSQLAll() + "('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"')");
+        // Execute SQL Code to add information to Database
+        sqlInt = 11;
+        s.ReadSQL(sqlInt);
+        st.executeUpdate(s.getSQLAll() + "('"+idNum+"','"+timeBase+"','"+timeBase+"','"+timeBase+"','"+password+"','"+"Out"+"')");
         // Show user that the information has been saved and display some
         // of that information.
         response.sendRedirect("save.jsp");

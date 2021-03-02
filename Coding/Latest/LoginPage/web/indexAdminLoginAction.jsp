@@ -16,6 +16,7 @@
     
 </head>
 <%
+    int sqlInt = 0;
     String adminID=request.getParameter("adminID");
     
     String pinNum=request.getParameter("pinNum");
@@ -34,24 +35,13 @@
             ReadSQL s = new ReadSQL();
             // Run the CSV Reader Class
             rf.ReadFile();
-            // run the CSV Reader Class
-            s.ReadSQL();
-            // String for the JBDC Driver Info
-            String classDriver = rf.getClassDriver();
-            // String used for link to the Remote Database
-            String link = rf.getLink();
-            // String used for username of the Remote Database
-            String user = rf.getUser();
-            // String used for password to the Remote Database
-            String pass = rf.getPass();
+            // Connect to Database
+            Class.forName(rf.getClassDriver());
+            con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
             // String used for SQL Query
-            String sqlText = s.getSQLTwo();
-            // Coneect to Database
-            Class.forName(classDriver);
-            con = DriverManager.getConnection(link,user,pass);
-            
-            String query = sqlText;
-            PreparedStatement ps = con.prepareStatement(query);
+            sqlInt = 2;
+            s.ReadSQL(sqlInt);
+            PreparedStatement ps = con.prepareStatement(s.getSQLAll());
             ps.setString(1,adminID );
             ps.setString(2,pinNum );    
             ResultSet rs = ps.executeQuery();    

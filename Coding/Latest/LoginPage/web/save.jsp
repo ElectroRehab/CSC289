@@ -47,6 +47,7 @@
                      <h1><br>Registration Accepted</h1>
            
 <%
+                int sqlInt = 0;
                 // Create string to be used after reading through database.
                 String userBarCode = "";
                 // Connect to database and find the most recent ID
@@ -59,23 +60,15 @@
                     ReadSQL s = new ReadSQL();
                     // Run the CSV Reader Class
                     rf.ReadFile();
-                    // run the CSV Reader Class
-                    s.ReadSQL();
-                    // String for the JBDC Driver Info
-                    String classDriver = rf.getClassDriver();
-                    // String used for link to the Remote Database
-                    String link = rf.getLink();
-                    // String used for username of the Remote Database
-                    String user = rf.getUser();
-                    // String used for password to the Remote Database
-                    String pass = rf.getPass();
-                    // String used for SQL Query
-                    String sqlText = s.getSQLOne();
                     // Connect to Database
-                    Class.forName(classDriver);
-                    con = DriverManager.getConnection(link,user,pass);
+                    Class.forName(rf.getClassDriver());
+                    con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
+                    // String used for SQL Query
+                    sqlInt = 1;
+                    s.ReadSQL(sqlInt);
+                    
                     Statement st=con.createStatement();
-                    ResultSet rs = st.executeQuery(sqlText);
+                    ResultSet rs = st.executeQuery(s.getSQLAll());
                     
                     while(rs.next()){
                         userBarCode = rs.getString("userID");

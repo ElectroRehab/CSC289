@@ -16,6 +16,7 @@
     <title>Dashboard - Brand</title>    
 </head> 
 <%
+    int sqlInt = 0;
     //Get Current date and time   
     java.util.Date date=new java.util.Date();			
     Date sqlDate=new java.sql.Date(date.getTime());
@@ -42,26 +43,20 @@ else
         ReadSQL s = new ReadSQL();
         // Run the CSV Reader Class
         rf.ReadFile();
-        // Run the CSV Reader Class
-        s.ReadSQL();
-        // String for the JBDC Driver Info
-        String classDriver = rf.getClassDriver();
-        // String used for link to the Remote Database
-        String link = rf.getLink();
-        // String used for username of the Remote Database
-        String user = rf.getUser();
-        // String used for password to the Remote Database
-        String pass = rf.getPass();
-        // Coneect to Database
-        Class.forName(classDriver);
-        con = DriverManager.getConnection(link,user,pass);
-        //String queryTimDif = "update employeetimetracker set totalTime = totalTime + timeDiff( timeIn,timeOut)";
-        PreparedStatement ps = con.prepareStatement(s.getSQLFive());   
+        // Connect to Database
+        Class.forName(rf.getClassDriver());
+        con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
+        //String queryTimDif = s.ReadSQL(14);        
+        sqlInt = 5;
+        s.ReadSQL(sqlInt);
+        PreparedStatement ps = con.prepareStatement(s.getSQLAll());   
         ps.setTimestamp(1,timeOut);
         ps.setString(2,status);               
         ps.setString(3,userID);           
-        ps.executeUpdate();       
-        ps = con.prepareStatement(s.getSQLSix()); 
+        ps.executeUpdate();
+        sqlInt = 6;
+        s.ReadSQL(sqlInt);
+        ps = con.prepareStatement(s.getSQLAll()); 
         ps.setString(1,userID);  
         ps.executeUpdate();       
         response.sendRedirect("indexUserLogin.jsp");            

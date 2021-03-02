@@ -1,3 +1,4 @@
+<%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <!DOCTYPE html>
 
@@ -157,27 +158,23 @@
                                 </div>
                             </div>
                              <%    
-    try
-    {
+    try{
+        int sqlInt = 0;
         // Create a new clean conneciton.
         Connection con = null;
         // Create object
         ReadFile rf = new ReadFile();
+        // Create object
+        ReadSQL s = new ReadSQL();
         // Run the CSV Reader Class
         rf.ReadFile();
-        // String for the JBDC Driver Info
-        String classDriver = rf.getClassDriver();
-        // String used for link to the Remote Database
-        String link = rf.getLink();
-        // String used for username of the Remote Database
-        String user = rf.getUser();
-        // String used for password to the Remote Database
-        String pass = rf.getPass();
-        // Coneect to Database
-        Class.forName(classDriver);
-        con = DriverManager.getConnection(link,user,pass);
+        // Connect to Database
+        Class.forName(rf.getClassDriver());
+        con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
         Statement st=con.createStatement();
-        ResultSet rs=st.executeQuery("select * from userdatamain where identifier = 'user';");
+        sqlInt = 13;
+        s.ReadSQL(sqlInt);
+        ResultSet rs=st.executeQuery(s.getSQLAll());
     %>
                             <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
                                 <table class="table my-0" id="dataTable">
