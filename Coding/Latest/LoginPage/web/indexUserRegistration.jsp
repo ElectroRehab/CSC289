@@ -8,18 +8,33 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="assetsJSP/css/registrationStyleSheet.css">
-        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+             
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <link rel="stylesheet" href="assetsJSP/css/registrationStyleSheet.css">        
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assetsJSP/mainPageCSS/Navigation-with-Button.css">
+        <link rel="stylesheet" href="assetsJSP/mainPageCSS/styles.css">
+        <link rel="stylesheet" href="assets/css/styles.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+        <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+        <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
         <title>User Registration</title>        
     </head>
     <body>
-        <div class="image">
-            
-            <div><img src="assetsJSP/css/images/mainPageBackgroundv3.png" class="image " alt=”K&OLogo” >    </div> 
-             
-        </div>
+       <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+            <div class="container"><img src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60"><a class="navbar-brand" href="index.jsp">Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav mr-auto">                                    
+                    
+                    </ul><span class="navbar-text actions"> <a class="login" href="indexUserLogin.jsp">User Log In</a><a class="btn btn-light action-button" role="button" href="indexUserRegistration.jsp">User Sign Up</a></span>
+                </div>
+            </div>
+        </nav>
+        <div data-bs-parallax-bg="true" style="height:1000px;background-image:url(assetsJSP/css/images/mainPageBackgroundv3.png);background-position:center;background-size:cover;"></div>
     <p id="random_number"></p>
     <%
         // Long Integer for first 6 digits of random barcode
@@ -30,24 +45,13 @@
         String linked = Long.toString(first) + 
                 Long.toString(second);
     %>       
-        <div class="flex-container" > 
-        <nav>
-            <div class= "main_home" >                    
-                <a href="index.jsp">Home</a>    
-                <a href="indexUserLogin.jsp">Login</a>  
-            </div>           
-        </nav>  
-    </div>
+        
     <div class="form-container" > 
            
-            <div class="reg-box">             
+                          
             <h1>Complete the User Registration Form</h1>
            <form onsubmit="return validationForm()" action="indexUserRegistrationAction.jsp" method="post" >   
-               <div class="form-image">
-            
-                    <div><img src="assetsJSP/css/images/formBG_Image.png" class="image " alt=”K&OLogo” >    </div> 
-             
-                </div>   
+                 
             <div class="section-one">
                 <div class="form-group">
                     <input class="form-control" type="text" name="fname" placeholder="Enter first name" required="" id="holder"><br>                     
@@ -105,10 +109,10 @@
                        <p>Unique ID</p>
                         <input class="form-control" type="text" name="rand_num" value="<%out.print(linked);%>" readonly="readonly">
                     </div>                    
-                            <button type="submit" class="pure-button pure-button-primary">Confirm</button>     
+                            <button type="submit" class="form-submit-button">Confirm</button>     
                 </div>              
             </form>
-        </div> 
+       
     </div>
                
     <div class="flex-container">             
