@@ -11,14 +11,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Untitled</title>
-     
+    <title>K&O Personnel Management Systems</title>     
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assetsJSP/mainPageCSS/fonts/ionicons.min.css">
     <link rel="stylesheet" href="assetsJSP/mainPageCSS/Footer-Dark.css">
     <link rel="stylesheet" href="assetsJSP/mainPageCSS/Navigation-with-Button.css">
     <link rel="stylesheet" href="assetsJSP/mainPageCSS/styles.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
    
 </head>
  
@@ -50,24 +49,26 @@
                     <div class="col-sm-6 col-md-3 item">
                         <h3>Services</h3>
                         <ul>
-                            <li><a href="#">Web design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Hosting</a></li>
+                            <li><a href="ohNo.jsp">Web design</a></li>
+                            <li><a href="ohNo.jsp">Development</a></li>
+                            <li><a href="ohNo.jsp">Hosting</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-3 item">
                         <h3>About</h3>
                         <ul>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Careers</a></li>
+                            <li><a href="ohNo.jsp">Company</a></li>
+                            <li><a href="indexTeam.jsp">Team</a></li>
+                            <li><a href="ohNo.jsp">Careers</a></li>
                         </ul>
                     </div>
                     <div class="col-md-6 item text">
                         <h3>K&amp;O</h3>
                         <p> K&O Personnel Management System is a web-based application that uses a database to access and store user data, so organizations can better track and monitor their employees.</p>
                     </div>
+                    
                     <div class="col item social">
+                        <h3>Connect With Us</h3>
                         <a  href="https://www.facebook.com/" target="blank"><i class="fa  fa-facebook"></i></a>
                         <a href="https://twitter.com/?lang=en" target="blank"><i class="fa  fa-twitter"></i></a>
                         <a href="https://myaccount.google.com/intro/profile" target="blank"><i class="fa  fa-google-plus"></i></a>
