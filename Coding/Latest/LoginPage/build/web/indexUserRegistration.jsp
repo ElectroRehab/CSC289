@@ -12,6 +12,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
         <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src;  
+        script-src 'self' 'unsafe-eval' 'unsafe-inline'; 
+        'report-sample'; style-src 'report-sample' 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; 
+        img-src 'self'; data; base-uri 'self'; object-src 'self';
+        connect-src 'self'; font-src 'self' https://cdnjs.cloudflare.com; frame-src 'self';  manifest-src 'self'; media-src 'self'; 
+        worker-src 'self'; report-uri https://603fa0ec0e0d6cb74f6e96a4.endpoint.csper.io">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <link rel="stylesheet" href="assetsJSP/css/registrationStyleSheet.css">        
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -26,7 +33,7 @@
     </head>
     <body>
        <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
-            <div class="container"><img src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60"><a class="navbar-brand" href="index.jsp">Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><img src="assetsJSP/css/images/CompanyLogo.png " height="60" width="60"><a class="navbar-brand" href="index.jsp">Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav mr-auto">                                    
                     

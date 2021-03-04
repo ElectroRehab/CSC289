@@ -13,6 +13,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Security-Policy" content="default-src;  
+        script-src 'self' 'nonce-EDNnf03nceIOfn39fn3e9h3sdfa'
+         
+        'report-sample'; style-src 'report-sample' 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; 
+        img-src 'self' data:; base-uri 'self'; object-src 'self';
+        connect-src 'self'; font-src 'self' https://cdnjs.cloudflare.com; frame-src 'self';  manifest-src 'self'; media-src 'self'; 
+        worker-src 'self'; report-uri https://603fa0ec0e0d6cb74f6e96a4.endpoint.csper.io">
+        
+        
         <link rel="stylesheet" href="assetsJSP/css/saveStyleSheet.css">
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
@@ -29,7 +38,7 @@
         <nav style="height: 65px">
         <script>
             function printDiv(divName) {
-                var printContents = document.getElementById(divName).innerHTML;
+                var printContents = document.getElementById(divName).innerText;
                 var originalContents = document.body.innerHTML;
                 document.body.innerHTML = originalContents;                
                 window.print();
@@ -108,8 +117,21 @@
                 <!--Display Unique User Barcode-->
                  <br><br>
                  <img id="barcode"/>
-                 <script>
+                 <script nonce='EDNnf03nceIOfn39fn3e9h3sdfa'>
                     JsBarcode("#barcode", "<%out.print(userBarCode);%>");
+                    
+                   
+                    //var randomNonce = function(length){
+                    //var text = "";
+                    //var possible = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm1234567890";   
+                    //for(var i = 0; i < length; i++){
+                      //  text += possible.charAt(Math.floor(Math.random() * possible.length));
+                    //}
+                   //  return text;
+               // }
+                   
+                   // var rs = randomNonce(15);
+                    
                  </script>
                   <div class="email-ins"><p>Check your email for further instructions. <i class="fas fa-exclamation-triangle" style="color: red"></i></p></div>        
              </div>

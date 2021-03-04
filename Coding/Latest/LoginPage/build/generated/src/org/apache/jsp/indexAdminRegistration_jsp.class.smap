@@ -1,0 +1,14 @@
+SMAP
+indexAdminRegistration_jsp.java
+JSP
+*S JSP
+*F
++ 0 indexAdminRegistration.jsp
+indexAdminRegistration.jsp
+*L
+5,46:44
+52,7:92
+58,61:99
+119:160,3
+120,19:163
+*E

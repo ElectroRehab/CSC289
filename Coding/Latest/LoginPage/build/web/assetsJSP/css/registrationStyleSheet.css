@@ -42,14 +42,9 @@ body
    
 } 
  
-.image{
-    position:absolute;
-    top: 15%; 
-    left:-5%;
-    background-position: center;   
-    height:100%;
-    width:100%;
-     margin: 0 auto;
+.container .image-control{
+    display: inline-block;
+   
 } 
 .form-image{
     position:absolute;
