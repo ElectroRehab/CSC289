@@ -59,7 +59,7 @@ else
         ps = con.prepareStatement(s.getSQLAll()); 
         ps.setString(1,userID);  
         ps.executeUpdate();       
-        response.sendRedirect("indexUserLogin.jsp");            
+        response.sendRedirect("indexUserLogoutSuccess.jsp");            
         //Close connections
         ps.close();        
         con.close();

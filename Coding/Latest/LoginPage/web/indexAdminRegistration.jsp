@@ -9,13 +9,6 @@
     <head>
             
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta http-equiv="Content-Security-Policy" content="default-src;  
-        script-src 'self' 'unsafe-eval' 'unsafe-inline'; 
-        'report-sample'; style-src 'report-sample' 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; 
-        img-src 'self'; data; base-uri 'self'; object-src 'self';
-        connect-src 'self'; font-src 'self' https://cdnjs.cloudflare.com; frame-src 'self';  manifest-src 'self'; media-src 'self'; 
-        worker-src 'self'; report-uri https://603fa0ec0e0d6cb74f6e96a4.endpoint.csper.io">
-
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -29,22 +22,20 @@
         <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
         <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
         <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
-        
+
 
          
     </head>
     <body>
         <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
-            <div class="container"><img class="image-control" src="assetsJSP/css/images/CompanyLogo.png " height="60" width="60"><a class="navbar-brand" href="index.jsp" >Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><img src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60"><a class="navbar-brand" href="index.jsp" >Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav mr-auto">
                     
                     </ul><span class="navbar-text actions"> <a class="login" href="indexAdminLogin.jsp">Admin Log In</a><a class="btn btn-light action-button" role="button" href="indexAdminRegistration.jsp">Admin Sign Up</a></span>
                 </div>
             </div>
-        </nav> 
-        
-         
+        </nav>
         <div data-bs-parallax-bg="true" style="height:1000px;background-image:url(assetsJSP/css/images/mainPageBackgroundv3.png);background-position:center;background-size:cover;"></div>
    
     <p id="random_number"></p>
@@ -59,7 +50,8 @@
     %>  
     
 
-    <div class="form-container" >                       
+    <div class="form-container" >            
+                        
         
            <form onsubmit="return validationForm()" action="indexAdminRegistrationAction.jsp" method="post" >   
              <h1>Complete the Admin Registration Form</h1>  
@@ -84,20 +76,17 @@
                     <input class="form-control" type="password" name="password_confirm"   placeholder="Re-enter pin" id="confirm_password"  required="required"  />
                 </div>                
                     <script language='javascript' type='text/javascript'>
-                        var password = document.getElementById("password").value;
-                        var confirm_password = document.getElementById("confirm_password").value;
+                        var password = document.getElementById("password")
+                        , confirm_password = document.getElementById("confirm_password");
 
                         function validatePassword(){
                             if(password.value !== confirm_password.value) 
                             {
                                 confirm_password.setCustomValidity("Passwords Don't Match");
-                                 return false; 
                             } 
                             else
                             {
                                 confirm_password.setCustomValidity('');
-                                alert("Passwords Match!"); 
-                                 return true; 
                             }
                         }
 

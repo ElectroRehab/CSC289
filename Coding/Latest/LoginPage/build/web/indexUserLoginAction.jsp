@@ -68,7 +68,7 @@
                 ps.setString(6,userID );  
                 ps.setString(7,pinCode );      
                 ps.executeUpdate();  
-                response.sendRedirect("indexUserLogin.jsp");              
+                response.sendRedirect("indexUserLoginSuccess.jsp");              
             }     
             else{
                 response.sendRedirect("error.jsp");

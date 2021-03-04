@@ -11,14 +11,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta  X-XSS-Protection: 1; mode=block>
-    <meta http-equiv="Content-Security-Policy" content="default-src;  
-    script-src 'self' 'unsafe-eval' 'unsafe-inline'; 
-    'report-sample'; style-src 'report-sample' 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; 
-    img-src 'self'; data; base-uri 'self'; object-src 'self';
-    connect-src 'self'; font-src 'self' https://cdnjs.cloudflare.com; frame-src 'self';  manifest-src 'self'; media-src 'self'; 
-    worker-src 'self'; report-uri https://603fa0ec0e0d6cb74f6e96a4.endpoint.csper.io">    
-    
     <title>K&O Personnel Management Systems</title>     
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assetsJSP/mainPageCSS/fonts/ionicons.min.css">
@@ -49,7 +41,6 @@
             </div>
         </div>
     </nav>
-    
     <div data-bs-parallax-bg="true" style="height:1000px;background-image:url(assetsJSP/css/images/mainPageBackgroundv2.png);background-position:center;background-size:cover;"></div>
     <div class="footer-dark">
         <footer>
