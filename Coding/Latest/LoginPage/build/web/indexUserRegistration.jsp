@@ -13,6 +13,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta http-equiv="Content-Security-Policy" content="default-src;  
+         
+        script-src  'report-sample''self'  'sha256-UBiwPD2T8seqiMf4WoummgVR8fvgmqqaONQXL/ARv2s='    
+        ;style-src 'report-sample' 'self' 'unsafe-inline' 
+        https://cdnjs.cloudflare.com https://fonts.googleapis.com; 
+        img-src 'self' data:; base-uri 'self'; object-src 'self';object-src 'none'; base-uri 'self'; 
+        connect-src 'self'; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; 
+        frame-src 'self'; img-src 'self'; 
+        manifest-src 'self'; media-src 'self'; report-uri https://604101920e0d6cb74f6e97d3.endpoint.csper.io/; 
+        worker-src 'none';">
+        
+         
         <link rel="stylesheet" href="assetsJSP/css/registrationStyleSheet.css">        
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assetsJSP/mainPageCSS/Navigation-with-Button.css">

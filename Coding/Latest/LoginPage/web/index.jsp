@@ -11,22 +11,28 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src;        
+        script-src 'self' 'sha256-OzqmAO+SFutn2tx7ipegj2ASyYCgLzk+60O8Tb/3fkE=';     
+        style-src 'report-sample' 'self' 'unsafe-inline' 
+        https://cdnjs.cloudflare.com https://fonts.googleapis.com; 
+        img-src 'self' data:; base-uri 'self'; object-src 'self'; 
+        connect-src 'self'; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; 
+        frame-src 'self';  
+        manifest-src 'self'; media-src 'self';  
+        worker-src 'none';">
     <title>K&O Personnel Management Systems</title>     
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assetsJSP/mainPageCSS/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">     
     <link rel="stylesheet" href="assetsJSP/mainPageCSS/Footer-Dark.css">
     <link rel="stylesheet" href="assetsJSP/mainPageCSS/Navigation-with-Button.css">
     <link rel="stylesheet" href="assetsJSP/mainPageCSS/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
    
-</head>
- 
+</head> 
 <body>
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
         <div class="container"><a class="navbar-brand" href="index.jsp">K&O</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav navbar-nav mr-auto">
-                    
+                <ul class="nav navbar-nav mr-auto">                    
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Access </a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="indexUserLogin.jsp">Clock-In</a><a class="dropdown-item" href="indexUserLogout.jsp">Clock-Out</a><a class="dropdown-item" href="indexAdminLogin.jsp">Admin Login</a></div>
                     </li>
@@ -35,8 +41,7 @@
                     </li>
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Info </a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="indexAboutCompany.jsp">About</a><a class="dropdown-item" href="indexCompanyMission.jsp">Mission</a><a class="dropdown-item" href="ohNo.jsp">Contact</a></div>
-                    </li>                 
-                    
+                    </li>                    
                 </ul><span class="navbar-text actions"> <a class="login" href="indexAdminLogin.jsp">Admin Log In</a><a class="btn btn-light action-button" role="button" href="indexAdminRegistration.jsp">Admin Sign Up</a></span>
             </div>
         </div>
@@ -82,5 +87,4 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
 </body>
-
 </html>

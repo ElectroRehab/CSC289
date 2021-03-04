@@ -56,14 +56,6 @@ public final class save_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <head>\r\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
       out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n");
-      out.write("        <meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'self';  \r\n");
-      out.write("        script-src 'self'; \r\n");
-      out.write("        'report-sample'; style-src 'report-sample' 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; \r\n");
-      out.write("        img-src 'self' ; base-uri 'self'; object-src 'self';\r\n");
-      out.write("        connect-src 'self';\r\n");
-      out.write("        font-src 'self' https://cdnjs.cloudflare.com; frame-src 'self';\r\n");
-      out.write("        manifest-src 'self'; media-src 'self'; \r\n");
-      out.write("        worker-src 'self'; report-uri https://603fa0ec0e0d6cb74f6e96a4.endpoint.csper.io\">\r\n");
       out.write("        <link rel=\"stylesheet\" href=\"assetsJSP/css/saveStyleSheet.css\">\r\n");
       out.write("        <link rel=\"stylesheet\" href=\"assets/bootstrap/css/bootstrap.min.css\">\r\n");
       out.write("        <link rel=\"stylesheet\" href=\"assets/fonts/fontawesome-all.min.css\">\r\n");
@@ -80,7 +72,7 @@ public final class save_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <nav style=\"height: 65px\">\r\n");
       out.write("        <script>\r\n");
       out.write("            function printDiv(divName) {\r\n");
-      out.write("                var printContents = document.getElementById(divName).innerText;\r\n");
+      out.write("                var printContents = document.getElementById(divName).innerHTML;\r\n");
       out.write("                var originalContents = document.body.innerHTML;\r\n");
       out.write("                document.body.innerHTML = originalContents;                \r\n");
       out.write("                window.print();\r\n");
