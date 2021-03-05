@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="Content-Security-Policy" content="default-src;        
         script-src 'self' 'sha256-OzqmAO+SFutn2tx7ipegj2ASyYCgLzk+60O8Tb/3fkE=';     
-        style-src 'report-sample' 'self' 'unsafe-inline' 
+        style-src 'report-sample' 'self'  
         https://cdnjs.cloudflare.com https://fonts.googleapis.com; 
         img-src 'self' data:; base-uri 'self'; object-src 'self'; 
         connect-src 'self'; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; 
@@ -67,11 +67,7 @@
                             <li><a href="ohNo.jsp">Careers</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-6 item text">
-                        <h3>K&amp;O</h3>
-                        <p> K&O Personnel Management System is a web-based application that uses a database to access and store user data, so organizations can better track and monitor their employees.</p>
-                    </div>
-                    
+                     
                     <div class="col item social">
                         <h3>Connect With Us</h3>
                         <a  href="https://www.facebook.com/" target="blank"><i class="fa  fa-facebook"></i></a>

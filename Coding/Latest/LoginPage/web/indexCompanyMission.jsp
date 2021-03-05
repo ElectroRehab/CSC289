@@ -47,17 +47,19 @@
             </div>
         </div>
     </nav>
-    
-    <div  data-bs-parallax-bg="true" style="height:1000px;background-image:url(assetsJSP/css/images/mainPageBackgroundv3.png);background-position:center;background-size:cover;">
+    <div><img class="image-main"  src="assetsJSP/css/images/mainPageBackgroundv3.png"</div>
+    <div class="container-fluid">
+                <div ><img class="image-logo-mission"  src="assetsJSP/css/images/CompanyLogo.png"</div>
         <div class="flex-container-mission">
+            
             <h1> <b>Mission</b></h1>
-            <div class="flex-column">                
+            <div class="flex-column-mission">                
                 <p>“To create a secure and reliable personnel management system for all organizations worldwide”.</p>
             </div>         
         </div>
         <div class="flex-container-vision">
             <h1> <b>Vision</b></h1>
-            <div class="flex-column">                
+            <div class="flex-column-vision">                
                 <p>“Efficient and reliable tracking system  for all organizations big or small”.</p>
             </div>         
         </div>        
@@ -81,12 +83,7 @@
                             <li><a href="indexTeam.jsp">Team</a></li>
                             <li><a href="ohNo.jsp">Careers</a></li>
                         </ul>
-                    </div>
-                    <div class="col-md-6 item text">
-                        <h3>K&amp;O</h3>
-                        <p> K&O Personnel Management System is a web-based application that uses a database to access and store user data, so organizations can better track and monitor their employees.</p>
-                    </div>
-                    
+                    </div>                   
                     <div class="col item social">
                         <h3>Connect With Us</h3>
                         <a  href="https://www.facebook.com/" target="blank"><i class="fa  fa-facebook"></i></a>

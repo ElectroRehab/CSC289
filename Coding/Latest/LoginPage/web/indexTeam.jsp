@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="assetsJSP/mainPageCSS/styles.css">
     <link rel="stylesheet" href="assetsJSP/css/teamStyleSheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
-   
+    <link rel="stylesheet" href="assetsJSP/mainPageCSS/mainPage.css">
 </head>
  
 <body>
@@ -43,13 +43,25 @@
             </div>
         </div>
     </nav>
-    <div class="image-container">
-        <h1><b>Company Team</b></h1>
-        <div class="image-team-control">
-            
-            <div class="image-one-ore"><img class="image-oreant" src="assetsJSP/css/images/Ore_Image.jpg"</div> 
-            <h3 style="color:black;font-family: microsoft, himalayan;"> <b>Anthony Orengo</b></h3>
+    
+    <div><img class="image-main"  src="assetsJSP/css/images/mainPageBackgroundv3.png"</div>
+    <h1><b>Company Team</b></h1>
+    <div ><img class="image-logo-team"  src="assetsJSP/css/images/CompanyLogo.png"</div>
+    <div class="image-container-jon">
+        
+        <div class="image-team-control-jon">            
+            <div class="image-two-kin"><img class="image-kinjon" src=" "</div> 
+            <h3 class="text-jon">Jon King</h3>
+            </div>
         </div>
+    </div>
+    <div class="image-container-ore">
+        <div class="image-team-control-ore">            
+            <div class="image-one-ore"><img class="image-oreant" src="assetsJSP/css/images/Ore_img.png"</div> 
+            <h3 class="text-ant">Anthony Orengo</h3>
+            </div>
+        </div>
+        
     </div>
   
     <div class="footer-dark">
@@ -71,11 +83,7 @@
                             <li><a href="#">Team</a></li>
                             <li><a href="#">Careers</a></li>
                         </ul>
-                    </div>
-                    <div class="col-md-6 item text">
-                        <h3>K&amp;O</h3>
-                        <p> K&O Personnel Management System is a web-based application that uses a database to access and store user data, so organizations can better track and monitor their employees.</p>
-                    </div>
+                    </div>                 
                     
                     <div class="col item social">
                         <h3>Connect With Us</h3>
