@@ -15,13 +15,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
         <meta http-equiv="Content-Security-Policy" content="default-src;  
          
-        script-src  'report-sample''self'  'sha256-UBiwPD2T8seqiMf4WoummgVR8fvgmqqaONQXL/ARv2s='    
+        script-src 'self'  'sha256-JE0280krcqkShSI9tiB7uYMolH2Mp4kLOi+tnmU+JI4='    
         ;style-src 'report-sample' 'self' 'unsafe-inline' 
         https://cdnjs.cloudflare.com https://fonts.googleapis.com; 
-        img-src 'self' data:; base-uri 'self'; object-src 'self';object-src 'none'; base-uri 'self'; 
+        img-src 'self' data:; base-uri 'self'; object-src 'self';
         connect-src 'self'; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; 
-        frame-src 'self'; img-src 'self'; 
-        manifest-src 'self'; media-src 'self'; report-uri https://604101920e0d6cb74f6e97d3.endpoint.csper.io/; 
+        frame-src 'self';
+        manifest-src 'self'; media-src 'self'; 
         worker-src 'none';">
         
          
@@ -56,14 +56,10 @@
         // Link integers into one 12 character string barcode. 
         String linked = Long.toString(first) + 
                 Long.toString(second);
-    %>       
-        
-    <div class="form-container" > 
-           
-                          
+    %>         
+    <div class="form-container" >                          
             <h1>Complete the User Registration Form</h1>
-           <form onsubmit="return validationForm()" action="indexUserRegistrationAction.jsp" method="post" >   
-                 
+           <form onsubmit="return validationForm()" action="indexUserRegistrationAction.jsp" method="post" >                 
             <div class="section-one">
                 <div class="form-group">
                     <input class="form-control" type="text" name="fname" placeholder="Enter first name" required="" id="holder"><br>                     
@@ -119,12 +115,11 @@
                     </div>  
                     <div class="form-group">                    
                        <p>Unique ID</p>
-                        <input class="form-control" type="text" name="rand_num" value="<%out.print(linked);%>" readonly="readonly">
+                       <input class="form-control" type="text" name="rand_num" value="<%out.print(linked);%>" readonly="readonly">
                     </div>                    
-                            <button type="submit" class="form-submit-button">Confirm</button>     
+                        <button type="submit" class="form-submit-button">Confirm</button>     
                 </div>              
-            </form>
-       
+            </form>       
     </div>
                
     <div class="flex-container">             

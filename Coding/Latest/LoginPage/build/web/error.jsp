@@ -9,6 +9,17 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src;        
+        script-src 'self';     
+        style-src 'report-sample' 'self' 'unsafe-inline' 
+        https://cdnjs.cloudflare.com https://fonts.googleapis.com; 
+        img-src 'self' data:; base-uri 'self'; object-src 'self'; 
+        connect-src 'self'; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; 
+        frame-src 'self';  
+        manifest-src 'self'; media-src 'self';  
+        worker-src 'none';">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assetsJSP/css/errorPageStyleSheet.css">
         <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
         <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">

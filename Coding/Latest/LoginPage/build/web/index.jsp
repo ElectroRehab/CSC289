@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="assetsJSP/mainPageCSS/Navigation-with-Button.css">
     <link rel="stylesheet" href="assetsJSP/mainPageCSS/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
-   
+ 
 </head> 
 <body>
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
@@ -46,7 +46,7 @@
             </div>
         </div>
     </nav>
-    <div data-bs-parallax-bg="true" style="height:1000px;background-image:url(assetsJSP/css/images/mainPageBackgroundv2.png);background-position:center;background-size:cover;"></div>
+    <div><img class="image-main"  src="assetsJSP/css/images/mainPageBackgroundv2.png"</div>
     <div class="footer-dark">
         <footer>
             <div class="container">

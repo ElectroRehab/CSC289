@@ -8,13 +8,22 @@
 <html>
     <head>
             
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">        
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <title>Admin Registration</title> 
-        <link rel="stylesheet" href="assetsJSP/css/registrationStyleSheet.css">    
-         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <meta http-equiv="Content-Security-Policy" content="default-src;        
+        script-src 'self'  'sha256-awguPNVIIbmCEbxJooc+Chn+d3lL519kkt42gCq2fyA='    
+        ;style-src 'report-sample' 'self' 'unsafe-inline' 
+        https://cdnjs.cloudflare.com https://fonts.googleapis.com; 
+        img-src 'self' data:; base-uri 'self'; object-src 'self';
+        connect-src 'self'; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; 
+        frame-src 'self';
+        manifest-src 'self'; media-src 'self'; 
+        worker-src 'none';">      
+         
+        <link rel="stylesheet" href="assetsJSP/css/registrationStyleSheet.css">        
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assetsJSP/mainPageCSS/Navigation-with-Button.css">
         <link rel="stylesheet" href="assetsJSP/mainPageCSS/styles.css">
         <link rel="stylesheet" href="assets/css/styles.min.css">
@@ -22,9 +31,7 @@
         <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
         <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
         <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
-
-
-         
+        <title>Admin Registration</title>  
     </head>
     <body>
         <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
@@ -47,14 +54,10 @@
         // Link integers into one 12 character string barcode. 
         String linked = Long.toString(first) + 
                 Long.toString(second);
-    %>  
-    
-
-    <div class="form-container" >            
-                        
-        
-           <form onsubmit="return validationForm()" action="indexAdminRegistrationAction.jsp" method="post" >   
-             <h1>Complete the Admin Registration Form</h1>  
+    %> 
+    <div class="form-container" >        
+        <form onsubmit="return validationForm()" action="indexAdminRegistrationAction.jsp" method="post" >   
+            <h1>Complete the Admin Registration Form</h1>  
             <div class="section-one">
                 <div class="form-group">
                     <input class="form-control" type="text" name="fname" placeholder="Enter first name" required="" id="holder"><br>                     
@@ -68,11 +71,11 @@
                 <div class="form-group">
                    <input class="form-control" type="text" name="mobileNo" placeholder="Enter Phone Number" required=""><br>
                 </div>
-               <div class="form-group">
+                <div class="form-group">
                   <p>Create Pin#</p>
                   <input class="form-control" name="password_confirm"  type="password" placeholder="Enter pin" id="password"  required="required"  />
-               </div>
-               <div class="form-group">
+                </div>
+                <div class="form-group">
                     <input class="form-control" type="password" name="password_confirm"   placeholder="Re-enter pin" id="confirm_password"  required="required"  />
                 </div>                
                     <script language='javascript' type='text/javascript'>
@@ -89,32 +92,30 @@
                                 confirm_password.setCustomValidity('');
                             }
                         }
-
                         password.onchange = validatePassword;
                         confirm_password.onkeyup = validatePassword;
                         </script>
-               </div>  
-               <div class="section-two">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="lname" placeholder="Enter last name" required=""><br> 
-                    </div>                   
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="city" placeholder="Enter city" required=""><br> 
-                    </div>  
-                    <div class="form-group">                     
-                        <input class="form-control" type="text" name="zipcode" placeholder="Enter zip code" required=""><br>
-                    </div>  
-                    <div class="form-group">                        
-                     <input class="form-control" type="text" name="email" placeholder="Enter email" required=""><br>   
-                    </div>  
-                    <div class="form-group">                    
-                       <p>Unique ID</p>
-                        <input class="form-control" type="text" name="rand_num" value="<%out.print(linked);%>" readonly="readonly">
-                    </div>                    
-                            <button type="submit" class="form-submit-button">Confirm</button>     
-                </div>              
-            </form>
-         
+            </div>  
+            <div class="section-two">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="lname" placeholder="Enter last name" required=""><br> 
+                </div>                   
+                <div class="form-group">
+                    <input class="form-control" type="text" name="city" placeholder="Enter city" required=""><br> 
+                </div>  
+                <div class="form-group">                     
+                    <input class="form-control" type="text" name="zipcode" placeholder="Enter zip code" required=""><br>
+                </div>  
+                <div class="form-group">                        
+                    <input class="form-control" type="text" name="email" placeholder="Enter email" required=""><br>   
+                </div>  
+                <div class="form-group">                    
+                    <p>Unique ID</p>
+                    <input class="form-control" type="text" name="rand_num" value="<%out.print(linked);%>" readonly="readonly">
+                </div>                    
+                <button type="submit" class="form-submit-button">Confirm</button>     
+            </div>              
+        </form>         
     </div>               
     <div class="flex-container">             
         <footer>            

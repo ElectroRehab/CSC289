@@ -3,7 +3,11 @@
   color:   #000;
   background-color:  #fff;
 }
-
+.image{
+    background-size: cover;
+    background-position: center;
+    background-image: url("assetsJSP/css/images/mainPageBackgroundv2.png");
+}
 .footer-dark h3 {
   margin-top: 0;
   margin-bottom: 12px;

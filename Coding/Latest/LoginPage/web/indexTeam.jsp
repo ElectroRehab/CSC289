@@ -44,10 +44,10 @@
         </div>
     </nav>
     <div class="image-container">
-        <h1 style="text-align: center;color:#000000;font-family: microsoft, himalayan;"><b>Company Team</b></h1>
+        <h1><b>Company Team</b></h1>
         <div class="image-team-control">
             
-            <div><img src="assetsJSP/css/images/Ore_Image.jpg" class="image " alt=”K&OLogo” width="300" height="500" style="border-style: ridge; border-color: gray;border-width: 10px">    </div> 
+            <div class="image-one-ore"><img class="image-oreant" src="assetsJSP/css/images/Ore_Image.jpg"</div> 
             <h3 style="color:black;font-family: microsoft, himalayan;"> <b>Anthony Orengo</b></h3>
         </div>
     </div>

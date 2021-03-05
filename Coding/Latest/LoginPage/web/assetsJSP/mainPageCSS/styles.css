@@ -1,3 +1,10 @@
 p{    
     color:black;
 }
+ .image-main{
+    background-image: url("assetsJSP/css/images/mainPageBackgroundv2.png");
+    background-size: cover;
+   height:1000px;
+   width:1950px;
+   background-position: center;
+}
