@@ -35,9 +35,9 @@
         </nav> 
         <header class="error"> 
             <%-- Displays page title using heading style one --%>
-            <h1> 404</h1>
+            <h1>404</h1>
             <%-- Set paragraph to display message--%>
-            <p>Oops! The page you requested wasn't found. <i class="fas fa-exclamation-triangle"></i></p>                      
+            <p>Oops! The page you requested was not found. <i class="fas fa-exclamation-triangle"></i></p>                      
         </header>
             
     </body>
