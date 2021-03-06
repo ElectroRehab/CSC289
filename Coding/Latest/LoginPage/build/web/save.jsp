@@ -20,8 +20,12 @@
         <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css"> 
         <title>JSP Page</title>
         <script type="text/javascript" src="jsBarcode.all.min.js"></script>
+        <script type="text/javascript">
+	window.history.forward();
+	function noBack() { window.history.forward(); }
+        </script>
     </head>  
-    <body>    
+    <body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">    
           <div class="image">            
             <div><img src="assetsJSP/css/images/mainPageBackgroundv3.png" class="image " alt=”K&OLogo”>    </div>              
         </div>

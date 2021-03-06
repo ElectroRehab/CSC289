@@ -49,7 +49,7 @@ body
     background-position: center;   
     height:100%;
     width:100%;
-     margin: 0 auto;
+    margin: 0 auto;
 } 
 .form-image{
     position:absolute;
@@ -60,43 +60,52 @@ body
     opacity: .1;
     height:100%;
     width:100%;
-     margin: 0 auto;
+    margin: 0 auto;
 } 
 body {
     color:  #cccccc;
     
      
 }
- .form-container h1{
-    
-    position: relative;  
-    top:5%;
-    left:7%;   
-    
-    font-size: 25px; 
+  .form-container .user-reg-title{
+    font-family: microsoft,himalayan;
+    position: absolute;  
+    top:15%;
+    left:4%;   
+    color: #dfe7f1;
+    font-size: 2.5vw; 
 }
-nav a.active{
-	  
+ .form-container .admin-reg-title{
+    font-family: microsoft,himalayan;
+    position: absolute;  
+    top:15%;
+    left:4%;   
+    color: #dfe7f1;
+    font-size: 2.5vw; 
+}
+nav a.active{	  
   	 color: white;
 } 
 nav a:hover {
- 	 background-color: #ddd;
-  	 color: black;
-          text-decoration: none; 
+    background-color: #66d7d7;
+    color: black;
+    text-decoration: none;
+    height:auto;
+    border-radius: 10px;
 }
  
 nav a {
-  	float: left;
-  	color: #f2f2f2;
-  	text-align: center;
-  	padding: 12px 15px;
-       margin: 0 auto;
-  	text-decoration: none;
-  	font-size: 20px;
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px 15px;
+    margin: 0 auto;
+    text-decoration: none;
+    font-size: 20px;
 }
+ 
 .home-btn{
-    background-color: black;
-    
+    background-color: black;    
     border-width: 4px;
     border-color: gold;
     border-radius: 10px;
@@ -109,7 +118,7 @@ nav a {
 } 
 
 .form-container {
-  display: table;
+  display: table;  
   height:100%;
   max-width: 900px;
   width: 100%;
@@ -121,7 +130,7 @@ nav a {
  .form-group .form-control {
   height:100%;
   width:100%;
-   margin: 0 auto;
+  margin: 0 auto;
   background: #f7f9fc;
   border: none;
   border-bottom: 1px solid #dfe7f1;
@@ -134,22 +143,15 @@ nav a {
  
  
 .form-control::placeholder {
-  color: blue;
-  font-size: 15px;
-  
+  color: black;
+  font-size:20px;
+  opacity: .7;
 }
  
-
- .form-container h1
-{
-    color: #000;
-    position: absolute;
-    font-size: 30px;
-    top:12%;
-    left:2%;  
-}
+ 
   .section-one  {     
     position: absolute; 
+    
     height:80%;
     width:25%;
     top:60%;
@@ -157,19 +159,19 @@ nav a {
     color: black;
     transform: translate(-50%,-50%);
     text-align: left;
-    font-size: 22px; 
+    font-size: 23px; 
 }
  
-  .section-two{
-    
-    position: absolute;    
-     height:80%;
+  .section-two{    
+    position: absolute;
+        
+    height:80%;
     width:25%;
     top:60%;
     left:45%;
     transform: translate(-50%,-50%);
     text-align: left;
-    font-size: 22px;
+    font-size: 20px;
     color:black;
 }
 
@@ -180,36 +182,37 @@ nav a {
     
 }
  .form-group input[type="text"] {
+     border-radius: 5px;      
      margin: 15px;
      padding: 25px;
      border: none;
-     border-bottom: 2px solid black;
-      
+     border: .2vw  solid black;
+     background-color: #f2f2f2; 
      color: black;
      font-size: 22px;    
-}
- .passwordControl {
+ }
+ 
+ .form-group p{ 
      
     position:absolute;
-    top:75%;     
-    border-width:2px;   
+    font-family: microsoft,himalayan;
+    font-size: 1.7vw;  
+    width:75%;
+    top:72%;
+    left:5%;
 }
- .passwordControl h1{     
-    position:relative;  
-    font-size: 25px;       
-}
- .passwordControl p{     
-    position:relative;  
-}
+  
+
+
  .form-group  input[type="password"]{
-    margin: 15px;
-    padding: 25px; 
-    position:relative;    
-    border: none;
-    border-bottom: 3px solid black;      
-    color: black;
-    font-size: 15px;       
-    text-align: left;
+     border-radius: 5px;      
+     margin: 15px;
+     padding: 25px;
+     border: none;
+     border: .2vw  solid black;
+     background-color: #f2f2f2; 
+     color: black;
+     font-size: 22px; 
 }
 .image-control{
     position:relative;   
@@ -244,6 +247,16 @@ nav a {
     color:white;	
     font-size: 24px;
     text-align: center;
+}
+.form-submit-button.active {
+    color:white;
+}
+ .form-submit-button :hover {
+    background-color: #66d7d7;
+    color: black;
+    text-decoration: none;
+    height:auto;
+    border-radius: 10px;   
 }
 .sticky-footer{
    position: fixed;

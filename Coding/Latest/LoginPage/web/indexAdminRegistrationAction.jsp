@@ -31,11 +31,17 @@
     String mobileNo=request.getParameter("mobileNo");
     String email=request.getParameter("email");
     String password=request.getParameter("password_confirm");
+    String passwordCheck=request.getParameter("password_Check"); 
     String image="https://drive.google.com/uc?export=view&id=1dYZ2xxA1DIwNcwdEwqRypTDkc4danQos";
     String ident = "admin";
     String timeBase = "00:00:00";
     
-    try{
+    if(password != passwordCheck || password.length() < 4 && passwordCheck.length() < 4 || password.length() > 10 && passwordCheck.length() > 10 ){
+       out.print("Pins Do not Match");
+       response.sendRedirect("regError.jsp");
+    }
+    else{
+         try{
         // Create a new clean conneciton.
         Connection con = null;
         // Create object
@@ -66,6 +72,8 @@
     // Catch
     catch(Exception e){ 
         out.println(e); 
+    }
+    
     }
 %> 
 </html>

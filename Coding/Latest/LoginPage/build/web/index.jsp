@@ -26,7 +26,10 @@
     <link rel="stylesheet" href="assetsJSP/mainPageCSS/Navigation-with-Button.css">
     <link rel="stylesheet" href="assetsJSP/mainPageCSS/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
- 
+    <script type="text/javascript">
+	window.history.forward();
+	function noBack() { window.history.forward(); }
+    </script>
 </head> 
 <body>
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">

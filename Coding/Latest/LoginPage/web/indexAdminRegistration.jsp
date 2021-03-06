@@ -43,8 +43,7 @@
                 </div>
             </div>
         </nav>
-        <div data-bs-parallax-bg="true" style="height:1000px;background-image:url(assetsJSP/css/images/mainPageBackgroundv3.png);background-position:center;background-size:cover;"></div>
-   
+        <div ><img class="image-reg" src="assetsJSP/css/images/mainPageBackgroundv3.png"</div>     
     <p id="random_number"></p>
     <%
         // Long Integer for first 6 digits of random barcode
@@ -71,30 +70,17 @@
                 <div class="form-group">
                    <input class="form-control" type="text" name="mobileNo" placeholder="Enter Phone Number" required=""><br>
                 </div>
-                <div class="form-group">
-                  <p>Create Pin#</p>
-                  <input class="form-control" name="password_confirm"  type="password" placeholder="Enter pin" id="password"  required="required"  />
+                 <div class="form-group">
+                     <p > 
+                     1. Passwords must match
+                     2. Length Greater than 4 less than 10</p>
+                     
+                  <input class="form-control" name="password_confirm"  type="password" placeholder="Enter pin" id="plainText1"  required="required"  />
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="password" name="password_confirm"   placeholder="Re-enter pin" id="confirm_password"  required="required"  />
+                    <input class="form-control" name="password_Check"   type="password" placeholder="Re-enter pin" id="plainText2"  required="required"  />
                 </div>                
-                    <script language='javascript' type='text/javascript'>
-                        var password = document.getElementById("password")
-                        , confirm_password = document.getElementById("confirm_password");
-
-                        function validatePassword(){
-                            if(password.value !== confirm_password.value) 
-                            {
-                                confirm_password.setCustomValidity("Passwords Don't Match");
-                            } 
-                            else
-                            {
-                                confirm_password.setCustomValidity('');
-                            }
-                        }
-                        password.onchange = validatePassword;
-                        confirm_password.onkeyup = validatePassword;
-                        </script>
+                     
             </div>  
             <div class="section-two">
                 <div class="form-group">

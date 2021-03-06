@@ -30,12 +30,18 @@
     String mobileNo=request.getParameter("mobileNo");
     String email=request.getParameter("email");
     String password=request.getParameter("password_confirm");    
+    String passwordCheck=request.getParameter("password_Check");
     String image="https://drive.google.com/uc?export=view&id=1AhrTHw6xzWn-AOOxnNsPlKyZLX3l9g3i";
     String ident = "user";
     String timeBase = "00:00:00";
 
-    //Make changes to the connection string(database name, user/password)
-    //Make changes to the String query(change table name)
+     if(password != passwordCheck || password.length() < 4 && passwordCheck.length() < 4  || password.length() > 10 && passwordCheck.length() > 10 ){
+       out.print("Pins Do not Match");
+       response.sendRedirect("regError.jsp");
+    }
+    else{
+      //Make changes to the connection string(database name, user/password)
+      //Make changes to the String query(change table name)
     try{
         // Create a new clean conneciton.
         Connection con = null;
@@ -63,6 +69,7 @@
     }
     catch(Exception e){
         out.println(e); 
+    }
     }
 %>
 </html>
