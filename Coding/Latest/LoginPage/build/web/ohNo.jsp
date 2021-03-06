@@ -26,16 +26,15 @@
     </head>
        
     <body>
-            <div  data-bs-parallax-bg="true" style="height:1000px;background-image:url(assetsJSP/css/images/25511.jpg);background-position:center;background-size:cover;">
+        <div><img class="image-ohNo"  src="assetsJSP/css/images/25511.jpg"></div>
 
+ 
          
         <nav>
             <div class= "main_home" >                    
                 <a href="index.jsp">Home</a> 
             </div>
 	</nav>
-        <div>
-            <h2>Page is Under Construction</h2>
-        </div>         
+                  
     </body>
 </html>
