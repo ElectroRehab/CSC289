@@ -15,8 +15,8 @@ p{
     background-position: center;
 }
 .image-ohNo{
-    background-size:contain;
-    width:50%;
+    background-size:cover;
+    width:100%;
     height:1000px;    
     background-position: center;
 }

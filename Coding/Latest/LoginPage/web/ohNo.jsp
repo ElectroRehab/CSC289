@@ -19,7 +19,7 @@
         frame-src 'self';  
         manifest-src 'self'; media-src 'self';  
         worker-src 'none';"> 
-        
+        <link rel="stylesheet" href="assetsJSP/mainPageCSS/styles.css">
         <link rel="stylesheet" href="assetsJSP/css/registrationStyleSheet.css">
         <link rel="stylesheet" href="assetsJSP/mainPageCSS/mainPage.css">  
         <title>Login</title>

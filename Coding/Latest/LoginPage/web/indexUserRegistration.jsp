@@ -58,7 +58,7 @@
                 Long.toString(second);
     %>         
     <div class="form-container" >                          
-            <h1>Complete the User Registration Form</h1>
+            <h1 class="reg-form-title">Complete the User Registration Form</h1>
            <form onsubmit="return validationForm()" action="indexUserRegistrationAction.jsp" method="post" >                 
             <div class="section-one">
                 <div class="form-group">

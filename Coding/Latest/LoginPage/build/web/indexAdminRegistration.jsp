@@ -56,7 +56,7 @@
     %> 
     <div class="form-container" >        
         <form onsubmit="return validationForm()" action="indexAdminRegistrationAction.jsp" method="post" >   
-            <h1>Complete the Admin Registration Form</h1>  
+            <h1 class="reg-form-title">Complete the Admin Registration Form</h1>  
             <div class="section-one">
                 <div class="form-group">
                     <input class="form-control" type="text" name="fname" placeholder="Enter first name" required="" id="holder"><br>                     

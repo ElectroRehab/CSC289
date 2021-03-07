@@ -13,6 +13,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src;        
+        script-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com;  ;     
+        style-src 'report-sample' 'self' 'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='
+        'sha256-z7zcnw/4WalZqx+PrNaRnoeLz/G9WXuFqV1WCJ129sg=' https://cdnjs.cloudflare.com https://fonts.googleapis.com; 
+        img-src 'self' data:; base-uri 'self'; object-src 'self'; 
+        connect-src 'self'; font-src 'self'  https://cdnjs.cloudflare.com https://fonts.gstatic.com; 
+        frame-src 'self';  
+        manifest-src 'self'; media-src 'self';  
+        worker-src 'none';">
     <title>Dashboard - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
      <link rel="stylesheet" href="assetsJSP/css/adminControl.css">
@@ -30,7 +39,7 @@
                     <div><img src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60"></div>
                     
                 </a>
-                <div class="sidebar-brand-text mx-3" style="color: white"><span><b>Personnel Management</b></span></div>
+                <div class="text"><span><b>Personnel Management</b></span></div>
                 <hr class="sidebar-divider my-0">
                 <ul class="nav navbar-nav text-light" id="accordionSidebar">
                     <li class="nav-item"><a class="nav-link active" href="indexAdminControl.jsp"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
@@ -267,7 +276,7 @@
                                                 </div>
                                                 <div class="col">
                                                     <div class="progress progress-sm">
-                                                        <div class="progress-bar bg-info" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"><span class="sr-only">50%</span></div>
+                                                        <div class="progress-bar bg-info" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><span class="sr-only">50%</span></div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -329,7 +338,7 @@
                                         
                     <div class="row">
                         <div class="col-lg-6 mb-4">
-                      
+                      <%--
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="text-primary font-weight-bold m-0">Taskings</h6>
@@ -358,6 +367,7 @@
                                     </div>
                                 </div>
                             </div> 
+                            --%>
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="text-primary font-weight-bold m-0">Todo List</h6>
@@ -369,7 +379,7 @@
                                                          
 
                 <div class="form-group" >                  
-                    <input class="form-control" type="text" name="adminID" placeholder="Enter Task" style="height:50px; width:500px"><br>
+                    <input class="form-control" type="text" name="adminID" placeholder="Enter Task"><br>
                 </div>   
                  
                 <div class="form-group">
@@ -423,7 +433,7 @@
                                 </ul>
                             </div>
                         </div>
-                         
+                        <%-- 
                         <div class="col">
                             <div class="row">
                                 <div class="col-lg-6 mb-4">
@@ -475,7 +485,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> 
+                        </div> --%>
                     </div>
                 </div>
                                         <img class="company-logo" src="assetsJSP/css/images/CompanyLogo.png" height="375" width="375">

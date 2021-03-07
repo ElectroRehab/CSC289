@@ -7,7 +7,17 @@ and open the template in the editor.
     Created on : Feb 26, 2021, 9:56:33 AM
     Author     : Anthony
 */
-
+.text{
+    color:white;
+}
+.progress progress-sm .progress-bar bg-info{
+    width:50%;
+    
+}
+.form-group .form-control{
+    height:50px;
+    width:500px;
+}
 .company-logo{
     
     position:relative;

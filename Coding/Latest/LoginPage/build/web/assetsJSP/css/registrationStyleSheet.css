@@ -16,6 +16,13 @@
  * {
   box-sizing: border-box;
 }
+.reg-form-title{
+    position:absolute;
+    top: 15%; 
+    left:5%;
+    color:whitesmoke;
+     
+}
 nav
 {
     overflow: hidden;          
