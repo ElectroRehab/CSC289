@@ -29,7 +29,7 @@
     String pinCode=request.getParameter("pinCode");
     //Declare and initialize status variable
     String status = "In";    
-    //Display error page if input is null
+    //Display error page if input is not a proper input
     if(userID == "" || pinCode == ""){
         // Go to error page
         response.sendRedirect("error.jsp");
@@ -47,9 +47,33 @@
             // Connect to Database
             Class.forName(rf.getClassDriver());
             con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
+            // Create a Statement to run query from database.
+            sqlInt = 15;
+            s.ReadSQL(sqlInt);
+            Statement st = con.createStatement();
+            ResultSet r = st.executeQuery(s.getSQLAll().toString());
+            // Read through database for user's currently inputted info
+            while(r.next()){
+                // Check for current user input info
+                if(r.getString("userID").equals(userID)){
+                    // Check for correct pin
+                    if(r.getString("pinNum").equals(pinCode)){
+                        // Good PIN Check
+                        // Continue with clock-in process
+                        break;
+                    }
+                    else{
+                        // --Bad PIN check--
+                        // ADD COUNT TOKEN IN THE FUTURE
+                        // Currently return to user login page for incorrect 
+                        // PIN code.
+                        response.sendRedirect("indexUserLogin.jsp");                        
+                    }
+                }
+            }
             // Create a Prepared Statement to run query from database.
             sqlInt = 3;
-            s.ReadSQL(sqlInt);
+            s.ReadSQL(sqlInt);            
             PreparedStatement ps = con.prepareStatement(s.getSQLAll());
             // Set Strings to locations in the database.
             ps.setString(1,userID );
@@ -77,8 +101,8 @@
             // Close all recently opened connections. 
             ps.close();
             rs.close();
-            con.close();   
-        }
+            con.close();        
+        }        
         catch(Exception e){
             out.println(e);
         }   
