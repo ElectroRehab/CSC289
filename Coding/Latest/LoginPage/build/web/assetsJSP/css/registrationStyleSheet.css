@@ -3,11 +3,7 @@
   width: device-width ;
   zoom: 1.0 ;
 }
--moz-appearance {
-   background-color: red !important;
-   color: red !important;
  
-}
 @-ms-viewport {
   width: device-width ;
 }
@@ -22,6 +18,15 @@
     left:5%;
     color:whitesmoke;
      
+}
+.unique-title{
+    position:relative;
+    text-align: center;
+    font-family: microsoft,himalayan;     
+    top:-1.5%;
+    left:0%;   
+    color: #dfe7f1;
+    font-size: 2vw; 
 }
 nav
 {
@@ -69,27 +74,22 @@ body
     width:100%;
     margin: 0 auto;
 } 
+.item-co-logo
+{
+   opacity: .6; 
+}
 body {
-    color:  #cccccc;
-    
-     
+    color:  #cccccc;    
 }
-  .form-container .user-reg-title{
+  .form-container .reg-form-title{
     font-family: microsoft,himalayan;
     position: absolute;  
     top:15%;
-    left:4%;   
-    color: #dfe7f1;
+    left:10%;   
+    color: #000;
     font-size: 2.5vw; 
 }
- .form-container .admin-reg-title{
-    font-family: microsoft,himalayan;
-    position: absolute;  
-    top:15%;
-    left:4%;   
-    color: #dfe7f1;
-    font-size: 2.5vw; 
-}
+ 
 nav a.active{	  
   	 color: white;
 } 
@@ -98,7 +98,7 @@ nav a:hover {
     color: black;
     text-decoration: none;
     height:auto;
-    border-radius: 10px;
+     
 }
  
 nav a {
@@ -125,6 +125,7 @@ nav a {
 } 
 
 .form-container {
+    
   display: table;  
   height:100%;
   max-width: 900px;
@@ -150,77 +151,76 @@ nav a {
  
  
 .form-control::placeholder {
-  color: black;
-  font-size:20px;
-  opacity: .7;
+  color: #cccccc  ;
+  font-size:1.3vw;
+  opacity: .3;
+  text-align: left;
 }
  
  
   .section-one  {     
-    position: absolute; 
-    
+    position: absolute;   
     height:80%;
-    width:25%;
+    max-width:20%;
     top:60%;
     left:15%;
     color: black;
     transform: translate(-50%,-50%);
     text-align: left;
-    font-size: 23px; 
+    font-size: 16px; 
 }
  
   .section-two{    
-    position: absolute;
-        
+    position: absolute;       
     height:80%;
-    width:25%;
+    max-width:22%;
     top:60%;
     left:45%;
     transform: translate(-50%,-50%);
     text-align: left;
-    font-size: 20px;
+    font-size: 16px;
     color:black;
 }
 
-.reg-box input{
-    
+.reg-box input{    
     padding:0;
     margin:0;
     
 }
  .form-group input[type="text"] {
      border-radius: 5px;      
-     margin: 15px;
-     padding: 25px;
+     width: auto;
+     height:auto; 
      border: none;
      border: .2vw  solid black;
      background-color: #f2f2f2; 
      color: black;
-     font-size: 22px;    
+    font-size: 2vw; 
  }
  
- .form-group p{ 
-     
-    position:absolute;
+ .pass-inst p{     
+    position:relative;
     font-family: microsoft,himalayan;
-    font-size: 1.7vw;  
-    width:75%;
-    top:72%;
-    left:5%;
+    font-size: 1.7vw;
+    text-align: center;
+    
+    top:55%;     
 }
-  
-
-
- .form-group  input[type="password"]{
+ .pass-inst{    
+        
+    top:45%;     
+}
+.form-group  input[type="password"]{
      border-radius: 5px;      
-     margin: 15px;
-     padding: 25px;
+     width: auto;
+     height:auto; 
      border: none;
      border: .2vw  solid black;
      background-color: #f2f2f2; 
      color: black;
-     font-size: 22px; 
+    font-size: 2vw; 
 }
+ 
 .image-control{
     position:relative;   
     top:5%;   
@@ -240,19 +240,22 @@ nav a {
 } 
 
 .form-submit-button[type="submit"]{
-    margin:0; 
-    padding:0;
+    border-radius: 5px;      
+    width: auto;
+    height:auto; 
+    border: none;
+    border: .2vw  solid black;
+    background-color: #f2f2f2; 
+    color: black;
+    font-size: 2vw;
     position: relative;
     background: #333;
-    top:1%;
-    left:44%;
-    height: 50px;    
-    border-width: 4px;
-    border-color: black;
-    border-radius: 5px;
-    width: 125px; 
+    top:0%;
+    left:30%;
+    
+     
     color:white;	
-    font-size: 24px;
+    font-size: 2vw;
     text-align: center;
 }
 .form-submit-button.active {
@@ -270,9 +273,8 @@ nav a {
     left: 0;
     bottom: 0px;
     width: 100%;
-    height: 5%;   
-    background-color: #333;     
-   
+    height: 10%;   
+    background-color:  #f7f9fc;  
     text-align: center;
 }
 .sticky-footer h4 {
@@ -285,7 +287,7 @@ nav a {
 .sticky-footer p {
    
     font-size: 18px;
-    color: white;
+    color:  #333;
     font-family: Courier New, monospace;
     text-align: center;
 }

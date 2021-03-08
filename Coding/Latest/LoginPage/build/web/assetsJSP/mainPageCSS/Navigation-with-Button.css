@@ -9,7 +9,7 @@
   margin-bottom: 0;
   font-size: 22px;
 }
-
+ 
 @media (min-width:768px) {
   .navigation-clean-button {
     padding-top: 1rem;
@@ -20,17 +20,33 @@
 }
 
 .navigation-clean-button .navbar-brand {
-  font-weight: bold;
+   
   color: inherit;
-  
+  line-height: 1;
+  font-size: 33px;
+  color: #37434d;
+  font-family: microsoft,himalayan;
 }
-
-.navigation-clean-button .navbar-brand:hover {
+nav a:hover {
+    
+    text-align: center;
+    background-color:  #66d7d7;
+    height: 45px;
+    color: black;
+    text-decoration: none;
+     
+    
+}
+nav a {
+    text-align: center;
+   
+}
+.navigation-clean-button .navbar-brand  {
   color: #222;
 }
 
 .navigation-clean-button.navbar-dark .navbar-brand:hover {
-  color: #f0f0f0;
+  color:  #f0f0f0;
 }
 
 .navigation-clean-button .navbar-brand img {

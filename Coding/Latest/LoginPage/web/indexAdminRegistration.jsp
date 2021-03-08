@@ -35,7 +35,7 @@
     </head>
     <body>
         <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
-            <div class="container"><img src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60"><a class="navbar-brand" href="index.jsp" >Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><img class="item-co-logo" src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60"><a class="navbar-brand" href="index.jsp" >Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav mr-auto">
                     
@@ -71,9 +71,8 @@
                    <input class="form-control" type="text" name="mobileNo" placeholder="Enter Phone Number" required=""><br>
                 </div>
                  <div class="form-group">
-                     <p > 
-                     1. Passwords must match
-                     2. Length Greater than 4 less than 10</p>
+                    <div class="pass-inst "><p  > 
+                     Create your Pin#</p></div>
                      
                   <input class="form-control" name="password_confirm"  type="password" placeholder="Enter pin" id="plainText1"  required="required"  />
                 </div>
@@ -95,10 +94,11 @@
                 <div class="form-group">                        
                     <input class="form-control" type="text" name="email" placeholder="Enter email" required=""><br>   
                 </div>  
+                
                 <div class="form-group">                    
-                    <p>Unique ID</p>
                     <input class="form-control" type="text" name="rand_num" value="<%out.print(linked);%>" readonly="readonly">
-                </div>                    
+                </div>    
+                <div class="unique-title"><p>Unique ID#</p></div>                
                 <button type="submit" class="form-submit-button">Confirm</button>     
             </div>              
         </form>         

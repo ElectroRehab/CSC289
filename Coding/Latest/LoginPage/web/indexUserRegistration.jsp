@@ -74,9 +74,9 @@
                    <input class="form-control" type="text" name="mobileNo" placeholder="Enter Phone Number" required=""><br>
                 </div>
                 <div class="form-group">
-                  <p>Create Pin#</p> 
-                     <h6>1. Passwords must match</h6>
-                     <h6>2. Length Greater than 4 less than 10</h6>
+                  <div class="pass-inst ">   <p  > 
+                     1. Passwords must match
+                     2. Length Greater than 4 less than 10</p></div>
                   <input class="form-control" name="password_confirm"  type="password" placeholder="Enter pin" id="plainText1"  required="required"  />
                </div>
                <div class="form-group">

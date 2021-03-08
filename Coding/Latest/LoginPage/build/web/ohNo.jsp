@@ -26,10 +26,7 @@
     </head>
        
     <body>
-        <div><img class="image-ohNo"  src="assetsJSP/css/images/25511.jpg"></div>
-
- 
-         
+        <div><img class="image-ohNo"  src="assetsJSP/css/images/25511.jpg"></div>        
         <nav>
             <div class= "main_home" >                    
                 <a href="index.jsp">Home</a> 

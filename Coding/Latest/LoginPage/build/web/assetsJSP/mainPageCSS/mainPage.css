@@ -14,7 +14,9 @@ and open the template in the editor.
 3. indexCompanyMission.jsp
 4. ohNo.jsp
 */
- 
+.nav-item-co-logo{
+    opacity:.6;
+} 
 .image-logo-team{
     width:auto;
     height:auto;

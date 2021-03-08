@@ -7,7 +7,11 @@ and open the template in the editor.
     Created on : Feb 2, 2021, 10:45:59 AM
     Author     : Anthony
 */
+ -moz-appearance {
+   background-color: red !important;
+   color: red !important;
  
+}
 
 * {
   box-sizing: border-box;
@@ -33,7 +37,7 @@ nav{
     position:fixed;	
     text-decoration: none;
     width: 100%;
-    background-color: #333; 
+    background-color:  #f7f9fc; 
     
 }
 .image{
@@ -49,14 +53,16 @@ nav a.active{
   	 color: white;
 } 
 nav a:hover {
- 	 background-color: #ddd;
+ 	 background-color:  #278c9b;
   	 color: black;
          text-decoration: none;
 }
  
 nav a {
+        font-family: microsoft,himalayan;
+
   	float: left;
-  	color: #f2f2f2;
+  	color:  black;
   	text-align: center;
   	padding: 14px 16px;
   	text-decoration: none;
@@ -86,15 +92,18 @@ h1{
    background-repeat: no-repeat;
    position: absolute; 
 }
+-moz-appearance-  form /* Mozilla */ {
+  background-color:  #278c9b; 
+} 
 .login-clean form {
-    
+  
   width: 275px;
   height: 450px;
   width: 26%; 
   bottom:-15%;
    right:70%;
   margin: 200px  0px 0px 800px;
-  background-color: activecaption;  
+  background-color:  lightgrey;  
   border-radius: 10px;
   color:  #282d32;
   box-shadow: 1px 1px 5px rgba(0,0,0,.3);

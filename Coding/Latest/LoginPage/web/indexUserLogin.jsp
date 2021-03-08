@@ -53,6 +53,7 @@
         </div >
         <div class="flex-container">
            <nav>
+               
                <div  >                    
                         <a href="index.jsp">Home</a>             
                </div>           
