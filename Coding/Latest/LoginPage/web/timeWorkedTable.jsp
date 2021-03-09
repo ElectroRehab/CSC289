@@ -3,6 +3,7 @@
     Created on : Feb 13, 2021, 8:05:37 PM
     Author     : Anthony
 --%>
+<%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <!DOCTYPE html>
 <html>
@@ -186,8 +187,8 @@
                                 </div>
                             </div>
                              <%    
-    try
-    {
+    try{
+        int sqlInt = 0;
         java.util.Date date=new java.util.Date();			
         // Create a new clean conneciton.
         Connection con = null;
@@ -195,6 +196,8 @@
         ReadFile rf = new ReadFile();
         // Run the CSV Reader Class
         rf.ReadFile();
+        // Create object
+        ReadSQL s = new ReadSQL();
         // String for the JBDC Driver Info
         String classDriver = rf.getClassDriver();
         // String used for link to the Remote Database
@@ -207,8 +210,11 @@
         Class.forName(classDriver);
         con = DriverManager.getConnection(link,user,pass);
         Statement st=con.createStatement();
-        ResultSet rs=st.executeQuery("select userdatamain.firstName, userdatamain.lastName,employeetimetracker.userID, totalTime, status from userdatamain,employeetimetracker where employeetimetracker.userID = userdatamain.userID ");
-    %>
+        sqlInt = 16;
+        s.ReadSQL(sqlInt);
+        ResultSet rs=st.executeQuery(s.getSQLAll());
+        
+%>
                             <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
                                 <table class="table my-0" id="dataTable">
                                     <thead>
