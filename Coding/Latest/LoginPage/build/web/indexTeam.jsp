@@ -50,7 +50,7 @@
     <div class="image-container-jon">
         
         <div class="image-team-control-jon">            
-            <div class="image-two-kin"><img class="image-kinjon" src=" "</div> 
+            <div class="image-two-kin"><img class="image-kinjon" src="assetsJSP/css/images/King_Image.jpg"</div> 
             <h3 class="text-jon">Jon King</h3>
             </div>
         </div>
