@@ -1,5 +1,9 @@
  <%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
+<%@page import="java.security.NoSuchAlgorithmException"%>
+<%@page import="java.security.MessageDigest"%>
+<%@page import="java.math.BigInteger"%>
+<%@page import="readfile.HashSHA512Encryption"%>
 <%-- 
     Document   : indexMain.jsp
     Created on : Feb 3, 2021, 6:40:30 AM
@@ -16,6 +20,7 @@
     
 </head>
 <%
+    HashSHA512Encryption hashText = new HashSHA512Encryption();
     int sqlInt = 0;
     String adminID=request.getParameter("adminID");
     
@@ -26,7 +31,11 @@
     else{
         //Make changes to the connection string(database name, user/password)
         //Make changes to the String query(change table name)
+        hashText.hashText = "";
+        hashText.setHashText(pinNum);
+        pinNum = hashText.getHashText();
         try{
+            
             // Create a new clean conneciton.
             Connection con = null;
             // Create object

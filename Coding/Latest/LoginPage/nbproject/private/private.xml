@@ -3,9 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Anthony/Desktop/ProjectFolder/CSC289/Coding/Latest/LoginPage/web/indexAdminControl.jsp</file>
-            <file>file:/C:/Users/Anthony/Desktop/ProjectFolder/CSC289/Coding/Latest/LoginPage/web/index.jsp</file>
-            <file>file:/C:/Users/Anthony/Desktop/ProjectFolder/CSC289/Coding/Latest/LoginPage/web/assetsJSP/mainPageCSS/Navigation-with-Button.css</file>
+            <file>file:/C:/Users/Anthony/Desktop/ProjectFolder/CSC289/Coding/Latest/LoginPage/web/indexAdminLoginAction.jsp</file>
+            <file>file:/C:/Users/Anthony/Desktop/ProjectFolder/CSC289/Coding/Latest/LoginPage/web/indexAdminRegistrationAction.jsp</file>
         </group>
     </open-files>
 </project-private>

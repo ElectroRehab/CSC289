@@ -8,6 +8,10 @@
 <%@page import ="java.sql.*"%>
 <%@page import ="java.time.LocalDateTime"%>
 <%@page import ="java.time.format.DateTimeFormatter"%>
+<%@page import="java.security.NoSuchAlgorithmException"%>
+<%@page import="java.security.MessageDigest"%>
+<%@page import="java.math.BigInteger"%>
+<%@page import="readfile.HashSHA512Encryption"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,6 +21,7 @@
     
 </head>
 <%
+    HashSHA512Encryption hashText = new HashSHA512Encryption();
     int sqlInt = 0;
     //Get Current date and time   
     java.util.Date date=new java.util.Date();
@@ -35,6 +40,12 @@
         response.sendRedirect("error.jsp");
     }
     else{
+        //Reset hashText
+        hashText.hashText = "";
+        //Set hashText to pinCode input
+        hashText.setHashText(pinCode);
+        //Return hashText and set pinCode to hash
+        pinCode = hashText.getHashText();
         try{
             // Create a new clean conneciton.
             Connection con = null;

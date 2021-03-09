@@ -3,6 +3,10 @@
     Created on : Feb 7, 2021, 7:21:53 PM
     Author     : Anthony
 --%>
+<%@page import="java.security.NoSuchAlgorithmException"%>
+<%@page import="java.security.MessageDigest"%>
+<%@page import="java.math.BigInteger"%>
+<%@page import="readfile.HashSHA512Encryption"%>
 <%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <%@page import="java.util.Random"%>
@@ -19,6 +23,7 @@
     <title>Dashboard - Brand</title>    
 </head> 
 <%
+    HashSHA512Encryption hashText = new HashSHA512Encryption();
     int sqlInt = 0;
     String idNum=request.getParameter("rand_num");    
     String fname=request.getParameter("fname");
@@ -35,13 +40,15 @@
     String ident = "user";
     String timeBase = "00:00:00";
 
-     if(password != passwordCheck || password.length() < 4 && passwordCheck.length() < 4  || password.length() > 10 && passwordCheck.length() > 10 ){
+     /*if(password != passwordCheck || password.length() < 4 && passwordCheck.length() < 4  || password.length() > 10 && passwordCheck.length() > 10 ){
        out.print("Pins Do not Match");
        response.sendRedirect("regError.jsp");
     }
-    else{
+    else{*/
       //Make changes to the connection string(database name, user/password)
       //Make changes to the String query(change table name)
+      hashText.setHashText(password);
+      password = hashText.getHashText();
     try{
         // Create a new clean conneciton.
         Connection con = null;
@@ -70,6 +77,6 @@
     catch(Exception e){
         out.println(e); 
     }
-    }
+    //}
 %>
 </html>

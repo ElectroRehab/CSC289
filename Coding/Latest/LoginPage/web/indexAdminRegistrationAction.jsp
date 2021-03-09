@@ -3,12 +3,16 @@
     Created on : Feb 2, 2021, 6:27:44 PM
     Author     : Anthony
 --%>
+<%@page import="java.security.NoSuchAlgorithmException"%>
+<%@page import="java.security.MessageDigest"%>
+<%@page import="java.math.BigInteger"%>
 <%@page import="java.util.Random"%>
 <%@page import="java.sql.*"%>
 <%@page import="com.itextpdf.text.pdf.BarcodeEAN"%>
 <%@page import="java.io.FileOutputStream"%>
 <%@page import="java.io.IOException"%>
 <%@page import="java.util.Random"%>
+<%@page import="readfile.HashSHA512Encryption"%>
 <%@page import="readfile.ReadFile"%>
 <%@page import="readfile.ReadSQL"%>
 <!DOCTYPE html>
@@ -19,6 +23,7 @@
     <title>K & O Tracks</title>    
 </head>
 <%
+    HashSHA512Encryption hashText = new HashSHA512Encryption();
     int sqlInt = 0;
     // Get Parameters from previous page of user inputted information.
     String idNum=request.getParameter("rand_num"); 
@@ -36,11 +41,13 @@
     String ident = "admin";
     String timeBase = "00:00:00";
     
-    if(password != passwordCheck || password.length() < 4 && passwordCheck.length() < 4 || password.length() > 10 && passwordCheck.length() > 10 ){
+    /*if(password != passwordCheck || password.length() < 4 && passwordCheck.length() < 4 || password.length() > 10 && passwordCheck.length() > 10 ){
        out.print("Pins Do not Match");
        response.sendRedirect("regError.jsp");
     }
-    else{
+    else{*/
+        hashText.setHashText(password);
+        password = hashText.getHashText();
          try{
         // Create a new clean conneciton.
         Connection con = null;
@@ -74,6 +81,6 @@
         out.println(e); 
     }
     
-    }
+    //,m }
 %> 
 </html>

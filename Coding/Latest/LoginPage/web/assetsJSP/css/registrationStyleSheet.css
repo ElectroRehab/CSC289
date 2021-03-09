@@ -24,7 +24,7 @@
     text-align: center;
     font-family: microsoft,himalayan;     
     top:-1.5%;
-    left:0%;   
+    left:2%;   
     color: #dfe7f1;
     font-size: 2vw; 
 }
@@ -163,7 +163,7 @@ nav a {
     height:80%;
     max-width:20%;
     top:60%;
-    left:15%;
+    left:12%;
     color: black;
     transform: translate(-50%,-50%);
     text-align: left;
@@ -175,7 +175,7 @@ nav a {
     height:80%;
     max-width:22%;
     top:60%;
-    left:45%;
+    left:47%;
     transform: translate(-50%,-50%);
     text-align: left;
     font-size: 16px;
@@ -202,7 +202,7 @@ nav a {
     position:relative;
     font-family: microsoft,himalayan;
     font-size: 1.7vw;
-    text-align: center;
+    text-align: left;
     
     top:55%;     
 }
@@ -251,7 +251,7 @@ nav a {
     position: relative;
     background: #333;
     top:0%;
-    left:30%;
+    left:32%;
     
      
     color:white;	
