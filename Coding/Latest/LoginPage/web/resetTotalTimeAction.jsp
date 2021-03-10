@@ -3,6 +3,7 @@
     Created on : Feb 13, 2021, 8:02:32 PM
     Author     : Anthony
 --%>
+<%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <%@page import ="java.sql.*"%>
 <%@page import ="java.time.LocalDateTime"%>
@@ -17,6 +18,7 @@
     <title>Dashboard - Brand</title>    
 </head>
 <%
+    int sqlInt = 0;
     //Get Current date and time   
     java.util.Date date=new java.util.Date();			
     Date sqlDate=new java.sql.Date(date.getTime());    
@@ -30,30 +32,21 @@
         Connection con = null;
         // Create object
         ReadFile rf = new ReadFile();
+        // Create object
+        ReadSQL s = new ReadSQL();
         // Run the CSV Reader Class
         rf.ReadFile();
-        // String for the JBDC Driver Info
-        String classDriver = rf.getClassDriver();
-        // String used for link to the Remote Database
-        String link = rf.getLink();
-        // String used for username of the Remote Database
-        String user = rf.getUser();
-        // String used for password to the Remote Database
-        String pass = rf.getPass();
-        // Coneect to Database
-        Class.forName(classDriver);
-        con = DriverManager.getConnection(link,user,pass);
-        Statement st=con.createStatement();
-        String query = "update employeetimetracker set totalTime =  timediff(totalTime,totalTime)";
-        //String query2 = "update * employeetimetracker set totalTime = '"+totalTime+"'";
-        //String query2 = "update employeetimetracker set userID =?,timeIn=?,timeOut=?,totalTime=?,pincode=?, status=? where userID=? && pincode=?";
-        //String query2 = "update employeetimetracker (userID,timeIn,pincode ) values(?,?,?)";
-
-        PreparedStatement ps = con.prepareStatement(query);         
-     
-        ps.executeUpdate();  
-
-        response.sendRedirect("indexAdminControl.jsp");   
+        // Connect to Database
+        Class.forName(rf.getClassDriver());
+        con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
+        // Create a Statement to run query from database.
+        sqlInt = 18;
+        s.ReadSQL(sqlInt);
+        PreparedStatement ps = con.prepareStatement(s.getSQLAll().toString());
+        // Execute & Update Current SQL Statement
+        ps.executeUpdate();
+        
+        response.sendRedirect("indexAdminControl.jsp");
         ps.close();     
         con.close();
     

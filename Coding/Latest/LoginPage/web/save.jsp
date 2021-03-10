@@ -75,7 +75,10 @@
                     ResultSet rs = st.executeQuery(s.getSQLAll());
                     
                     while(rs.next()){
-                        userBarCode = rs.getString("userID");
+                        // User ID
+                        sqlInt = 20;
+                        s.ReadSQL(sqlInt);
+                        userBarCode = rs.getString(s.getSQLAll().toString());
 %>
             <table class="table my-0" id="dataTable">  
                 
@@ -83,21 +86,43 @@
                 <h1><br>Registration Accepted</h1>
                 <thead>
                             <tr>
-                                <th>Unique ID</th>
+                                <th>&nbsp;&nbsp;Unique ID</th>
                                 <th>First Name</th>
                                 <th>Last Name</th>
-                                <th>Email</th>
-                                <th>&nbsp;&nbsp;PIN#</th>
+                                <th>&nbsp;&nbsp;Email</th>
                                 <th>&nbsp;&nbsp;&nbsp;&nbsp;Identifier</th>
                             </tr><br>
                         <tr>
-                            
-                            <td>&nbsp;&nbsp;<%=rs.getString("userID") %></td>
-                            <td>&nbsp;&nbsp;<%=rs.getString("firstName") %></td>
-                            <td>&nbsp;&nbsp;<%=rs.getString("lastName") %></td>
-                            <td>&nbsp;&nbsp;<%=rs.getString("email") %></td>
-                            <td>&nbsp;&nbsp;<%=rs.getString("pinNum") %></td>
-                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=rs.getString("identifier") %></td>
+                            <!-- User ID -->
+                            <%
+                                sqlInt = 20;
+                                s.ReadSQL(sqlInt);
+                            %>                            
+                            <td>&nbsp;&nbsp;<%=rs.getString(s.getSQLAll().toString()) %></td>
+                            <!-- First Name -->
+                            <%
+                                sqlInt = 21;
+                                s.ReadSQL(sqlInt);
+                            %>
+                            <td>&nbsp;&nbsp;<%=rs.getString(s.getSQLAll().toString()) %></td>
+                            <!-- Last Name -->
+                            <%
+                                sqlInt = 22;
+                                s.ReadSQL(sqlInt);
+                            %>
+                            <td>&nbsp;&nbsp;<%=rs.getString(s.getSQLAll().toString()) %></td>
+                            <!-- E-Mail -->
+                            <%
+                                sqlInt = 28;
+                                s.ReadSQL(sqlInt);
+                            %>
+                            <td>&nbsp;&nbsp;<%=rs.getString(s.getSQLAll().toString()) %></td>
+                            <!-- Group -->
+                            <%
+                                sqlInt = 31;
+                                s.ReadSQL(sqlInt);
+                            %>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=rs.getString(s.getSQLAll().toString()) %></td>
                         </tr>
                 </thead>
             </table>

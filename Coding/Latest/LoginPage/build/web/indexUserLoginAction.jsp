@@ -65,10 +65,14 @@
             ResultSet r = st.executeQuery(s.getSQLAll().toString());
             // Read through database for user's currently inputted info
             while(r.next()){
+                sqlInt = 20;
+                s.ReadSQL(sqlInt);
                 // Check for current user input info
-                if(r.getString("userID").equals(userID)){
+                if(r.getString(s.getSQLAll().toString()).equals(userID)){
                     // Check for correct pin
-                    if(r.getString("pinNum").equals(pinCode)){
+                    sqlInt = 29;
+                    s.ReadSQL(sqlInt);
+                    if(r.getString(s.getSQLAll().toString()).equals(pinCode)){
                         // Good PIN Check
                         // Continue with clock-in process
                         break;

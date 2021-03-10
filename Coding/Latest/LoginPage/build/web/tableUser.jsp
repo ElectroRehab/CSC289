@@ -189,9 +189,7 @@
                                             <th>State</th>
                                             <th>Zip Code</th>
                                             <th>Phone Number</th>
-                                            <th>Email</th>                                           
-                                            <th>Password</th>
-                                          
+                                            <th>Email</th>                                          
                                             <th>Identifier</th>
                                         </tr>
                                     </thead>
@@ -211,9 +209,7 @@
                 <td><%=rs.getString("state") %></td>   
                 <td><%=rs.getString("zipcode") %></td>   
                 <td><%=rs.getString("phoneNumber") %></td>   
-                <td><%=rs.getString("email") %></td>   
-                <td><%=rs.getString("pinNum") %></td> 
-                 
+                <td><%=rs.getString("email") %></td>                 
                 <td><%=rs.getString("identifier") %></td>   
                 
             </tr>            
