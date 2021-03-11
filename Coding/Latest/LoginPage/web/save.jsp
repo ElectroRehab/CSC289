@@ -84,6 +84,9 @@
                 
                 <div><img src="assetsJSP/css/images/formBG_Image.png" class="image " alt=”K&OLogo” style="opacity: .1" >    </div> 
                 <h1><br>Registration Accepted</h1>
+                                <div><img src="assetsJSP/css/images/CompanyApprovalSeal.png" class="image-seal " alt=”K&OLogo”>
+
+                <div class="email-ins"><p>Check your email for further instructions. <i class="fas fa-exclamation-triangle" style="color: red"></i></p></div>        
                 <thead>
                             <tr>
                                 <th>&nbsp;&nbsp;Unique ID</th>
@@ -136,11 +139,11 @@
 %>
                 <!--Display Unique User Barcode-->
                  <br><br>
-                 <img id="barcode"/>
+                 <img class= "barcode-image" id="barcode"/>
                  <script>
                     JsBarcode("#barcode", "<%out.print(userBarCode);%>");
                  </script>
-                  <div class="email-ins"><p>Check your email for further instructions. <i class="fas fa-exclamation-triangle" style="color: red"></i></p></div>        
+                  
              </div>
             </div>
     <div class="flex-container">        
