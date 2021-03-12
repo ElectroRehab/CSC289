@@ -1,43 +1,73 @@
 package readfile;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.URL;
-
 public class ReadTitles {
     // String used for SQL Code to link database info
     String sqlAll;
-    
     // User Element Selection
-    int p = 0;    
-    public void ReadTitles(int p) throws FileNotFoundException, IOException{
+    int p = 0;
+    
+    public void ReadTitles(int p){
         this.p = p;
-        // Row Count
-        int i = 0;
-        // File URL Location
-        String fName = "https://dl.dropboxusercontent.com/s/54rh8ic1mdra3qk/sqltitle.csv";
-        // URL Object 
-        URL url = new URL(fName);
-        // Buffered Reader and Input Sctream to read CSV File located in cloud.
-        BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
-        // Determine what is considered a line
-        String thisLine;
-        // Iterate through CSV File to find the proper connection information.
-        while((thisLine = reader.readLine()) != null){
-            // Array to store all elements seperated by next line
-            String readBlock[] = thisLine.split("\n");
-            // For loop to read through the array and set correct statement
-            for(int j = 0; j < readBlock.length; j++){
-                if(p == i){
-                        sqlAll = readBlock[j].replace("\"","");
-                }
-                // check next row
-                i++;
-            }
+        // If-ElseIf-Else statements for SQL statements thorughout program.
+        if(p == 1){
+            sqlAll = "adminID";
         }
+        else if(p == 2){
+            sqlAll = "userID";
+        }
+        else if(p == 3){
+            sqlAll = "firstName";
+        }
+        else if(p == 4){
+            sqlAll = "lastName";
+        }
+        else if(p == 5){
+            sqlAll = "address";
+        }
+        else if(p == 6){
+            sqlAll = "city";
+        }
+        else if(p == 7){
+            sqlAll = "state";
+        }
+        else if(p == 8){
+            sqlAll = "zipcode";
+        }
+        else if(p == 9){
+            sqlAll = "phoneNumber";
+        }
+        else if(p == 10){
+            sqlAll = "email";
+        }
+        else if(p == 11){
+            sqlAll = "pinNum";
+        }
+        else if(p == 12){
+            sqlAll = "imageID";
+        }
+        else if(p == 13){
+            sqlAll = "identifier";
+        }
+        else if(p == 14){
+            sqlAll = "ID";
+        }
+        else if(p == 15){
+            sqlAll = "totalTime";
+        }
+        else if(p == 16){
+            sqlAll = "status";
+        }
+        else if(p == 17){
+            sqlAll = "timeIn";
+        }
+        else if(p == 18){
+            sqlAll = "timeOut";
+        }
+        else{
+            sqlAll = "NULL";
+        }        
     }
+    // Return String
     public String getSQLTitles(){
         return sqlAll;
     }

@@ -30,14 +30,16 @@ public class ReadSQL {
             String readBlock[] = thisLine.split("\n");
             // For loop to read through the array and set correct statement
             for(int j = 0; j < readBlock.length; j++){
+                // Check row
                 if(p == i){
                         sqlAll = readBlock[j].replace("\"","");
                 }
-                // check next row
+                // Check next row
                 i++;
             }
         }
     }
+    // Return proper SQL Statement for program. 
     public String getSQLAll(){
         return sqlAll;
     }
