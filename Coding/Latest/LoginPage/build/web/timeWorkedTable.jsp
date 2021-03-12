@@ -3,6 +3,7 @@
     Created on : Feb 13, 2021, 8:05:37 PM
     Author     : Anthony
 --%>
+<%@page import="readfile.ReadTitles"%>
 <%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <!DOCTYPE html>
@@ -198,6 +199,8 @@
         rf.ReadFile();
         // Create object
         ReadSQL s = new ReadSQL();
+        // Create object
+        ReadTitles t = new ReadTitles();
         // Connect to Database
         Class.forName(rf.getClassDriver());
         con = DriverManager.getConnection(rf.getLink(), rf.getUser(), rf.getPass());
@@ -225,12 +228,21 @@
               
             %>               
             <tr>           
-                <td><%=rs.getString("firstName") %></td>
-                <td><%=rs.getString("lastName") %></td>
-                <td><%=rs.getString("userID") %></td>
-                 
-                <td><%=rs.getString("totalTime") %></td>   
-                <td><%=rs.getString("status") %></td>                
+                <!--First Name-->
+                <%t.ReadTitles(3);%>
+                <td><%=rs.getString(t.getSQLTitles())%></td>
+                <!--Last Name-->
+                <%t.ReadTitles(4);%>
+                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <!--User ID-->
+                <%t.ReadTitles(2);%>
+                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <!--Total Time-->
+                <%t.ReadTitles(15);%>
+                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <!--Status-->
+                <%t.ReadTitles(16);%>
+                <td><%=rs.getString(t.getSQLTitles()) %></td>
             </tr>            
            
     <%}

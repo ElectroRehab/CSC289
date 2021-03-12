@@ -1,3 +1,4 @@
+<%@page import="readfile.ReadTitles"%>
 <%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <!DOCTYPE html>
@@ -166,6 +167,8 @@
         ReadFile rf = new ReadFile();
         // Create object
         ReadSQL s = new ReadSQL();
+        // Create object
+        ReadTitles t = new ReadTitles();
         // Run the CSV Reader Class
         rf.ReadFile();
         // Connect to Database
@@ -200,20 +203,40 @@
               
             %>               
             <tr>
-                <td><img src="<%=rs.getString("imageID") %>" alt="imageIcon" width= "60"  height="60"></td>
-                <td><%=rs.getString("userID") %></td>
-                <td><%=rs.getString("firstName") %></td>   
-                <td><%=rs.getString("lastName") %></td>   
-                <td><%=rs.getString("address") %></td>   
-                <td><%=rs.getString("city") %></td>   
-                <td><%=rs.getString("state") %></td>   
-                <td><%=rs.getString("zipcode") %></td>   
-                <td><%=rs.getString("phoneNumber") %></td>   
-                <td><%=rs.getString("email") %></td>                 
-                <td><%=rs.getString("identifier") %></td>   
-                
-            </tr>            
-           
+                <!--Image-->
+                <%t.ReadTitles(12);%>
+                <td><img src="<%=rs.getString(t.getSQLTitles()) %>" alt="imageIcon" width= "60"  height="60"></td>
+                <!--User ID-->
+                <%t.ReadTitles(2);%>
+                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <!--First Name-->
+                <%t.ReadTitles(3);%>
+                <td><%=rs.getString(t.getSQLTitles())%></td>
+                <!--Last Name-->
+                <%t.ReadTitles(4);%>
+                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <!--Address-->
+                <%t.ReadTitles(5);%>
+                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <!--City-->
+                <%t.ReadTitles(6);%>
+                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <!--State-->
+                <%t.ReadTitles(7);%>
+                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <!--Zip Code-->
+                <%t.ReadTitles(8);%>
+                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <!--Phone Number-->
+                <%t.ReadTitles(9);%>
+                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <!--Email-->
+                <%t.ReadTitles(10);%>
+                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <!--Group-->
+                <%t.ReadTitles(13);%>
+                <td><%=rs.getString(t.getSQLTitles()) %></td>                
+            </tr>
     <%}
 }
     catch(Exception e){

@@ -203,13 +203,27 @@
             
             %>               
             <tr>
-                <td><%=rs.getString("firstName")%></td>
-                <td><%=rs.getString("lastName") %></td>
-                <td><%=rs.getString("userID") %></td>
-                <td><%=rs.getString("timeIn") %></td>   
-                <td><%=rs.getString("timeOut") %></td>   
-                <td><%=rs.getString("totalTime") %></td>   
-                <td><%=rs.getString("status") %></td>                
+                <!--First Name-->
+                <%t.ReadTitles(3);%>
+                <td><%=rs.getString(t.getSQLTitles())%></td>
+                <!--Last Name-->
+                <%t.ReadTitles(4);%>
+                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <!--User ID-->
+                <%t.ReadTitles(2);%>
+                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <!--Time In-->
+                <%t.ReadTitles(17);%>
+                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <!--Time Out-->
+                <%t.ReadTitles(18);%>
+                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <!--Total Time-->
+                <%t.ReadTitles(15);%>
+                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <!--Status-->
+                <%t.ReadTitles(16);%>
+                <td><%=rs.getString(t.getSQLTitles()) %></td>
             </tr>            
            
     <%}

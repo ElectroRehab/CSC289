@@ -48,7 +48,7 @@
     else{*/
         hashText.setHashText(password);
         password = hashText.getHashText();
-         try{
+        try{
         // Create a new clean conneciton.
         Connection con = null;
         // Create object
