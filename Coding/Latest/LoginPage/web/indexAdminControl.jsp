@@ -3,6 +3,7 @@
     Created on : Feb 3, 2021, 6:40:30 AM
     Author     : Anthony
 --%>
+<%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <%@page import ="java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -171,6 +172,8 @@
         Connection con = null;
         // Create object
         ReadFile rf = new ReadFile();
+        // Create object
+        ReadSQL s = new ReadSQL();
         // Run the CSV Reader Class
         rf.ReadFile();
         // String for the JBDC Driver Info
@@ -185,12 +188,12 @@
         Class.forName(classDriver);
         con = DriverManager.getConnection(link,user,pass);
         Statement st=con.createStatement();
-        ResultSet rs=st.executeQuery("select COUNT(*) from userdatamain;");
+        s.ReadSQL(19);
+        ResultSet rs=st.executeQuery(s.getSQLAll().toString());
    
         String Countrow="";                     
         while(rs.next()){
-        Countrow = rs.getString(1);
-        
+            Countrow = rs.getString(1);
         }
               
             %>               
@@ -223,27 +226,21 @@
         // Create a new clean conneciton.
         Connection con = null;
         // Create object
-        ReadFile rf = new ReadFile();
+        ReadFile rf = new ReadFile();        
+        // Create object
+        ReadSQL s = new ReadSQL();
         // Run the CSV Reader Class
         rf.ReadFile();
-        // String for the JBDC Driver Info
-        String classDriver = rf.getClassDriver();
-        // String used for link to the Remote Database
-        String link = rf.getLink();
-        // String used for username of the Remote Database
-        String user = rf.getUser();
-        // String used for password to the Remote Database
-        String pass = rf.getPass();
         // Coneect to Database
-        Class.forName(classDriver);
-        con = DriverManager.getConnection(link,user,pass);
+        Class.forName(rf.getClassDriver());
+        con = DriverManager.getConnection(rf.getLink(), rf.getUser(), rf.getPass());
         Statement st=con.createStatement();
-        ResultSet rs=st.executeQuery("select COUNT(*) from employeetimetracker where status = 'In';");
-   
+        // Run the SQL Reader Class
+        s.ReadSQL(20);
+        ResultSet rs=st.executeQuery(s.getSQLAll().toString());   
         String Countrow="";                     
         while(rs.next()){
-        Countrow = rs.getString(1);
-        
+            Countrow = rs.getString(1);        
         }
               
             %>               

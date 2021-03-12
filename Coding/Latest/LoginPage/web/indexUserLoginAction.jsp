@@ -65,12 +65,12 @@
             ResultSet r = st.executeQuery(s.getSQLAll().toString());
             // Read through database for user's currently inputted info
             while(r.next()){
-                sqlInt = 20;
+                sqlInt = 22;
                 s.ReadSQL(sqlInt);
                 // Check for current user input info
                 if(r.getString(s.getSQLAll().toString()).equals(userID)){
                     // Check for correct pin
-                    sqlInt = 29;
+                    sqlInt = 31;
                     s.ReadSQL(sqlInt);
                     if(r.getString(s.getSQLAll().toString()).equals(pinCode)){
                         // Good PIN Check

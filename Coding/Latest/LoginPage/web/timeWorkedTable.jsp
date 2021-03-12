@@ -198,17 +198,9 @@
         rf.ReadFile();
         // Create object
         ReadSQL s = new ReadSQL();
-        // String for the JBDC Driver Info
-        String classDriver = rf.getClassDriver();
-        // String used for link to the Remote Database
-        String link = rf.getLink();
-        // String used for username of the Remote Database
-        String user = rf.getUser();
-        // String used for password to the Remote Database
-        String pass = rf.getPass();
-        // Coneect to Database
-        Class.forName(classDriver);
-        con = DriverManager.getConnection(link,user,pass);
+        // Connect to Database
+        Class.forName(rf.getClassDriver());
+        con = DriverManager.getConnection(rf.getLink(), rf.getUser(), rf.getPass());
         Statement st=con.createStatement();
         sqlInt = 16;
         s.ReadSQL(sqlInt);

@@ -76,7 +76,7 @@
                     
                     while(rs.next()){
                         // User ID
-                        sqlInt = 20;
+                        sqlInt = 22;
                         s.ReadSQL(sqlInt);
                         userBarCode = rs.getString(s.getSQLAll().toString());
 %>
@@ -98,31 +98,31 @@
                         <tr>
                             <!-- User ID -->
                             <%
-                                sqlInt = 20;
+                                sqlInt = 22;
                                 s.ReadSQL(sqlInt);
                             %>                            
                             <td>&nbsp;&nbsp;<%=rs.getString(s.getSQLAll().toString()) %></td>
                             <!-- First Name -->
                             <%
-                                sqlInt = 21;
+                                sqlInt = 23;
                                 s.ReadSQL(sqlInt);
                             %>
                             <td>&nbsp;&nbsp;<%=rs.getString(s.getSQLAll().toString()) %></td>
                             <!-- Last Name -->
                             <%
-                                sqlInt = 22;
+                                sqlInt = 24;
                                 s.ReadSQL(sqlInt);
                             %>
                             <td>&nbsp;&nbsp;<%=rs.getString(s.getSQLAll().toString()) %></td>
                             <!-- E-Mail -->
                             <%
-                                sqlInt = 28;
+                                sqlInt = 30;
                                 s.ReadSQL(sqlInt);
                             %>
                             <td>&nbsp;&nbsp;<%=rs.getString(s.getSQLAll().toString()) %></td>
                             <!-- Group -->
                             <%
-                                sqlInt = 31;
+                                sqlInt = 33;
                                 s.ReadSQL(sqlInt);
                             %>
                             <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=rs.getString(s.getSQLAll().toString()) %></td>

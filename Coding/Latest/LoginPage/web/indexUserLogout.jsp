@@ -45,17 +45,14 @@
                     </div>  
                     <div class="form-group">
                         <button class="btn btn-primary btn-block" type="submit">Log Out</button>             
-                    </div>   
-                    <a href="indexUserRegistration.jsp"> Create a user Account</a>
-                    <a class="forgot" href="indexUserRegistration.jsp"> Forgot username or pin?</a>  
+                    </div>                        
                 </form>   
             </div>
         </div>        
         <div class="flex-container">
            <nav>
                <div  >                    
-                    <a href="index.jsp">Home</a>  
-                    <a href="indexUserLogin.jsp">Login</a>  
+                    <a href="index.jsp">Home</a>             
                </div>           
            </nav>   
         </div>          

@@ -1,3 +1,4 @@
+<%@page import="readfile.ReadTitles"%>
 <%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <!DOCTYPE html>
@@ -171,6 +172,8 @@
         ReadFile rf = new ReadFile();
         // Create object
         ReadSQL s = new ReadSQL();
+        // Create object
+        ReadTitles t = new ReadTitles();
         // Run the CSV Reader Class
         rf.ReadFile();
         // Connect to Database
@@ -196,12 +199,11 @@
                                     </thead>
                                     <tbody>
                                         <tbody>
-        <%while(rs.next())
-        {
-              
+        <%while(rs.next()){
+            
             %>               
-            <tr>       
-                <td><%=rs.getString("firstName") %></td>
+            <tr>
+                <td><%=rs.getString("firstName")%></td>
                 <td><%=rs.getString("lastName") %></td>
                 <td><%=rs.getString("userID") %></td>
                 <td><%=rs.getString("timeIn") %></td>   
