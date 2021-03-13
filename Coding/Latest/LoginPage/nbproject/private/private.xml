@@ -3,28 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE%203/11MAR21/VERSION_4/Latest/LoginPage/web/indexCompanyMission.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE%203/11MAR21/VERSION_4/Latest/LoginPage/web/indexUserLogin.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE%203/11MAR21/VERSION_4/Latest/LoginPage/web/regError.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE%203/11MAR21/VERSION_4/Latest/LoginPage/web/indexUserLogoutAction.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE%203/11MAR21/VERSION_4/Latest/LoginPage/src/java/readfile/ReadSQL.java</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE%203/11MAR21/VERSION_4/Latest/LoginPage/web/indexTeam.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE%203/11MAR21/VERSION_4/Latest/LoginPage/src/java/readfile/ReadFile.java</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE%203/11MAR21/VERSION_4/Latest/LoginPage/web/timeWorkedTable.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE%203/11MAR21/VERSION_4/Latest/LoginPage/web/indexUserLoginAction.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE%203/11MAR21/VERSION_4/Latest/LoginPage/web/indexAdminControl.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE%203/11MAR21/VERSION_4/Latest/LoginPage/src/java/readfile/ReadTitles.java</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE%203/11MAR21/VERSION_4/Latest/LoginPage/web/workTable.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE%203/11MAR21/VERSION_4/Latest/LoginPage/web/profile.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE%203/11MAR21/VERSION_4/Latest/LoginPage/web/indexAdminRegistration.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE%203/11MAR21/VERSION_4/Latest/LoginPage/web/indexAdminLogin.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE%203/11MAR21/VERSION_4/Latest/LoginPage/web/indexUserLoginSuccess.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE%203/11MAR21/VERSION_4/Latest/LoginPage/web/indexUserRegistrationAction.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE%203/11MAR21/VERSION_4/Latest/LoginPage/web/indexUserLogoutSuccess.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE%203/11MAR21/VERSION_4/Latest/LoginPage/web/indexAdminRegistrationAction.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE%203/11MAR21/VERSION_4/Latest/LoginPage/web/tableAdmin.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE%203/11MAR21/VERSION_4/Latest/LoginPage/web/indexAdminLoginAction.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE%203/11MAR21/VERSION_4/Latest/LoginPage/web/tableUser.jsp</file>
+            <file>file:/C:/Users/Anthony/Desktop/ProjectFolder/CSC289/Coding/Latest/LoginPage/web/indexUserLogin.jsp</file>
+            <file>file:/C:/Users/Anthony/Desktop/ProjectFolder/CSC289/Coding/Latest/LoginPage/web/indexUserLogout.jsp</file>
+            <file>file:/C:/Users/Anthony/Desktop/ProjectFolder/CSC289/Coding/Latest/LoginPage/web/save.jsp</file>
         </group>
     </open-files>
 </project-private>

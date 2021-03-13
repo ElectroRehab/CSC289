@@ -55,7 +55,8 @@
            <nav>
                
                <div  >                    
-                        <a href="index.jsp">Home</a>             
+                        <a href="index.jsp">Home</a>
+                        <a href="indexUserLogout.jsp">Logout</a>
                </div>           
            </nav>   
        </div>          
