@@ -45,8 +45,7 @@ else
         rf.ReadFile();
         // Connect to Database
         Class.forName(rf.getClassDriver());
-        con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
-        //String queryTimDif = s.ReadSQL(14);        
+        con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());     
         sqlInt = 5;
         s.ReadSQL(sqlInt);
         PreparedStatement ps = con.prepareStatement(s.getSQLAll());   
@@ -54,7 +53,7 @@ else
         ps.setString(2,status);               
         ps.setString(3,userID);           
         ps.executeUpdate();
-        sqlInt = 6;
+        sqlInt = 14;
         s.ReadSQL(sqlInt);
         ps = con.prepareStatement(s.getSQLAll()); 
         ps.setString(1,userID);  
