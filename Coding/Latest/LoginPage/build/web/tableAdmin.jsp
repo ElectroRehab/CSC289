@@ -36,7 +36,7 @@
                     <li class="nav-item"><a class="nav-link active" href="tableUser.jsp"><i class="fas fa-table"></i><span>Employee Table</span></a></li>
                     <li class="nav-item"><a class="nav-link active" href="workTable.jsp"><i class="fas fa-table"></i><span>Work Table</span></a></li>
                     <li class="nav-item"><a class="nav-link active" href="timeWorkedTable.jsp"><i class="fas fa-table"></i><span>Time Worked Table</span></a></li>
-                    <li class="nav-item"><a class="nav-link active" href="indexAdminLogin.jsp"><i class="far fa-user-circle"></i><span>Log out</span></a></li>                  
+                    <li class="nav-item"><a class="nav-link active" href="indexMainPage.jsp"><i class="far fa-user-circle"></i><span>Log out</span></a></li>                  
                      
                 </ul>
                 
@@ -136,7 +136,7 @@
                             <li class="nav-item dropdown no-arrow">
                                 <div class="nav-item dropdown no-arrow"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#"><span class="d-none d-lg-inline mr-2 text-gray-600 small">Administrator</span><img class="border rounded-circle img-profile" src="assetsJSP/css/images/iconfinder_Account_1891016.png"></a>
                                     <div class="dropdown-menu shadow dropdown-menu-right animated--grow-in"><a class="dropdown-item" href="profile.jsp"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Profile</a><a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Settings</a><a class="dropdown-item" href="#"><i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Activity log</a>
-                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="index.jsp"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a>
+                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="indexMainPage.jsp"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>&nbsp;Logout</a>
                                     </div>
                                 </div>
                             </li>

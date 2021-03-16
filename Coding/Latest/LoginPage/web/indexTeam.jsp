@@ -40,10 +40,36 @@
                         <div class="dropdown-menu"><a class="dropdown-item" href="indexAboutCompany.jsp">About</a><a class="dropdown-item" href="indexCompanyMission.jsp">Mission</a><a class="dropdown-item" href="ohNo.jsp">Contact</a></div>
                     </li>                 
                     
-                </ul><span class="navbar-text actions"> <a class="login" href="indexAdminLogin.jsp">Admin Log In</a>  </span>
+                </ul><span class="navbar-text actions"> <a class="login" href="indexAdminLogin.jsp" data-target="#admin-login" data-toggle="modal" >Admin Log In</a>  </span>
             </div>
         </div>
     </nav>
+    <%--Displays admin login menu to user//////////////////////////////////--%>
+    <div id="admin-login" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    
+        <div class="modal-content">
+            <div class="modal-body">
+                <button data-dismiss="modal" class="close">&times;</button>
+            
+                <form action="indexAdminLoginAction.jsp" method="post" >
+                    <div ><h2>Admin Login</h2></div>              
+                
+                    <div class="form-group" >                  
+                        <input class="form-control" type="text" name="adminID" placeholder="Scan ID"><br>
+                    </div>   
+                    <div class="form-group">
+                        <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
+                    </div>  
+                    <div class="form-group">
+                        <button class=" login" type="submit">Login</button>             
+                    </div> 
+             
+                </form>
+            </div>
+        </div>
+    </div>  
+    </div>
       <div id="login" class="modal fade" role="dialog">
         <div class="modal-dialog">
     
@@ -52,7 +78,7 @@
                 <button data-dismiss="modal" class="close">&times;</button>
             
                 <form action="indexAdminLoginRegistrationAction.jsp" method="post" >
-                    <div ><h2 class="comp-team-form-title">Admin Login</h2></div>              
+                    <div ><h2 class="comp-team-form-title">Admin Login Required</h2></div>              
                 
                     <div class="form-group" >                  
                         <input class="form-control" type="text" name="adminID" placeholder="Scan ID"><br>

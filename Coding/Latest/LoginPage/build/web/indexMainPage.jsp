@@ -39,7 +39,7 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav mr-auto">                    
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Access </a>
-                        <div class="dropdown-menu"><a class="dropdown-item" href="indexUserLogin.jsp">Clock-In</a><a class="dropdown-item" href="indexUserLogout.jsp">Clock-Out</a><a class="dropdown-item" href="indexAdminLogin.jsp">Admin Login</a></div>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="indexUserLogin.jsp">Clock-In</a><a class="dropdown-item" href="indexUserLogout.jsp">Clock-Out</a><a class="dropdown-item" href="indexAdminLogin.jsp" data-target="#admin-login" data-toggle="modal">Admin Login</a></div>
                     </li>
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Create Account </a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="indexAdminRegistration.jsp" data-target="#login" data-toggle="modal">Create Admin Account</a><a class="dropdown-item" href="indexUserRegistration.jsp">Create User Account</a></div>
@@ -47,19 +47,19 @@
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Info </a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="indexAboutCompany.jsp">About</a><a class="dropdown-item" href="indexCompanyMission.jsp">Mission</a><a class="dropdown-item" href="ohNo.jsp">Contact</a></div>
                     </li>                    
-                </ul><span class="navbar-text actions"> <a class="login-admin-main" href="indexAdminLogin.jsp" >Admin Log In</a></span> 
+                </ul><span class="navbar-text actions"> <a class="login-admin-main" href="indexAdminLogin.jsp" data-target="#admin-login" data-toggle="modal" >Admin Log In</a> <a class="logout-system-main" href="indexAdminLogin.jsp"data-target="#logout" data-toggle="modal" >System Logout</a></span> 
             </div>
         </div>
     </nav>
-    <div id="login" class="modal fade" role="dialog">
+     <div id="admin-login" class="modal fade" role="dialog">
         <div class="modal-dialog">
     
         <div class="modal-content">
             <div class="modal-body">
                 <button data-dismiss="modal" class="close">&times;</button>
             
-                <form action="indexAdminLoginRegistrationAction.jsp" method="post" >
-                    <div ><h1>Admin Login</h1></div>              
+                <form action="indexAdminLoginAction.jsp" method="post" >
+                    <div ><h2>Admin Login</h2></div>              
                 
                     <div class="form-group" >                  
                         <input class="form-control" type="text" name="adminID" placeholder="Scan ID"><br>
@@ -70,6 +70,57 @@
                     <div class="form-group">
                         <button class=" login" type="submit">Login</button>             
                     </div> 
+             
+                </form>
+            </div>
+        </div>
+    </div>  
+    </div>
+    <div id="login" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    
+        <div class="modal-content">
+            <div class="modal-body">
+                <button data-dismiss="modal" class="close">&times;</button>
+            
+                <form action="indexAdminLoginRegistrationAction.jsp" method="post" >
+                    <div ><h2>Admin Login Required</h2></div>              
+                
+                    <div class="form-group" >                  
+                        <input class="form-control" type="text" name="adminID" placeholder="Scan ID"><br>
+                    </div>   
+                    <div class="form-group">
+                        <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
+                    </div>  
+                    <div class="form-group">
+                        <button class=" login" type="submit">Login</button>             
+                    </div> 
+             
+                </form>
+            </div>
+        </div>
+    </div>  
+    </div>
+     <div id="logout" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    
+        <div class="modal-content">
+            <div class="modal-body">
+                <button data-dismiss="modal" class="close">&times;</button>
+            
+                <form action="indexSystemLogoutAction.jsp" method="post" >
+                    <div ><h2>System Logout</h2></div>              
+                
+                    <div class="form-group" >                  
+                        <input class="form-control" type="text" name="adminID" placeholder="Scan ID"><br>
+                    </div>   
+                    <div class="form-group">
+                        <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
+                    </div>  
+                    <div class="form-group">
+                        <button class=" login" type="submit">Logout</button>             
+                    </div> 
+                    <div ><h3>Admin Required!</h3></div> 
              
                 </form>
             </div>

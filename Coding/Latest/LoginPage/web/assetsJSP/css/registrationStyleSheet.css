@@ -197,7 +197,14 @@ nav a {
      color: black;
     font-size: 2vw; 
  }
- 
+ .form-group p{     
+    position:relative;
+    font-family: microsoft,himalayan;
+    font-size: 1.7vw;
+    text-align: left;
+    
+    top:55%;     
+}
  .pass-inst p{     
     position:relative;
     font-family: microsoft,himalayan;

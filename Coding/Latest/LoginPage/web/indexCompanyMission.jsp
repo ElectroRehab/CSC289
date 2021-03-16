@@ -44,19 +44,20 @@
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Info </a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="indexAboutCompany.jsp">About</a><a class="dropdown-item" href="indexCompanyMission.jsp">Mission</a><a class="dropdown-item" href="ohNo.jsp">Contact</a></div>
                     </li>                    
-                </ul><span class="navbar-text actions"> <a class="login" href="indexAdminLogin.jsp">Admin Log In</a> </span>
+                </ul><span class="navbar-text actions"> <a class="login" href="indexAdminLogin.jsp" data-target="#admin-login" data-toggle="modal" >Admin Log In</a> </span>
             </div>
         </div>
     </nav>
-      <div id="login" class="modal fade" role="dialog">
+<%--Displays admin login menu to user//////////////////////////////////--%>
+    <div id="admin-login" class="modal fade" role="dialog">
         <div class="modal-dialog">
     
         <div class="modal-content">
             <div class="modal-body">
                 <button data-dismiss="modal" class="close">&times;</button>
             
-                <form action="indexAdminLoginRegistrationAction.jsp" method="post" >
-                    <div ><h1>Admin Login</h1></div>              
+                <form action="indexAdminLoginAction.jsp" method="post" >
+                    <div ><h2>Admin Login</h2></div>              
                 
                     <div class="form-group" >                  
                         <input class="form-control" type="text" name="adminID" placeholder="Scan ID"><br>
@@ -73,7 +74,35 @@
         </div>
     </div>  
     </div>
+ <%--Displays admin login menu to user//////////////////////////////////--%>
+      <div id="login" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    
+        <div class="modal-content">
+            <div class="modal-body">
+                <button data-dismiss="modal" class="close">&times;</button>
+            
+                <form action="indexAdminLoginRegistrationAction.jsp" method="post" >
+                    <div ><h1>Admin Login Required</h1></div>              
+                
+                    <div class="form-group" >                  
+                        <input class="form-control" type="text" name="adminID" placeholder="Scan ID"><br>
+                    </div>   
+                    <div class="form-group">
+                        <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
+                    </div>  
+                    <div class="form-group">
+                        <button class=" login" type="submit">Login</button>             
+                    </div> 
+             
+                </form>
+            </div>
+        </div>
+    </div>  
+    </div>
+ <%--Displays Main Background Image--%>
     <div><img class="image-main"  src="assetsJSP/css/images/mainPageBackgroundv3.png"</div>
+<%--Displays Information About the Company--%>
     <div class="container-fluid">
                 <div ><img class="image-logo-mission"  src="assetsJSP/css/images/CompanyLogo.png"</div>
         <div class="flex-container-mission">
@@ -90,6 +119,7 @@
             </div>         
         </div>        
     </div>    
+ <%--Footer links--%>
     <div class="footer-dark">
         <footer>
             <div class="container">

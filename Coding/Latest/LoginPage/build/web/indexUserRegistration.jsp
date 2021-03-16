@@ -75,8 +75,7 @@
                 </div>
                 <div class="form-group">
                   <div class="pass-inst ">   <p  > 
-                     1. Passwords must match
-                     2. Length Greater than 4 less than 10</p></div>
+                     Create Pin#</p></div>
                   <input class="form-control" name="password_confirm"  type="password" placeholder="Enter pin" id="plainText1"  required="required"  />
                </div>
                <div class="form-group">
@@ -100,7 +99,8 @@
                      <input class="form-control" type="text" name="email" placeholder="Enter email" required=""><br>   
                     </div>  
                     <div class="form-group">                    
-                       <p>Unique ID</p>
+                       <div class="pass-inst ">   <p  > 
+                     Unique ID#</p></div>
                        <input class="form-control" type="text" name="rand_num" value="<%out.print(linked);%>" readonly="readonly">
                     </div>                    
                         <button type="submit" class="form-submit-button">Confirm</button>     

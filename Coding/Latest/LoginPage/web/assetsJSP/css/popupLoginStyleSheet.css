@@ -11,10 +11,15 @@ and open the template in the editor.
 h1 {
   font-weight: bold;
   font-family: microsoft, himalayan;
-  color:   #f7f9fc;
+  color:    #000;
 }
  h2{
-      font-weight: bold;
+  font-weight: bold;
+  font-family: microsoft, himalayan;
+  color:  #000;
+}
+ h3{
+  font-weight: bold;
   font-family: microsoft, himalayan;
   color:  #000;
 }
@@ -50,24 +55,25 @@ h1 {
   font-weight: bold;
   color: #fff;
 }
-.login {
-  padding: 6px 20px;
+.login-admin-main {
+  padding: 12px 20px;
   border-radius: 20px;
-  background-color:  #278c9b;
+  font-family: microsoft, himalayan;
+  background-color:  #36b9cc;
   border: 2px solid  #000;
   color:  #000;
   font-weight: bold;
   transition: all .5s;
   margin-top: 1em;
 }
-.login:hover {
+.login-admin-main:hover {
   background:  #36b9cc;
   color: #fff;
 }
 .login-admin-main{
   padding: 8px 20px;
   border-radius: 20px;
-  background-color:  #278c9b;
+  background-color:  #36b9cc;
   border: 2px solid  #000;
   color:  #000;
   font-weight: bold;
@@ -77,6 +83,39 @@ h1 {
     
 }
 .login-admin-main:hover {
-  background:  #36b9cc;
+  background:   #66d7d7;
   color: #fff;
 }
+
+.logout-system-main {
+  padding: 6px 20px;
+  border-radius: 20px;  
+  font-family: microsoft, himalayan;
+  background-color:  #278c9b;
+  border: 2px solid  #000;
+  color:  #000;
+  font-weight: bold;
+  transition: all .5s;
+  margin-top: 1em;
+}
+.logout:hover {
+  background:   #f7f9fc;
+  color: #fff;
+}
+.logout-system-main{
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color:  #36b9cc;
+  border: 2px solid  #000;
+  color:  #000;
+  font-weight: bold;
+  transition: all .5s;
+  margin-top: 1em;
+    
+    
+}
+.logout-system-main:hover {    
+  background:  red;
+  color:  #fff;
+}
+ 
