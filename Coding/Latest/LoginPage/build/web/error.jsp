@@ -30,7 +30,7 @@
         <nav>
              <%-- Creates an active link home button in the nav section--%>   
             <div>                    
-                <a href="index.jsp">Home</a>         
+                <a href="indexMainPage.jsp">Home</a>         
             </div>           
         </nav> 
         <header class="error"> 

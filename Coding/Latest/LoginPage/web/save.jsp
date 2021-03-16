@@ -42,7 +42,7 @@
             
         </script>
         <div class= "main_home" >                              
-                <a href="index.jsp" style="text-decoration: none">Home</a>                 
+                <a href="indexMainPage.jsp" style="text-decoration: none">Home</a>                 
                 <a><input class="btn-print" type="button" name="btn" onclick="printDiv('printableArea')" value="Print Barcode" /></a>  
         </div>         
         </nav> 

@@ -44,10 +44,10 @@ and open the template in the editor.
 h1{
     position: absolute;
     top:10%;
-    left:30%;
+    left:27.5%;
     font-size: 4vw;
     text-align: center;
-    color: #dfe7f1;
+    color:  #dfe7f1;
     font-family: microsoft, himalayan;
 }
 .image-team-control-ore h3{

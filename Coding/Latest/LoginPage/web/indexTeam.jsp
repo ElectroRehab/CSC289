@@ -21,11 +21,12 @@
     <link rel="stylesheet" href="assetsJSP/css/teamStyleSheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
     <link rel="stylesheet" href="assetsJSP/mainPageCSS/mainPage.css">
+    <link rel="stylesheet" href="assetsJSP/css/popupLoginStyleSheet.css">
 </head>
  
 <body>
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
-        <div class="container"><img class="item-co-logo" src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60">&nbsp;&nbsp;&nbsp;<a class="navbar-brand" href="index.jsp">Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><img class="item-co-logo" src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60">&nbsp;&nbsp;&nbsp;<a class="navbar-brand" href="indexMainPage.jsp">Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav mr-auto">
                     
@@ -33,17 +34,41 @@
                         <div class="dropdown-menu"><a class="dropdown-item" href="indexUserLogin.jsp">Clock-In</a><a class="dropdown-item" href="indexUserLogout.jsp">Clock-Out</a><a class="dropdown-item" href="indexAdminLogin.jsp">Admin Login</a></div>
                     </li>
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Create Account </a>
-                        <div class="dropdown-menu"><a class="dropdown-item" href="indexAdminRegistration.jsp">Create Admin Account</a><a class="dropdown-item" href="indexUserRegistration.jsp">Create User Account</a></div>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="indexAdminRegistration.jsp"data-target="#login" data-toggle="modal">Create Admin Account</a><a class="dropdown-item" href="indexUserRegistration.jsp">Create User Account</a></div>
                     </li>
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Info </a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="indexAboutCompany.jsp">About</a><a class="dropdown-item" href="indexCompanyMission.jsp">Mission</a><a class="dropdown-item" href="ohNo.jsp">Contact</a></div>
                     </li>                 
                     
-                </ul><span class="navbar-text actions"> <a class="login" href="indexAdminLogin.jsp">Admin Log In</a><a class="btn btn-light action-button" role="button" href="indexAdminRegistration.jsp">Admin Sign Up</a></span>
+                </ul><span class="navbar-text actions"> <a class="login" href="indexAdminLogin.jsp">Admin Log In</a>  </span>
             </div>
         </div>
     </nav>
+      <div id="login" class="modal fade" role="dialog">
+        <div class="modal-dialog">
     
+        <div class="modal-content">
+            <div class="modal-body">
+                <button data-dismiss="modal" class="close">&times;</button>
+            
+                <form action="indexAdminLoginRegistrationAction.jsp" method="post" >
+                    <div ><h2 class="comp-team-form-title">Admin Login</h2></div>              
+                
+                    <div class="form-group" >                  
+                        <input class="form-control" type="text" name="adminID" placeholder="Scan ID"><br>
+                    </div>   
+                    <div class="form-group">
+                        <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
+                    </div>  
+                    <div class="form-group">
+                        <button class=" login" type="submit">Login</button>             
+                    </div> 
+             
+                </form>
+            </div>
+        </div>
+    </div>  
+    </div>
     <div><img class="image-main"  src="assetsJSP/css/images/mainPageBackgroundv3.png"</div>
     <h1><b>Company Team</b></h1>
     <div ><img class="image-logo-team"  src="assetsJSP/css/images/CompanyLogo.png"</div>

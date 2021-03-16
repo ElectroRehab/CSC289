@@ -57,7 +57,7 @@
         <div class="flex-container">
            <nav>
                <div  >                    
-                        <a href="index.jsp">Home</a>             
+                        <a href="indexMainPage.jsp">Home</a>             
                </div>           
            </nav>   
        </div>          

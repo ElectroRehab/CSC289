@@ -1,0 +1,82 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 16, 2021, 9:02:07 AM
+    Author     : Anthony
+*/
+/*Modal*/
+h1 {
+  font-weight: bold;
+  font-family: microsoft, himalayan;
+  color:   #f7f9fc;
+}
+ h2{
+      font-weight: bold;
+  font-family: microsoft, himalayan;
+  color:  #000;
+}
+.close {
+  color: #fff;
+  transform: scale(1.2)
+}
+.modal-content {
+  font-weight: bold;
+  background: linear-gradient(to bottom right,#f7f9fc,#278c9b);
+}
+.form-control {
+  margin: 1em 0;
+  
+}
+.form-control:hover, .form-control:focus {
+  box-shadow: none;  
+  border-color: #fff;
+}
+.username, .password {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 2px solid #eee;
+  padding-left: 0;
+  font-weight: normal;
+  background: transparent;  
+}
+.form-control::-webkit-input-placeholder {
+  color:  #000;  
+}
+.form-control:focus::-webkit-input-placeholder {
+  font-weight: bold;
+  color: #fff;
+}
+.login {
+  padding: 6px 20px;
+  border-radius: 20px;
+  background-color:  #278c9b;
+  border: 2px solid  #000;
+  color:  #000;
+  font-weight: bold;
+  transition: all .5s;
+  margin-top: 1em;
+}
+.login:hover {
+  background:  #36b9cc;
+  color: #fff;
+}
+.login-admin-main{
+  padding: 8px 20px;
+  border-radius: 20px;
+  background-color:  #278c9b;
+  border: 2px solid  #000;
+  color:  #000;
+  font-weight: bold;
+  transition: all .5s;
+  margin-top: 1em;
+    
+    
+}
+.login-admin-main:hover {
+  background:  #36b9cc;
+  color: #fff;
+}
