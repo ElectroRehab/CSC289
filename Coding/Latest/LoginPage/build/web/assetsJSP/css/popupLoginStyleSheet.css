@@ -30,6 +30,8 @@ h1 {
 .modal-content {
   font-weight: bold;
   background: linear-gradient(to bottom right,#f7f9fc,#278c9b);
+  border: 3px  inset   #000; 
+  
 }
 .form-control {
   margin: 1em 0;
@@ -38,6 +40,7 @@ h1 {
 .form-control:hover, .form-control:focus {
   box-shadow: none;  
   border-color: #fff;
+  
 }
 .username, .password {
   border: none;
@@ -54,68 +57,71 @@ h1 {
 .form-control:focus::-webkit-input-placeholder {
   font-weight: bold;
   color: #fff;
+} 
+.home-main:hover {    
+  background: crimson;
+  background: linear-gradient(to bottom,#f7f9fc,#36b9cc);
+  color:  #000;   
+  border-radius: 5px;
+  border: 3px solid  #000; 
 }
-.login-admin-main {
-  padding: 12px 20px;
-  border-radius: 20px;
+.home-main{   
+  margin:0;
   font-family: microsoft, himalayan;
-  background-color:  #36b9cc;
-  border: 2px solid  #000;
+  text-align: center;
+  padding: 12px 20px;   
   color:  #000;
   font-weight: bold;
-  transition: all .5s;
-  margin-top: 1em;
+  transition: all .5s;       
 }
-.login-admin-main:hover {
-  background:  #36b9cc;
+.home-admin-login:hover {    
+  background: crimson;
+  background: linear-gradient(to bottom,#f7f9fc,#36b9cc);
   color: #fff;
+  border-radius: 5px;
+  border: 3px solid  #000; 
 }
-.login-admin-main{
-  padding: 8px 20px;
-  border-radius: 20px;
-  background-color:  #36b9cc;
-  border: 2px solid  #000;
-  color:  #000;
-  font-weight: bold;
-  transition: all .5s;
-  margin-top: 1em;
-    
-    
-}
-.login-admin-main:hover {
-  background:   #66d7d7;
-  color: #fff;
-}
-
-.logout-system-main {
-  padding: 6px 20px;
-  border-radius: 20px;  
+.home-admin-login{   
+  margin:0;
   font-family: microsoft, himalayan;
-  background-color:  #278c9b;
-  border: 2px solid  #000;
+  text-align: center;
+  padding: 12px 20px;   
   color:  #000;
   font-weight: bold;
-  transition: all .5s;
-  margin-top: 1em;
+  transition: all .5s;   
+    
 }
-.logout:hover {
-  background:   #f7f9fc;
+.home-system-logout{   
+  margin:0;
+  font-family: microsoft, himalayan;
+  text-align: center;
+  padding: 12px 20px;   
+  color:  #000;
+  font-weight: bold;
+  transition: all .5s;   
+    
+}
+.home-system-logout:hover {    
+  background: crimson;
+  background: linear-gradient(to bottom,#f7f9fc,red);
   color: #fff;
-}
-.logout-system-main{
-  padding: 10px 20px;
-  border-radius: 20px;
-  background-color:  #36b9cc;
-  border: 2px solid  #000;
-  color:  #000;
-  font-weight: bold;
-  transition: all .5s;
-  margin-top: 1em;
-    
-    
-}
-.logout-system-main:hover {    
-  background:  red;
-  color:  #fff;
+  border-radius: 5px; 
+  border: 3px solid  #000; 
 }
  
+ .home-popup-login{   
+  margin:0;
+  font-family: microsoft, himalayan;
+  text-align: center; 
+  padding: 12px 20px;   
+  color:  #000;
+  font-weight: bold;
+  transition: all .5s;   
+    
+}
+.home-popup-login:hover {  
+  background: linear-gradient(to bottom,#f7f9fc,#36b9cc);
+  color: #000;
+  border-radius: 5px;
+  border: 3px solid  #000; 
+}
