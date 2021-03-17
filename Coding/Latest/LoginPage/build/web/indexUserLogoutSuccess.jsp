@@ -12,6 +12,14 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="assetsJSP/css/loginStyleSheet.css">
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assetsJSP/css/loginStyleSheet.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">     
+        <link rel="stylesheet" href="assetsJSP/mainPageCSS/Footer-Dark.css">
+        <link rel="stylesheet" href="assetsJSP/mainPageCSS/Navigation-with-Button.css">
+        <link rel="stylesheet" href="assetsJSP/mainPageCSS/styles.css">
+        <link rel="stylesheet" href="assetsJSP/css/popupLoginStyleSheet.css">   
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -26,7 +34,7 @@
         </div>
         
         <div class="flex-container">   
-            <div class="login-clean">            
+            <div class="login-clean-user-login">            
                 <form action="indexUserLogin.jsp" method="post" >
                     <div class="illustration">   
                         <br><br>
@@ -45,7 +53,7 @@
         <div class="flex-container">
            <nav>
                <div  >                    
-                    <a href="indexMainPage.jsp">Home</a>             
+                    <a href="indexUserLogin.jsp">Home</a>             
                </div>           
            </nav>   
         </div>          

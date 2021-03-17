@@ -55,7 +55,7 @@
             ps.setString(2,pinNum );    
             ResultSet rs = ps.executeQuery();    
             if (rs.next()){
-                response.sendRedirect("indexAdminControl.jsp");              
+                response.sendRedirect("indexUserLogin.jsp");              
             }
             else{
                 response.sendRedirect("error.jsp");

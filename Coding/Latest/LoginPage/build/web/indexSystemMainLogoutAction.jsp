@@ -1,9 +1,8 @@
 <%-- 
-    Document   : indexSystemLogoutAction
-    Created on : Mar 16, 2021, 10:09:33 AM
+    Document   : indexSystemMainLogoutAction
+    Created on : Mar 17, 2021, 7:31:23 PM
     Author     : Anthony
 --%>
-
 <%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <%@page import="java.security.NoSuchAlgorithmException"%>
@@ -57,7 +56,7 @@
             ps.setString(2,pinNum );    
             ResultSet rs = ps.executeQuery();    
             if (rs.next()){
-                response.sendRedirect("indexSystemLoginOption.jsp");              
+                response.sendRedirect("index.jsp");              
             }
             else{
                 response.sendRedirect("error.jsp");

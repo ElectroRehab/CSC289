@@ -64,8 +64,7 @@ public final class indexMainPage_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("    <link rel=\"stylesheet\" href=\"assetsJSP/mainPageCSS/Footer-Dark.css\">\r\n");
       out.write("    <link rel=\"stylesheet\" href=\"assetsJSP/mainPageCSS/Navigation-with-Button.css\">\r\n");
       out.write("    <link rel=\"stylesheet\" href=\"assetsJSP/mainPageCSS/styles.css\">\r\n");
-      out.write("    <link rel=\"stylesheet\" href=\"assetsJSP/css/popupLoginStyleSheet.css\">\r\n");
-      out.write("    \r\n");
+      out.write("    <link rel=\"stylesheet\" href=\"assetsJSP/css/popupLoginStyleSheet.css\">    \r\n");
       out.write("    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">  \r\n");
       out.write("    ");
       out.write("\r\n");

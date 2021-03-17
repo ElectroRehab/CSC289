@@ -25,7 +25,8 @@
         <link rel="stylesheet" href="assetsJSP/mainPageCSS/Footer-Dark.css">
         <link rel="stylesheet" href="assetsJSP/mainPageCSS/Navigation-with-Button.css">
         <link rel="stylesheet" href="assetsJSP/mainPageCSS/styles.css">
-        <link rel="stylesheet" href="assetsJSP/css/popupLoginStyleSheet.css">      
+        <link rel="stylesheet" href="assetsJSP/css/popupLoginStyleSheet.css">   
+        
     </head>     
     <body>
         <div class="flex-container">        
@@ -60,9 +61,36 @@
                     </li>
                                          
                 </ul>
+                <span class=" "> <a class="home-system-logout" href="indexAdminLogin.jsp"data-target="#admin-login" data-toggle="modal" >System Logout</a></span> 
+
              </div>
         </div>
-    </nav>     
+    </nav>  
+        <div id="admin-login" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    
+        <div class="modal-content">
+            <div class="modal-body">
+                <button data-dismiss="modal" class="close">&times;</button>
+            
+                <form action="indexSystemLogoutAction.jsp" method="post" >
+                    <div ><h2>System Logout</h2></div>              
+                
+                    <div class="form-group" >                  
+                        <input class="form-control" type="text" name="adminID" placeholder="Scan ID"><br>
+                    </div>   
+                    <div class="form-group">
+                        <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
+                    </div>  
+                    <div class="form-group">
+                        <button class="home-popup-login" type="submit">Logout</button>             
+                    </div> 
+             
+                </form>
+            </div>
+        </div>
+    </div>  
+    </div>
         <div><img class="image-main"  src="assetsJSP/css/images/mainPageBackgroundv2.png"</div>
     <div class="footer-dark">
         <footer>
