@@ -3,6 +3,7 @@
     Created on : Feb 7, 2021, 5:39:52 PM
     Author     : Anthony
 --%> 
+<%@page import="readfile.ReadTitles"%>
 <%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <%@page import ="java.sql.*"%>
@@ -23,6 +24,7 @@
 <%
     HashSHA512Encryption hashText = new HashSHA512Encryption();
     int sqlInt = 0;
+    int locked = 3;
     //Get Current date and time   
     java.util.Date date=new java.util.Date();
     // Date and Time Check 
@@ -53,6 +55,8 @@
             ReadFile rf = new ReadFile();
             // Create object
             ReadSQL s = new ReadSQL();
+            // Create Object 
+            ReadTitles t = new ReadTitles();
             // Run the CSV Reader Class
             rf.ReadFile();
             // Connect to Database
@@ -65,24 +69,37 @@
             ResultSet r = st.executeQuery(s.getSQLAll().toString());
             // Read through database for user's currently inputted info
             while(r.next()){
-                sqlInt = 22;
-                s.ReadSQL(sqlInt);
+                // User Name
+                sqlInt = 2;
+                t.ReadTitles(sqlInt);
                 // Check for current user input info
-                if(r.getString(s.getSQLAll().toString()).equals(userID)){
-                    // Check for correct pin
-                    sqlInt = 31;
-                    s.ReadSQL(sqlInt);
-                    if(r.getString(s.getSQLAll().toString()).equals(pinCode)){
-                        // Good PIN Check
-                        // Continue with clock-in process
-                        break;
+                if(r.getString(t.getSQLTitles().toString()).equals(userID)){
+                    out.println("HERE");
+                    // Check for locked account.
+                    sqlInt = 19;
+                    t.ReadTitles(sqlInt);
+                    int check = Integer.parseInt(r.getString(t.getSQLTitles().toString()));
+                    if(check == locked){
+                        // Alert User it is locked return to index.
+                        response.sendRedirect("error.jsp");
                     }
                     else{
-                        // --Bad PIN check--
-                        // ADD COUNT TOKEN IN THE FUTURE
-                        // Currently return to user login page for incorrect 
-                        // PIN code.
-                        response.sendRedirect("indexUserLogin.jsp");                        
+                        // Check for correct pin
+                        sqlInt = 11;
+                        t.ReadTitles(sqlInt);
+                        if(r.getString(t.getSQLTitles().toString()).equals(pinCode)){
+                            // Good PIN Check
+                            // Continue with clock-in process
+                            break;
+                        }
+                        else{
+                            // --Bad PIN check--
+                            sqlInt = 21;
+                            s.ReadSQL(sqlInt);
+                            Statement psps = con.createStatement();
+                            psps.executeUpdate(s.getSQLAll() + userID);
+                            response.sendRedirect("indexUserLogin.jsp");                                                
+                        }
                     }
                 }
             }

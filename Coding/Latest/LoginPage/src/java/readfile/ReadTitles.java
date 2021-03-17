@@ -63,6 +63,9 @@ public class ReadTitles {
         else if(p == 18){
             sqlAll = "timeOut";
         }
+        else if(p == 19){
+            sqlAll = "wrong";
+        }
         else{
             sqlAll = "NULL";
         }        
