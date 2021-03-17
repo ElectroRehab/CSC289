@@ -34,7 +34,7 @@
              
         </div>
         <div class="flex-container">
-        <div class="login-clean">          
+        <div class="login-clean-main">          
             <form action="indexSystemLoginAction.jsp" method="post" >  
                 <div ><h1>System Login</h1></div>              
                 <div class="illustration">                       

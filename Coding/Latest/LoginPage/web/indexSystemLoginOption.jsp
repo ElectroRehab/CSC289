@@ -1,11 +1,12 @@
 <%-- 
-    Document   : index
-    Created on : Mar 16, 2021, 8:15:13 AM
+    Document   : indexSystemLoginOption
+    Created on : Mar 17, 2021, 4:38:04 PM
     Author     : Anthony
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+ 
 <html>
     <head>
         <meta charset="UTF-8">
@@ -34,9 +35,29 @@
              
         </div>
         <div class="flex-container">
-        <div class="login-clean-main">          
-            <form action="indexSystemLoginAction.jsp" method="post" >  
-                <div ><h1>System Login</h1></div>              
+        <div class="login-clean-admin">          
+            <form action="indexAdminSystemLoginAction.jsp" method="post" >  
+                <div ><h1>Admin System</h1></div>              
+                <div class="illustration">                       
+                    <img src="assetsJSP/css/images/iconfinder_Account_1891016.png" alt="accountIcon" width= "60"  height="60" >
+                </div>
+                <div class="form-group" >                  
+                    <input class="form-control" type="text" name="adminID" placeholder="Scan ID"><br>
+                </div>   
+                <div class="form-group">
+                    <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
+                </div>  
+                <div class="form-group">
+                    <button class=" btn-primary" type="submit">Login</button>             
+                </div>                        
+                     
+            </form>        
+        </div> 
+        </div >
+        <div class="flex-container">
+        <div class="login-clean-user">          
+            <form action="indexAdminSystemLoginAction.jsp" method="post" >  
+                <div ><h1>User System</h1></div>              
                 <div class="illustration">                       
                     <img src="assetsJSP/css/images/iconfinder_Account_1891016.png" alt="accountIcon" width= "60"  height="60" >
                 </div>
@@ -67,4 +88,3 @@
         </div>        
     </body>
 </html>
-

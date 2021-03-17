@@ -34,7 +34,7 @@ and open the template in the editor.
     max-width: 35%;
     position: absolute;      
     left: 45%;
-    top:71%;
+    top:55%;
     opacity: .5;
 }
 .image-logo-mission{
@@ -59,16 +59,16 @@ and open the template in the editor.
     width:auto;  
 }
 .flex-container-about h1{    
-    font-size: 5vw;
+    font-size: 4vw;
     text-align: center;
     font-family: microsoft, himalayan;
-    color: #dfe7f1;     
+    color: #000;     
 }
 .flex-column-about p{       
-    font-size: 3vw;
+    font-size: 2.2vw;
     text-align: center;
     font-family: microsoft, himalayan;
-    color: #dfe7f1;
+    color:  #000;
 }
 .flex-container-mission{
     position: absolute;      
@@ -85,13 +85,13 @@ and open the template in the editor.
     font-size: 5vw;
     text-align: center;
     font-family: microsoft, himalayan;
-    color: #dfe7f1;     
+    color:  #000;     
 }
 .flex-column-mission p{       
-    font-size: 3vw;
+    font-size: 2.5vw;
     text-align: center;
     font-family: microsoft, himalayan;
-    color: #dfe7f1;
+    color: #000;
 }
 .flex-container-vision{
     position: absolute;      
@@ -108,12 +108,12 @@ and open the template in the editor.
     font-size: 5vw;
     text-align: center;
     font-family: microsoft, himalayan;
-    color: #dfe7f1;     
+    color:  #000;     
 }
 .flex-column-vision p{       
-    font-size: 3vw;
+    font-size: 2.5vw;
     text-align: center;
     font-family: microsoft, himalayan;
-    color: #dfe7f1;
+    color:  #000;
 }
  

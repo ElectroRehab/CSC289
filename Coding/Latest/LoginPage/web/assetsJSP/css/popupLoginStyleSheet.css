@@ -59,34 +59,37 @@ h1 {
   color: #fff;
 } 
 .home-main:hover {    
-  background: crimson;
+   
   background: linear-gradient(to bottom,#f7f9fc,#36b9cc);
-  color:  #000;   
+  color:     #000;   
+  padding: 5px 20px 15px;   
   border-radius: 5px;
-  border: 3px solid  #000; 
+ 
 }
 .home-main{   
-  margin:0;
+  
   font-family: microsoft, himalayan;
-  text-align: center;
-  padding: 12px 20px;   
-  color:  #000;
+  text-align: center;   
+  padding: 5px 20px 5px;   
+  color:  #000;   
   font-weight: bold;
   transition: all .5s;       
 }
 .home-admin-login:hover {    
   background: crimson;
   background: linear-gradient(to bottom,#f7f9fc,#36b9cc);
+  padding: 20px 30px;
   color: #fff;
   border-radius: 5px;
-  border: 3px solid  #000; 
+  font-size: 1.1vw;
+   
 }
 .home-admin-login{   
   margin:0;
   font-family: microsoft, himalayan;
   text-align: center;
-  padding: 5px 20px; 
-  margin:10px 15px;  
+  padding: 12px 20px; 
+  margin:10px 20px;  
   color:  #000;
   font-size: 1.1vw;
   font-weight: bold;
@@ -100,33 +103,36 @@ h1 {
   padding: 12px 20px;   
   color:  #000;
   font-weight: bold;
-   font-size: 1.1vw;
-  transition: all .5s;   
+  font-size: 1.1vw;
+  transition: all .5s;  
     
 }
 .home-system-logout:hover {    
   background: crimson;
   background: linear-gradient(to bottom,#f7f9fc,red);
   color: #fff;
+  padding: 20px 30px;
   border-radius: 5px; 
-  border: 3px solid  #000; 
+ 
 }
  
  .home-popup-login{   
   margin:0;
   font-family: microsoft, himalayan;
   text-align: center; 
-  padding: 12px 20px;   
+  padding:5px 10px;   
   color:  #000;
+   font-size: 1.1vw;
   font-weight: bold;
   transition: all .5s;   
     
 }
 .home-popup-login:hover {  
   background: linear-gradient(to bottom,#f7f9fc,#36b9cc);
-  color: #000;
+  color:  #fff;
   border-radius: 5px;
-  border: 3px solid  #000; 
+  padding: 10px 40px;
+ 
 }
 .reg-main{   
   margin:0;
@@ -140,6 +146,24 @@ h1 {
     
 }
 .reg-main:hover {  
+  background: linear-gradient(to bottom,#f7f9fc,#36b9cc);
+  color: #000;
+  border-radius: 5px;
+  border: 3px solid  #000; 
+}
+
+.user-login{   
+  margin:0;
+  font-family: microsoft, himalayan;
+  text-align: center; 
+  font-size: 1vw;
+  padding: 12px 20px;   
+  color:  #000;
+  font-weight: bold;
+  transition: all .5s;   
+    
+}
+.user-login:hover {  
   background: linear-gradient(to bottom,#f7f9fc,#36b9cc);
   color: #000;
   border-radius: 5px;

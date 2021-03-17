@@ -33,16 +33,17 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
         <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
         <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+        <link rel="stylesheet" href="assetsJSP/css/popupLoginStyleSheet.css"> 
         <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
         <title>User Registration</title>        
     </head>
     <body>
        <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
-            <div class="container"><img src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60"><a class="navbar-brand" href="indexMainPage.jsp">Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><img src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60"><a class="user-login" href="indexUserLogin.jsp">Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav mr-auto">                                    
                     
-                    </ul><span class="navbar-text actions"> <a class="login" href="indexUserLogin.jsp">User Log In</a><a class="btn btn-light action-button" role="button" href="indexUserRegistration.jsp">User Sign Up</a></span>
+                    </ul><span class="navbar-text actions"> <a class="user-login" href="indexUserLogin.jsp">User Log In</a></span>
                 </div>
             </div>
         </nav>

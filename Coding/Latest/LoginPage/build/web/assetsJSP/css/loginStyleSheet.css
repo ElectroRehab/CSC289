@@ -78,15 +78,16 @@ h1{
     position:relative;
     font-family: microsoft-himalayan;
     top:0%;
+    font-size: 1vw;
     left: 7%;
 }
-
- .login-clean   {
+/*LOGIN MAIN///////////////////////////////////////////////////////////////*/
+ .login-clean-main   {
    margin: 0;
    padding:0;
    bottom:-15%;
-   top:-5%;
-   right: 42.5%;
+   top:-1%;
+   right: 43.5%;
    height: 1000px;     
    background-size: cover;
    background-repeat: no-repeat;
@@ -95,13 +96,13 @@ h1{
 -moz-appearance-  form /* Mozilla */ {
   background-color:  #278c9b; 
 } 
-.login-clean form {
+.login-clean-main form {
   
-  width: 275px;
-  height: 450px;
-  width: 26%; 
+  width: 300px;
+  height: 400px;
+  width: 29%; 
   bottom:-15%;
-   right:70%;
+  right:70%;
   margin: 200px  0px 0px 800px;
   background-color:  lightgrey;  
   border-radius: 10px;
@@ -110,28 +111,28 @@ h1{
   opacity: .95;
   
 }
-.login-clean form a {
+.login-clean-main form a {
     position: relative;
     right: -10%;  
     text-decoration: none;
     color: blue;
     font-size: 18px;
 }
-.login-clean form a.forgot {
+.login-clean-main form a.forgot {
     position: relative;
     right:1%;
     text-decoration: none;
     color:  #6f7a85;
     font-size: 20px;
 }
-.login-clean .illustration {
+.login-clean-main .illustration {
   right:-38%; 
-  top:-2%;
+  top:-1%;
   position: relative; 
   color: rgb(244,71,107);
 }
 
-.login-clean form .form-control {
+.login-clean-main form .form-control {
   background: #f7f9fc;
   position: relative;
   right:-10%;
@@ -149,7 +150,7 @@ h1{
   
 }
 
-.login-clean form .btn-primary {
+.login-clean-main form .btn-primary {
   background:  #278c9b;
   position: relative;
   right:-10%;
@@ -166,15 +167,15 @@ h1{
  
 }
 
-.login-clean form .btn-primary:hover, .login-clean form .btn-primary:active {
+.login-clean-main form .btn-primary:hover, .login-clean-main  form .btn-primary:active {
   background:  #36b9cc;
 }
 
-.login-clean form .btn-primary:active {
+.login-clean-main form .btn-primary:active {
   transform: translateY(1px);
 }
 
-.login-clean form .forgot {
+.login-clean-main form .forgot {
   position: relative;
   right:-4%;
   display: block;
@@ -185,11 +186,329 @@ h1{
   text-decoration: none;
 }
 
-.login-clean form .forgot:hover, .login-clean form .forgot:active {
+.login-clean-main form .forgot:hover, .login-clean-main  form .forgot:active {
   opacity: 1;
   text-decoration: none;
 }
+/*///////////////////////////////////////////////////////*/
+.login-clean-admin   {
+   margin: 0;
+   padding:0;
+   bottom:-15%;
+   top:-1%;
+   right: 31%;
+   height: 1000px;     
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: absolute; 
+}
+ 
+.login-clean-admin form {
+  
+  width: 300px;
+  height: 400px;
+  width: 29%; 
+  bottom:-15%;
+  right:70%;
+  margin: 200px  0px 0px 800px;
+  background-color:  lightgrey;  
+  border-radius: 10px;
+  color:  #282d32;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.3);
+  opacity: .95;
+  
+}
+.login-clean-admin form a {
+    position: relative;
+    right: -10%;  
+    text-decoration: none;
+    color: blue;
+    font-size: 18px;
+}
+.login-clean-admin form a.forgot {
+    position: relative;
+    right:1%;
+    text-decoration: none;
+    color:  #6f7a85;
+    font-size: 20px;
+}
+.login-clean-admin .illustration {
+  right:-38%; 
+  top:-1%;
+  position: relative; 
+  color: rgb(244,71,107);
+}
 
+.login-clean-admin form .form-control {
+  background: #f7f9fc;
+  position: relative;
+  right:-10%;
+  height: 100px;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #dfe7f1;
+  border-radius: 4px;
+  box-shadow: none;
+  outline: none;
+  font-size: 15px;
+  color: inherit;
+  text-indent: 8px;
+  height: 42px;
+  
+}
+
+.login-clean-admin form .btn-primary {
+  background:  #278c9b;
+  position: relative;
+  right:-10%;
+  border: none;
+  height:50px;
+  width: 200px;
+  border-radius: 4px;
+  padding: 11px;
+  box-shadow: none;
+  margin-top: 26px;
+  text-shadow: none;
+  font-size: 25px;
+  outline: none !important;
+ 
+}
+
+.login-clean-admin form .btn-primary:hover, .login-clean-admin  form .btn-primary:active {
+  background:  #36b9cc;
+}
+
+.login-clean-admin form .btn-primary:active {
+  transform: translateY(1px);
+}
+
+.login-clean-admin form .forgot {
+  position: relative;
+  right:-4%;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #6f7a85;
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.login-clean-admin form .forgot:hover, .login-clean-admin  form .forgot:active {
+  opacity: 1;
+  text-decoration: none;
+}
+/*//////////////////////////////////////////////////////////////////////////*/
+ .login-clean-user   {
+   margin: 0;
+   padding:0;
+   bottom:-15%;
+   top:-1%;
+   right: 56%;
+   height: 1000px;     
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: absolute; 
+}
+.login-clean-user form {
+  
+   
+  height: 400px;
+  width: 29%; 
+  bottom:-15%;
+   right:70%;
+  margin: 200px  0px 0px 800px;
+  background-color:  lightgrey;  
+  border-radius: 10px;
+  color:  #282d32;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.3);
+  opacity: .95;
+  
+}
+.login-clean-user  form a {
+    position: relative;
+    right: -10%;  
+    text-decoration: none;
+    color: blue;
+    font-size: 18px;
+}
+.login-clean-user  form a.forgot {
+    position: relative;
+    right:1%;
+    text-decoration: none;
+    color:  #6f7a85;
+    font-size: 20px;
+}
+.login-clean-user  .illustration {
+  right:-38%; 
+  top:-1%;
+  position: relative; 
+  color: rgb(244,71,107);
+}
+
+.login-clean-user  form .form-control {
+  background: #f7f9fc;
+  position: relative;
+  right:-10%;
+  height: 100px;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #dfe7f1;
+  border-radius: 4px;
+  box-shadow: none;
+  outline: none;
+  font-size: 15px;
+  color: inherit;
+  text-indent: 8px;
+  height: 42px;
+  
+}
+
+.login-clean-user  form .btn-primary {
+  background:  #278c9b;
+  position: relative;
+  right:-10%;
+  border: none;
+  height:50px;
+  width: 200px;
+  border-radius: 4px;
+  padding: 11px;
+  box-shadow: none;
+  margin-top: 26px;
+  text-shadow: none;
+  font-size: 25px;
+  outline: none !important;
+ 
+}
+
+.login-clean-user  form .btn-primary:hover, .login-clean-user form .btn-primary:active {
+  background:  #36b9cc;
+}
+
+.login-clean-user  form .btn-primary:active {
+  transform: translateY(1px);
+}
+
+.login-clean-user  form .forgot {
+  position: relative;
+  right:-4%;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #6f7a85;
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.login-clean-user  form .forgot:hover, .login-clean-user form .forgot:active {
+  opacity: 1;
+  text-decoration: none;
+}
+/*////////////////////////////////////////////////////////////*/
+ .login-clean-user-login   {
+   margin: 0;
+   padding:0;
+   bottom:-15%;
+   top:-1%;
+   right: 45%;
+   height: 1000px;     
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: absolute; 
+}
+.login-clean-user-login   form {
+  
+   
+  height: 400px;
+  width: 29%; 
+  bottom:-15%;
+   right:70%;
+  margin: 200px  0px 0px 800px;
+  background-color:  lightgrey;  
+  border-radius: 10px;
+  color:  #282d32;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.3);
+  opacity: .95;
+  
+}
+.login-clean-user-login    form a {
+    position: relative;
+    right: -10%;  
+    text-decoration: none;
+    color: blue;
+    font-size: 18px;
+}
+.login-clean-user-login    form a.forgot {
+    position: relative;
+    right:1%;
+    text-decoration: none;
+    color:  #6f7a85;
+    font-size: 20px;
+}
+.login-clean-user-login    .illustration {
+  right:-38%; 
+  top:-1%;
+  position: relative; 
+  color: rgb(244,71,107);
+}
+
+.login-clean-user-login    form .form-control {
+  background: #f7f9fc;
+  position: relative;
+  right:-10%;
+  height: 100px;
+  width: 200px;
+  border: none;
+  border-bottom: 1px solid #dfe7f1;
+  border-radius: 4px;
+  box-shadow: none;
+  outline: none;
+  font-size: 15px;
+  color: inherit;
+  text-indent: 8px;
+  height: 42px;
+  
+}
+
+.login-clean-user-login    form .btn-primary {
+  background:  #278c9b;
+  position: relative;
+  right:-10%;
+  border: none;
+  height:50px;
+  width: 200px;
+  border-radius: 4px;
+  padding: 11px;
+  box-shadow: none;
+  margin-top: 26px;
+  text-shadow: none;
+  font-size: 25px;
+  outline: none !important;
+ 
+}
+
+.login-clean-user-login    form .btn-primary:hover, .login-clean-user-login form .btn-primary:active {
+  background:  #36b9cc;
+}
+
+.login-clean-user-login    form .btn-primary:active {
+  transform: translateY(1px);
+}
+
+.login-clean-user-login  form .forgot {
+  position: relative;
+  right:-4%;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #6f7a85;
+  opacity: 0.9;
+  text-decoration: none;
+}
+
+.login-clean-user-login form .forgot:hover, .login-clean-user-login form .forgot:active {
+  opacity: 1;
+  text-decoration: none;
+}
 .sticky-footer{
      position: fixed;
     left: 0;

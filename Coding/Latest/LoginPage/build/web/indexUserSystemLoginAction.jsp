@@ -1,6 +1,6 @@
 <%-- 
-    Document   : indexSystemLoginAction
-    Created on : Mar 16, 2021, 8:17:09 AM
+    Document   : indexUserSystemLoginAction
+    Created on : Mar 17, 2021, 5:13:16 PM
     Author     : Anthony
 --%>
 <%@page import="readfile.ReadSQL"%>
@@ -8,8 +8,7 @@
 <%@page import="java.security.NoSuchAlgorithmException"%>
 <%@page import="java.security.MessageDigest"%>
 <%@page import="java.math.BigInteger"%>
-<%@page import="readfile.HashSHA512Encryption"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="readfile.HashSHA512Encryption"%> 
 <%@page import ="java.sql.*"%>
 
 <!DOCTYPE html>
@@ -56,7 +55,7 @@
             ps.setString(2,pinNum );    
             ResultSet rs = ps.executeQuery();    
             if (rs.next()){
-                response.sendRedirect("indexSystemLoginOption.jsp");              
+                response.sendRedirect("indexAdminControl.jsp");              
             }
             else{
                 response.sendRedirect("error.jsp");
@@ -70,4 +69,4 @@
         }   
     }
 %> 
-</html>
+</html
