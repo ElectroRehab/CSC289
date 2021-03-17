@@ -31,18 +31,45 @@
         <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
         <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
         <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+        <link rel="stylesheet" href="assetsJSP/css/popupLoginStyleSheet.css">
         <title>Admin Registration</title>  
     </head>
     <body>
         <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
-            <div class="container"><img class="item-co-logo" src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60"><a class="navbar-brand" href="indexMainPage.jsp" >Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><img class="item-co-logo" src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60"><a class="home-admin-login" href="indexMainPage.jsp" >Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav mr-auto">
                     
-                    </ul><span class="navbar-text actions"> <a class="login" href="indexAdminLogin.jsp">Admin Log In</a><a class="btn btn-light action-button" role="button" href="indexAdminRegistration.jsp">Admin Sign Up</a></span>
+                    </ul>
+                <span class="navbar-text actions"> <a class="home-admin-login" href="indexAdminLogin.jsp" data-target="#admin-login" data-toggle="modal" >Admin Log In</a>  </span> 
                 </div>
             </div>
         </nav>
+         <div id="admin-login" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    
+        <div class="modal-content">
+            <div class="modal-body">
+                <button data-dismiss="modal" class="close">&times;</button>
+            
+                <form action="indexAdminLoginAction.jsp" method="post" >
+                    <div ><h2>Admin Login</h2></div>              
+                
+                    <div class="form-group-popup" >                  
+                        <input class="form-control-popup" type="text" name="adminID" placeholder="Scan ID"><br>
+                    </div>   
+                    <div class="form-group-popup">
+                        <input class="form-control-popup"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
+                    </div>  
+                    <div class="form-group-popup-popup">
+                        <button class="home-popup-login" type="submit">Login</button>             
+                    </div> 
+             
+                </form>
+            </div>
+        </div>
+    </div>  
+    </div>
         <div ><img class="image-reg" src="assetsJSP/css/images/mainPageBackgroundv3.png"</div>     
     <p id="random_number"></p>
     <%
@@ -94,11 +121,12 @@
                 <div class="form-group">                        
                     <input class="form-control" type="text" name="email" placeholder="Enter email" required=""><br>   
                 </div>  
-                
+                 <div class="pass-inst "><p> 
+                     Unique ID#</p></div> 
                 <div class="form-group">                    
                     <input class="form-control" type="text" name="rand_num" value="<%out.print(linked);%>" readonly="readonly">
                 </div>    
-                <div class="unique-title"><p>Unique ID#</p></div>                
+                             
                 <button type="submit" class="form-submit-button">Confirm</button>     
             </div>              
         </form>         

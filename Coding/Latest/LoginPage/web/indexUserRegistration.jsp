@@ -74,7 +74,7 @@
                    <input class="form-control" type="text" name="mobileNo" placeholder="Enter Phone Number" required=""><br>
                 </div>
                 <div class="form-group">
-                  <div class="pass-inst ">   <p  > 
+                  <div class="pass-inst "><p> 
                      Create Pin#</p></div>
                   <input class="form-control" name="password_confirm"  type="password" placeholder="Enter pin" id="plainText1"  required="required"  />
                </div>
@@ -99,7 +99,7 @@
                      <input class="form-control" type="text" name="email" placeholder="Enter email" required=""><br>   
                     </div>  
                     <div class="form-group">                    
-                       <div class="pass-inst ">   <p  > 
+                       <div class="pass-inst "><p> 
                      Unique ID#</p></div>
                        <input class="form-control" type="text" name="rand_num" value="<%out.print(linked);%>" readonly="readonly">
                     </div>                    

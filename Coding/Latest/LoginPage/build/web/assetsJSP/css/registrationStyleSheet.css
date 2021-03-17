@@ -12,22 +12,15 @@
  * {
   box-sizing: border-box;
 }
-.reg-form-title{
+.reg-form-title {
     position:absolute;
     top: 15%; 
     left:5%;
+    font-size: 2vw;
     color:whitesmoke;
      
 }
-.unique-title{
-    position:relative;
-    text-align: center;
-    font-family: microsoft,himalayan;     
-    top:-1.5%;
-    left:2%;   
-    color: #dfe7f1;
-    font-size: 2vw; 
-}
+ 
 nav
 {
     overflow: hidden;          
@@ -85,7 +78,7 @@ body {
     font-family: microsoft,himalayan;
     position: absolute;  
     top:15%;
-    left:10%;   
+    left:2%;   
     color: #000;
     font-size: 2.5vw; 
 }
@@ -191,7 +184,7 @@ nav a {
      border-radius: 5px;      
      width: auto;
      height:auto; 
-     border: none;
+     border: none;     
      border: .2vw  solid black;
      background-color: #f2f2f2; 
      color: black;
@@ -309,3 +302,49 @@ nav a {
      margin: 0;
      
 }
+  .form-group-popup .form-control-popup {
+  height:100%;
+  width:100%;
+  margin: 0 auto;
+  padding: 25px;
+  background: #f7f9fc;
+  border: none;
+  border-bottom: 1px solid #dfe7f1;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;   
+  text-indent: 6px;
+  height: 45px;
+}
+ 
+ 
+ .form-control-popup::placeholder {
+  color: #cccccc  ;
+  font-size:1vw;
+  opacity: .3;
+  text-indent: 6px;
+  text-align: left;
+}
+ .form-group-popup  input[type="password"]{
+     border-radius: 5px;
+     max-width: 50%;
+     max-height: 100px;
+     width: auto;     
+     border: none;
+     border: .2vw  solid black;
+     background-color: #f2f2f2; 
+     color: black;
+    font-size: 1vw; 
+}
+ .form-group-popup input[type="text"] {
+     border-radius: 5px;   
+     max-width: 50%;
+     max-height: 100px;
+     width: auto;
+     
+     border: none;
+     border: .2vw  solid black;
+     background-color: #f2f2f2; 
+     color: black;
+    font-size: 1vw; 
+ }
