@@ -3,15 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_3/17MAR21/VERSION_2/LoginPage/web/indexSystemLoginAction.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_3/17MAR21/VERSION_2/LoginPage/web/assetsJSP/css/lockAccountStyleSheet.css</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_3/17MAR21/VERSION_2/LoginPage/web/error.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_3/17MAR21/VERSION_2/LoginPage/web/indexUserLoginAction.jsp</file>
             <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_3/17MAR21/VERSION_2/LoginPage/src/java/readfile/ReadSQL.java</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_3/17MAR21/VERSION_2/LoginPage/web/lockedAccount.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_3/17MAR21/VERSION_2/LoginPage/web/save.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_3/17MAR21/VERSION_2/LoginPage/web/indexUserRegistrationAction.jsp</file>
             <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_3/17MAR21/VERSION_2/LoginPage/src/java/readfile/ReadTitles.java</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_3/17MAR21/VERSION_2/LoginPage/web/unacceptable.jsp</file>
             <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_3/17MAR21/VERSION_2/LoginPage/web/indexUserLoginSuccess.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_3/17MAR21/VERSION_2/LoginPage/web/indexUserLoginAction.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_3/17MAR21/VERSION_2/LoginPage/web/error.jsp</file>
         </group>
     </open-files>
 </project-private>

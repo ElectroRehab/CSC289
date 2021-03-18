@@ -3,6 +3,7 @@
     Created on : Feb 3, 2021, 6:43:26 AM
     Author     : Anthony
 --%>
+<%@page import="readfile.ReadTitles"%>
 <%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <%@page import="java.util.Random"%>
@@ -62,6 +63,8 @@
                     ReadFile rf = new ReadFile();
                     // Create object
                     ReadSQL s = new ReadSQL();
+                    // Create Object 
+                    ReadTitles t = new ReadTitles();
                     // Run the CSV Reader Class
                     rf.ReadFile();
                     // Connect to Database
@@ -76,9 +79,9 @@
                     
                     while(rs.next()){
                         // User ID
-                        sqlInt = 22;
-                        s.ReadSQL(sqlInt);
-                        userBarCode = rs.getString(s.getSQLAll().toString());
+                        sqlInt = 2;
+                        t.ReadTitles(sqlInt);
+                        userBarCode = rs.getString(t.getSQLTitles().toString());
 %>
             <table class="table my-0" id="dataTable">  
                 
@@ -98,34 +101,34 @@
                         <tr>
                             <!-- User ID -->
                             <%
-                                sqlInt = 22;
-                                s.ReadSQL(sqlInt);
+                                sqlInt = 2;
+                                t.ReadTitles(sqlInt);
                             %>                            
-                            <td>&nbsp;&nbsp;<%=rs.getString(s.getSQLAll().toString()) %></td>
+                            <td>&nbsp;&nbsp;<%=rs.getString(t.getSQLTitles().toString()) %></td>
                             <!-- First Name -->
                             <%
-                                sqlInt = 23;
-                                s.ReadSQL(sqlInt);
+                                sqlInt = 3;
+                                t.ReadTitles(sqlInt);
                             %>
-                            <td>&nbsp;&nbsp;<%=rs.getString(s.getSQLAll().toString()) %></td>
+                            <td>&nbsp;&nbsp;<%=rs.getString(t.getSQLTitles().toString()) %></td>
                             <!-- Last Name -->
                             <%
-                                sqlInt = 24;
-                                s.ReadSQL(sqlInt);
+                                sqlInt = 4;
+                                t.ReadTitles(sqlInt);
                             %>
-                            <td>&nbsp;&nbsp;<%=rs.getString(s.getSQLAll().toString()) %></td>
+                            <td>&nbsp;&nbsp;<%=rs.getString(t.getSQLTitles().toString()) %></td>
                             <!-- E-Mail -->
                             <%
-                                sqlInt = 30;
-                                s.ReadSQL(sqlInt);
+                                sqlInt = 10;
+                                t.ReadTitles(sqlInt);
                             %>
-                            <td>&nbsp;&nbsp;<%=rs.getString(s.getSQLAll().toString()) %></td>
+                            <td>&nbsp;&nbsp;<%=rs.getString(t.getSQLTitles().toString()) %></td>
                             <!-- Group -->
                             <%
-                                sqlInt = 33;
-                                s.ReadSQL(sqlInt);
+                                sqlInt = 13;
+                                t.ReadTitles(sqlInt);
                             %>
-                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=rs.getString(s.getSQLAll().toString()) %></td>
+                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%=rs.getString(t.getSQLTitles().toString()) %></td>
                         </tr>
                 </thead>
             </table>
