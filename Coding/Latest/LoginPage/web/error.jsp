@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta http-equiv="refresh" content="5;url=index.jsp" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="UTF-8">
         <meta http-equiv="Content-Security-Policy" content="default-src;        
