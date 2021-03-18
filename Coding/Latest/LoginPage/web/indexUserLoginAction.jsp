@@ -82,7 +82,7 @@
                     int check = Integer.parseInt(r.getString(t.getSQLTitles().toString()));
                     if(check == locked){
                         // Alert User it is locked return to index.
-                        response.sendRedirect("error.jsp");
+                        response.sendRedirect("lockedAccount.jsp");
                     }
                     else{
                         // Check for correct pin
@@ -91,7 +91,10 @@
                         if(r.getString(t.getSQLTitles().toString()).equals(pinCode)){
                             // Good PIN Check
                             // Continue with clock-in process
-                            break;
+                            sqlInt = 22;
+                            s.ReadSQL(sqlInt);
+                            Statement psps = con.createStatement();
+                            psps.executeUpdate(s.getSQLAll() + userID);
                         }
                         else{
                             // --Bad PIN check--
@@ -102,6 +105,7 @@
                             response.sendRedirect("unacceptable.jsp");                                                
                         }
                     }
+                    
                 }
             }
             // Create a Prepared Statement to run query from database.

@@ -22,10 +22,10 @@
 <%
     HashSHA512Encryption hashText = new HashSHA512Encryption();
     int sqlInt = 0;
-    String adminID=request.getParameter("adminID");
+    String userID=request.getParameter("userID");
     
     String pinNum=request.getParameter("pinNum");
-    if(adminID == "" || pinNum == ""){
+    if(userID == "" || pinNum == ""){
         response.sendRedirect("error.jsp");
     }
     else{
@@ -48,10 +48,10 @@
             Class.forName(rf.getClassDriver());
             con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
             // String used for SQL Query
-            sqlInt = 2;
+            sqlInt = 3;
             s.ReadSQL(sqlInt);
             PreparedStatement ps = con.prepareStatement(s.getSQLAll());
-            ps.setString(1,adminID );
+            ps.setString(1,userID );
             ps.setString(2,pinNum );    
             ResultSet rs = ps.executeQuery();    
             if (rs.next()){
