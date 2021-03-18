@@ -58,7 +58,7 @@
                 response.sendRedirect("indexMainPage.jsp");              
             }
             else{
-                response.sendRedirect("error.jsp");
+                response.sendRedirect("errorSystemsLogin.jsp");
             }
             ps.close();
             rs.close();

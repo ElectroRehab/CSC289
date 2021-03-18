@@ -26,7 +26,7 @@
     
     String pinNum=request.getParameter("pinNum");
     if(adminID == "" || pinNum == ""){
-        response.sendRedirect("error.jsp");
+        response.sendRedirect("errorAdminLogin.jsp");
     }
     else{
         //Make changes to the connection string(database name, user/password)
@@ -58,7 +58,7 @@
                 response.sendRedirect("indexAdminControl.jsp");              
             }
             else{
-                response.sendRedirect("error.jsp");
+                response.sendRedirect("errorAdminLogin.jsp");
             }
             ps.close();
             rs.close();

@@ -76,7 +76,7 @@ public final class indexMainPage_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("                \r\n");
       out.write("                <ul class=\"nav navbar-nav mr-auto\">                    \r\n");
       out.write("                    <li class=\"nav-item dropdown\"><a class=\"dropdown-toggle nav-link\" data-toggle=\"dropdown\" aria-expanded=\"false\" href=\"#\">Access </a>\r\n");
-      out.write("                        <div class=\"dropdown-menu\"><a class=\"dropdown-item\" href=\"indexUserLogin.jsp\">Clock-In</a><a class=\"dropdown-item\" href=\"indexUserLogout.jsp\">Clock-Out</a><a class=\"dropdown-item\" href=\"indexAdminLogin.jsp\" data-target=\"#admin-login\" data-toggle=\"modal\">Admin Login</a></div>\r\n");
+      out.write("                        <div class=\"dropdown-menu\"> <a class=\"dropdown-item\" href=\"indexAdminLogin.jsp\" data-target=\"#admin-login\" data-toggle=\"modal\">Admin Login</a></div>\r\n");
       out.write("                    </li>\r\n");
       out.write("                    <li class=\"nav-item dropdown\"><a class=\"dropdown-toggle nav-link\" data-toggle=\"dropdown\" aria-expanded=\"false\" href=\"#\">Create Account </a>\r\n");
       out.write("                        <div class=\"dropdown-menu\"><a class=\"dropdown-item\" href=\"indexAdminRegistration.jsp\" data-target=\"#login\" data-toggle=\"modal\">Create Admin Account</a><a class=\"dropdown-item\" href=\"indexUserRegistrationAdminPage.jsp\">Create User Account</a></div>\r\n");
