@@ -41,7 +41,7 @@
                     <img src="assetsJSP/css/images/iconfinder_Account_1891016.png" alt="accountIcon" width= "60"  height="60" >
                 </div>
                 <div class="form-group" >                  
-                    <input class="form-control" type="text" name="adminID" placeholder="Scan ID"><br>
+                    <input class="form-control" type="text" name="adminID" placeholder="Scan Admin ID"><br>
                 </div>   
                 <div class="form-group">
                     <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
