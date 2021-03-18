@@ -1,6 +1,6 @@
 <%-- 
-    Document   : indexUserRegistration
-    Created on : Feb 7, 2021, 7:21:53 PM
+    Document   : indexUserRegistrationAdminPageAction
+    Created on : Mar 18, 2021, 7:05:44 AM
     Author     : Anthony
 --%>
 <%@page import="java.security.NoSuchAlgorithmException"%>
@@ -72,7 +72,7 @@
         st.executeUpdate(s.getSQLAll() + "('"+idNum+"','"+timeBase+"','"+timeBase+"','"+timeBase+"','"+password+"','"+"Out"+"')");
         // Show user that the information has been saved and display some
         // of that information.
-        response.sendRedirect("indexUserPrintPage.jsp");
+        response.sendRedirect("save.jsp");
     }
     catch(Exception e){
         out.println(e); 

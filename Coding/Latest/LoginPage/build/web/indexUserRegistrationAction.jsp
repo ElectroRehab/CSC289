@@ -72,7 +72,7 @@
         st.executeUpdate(s.getSQLAll() + "('"+idNum+"','"+timeBase+"','"+timeBase+"','"+timeBase+"','"+password+"','"+"Out"+"')");
         // Show user that the information has been saved and display some
         // of that information.
-        response.sendRedirect("save.jsp");
+        response.sendRedirect("indexUserPrintPage.jsp");
     }
     catch(Exception e){
         out.println(e); 
