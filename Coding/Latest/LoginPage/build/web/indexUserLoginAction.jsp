@@ -25,6 +25,8 @@
     HashSHA512Encryption hashText = new HashSHA512Encryption();
     int sqlInt = 0;
     int locked = 3;
+    int reset = 0;
+    
     //Get Current date and time   
     java.util.Date date=new java.util.Date();
     // Date and Time Check 
@@ -74,8 +76,7 @@
                 t.ReadTitles(sqlInt);
                 // Check for current user input info
                 if(r.getString(t.getSQLTitles().toString()).equals(userID)){
-                    out.println("HERE");
-                    // Check for locked account.
+                    // Check for locked account and count.
                     sqlInt = 19;
                     t.ReadTitles(sqlInt);
                     int check = Integer.parseInt(r.getString(t.getSQLTitles().toString()));
@@ -98,7 +99,7 @@
                             s.ReadSQL(sqlInt);
                             Statement psps = con.createStatement();
                             psps.executeUpdate(s.getSQLAll() + userID);
-                            response.sendRedirect("indexUserLogin.jsp");                                                
+                            response.sendRedirect("unacceptable.jsp");                                                
                         }
                     }
                 }
