@@ -1,27 +1,35 @@
 <%-- 
-    Document   : profile
-    Created on : Feb 9, 2021, 5:29:48 PM
+    Document   : timeWorked
+    Created on : Feb 13, 2021, 8:05:37 PM
     Author     : Anthony
 --%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="readfile.ReadTitles"%>
+<%@page import="readfile.ReadSQL"%>
+<%@page import="readfile.ReadFile"%>
 <!DOCTYPE html>
 <html>
 <head>
+    <%@page import ="java.sql.*"%>
+    <%@page import ="java.time.LocalDateTime"%> 
+    <%@page import ="java.time.format.DateTimeFormatter"%>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Profile - Brand</title>
+    <title>Table - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assetsJSP/css/adminControl.css">
+    <link rel="stylesheet" href="assetsJSP/css/timeWorkedTableStyleSheet.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">   
+     
 </head>
+
 <body id="page-top">
     <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
             <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
-                    <div><img src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60"></div>
+                   <div><img src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60"></div>
                     
                 </a>
                 <div class="sidebar-brand-text mx-3" style="color: white"><span><b>Personnel Management</b></span></div>
@@ -34,7 +42,8 @@
                     <li class="nav-item"><a class="nav-link active" href="workTable.jsp"><i class="fas fa-table"></i><span>Work Table</span></a></li>
                     <li class="nav-item"><a class="nav-link active" href="timeWorkedTable.jsp"><i class="fas fa-table"></i><span>Time Worked Table</span></a></li>
                     <li class="nav-item"><a class="nav-link active" href="resetLockedAccount.jsp"><i class="fas fa-lock-open"></i><span>Reset Locked Account</span></a></li>
-                    <li class="nav-item"><a class="nav-link active" href="indexMainPage.jsp"><i class="far fa-user-circle"></i><span>Log out</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="indexMainPage.jsp"><i class="far fa-user-circle"></i><span>Log out</span></a></li>                   
+                     
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
             </div>
@@ -119,7 +128,7 @@
                                             </div>
                                             <div class="font-weight-bold">
                                                 <div class="text-truncate"><span>Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</span></div>
-                                                <p class="small text-gray-500 mb-0">Chicken the Dog Â· 2w</p>
+                                                <p class="small text-gray-500 mb-0">Chicken the Dog · 2w</p>
                                             </div>
                                         </a><a class="text-center dropdown-item small text-gray-500" href="#">Show All Alerts</a>
                                     </div>
@@ -138,148 +147,162 @@
                     </div>
                 </nav>
                 <div class="container-fluid">
-                    <h3 class="text-dark mb-4">Profile</h3>
-                    <div class="row mb-3">
-                        <div class="col-lg-4">
-                            <div class="card mb-3">
-                                <div class="card-body text-center shadow"><img class="rounded-circle mb-3 mt-4" src="assetsJSP/css/images/iconfinder_Account_1891016.png" width="160" height="160">
-                                    <div class="mb-3"><button class="btn btn-primary btn-sm" type="button">Change Photo</button></div>
-                                </div>
-                            </div>
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="text-primary font-weight-bold m-0">Projects</h6>
-                                </div>
-                                <div class="card-body">
-                                    <h4 class="small font-weight-bold">Server migration<span class="float-right">20%</span></h4>
-                                    <div class="progress progress-sm mb-3">
-                                        <div class="progress-bar bg-danger" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%;"><span class="sr-only">20%</span></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Sales tracking<span class="float-right">40%</span></h4>
-                                    <div class="progress progress-sm mb-3">
-                                        <div class="progress-bar bg-warning" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;"><span class="sr-only">40%</span></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Customer Database<span class="float-right">60%</span></h4>
-                                    <div class="progress progress-sm mb-3">
-                                        <div class="progress-bar bg-primary" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">60%</span></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Payout Details<span class="float-right">80%</span></h4>
-                                    <div class="progress progress-sm mb-3">
-                                        <div class="progress-bar bg-info" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"><span class="sr-only">80%</span></div>
-                                    </div>
-                                    <h4 class="small font-weight-bold">Account setup<span class="float-right">Complete!</span></h4>
-                                    <div class="progress progress-sm mb-3">
-                                        <div class="progress-bar bg-success" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"><span class="sr-only">100%</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="row mb-3 d-none">
-                                <div class="col">
-                                    <div class="card text-white bg-primary shadow">
-                                        <div class="card-body">
-                                            <div class="row mb-2">
-                                                <div class="col">
-                                                    <p class="m-0">Peformance</p>
-                                                    <p class="m-0"><strong>65.2%</strong></p>
-                                                </div>
-                                                <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
-                                            </div>
-                                            <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i>&nbsp;5% since last month</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card text-white bg-success shadow">
-                                        <div class="card-body">
-                                            <div class="row mb-2">
-                                                <div class="col">
-                                                    <p class="m-0">Peformance</p>
-                                                    <p class="m-0"><strong>65.2%</strong></p>
-                                                </div>
-                                                <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
-                                            </div>
-                                            <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i>&nbsp;5% since last month</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="card shadow mb-3">
-                                        <div class="card-header py-3">
-                                            <p class="text-primary m-0 font-weight-bold">User Settings</p>
-                                        </div>
-                                        <div class="card-body">
-                                            <form>
-                                                <div class="form-row">
-                                                    <div class="col">
-                                                        <div class="form-group"><label for="username"><strong>Username</strong></label><input class="form-control" type="text" placeholder="user.name" name="username"></div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div class="form-group"><label for="email"><strong>Email Address</strong></label><input class="form-control" type="email" placeholder="user@example.com" name="email"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-row">
-                                                    <div class="col">
-                                                        <div class="form-group"><label for="first_name"><strong>First Name</strong></label><input class="form-control" type="text" placeholder="John" name="first_name"></div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div class="form-group"><label for="last_name"><strong>Last Name</strong></label><input class="form-control" type="text" placeholder="Doe" name="last_name"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group"><button class="btn btn-primary btn-sm" type="submit">Save Settings</button></div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="card shadow">
-                                        <div class="card-header py-3">
-                                            <p class="text-primary m-0 font-weight-bold">Contact Settings</p>
-                                        </div>
-                                        <div class="card-body">
-                                            <form>
-                                                <div class="form-group"><label for="address"><strong>Address</strong></label><input class="form-control" type="text" placeholder="Sunset Blvd, 38" name="address"></div>
-                                                <div class="form-row">
-                                                    <div class="col">
-                                                        <div class="form-group"><label for="city"><strong>City</strong></label><input class="form-control" type="text" placeholder="Los Angeles" name="city"></div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div class="form-group"><label for="country"><strong>Country</strong></label><input class="form-control" type="text" placeholder="USA" name="country"></div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group"><button class="btn btn-primary btn-sm" type="submit">Save&nbsp;Settings</button></div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card shadow mb-5">
+                    <h3 class="text-dark mb-4">Locked Accounts</h3>
+                    <div class="card shadow">
                         <div class="card-header py-3">
-                            <p class="text-primary m-0 font-weight-bold">Forum Settings</p>
+                            <p class="text-primary m-0 font-weight-bold">Employee Time Worked</p>
                         </div>
                         <div class="card-body">
                             <div class="row">
+                                <div class="col-md-6 text-nowrap">
+                                    <div id="dataTable_length" class="dataTables_length" aria-controls="dataTable"><label>Show&nbsp;<select class="form-control form-control-sm custom-select custom-select-sm">
+                                                <option value="10" selected="">10</option>
+                                                <option value="25">25</option>
+                                                <option value="50">50</option>
+                                                <option value="100">100</option>
+                                            </select>&nbsp;</label></div>
+                                    <!--
+                                    <div class="form-group" >
+                                        <form  action="resetTotalTimeAction.jsp" method="post">                
+                                                                               
+                                           <input  onclick="return getConfirmation();" type="submit" value="Reset" name="Reset Time" class="btn">  
+                                           <script type = "text/javascript">
+        
+                                                function getConfirmation() {
+                                                    var retVal = confirm("WARNING!!!\nYou are about to reset the TotalTime column.\nDo you wish to continue?");
+                                        
+                                                    if( retVal === true ) 
+                                                    {                          
+                                                         return true;
+                                                    } 
+                                                    else 
+                                                    {                   
+                                                         return false;
+                                                    }
+                                                }                
+                                          </script>       
+                                        </form>
+                                                      
+                                    </div>      -->  
+                                </div>
                                 <div class="col-md-6">
-                                    <form>
-                                        <div class="form-group"><label for="signature"><strong>Signature</strong><br></label><textarea class="form-control" rows="4" name="signature"></textarea></div>
-                                        <div class="form-group">
-                                            <div class="custom-control custom-switch"><input class="custom-control-input" type="checkbox" id="formCheck-1"><label class="custom-control-label" for="formCheck-1"><strong>Notify me about new replies</strong></label></div>
-                                        </div>
-                                        <div class="form-group"><button class="btn btn-primary btn-sm" type="submit">Save Settings</button></div>
-                                    </form>
+                                    <div class="text-md-right dataTables_filter" id="dataTable_filter"><label><input type="search" class="form-control form-control-sm" aria-controls="dataTable" placeholder="Search"></label></div>
+                                </div>
+                            </div>
+                             <%    
+    try{
+        int sqlInt = 0;
+        java.util.Date date=new java.util.Date();			
+        // Create a new clean conneciton.
+        Connection con = null;
+        // Create object
+        ReadFile rf = new ReadFile();
+        // Run the CSV Reader Class
+        rf.ReadFile();
+        // Create object
+        ReadSQL s = new ReadSQL();
+        // Create object
+        ReadTitles t = new ReadTitles();
+        // Connect to Database
+        Class.forName(rf.getClassDriver());
+        con = DriverManager.getConnection(rf.getLink(), rf.getUser(), rf.getPass());
+        Statement st=con.createStatement();
+        sqlInt = 23;
+        s.ReadSQL(sqlInt);
+        ResultSet rs=st.executeQuery(s.getSQLAll());
+        
+%>
+                            <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                                <table class="table my-0" id="dataTable">
+                                    <thead>
+                                        <tr>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>User ID</th>                                             
+                                            <th>Wrong</th>
+                                            <th>Pin Reset</th>                                             
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tbody>
+        <%while(rs.next())
+        {
+              
+            %>               
+            <tr>           
+                <!--First Name-->
+                <%t.ReadTitles(3);%>
+                <td><%=rs.getString(t.getSQLTitles())%></td>
+                <!--Last Name-->
+                <%t.ReadTitles(4);%>
+                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <!--User ID-->
+                <%t.ReadTitles(2);%>
+                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <!--Wrong-->
+                <%t.ReadTitles(19);%>
+                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <!--Reset-->
+                <td><div class="form-group" >
+                                        <form  action="ohNo.jsp" method="post">                
+                                                                               
+                                           <input  onclick="return getConfirmation();" type="submit" value="Reset" name="Reset Time" class="btn">  
+                                           <script type = "text/javascript">
+        
+                                                function getConfirmation() {
+                                                    var retVal = confirm("Currently Under Construction\nDo you wish to continue?");
+                                        
+                                                    if( retVal === true ) 
+                                                    {                          
+                                                         return true;
+                                                    } 
+                                                    else 
+                                                    {                   
+                                                         return false;
+                                                    }
+                                                }                
+                                          </script>       
+                                        </form>
+                                                      
+                                    </div></td>
+            </tr>            
+           
+    <%}
+}
+    catch(Exception e){
+        out.print(e.getMessage());%><br><%
+    }
+    finally{         
+    }
+    %>
+                                         
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 align-self-center">
+                                    <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to 10 of 27</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                                        <ul class="pagination">
+                                            <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                                        </ul>
+                                    </nav>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <img class="company-logo-profile-table" src="assetsJSP/css/images/CompanyLogo.png" height="280" width="280">
+    <img class="company-logo-time-worked-table" src="assetsJSP/css/images/CompanyLogo.png" height="600" width="600">
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
-                    <div class="text-center my-auto copyright"><span>Copyright Â© Brand 2021</span></div>
+                    <div class="text-center my-auto copyright"><span>Copyright © Brand 2021</span></div>
                 </div>
             </footer>
         </div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>

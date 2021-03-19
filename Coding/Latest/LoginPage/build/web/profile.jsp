@@ -33,6 +33,7 @@
                     <li class="nav-item"><a class="nav-link active" href="tableUser.jsp"><i class="fas fa-table"></i><span>Employee Table</span></a></li>
                     <li class="nav-item"><a class="nav-link active" href="workTable.jsp"><i class="fas fa-table"></i><span>Work Table</span></a></li>
                     <li class="nav-item"><a class="nav-link active" href="timeWorkedTable.jsp"><i class="fas fa-table"></i><span>Time Worked Table</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="resetLockedAccount.jsp"><i class="fas fa-lock-open"></i><span>Reset Locked Account</span></a></li>
                     <li class="nav-item"><a class="nav-link active" href="indexMainPage.jsp"><i class="far fa-user-circle"></i><span>Log out</span></a></li>
                 </ul>
                 <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>

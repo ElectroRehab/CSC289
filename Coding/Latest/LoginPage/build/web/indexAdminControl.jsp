@@ -23,7 +23,7 @@
         frame-src 'self';  
         manifest-src 'self'; media-src 'self';  
         worker-src 'none';">
-    <title>Dashboard - Brand</title>
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
      <link rel="stylesheet" href="assetsJSP/css/adminControl.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -49,6 +49,7 @@
                     <li class="nav-item"><a class="nav-link active" href="tableUser.jsp"><i class="fas fa-table"></i><span>Employee Table</span></a></li>
                     <li class="nav-item"><a class="nav-link active" href="workTable.jsp"><i class="fas fa-table"></i><span>Work Table</span></a></li>
                     <li class="nav-item"><a class="nav-link active" href="timeWorkedTable.jsp"><i class="fas fa-table"></i><span>Time Worked Table</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="resetLockedAccount.jsp"><i class="fas fa-lock-open"></i><span>Reset Locked Account</span></a></li>
                     <li class="nav-item"><a class="nav-link active" href="indexMainPage.jsp"><i class="far fa-user-circle"></i><span>Log out</span></a></li>
                      
                 </ul>
