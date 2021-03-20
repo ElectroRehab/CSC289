@@ -3,6 +3,10 @@
     Created on : Feb 9, 2021, 5:29:48 PM
     Author     : Anthony
 --%>
+<%@page import="readfile.ReadTitles"%>
+<%@page import="readfile.ReadSQL"%>
+<%@page import="readfile.ReadFile"%>
+<%@page import ="java.sql.*"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -16,6 +20,7 @@
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assetsJSP/mainPageCSS/styles.css">
 </head>
 <body id="page-top">
     <div id="wrapper">
@@ -205,28 +210,59 @@
                                     </div>
                                 </div>
                             </div>
+                             <%    
+    try{
+        int count = 0;
+        int sqlInt = 0;
+        // Create a new clean conneciton.
+        Connection con = null;
+        // Create object
+        ReadFile rf = new ReadFile();
+        // Create object
+        ReadSQL s = new ReadSQL();
+        //Create Object
+        ReadTitles t = new ReadTitles();
+        // Run the CSV Reader Class
+        rf.ReadFile();
+        // Connect to Database
+        Class.forName(rf.getClassDriver());
+        con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
+        Statement st=con.createStatement();
+        sqlInt = 12;
+        s.ReadSQL(sqlInt);
+        ResultSet rs=st.executeQuery(s.getSQLAll());
+    %>
+     <% rs.next(); 
+    
+            %>
                             <div class="row">
                                 <div class="col">
                                     <div class="card shadow mb-3">
                                         <div class="card-header py-3">
-                                            <p class="text-primary m-0 font-weight-bold">User Settings</p>
+                                            <p class="text-primary m-0 font-weight-bold">User Information</p>
                                         </div>
+                                        
                                         <div class="card-body">
                                             <form>
+                                                
                                                 <div class="form-row">
                                                     <div class="col">
-                                                        <div class="form-group"><label for="username"><strong>Username</strong></label><input class="form-control" type="text" placeholder="user.name" name="username"></div>
+                                                        <div class="form-group"><label for="first_name"><strong>First Name</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(3);%>
+                <%=rs.getString(t.getSQLTitles())%>" name="first_name"></div>
                                                     </div>
                                                     <div class="col">
-                                                        <div class="form-group"><label for="email"><strong>Email Address</strong></label><input class="form-control" type="email" placeholder="user@example.com" name="email"></div>
+                                                        <div class="form-group"><label for="last_name"><strong>Last Name</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(4);%>
+                 <%=rs.getString(t.getSQLTitles()) %>" name="last_name"></div>
                                                     </div>
                                                 </div>
-                                                <div class="form-row">
-                                                    <div class="col">
-                                                        <div class="form-group"><label for="first_name"><strong>First Name</strong></label><input class="form-control" type="text" placeholder="John" name="first_name"></div>
+                                                    <div class="form-row">
+                                                     <div class="col">
+                                                        <div class="form-group"><label for="phone_nuber"><strong>Phone Number</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(9);%>
+                <%=rs.getString(t.getSQLTitles()) %>" name="last_name"></div>
                                                     </div>
                                                     <div class="col">
-                                                        <div class="form-group"><label for="last_name"><strong>Last Name</strong></label><input class="form-control" type="text" placeholder="Doe" name="last_name"></div>
+                                                        <div class="form-group"><label for="email"><strong>Email Address</strong></label><input class="form-control" type="email" placeholder="<%t.ReadTitles(10);%>
+                 <%=rs.getString(t.getSQLTitles()) %>" name="email"></div>
                                                     </div>
                                                 </div>
                                                 <div class="form-group"><button class="btn btn-primary btn-sm" type="submit">Save Settings</button></div>
@@ -239,15 +275,30 @@
                                         </div>
                                         <div class="card-body">
                                             <form>
-                                                <div class="form-group"><label for="address"><strong>Address</strong></label><input class="form-control" type="text" placeholder="Sunset Blvd, 38" name="address"></div>
+                                                <div class="form-group"><label for="address"><strong>Address</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(5);%>
+                 <%=rs.getString(t.getSQLTitles()) %>" name="address"></div>
+                                                <div class="form-group"><label for="city"><strong>City</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(6);%>
+                <%=rs.getString(t.getSQLTitles()) %>" name="address"></div>
+                 
                                                 <div class="form-row">
+
                                                     <div class="col">
-                                                        <div class="form-group"><label for="city"><strong>City</strong></label><input class="form-control" type="text" placeholder="Los Angeles" name="city"></div>
-                                                    </div>
-                                                    <div class="col">
-                                                        <div class="form-group"><label for="country"><strong>Country</strong></label><input class="form-control" type="text" placeholder="USA" name="country"></div>
-                                                    </div>
+                                                        <div class="form-group"><label for="State"><strong>State</strong></label><input class="form-control" type="text" placeholder=" <%t.ReadTitles(7);%>
+                 <%=rs.getString(t.getSQLTitles()) %>" name="State"></div>
+                                                    </div>                      
+
                                                 </div>
+                                                    <div class="form-row">
+
+                                                   <div class="col">
+                                                        <div class="form-group"><label for="country"><strong>Country</strong></label><input class="form-control" type="text" value="USA" name="country"></div>
+ 
+                                                    </div>   
+                                                        <div class="col">
+                                                                <img class="world-map-image" src="assetsJSP/css/images/worldImage.png" alt="worldIcon">    
+                                                    </div>  
+                                                                                               
+                                                </div>                                           
                                                 <div class="form-group"><button class="btn btn-primary btn-sm" type="submit">Save&nbsp;Settings</button></div>
                                             </form>
                                         </div>
@@ -256,6 +307,15 @@
                             </div>
                         </div>
                     </div>
+                                             
+                            <%}
+
+    catch(Exception e){
+        out.print(e.getMessage());%><br><%
+    }
+    finally{         
+    }
+    %>
                     <div class="card shadow mb-5">
                         <div class="card-header py-3">
                             <p class="text-primary m-0 font-weight-bold">Forum Settings</p>

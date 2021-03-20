@@ -77,7 +77,7 @@
                     <div ><h2>System Logout</h2></div>              
                 
                     <div class="form-group" >                  
-                        <input class="form-control" type="text" name="adminID" placeholder="Scan ID"><br>
+                        <input class="form-control" type="text" name="adminID" placeholder="Scan Admin ID"><br>
                     </div>   
                     <div class="form-group">
                         <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
@@ -85,6 +85,7 @@
                     <div class="form-group">
                         <button class="home-popup-login" type="submit">Logout</button>             
                     </div> 
+                    <div ><h3>Admin Required!</h3></div> 
              
                 </form>
             </div>

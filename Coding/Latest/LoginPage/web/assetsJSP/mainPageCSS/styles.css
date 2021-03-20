@@ -36,3 +36,22 @@ p{
    
    opacity: .6; 
 }
+.world-map-image{
+     
+    position: absolute   ;
+    top: -300%;
+    left: -10%;
+    height: 450px;
+    width:700px;
+}
+
+
+ ::-webkit-input-placeholder {  
+    color: black !important; 
+    font-size: 1vw; 
+    text-align: left;}  
+  ::-mozilla-input-placeholder {  
+    color: black !important; 
+    font-size: 1vw; 
+    text-align: left;}  
+ 
