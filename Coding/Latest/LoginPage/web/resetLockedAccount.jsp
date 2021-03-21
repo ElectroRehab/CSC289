@@ -229,7 +229,8 @@
         {
               
             %>               
-            <tr>           
+            <tr>
+                        <form  action="resetLockedAccountAction.jsp" method="post">    
                 <!--First Name-->
                 <%t.ReadTitles(3);%>
                 <td><%=rs.getString(t.getSQLTitles())%></td>
@@ -237,36 +238,31 @@
                 <%t.ReadTitles(4);%>
                 <td><%=rs.getString(t.getSQLTitles()) %></td>
                 <!--User ID-->
-                <%t.ReadTitles(2);%>
-                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <%t.ReadTitles(2);%>                
+                <td><input class="form-control" type="text" name="user_id" value="<%out.print(rs.getString(t.getSQLTitles()));%>" readonly="readonly"></td>
                 <!--Wrong-->
                 <%t.ReadTitles(19);%>
                 <td><%=rs.getString(t.getSQLTitles()) %></td>
                 <!--Reset-->
-                <td><div class="form-group" >
-                                        <form  action="ohNo.jsp" method="post">                
-                                                                               
-                                           <input  onclick="return getConfirmation();" type="submit" value="Reset" name="Reset Time" class="btn">  
-                                           <script type = "text/javascript">
-        
-                                                function getConfirmation() {
-                                                    var retVal = confirm("Currently Under Construction\nDo you wish to continue?");
-                                        
-                                                    if( retVal === true ) 
-                                                    {                          
-                                                         return true;
-                                                    } 
-                                                    else 
-                                                    {                   
-                                                         return false;
-                                                    }
-                                                }                
-                                          </script>       
-                                        </form>
-                                                      
-                                    </div></td>
-            </tr>            
-           
+                <td>
+                    <div class="form-group">
+                        <input  onclick="return getConfirmation();" type="submit" value="Reset" name="Reset Time" class="btn">
+                        <script type = "text/javascript">
+                            function getConfirmation(){
+                                var retVal = confirm("You are about to reset a PIN.\nDo you wish to continue?");
+                                
+                                if( retVal === true ){
+                                    return true;
+                                } 
+                                else{
+                                    return false;
+                                }
+                            }
+                            </script>
+                        </form>                                                      
+                    </div>
+                </td>
+            </tr>
     <%}
 }
     catch(Exception e){
