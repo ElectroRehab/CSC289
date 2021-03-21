@@ -3,6 +3,7 @@
     Created on : Feb 13, 2021, 8:05:37 PM
     Author     : Anthony
 --%>
+<%@page import="readfile.HashSHA512Encryption"%>
 <%@page import="readfile.ReadTitles"%>
 <%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
@@ -12,9 +13,22 @@
     <%@page import ="java.sql.*"%>
     <%@page import ="java.time.LocalDateTime"%> 
     <%@page import ="java.time.format.DateTimeFormatter"%>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">        
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src;  
+
+        script-src 'self'  'sha256-JE0280krcqkShSI9tiB7uYMolH2Mp4kLOi+tnmU+JI4='    
+        ;style-src 'report-sample' 'self' 'unsafe-inline' 
+        https://cdnjs.cloudflare.com https://fonts.googleapis.com; 
+        img-src 'self' data:; base-uri 'self'; object-src 'self';
+        connect-src 'self'; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; 
+        frame-src 'self';
+        manifest-src 'self'; media-src 'self'; 
+        worker-src 'none';">
     <title>Table - Brand</title>
+    <link rel="stylesheet" href="assetsJSP/css/registrationStyleSheet.css"> 
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assetsJSP/css/adminControl.css">
     <link rel="stylesheet" href="assetsJSP/css/timeWorkedTableStyleSheet.css">
@@ -161,29 +175,7 @@
                                                 <option value="50">50</option>
                                                 <option value="100">100</option>
                                             </select>&nbsp;</label></div>
-                                    <!--
-                                    <div class="form-group" >
-                                        <form  action="resetTotalTimeAction.jsp" method="post">                
-                                                                               
-                                           <input  onclick="return getConfirmation();" type="submit" value="Reset" name="Reset Time" class="btn">  
-                                           <script type = "text/javascript">
-        
-                                                function getConfirmation() {
-                                                    var retVal = confirm("WARNING!!!\nYou are about to reset the TotalTime column.\nDo you wish to continue?");
-                                        
-                                                    if( retVal === true ) 
-                                                    {                          
-                                                         return true;
-                                                    } 
-                                                    else 
-                                                    {                   
-                                                         return false;
-                                                    }
-                                                }                
-                                          </script>       
-                                        </form>
-                                                      
-                                    </div>      -->  
+                                    
                                 </div>
                                 <div class="col-md-6">
                                     <div class="text-md-right dataTables_filter" id="dataTable_filter"><label><input type="search" class="form-control form-control-sm" aria-controls="dataTable" placeholder="Search"></label></div>
@@ -191,6 +183,7 @@
                             </div>
                              <%    
     try{
+        HashSHA512Encryption hashText = new HashSHA512Encryption();
         int sqlInt = 0;
         java.util.Date date=new java.util.Date();			
         // Create a new clean conneciton.
@@ -220,7 +213,8 @@
                                             <th>Last Name</th>
                                             <th>User ID</th>                                             
                                             <th>Wrong</th>
-                                            <th>Pin Reset</th>                                             
+                                            <th>Enter New PIN</th>  
+                                            <th>Pin Reset</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -230,7 +224,7 @@
               
             %>               
             <tr>
-                        <form  action="resetLockedAccountAction.jsp" method="post">    
+                <form  action="resetLockedAccountAction.jsp" method="post">    
                 <!--First Name-->
                 <%t.ReadTitles(3);%>
                 <td><%=rs.getString(t.getSQLTitles())%></td>
@@ -243,9 +237,15 @@
                 <!--Wrong-->
                 <%t.ReadTitles(19);%>
                 <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <!--PIN RESET-->
+                <td><div class="form-group">
+                        <div class="pass-inst "><p>
+                  <input class="form-stand" name="password" type="password" placeholder="Enter pin" id="plainText1"/>
+                            </p></div>
+                </td>
                 <!--Reset-->
                 <td>
-                    <div class="form-group">
+                    <div class="form-group">                        
                         <input  onclick="return getConfirmation();" type="submit" value="Reset" name="Reset Time" class="btn">
                         <script type = "text/javascript">
                             function getConfirmation(){
@@ -258,10 +258,9 @@
                                     return false;
                                 }
                             }
-                            </script>
-                        </form>                                                      
-                    </div>
+                            </script>                            
                 </td>
+                
             </tr>
     <%}
 }
