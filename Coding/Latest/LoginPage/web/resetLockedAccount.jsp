@@ -28,7 +28,7 @@
         manifest-src 'self'; media-src 'self'; 
         worker-src 'none';">
     <title>Table - Brand</title>
-    <link rel="stylesheet" href="assetsJSP/css/registrationStyleSheet.css"> 
+     
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assetsJSP/css/adminControl.css">
     <link rel="stylesheet" href="assetsJSP/css/timeWorkedTableStyleSheet.css">
