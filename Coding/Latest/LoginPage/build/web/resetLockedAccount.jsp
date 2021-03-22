@@ -212,7 +212,7 @@
                                             <th>First Name</th>
                                             <th>Last Name</th>
                                             <th>User ID</th>                                             
-                                            <th>Wrong</th>
+                                            <th>Identifier</th>
                                             <th>Enter New PIN</th>  
                                             <th>Pin Reset</th>
                                         </tr>
@@ -234,9 +234,9 @@
                 <!--User ID-->
                 <%t.ReadTitles(2);%>                
                 <td><input class="form-control" type="text" name="user_id" value="<%out.print(rs.getString(t.getSQLTitles()));%>" readonly="readonly"></td>
-                <!--Wrong-->
-                <%t.ReadTitles(19);%>
-                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <!--Identifier-->
+                <%t.ReadTitles(13);%>
+                <td><input class="form-control" type="text" name="identifier" value="<%out.print(rs.getString(t.getSQLTitles()));%>" readonly="readonly"></td>
                 <!--PIN RESET-->
                 <td><div class="form-group">
                         <div class="pass-inst "><p>
