@@ -56,6 +56,7 @@
                     s.ReadSQL(sqlInt);
                     Statement psps = con.createStatement();
                     psps.executeUpdate(s.getSQLAll() + idInfo);
+                    response.sendRedirect("indexAdminControl.jsp"); 
                 }
                 else{
                 }
