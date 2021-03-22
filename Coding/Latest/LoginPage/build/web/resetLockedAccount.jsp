@@ -164,7 +164,7 @@
                     <h3 class="text-dark mb-4">Locked Accounts</h3>
                     <div class="card shadow">
                         <div class="card-header py-3">
-                            <p class="text-primary m-0 font-weight-bold">Employee Time Worked</p>
+                            <p class="text-primary m-0 font-weight-bold">Reset Employee Account</p>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -294,8 +294,7 @@
                     </div>
                 </div>
             </div>
-    <img class="company-logo-time-worked-table" src="assetsJSP/css/images/CompanyLogo.png" height="600" width="600">
-            <footer class="bg-white sticky-footer">
+             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
                     <div class="text-center my-auto copyright"><span>Copyright © Brand 2021</span></div>
                 </div>
