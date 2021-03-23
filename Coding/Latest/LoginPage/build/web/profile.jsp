@@ -3,6 +3,7 @@
     Created on : Feb 9, 2021, 5:29:48 PM
     Author     : Anthony
 --%>
+<%@page import="readfile.ReadSessions"%>
 <%@page import="readfile.ReadTitles"%>
 <%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
@@ -23,21 +24,10 @@
     <link rel="stylesheet" href="assetsJSP/mainPageCSS/styles.css">
 </head>
 <body id="page-top">
-    <% 
-            String uid = (String)session.getAttribute("adminID");
-            if (uid == null)
-            {
-		%><!-- NOT A VALID USER, IF THE USER TRIES TO EXECUTE LOGGED IN PAGE DIRECTLY, ACCESS IS RESTRICTED -->
-                     <jsp:forward page="index.jsp"/>
-		<%	
-		}
-		else
-		{//IF THE VALUE IN SESSION IS NOT NULL THEN THE IS USER IS VALID
-					 
-		%>
-		<!-- WE HAVE GIVEN LOGOUT.JSP FILE INORDER TO LOGOUT THE SESSION -->					 
-		<%}
-    %>
+<%
+    ReadSessions r = new ReadSessions();
+    r.getPost(request, response, session);
+%>
     <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
             <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">

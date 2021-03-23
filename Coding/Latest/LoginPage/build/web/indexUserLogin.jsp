@@ -3,6 +3,7 @@
     Created on : Feb 7, 2021, 5:39:52 PM
     Author     : Anthony
 --%>
+<%@page import="readfile.ReadSessions"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -29,21 +30,10 @@
         
     </head>     
     <body>
-            <% 
-            String uid = (String)session.getAttribute("adminID");
-            if (uid == null)
-            {
-		%><!-- NOT A VALID USER, IF THE USER TRIES TO EXECUTE LOGGED IN PAGE DIRECTLY, ACCESS IS RESTRICTED -->
-                     <jsp:forward page="index.jsp"/>
-		<%	
-		}
-		else
-		{//IF THE VALUE IN SESSION IS NOT NULL THEN THE IS USER IS VALID
-					 
-		%>
-		<!-- WE HAVE GIVEN LOGOUT.JSP FILE INORDER TO LOGOUT THE SESSION -->					 
-		<%}
-            %>
+<%
+    ReadSessions r = new ReadSessions();
+    r.getPost(request, response, session);
+%>
         <div class="flex-container">        
         <div class="login-clean-user-login">    
             <form action="indexUserLoginAction.jsp" method="post" >  
@@ -65,7 +55,7 @@
         </div>
         </div >
         <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
-        <div class="container"><img class="item-co-logo" src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60">&nbsp;&nbsp;&nbsp;<a class="home-main" href="indexUserLogin.jsp">K&O</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container"><img class="item-co-logo" src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60">&nbsp;&nbsp;&nbsp;<a class="home-main" href="index.jsp">K&O</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">                
                 <ul class="nav navbar-nav mr-auto">                    
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Access </a>

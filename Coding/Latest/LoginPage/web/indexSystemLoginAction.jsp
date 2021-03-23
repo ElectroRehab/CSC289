@@ -3,6 +3,8 @@
     Created on : Mar 16, 2021, 8:17:09 AM
     Author     : Anthony
 --%>
+<%@page import="readfile.ReadSessions"%>
+<%@page import="readfile.ReadTitles"%>
 <%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <%@page import="java.security.NoSuchAlgorithmException"%>
@@ -10,8 +12,8 @@
 <%@page import="java.math.BigInteger"%>
 <%@page import="readfile.HashSHA512Encryption"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import ="java.sql.*"%>
-<%@ page import = "java.io.*,java.util.*" %>
+<%@page import="java.sql.*"%>
+<%@page import="java.io.*,java.util.*"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,14 +38,17 @@
         hashText.hashText = "";
         hashText.setHashText(pinNum);
         pinNum = hashText.getHashText();
-        try{
-            
+        try{            
             // Create a new clean conneciton.
             Connection con = null;
             // Create object
             ReadFile rf = new ReadFile();
             // Create object
             ReadSQL s = new ReadSQL();
+            // Create object
+            ReadTitles t = new ReadTitles();
+            // Create Object
+            ReadSessions r = new ReadSessions();
             // Run the CSV Reader Class
             rf.ReadFile();
             // Connect to Database
@@ -57,10 +62,10 @@
             ps.setString(2,pinNum );    
             ResultSet rs = ps.executeQuery();    
             if (rs.next()){
-                
-                session.setAttribute("adminID", adminID);
-                response.sendRedirect("indexSystemLoginOption.jsp"); 
-                
+                sqlInt = 1;
+                t.ReadTitles(sqlInt);
+                session.setAttribute(t.getSQLTitles().toString(), adminID);                
+                response.sendRedirect("indexSystemLoginOption.jsp");                
             }
             else{
                 response.sendRedirect("notAdminError.jsp");

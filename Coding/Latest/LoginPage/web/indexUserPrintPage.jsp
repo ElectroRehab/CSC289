@@ -27,21 +27,10 @@
         </script>
     </head>  
     <body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">  
-            <% 
-            String uid = (String)session.getAttribute("adminID");
-            if (uid == null)
-            {
-		%><!-- NOT A VALID USER, IF THE USER TRIES TO EXECUTE LOGGED IN PAGE DIRECTLY, ACCESS IS RESTRICTED -->
-                     <jsp:forward page="index.jsp"/>
-		<%	
-		}
-		else
-		{//IF THE VALUE IN SESSION IS NOT NULL THEN THE IS USER IS VALID
-					 
-		%>
-		<!-- WE HAVE GIVEN LOGOUT.JSP FILE INORDER TO LOGOUT THE SESSION -->					 
-		<%}
-            %>
+<%
+    ReadSessions r = new ReadSessions();
+    r.getPost(request, response, session);
+%>
           <div class="image">            
             <div><img src="assetsJSP/css/images/mainPageBackgroundv3.png" class="image " alt=”K&OLogo”>    </div>              
         </div>

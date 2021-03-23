@@ -1,16 +1,16 @@
- <%@page import="readfile.ReadSQL"%>
+ <%@page import="readfile.ReadTitles"%>
+<%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <%@page import="java.security.NoSuchAlgorithmException"%>
 <%@page import="java.security.MessageDigest"%>
 <%@page import="java.math.BigInteger"%>
 <%@page import="readfile.HashSHA512Encryption"%>
+<%@page import ="java.sql.*"%>
 <%-- 
     Document   : indexMain.jsp
     Created on : Feb 3, 2021, 6:40:30 AM
     Author     : Anthony
 --%>
-<%@page import ="java.sql.*"%>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,14 +34,15 @@
         hashText.hashText = "";
         hashText.setHashText(pinNum);
         pinNum = hashText.getHashText();
-        try{
-            
+        try{            
             // Create a new clean conneciton.
             Connection con = null;
             // Create object
             ReadFile rf = new ReadFile();
             // Create object
             ReadSQL s = new ReadSQL();
+            // Create object
+            ReadTitles t = new ReadTitles();
             // Run the CSV Reader Class
             rf.ReadFile();
             // Connect to Database
@@ -55,7 +56,8 @@
             ps.setString(2,pinNum );    
             ResultSet rs = ps.executeQuery();    
             if (rs.next()){
-                session.setAttribute("adminID", adminID);
+                t.ReadTitles(1);
+                session.setAttribute(t.getSQLTitles().toString(), adminID);
                 response.sendRedirect("indexAdminControl.jsp");              
             }
             else{

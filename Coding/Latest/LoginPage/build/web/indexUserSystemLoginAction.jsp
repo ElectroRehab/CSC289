@@ -3,6 +3,7 @@
     Created on : Mar 17, 2021, 5:13:16 PM
     Author     : Anthony
 --%>
+<%@page import="readfile.ReadTitles"%>
 <%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <%@page import="java.security.NoSuchAlgorithmException"%>
@@ -42,6 +43,8 @@
             ReadFile rf = new ReadFile();
             // Create object
             ReadSQL s = new ReadSQL();
+            // Create object
+            ReadTitles t = new ReadTitles();
             // Run the CSV Reader Class
             rf.ReadFile();
             // Connect to Database
@@ -55,7 +58,8 @@
             ps.setString(2,pinNum );    
             ResultSet rs = ps.executeQuery();    
             if (rs.next()){
-                session.setAttribute("adminID", adminID);
+                t.ReadTitles(1);
+                session.setAttribute(t.getSQLTitles().toString(), adminID);
                 response.sendRedirect("indexUserLogin.jsp");              
             }
             else{

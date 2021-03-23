@@ -4,6 +4,7 @@
     Author     : Anthony
 --%>
 
+<%@page import="readfile.ReadSessions"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
  
@@ -27,26 +28,12 @@
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assetsJSP/css/popupLoginStyleSheet.css"> 
         <link rel="stylesheet" href="assetsJSP/mainPageCSS/styles.css">
-         
-       
-    </head>       
+    </head>
     <body>
-        
-    <% 
-            String uid = (String)session.getAttribute("adminID");
-            if (uid == null)
-            {
-		%><!-- NOT A VALID USER, IF THE USER TRIES TO EXECUTE LOGGED IN PAGE DIRECTLY, ACCESS IS RESTRICTED -->
-                     <jsp:forward page="index.jsp"/>
-		<%	
-		}
-		else
-		{//IF THE VALUE IN SESSION IS NOT NULL THEN THE IS USER IS VALID
-					 
-		%>
-		<!-- WE HAVE GIVEN LOGOUT.JSP FILE INORDER TO LOGOUT THE SESSION -->					 
-		<%}
-    %>
+<%
+    ReadSessions r = new ReadSessions();
+    r.getPost(request, response, session);
+%>
         <div class="flex-container">
         <div class="login-clean-admin">          
             <form action="indexAdminSystemLoginAction.jsp" method="post" >  
@@ -88,7 +75,7 @@
         </div> 
         </div >
         <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
-             <div class="container"><img class="item-co-logo" src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60">&nbsp;&nbsp;&nbsp;<a class="home-main" href="indexSystemLoginOption.jsp">K&O</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+             <div class="container"><img class="item-co-logo" src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60">&nbsp;&nbsp;&nbsp;<a class="home-main" href="index.jsp">K&O</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">              
                     <span class="navbar-text actions"> <a class="home-system-logout" href="indexAdminLogin.jsp"data-target="#admin-login" data-toggle="modal" >System Logout</a></span> 
                  </div>
