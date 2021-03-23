@@ -32,6 +32,21 @@
     </head>       
     <body>
         
+    <% 
+            String uid = (String)session.getAttribute("adminID");
+            if (uid == null)
+            {
+		%><!-- NOT A VALID USER, IF THE USER TRIES TO EXECUTE LOGGED IN PAGE DIRECTLY, ACCESS IS RESTRICTED -->
+                     <jsp:forward page="index.jsp"/>
+		<%	
+		}
+		else
+		{//IF THE VALUE IN SESSION IS NOT NULL THEN THE IS USER IS VALID
+					 
+		%>
+		<!-- WE HAVE GIVEN LOGOUT.JSP FILE INORDER TO LOGOUT THE SESSION -->					 
+		<%}
+    %>
         <div class="flex-container">
         <div class="login-clean-admin">          
             <form action="indexAdminSystemLoginAction.jsp" method="post" >  
@@ -60,7 +75,7 @@
                     <img src="assetsJSP/css/images/iconfinder_Account_1891016.png" alt="accountIcon" width= "60"  height="60" >
                 </div>
                 <div class="form-group" >                  
-                    <input class="form-control" type="text" name="userID" placeholder="Scan Admin ID"><br>
+                    <input class="form-control" type="text" name="adminID" placeholder="Scan Admin ID"><br>
                 </div>   
                 <div class="form-group">
                     <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    

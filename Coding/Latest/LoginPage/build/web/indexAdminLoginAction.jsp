@@ -55,6 +55,7 @@
             ps.setString(2,pinNum );    
             ResultSet rs = ps.executeQuery();    
             if (rs.next()){
+                session.setAttribute("adminID", adminID);
                 response.sendRedirect("indexAdminControl.jsp");              
             }
             else{

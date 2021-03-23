@@ -11,7 +11,7 @@
 <%@page import="readfile.HashSHA512Encryption"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import ="java.sql.*"%>
-
+<%@ page import = "java.io.*,java.util.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,6 +21,7 @@
     
 </head>
 <%
+    
     HashSHA512Encryption hashText = new HashSHA512Encryption();
     int sqlInt = 0;
     String adminID=request.getParameter("adminID");
@@ -56,7 +57,10 @@
             ps.setString(2,pinNum );    
             ResultSet rs = ps.executeQuery();    
             if (rs.next()){
-                response.sendRedirect("indexSystemLoginOption.jsp");              
+                
+                session.setAttribute("adminID", adminID);
+                response.sendRedirect("indexSystemLoginOption.jsp"); 
+                
             }
             else{
                 response.sendRedirect("notAdminError.jsp");
