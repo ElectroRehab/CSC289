@@ -377,7 +377,7 @@
                                 </div>
                                 <div class="flex-container">
         <div class="task-form">          
-            <form >  
+            <form action="taskAction.jsp" method = "post">  
                 <h1>&nbsp; Task</h1>                
                                                          
 
@@ -491,8 +491,7 @@
                         </div> --%>
                     </div>
                 </div>
-                                        <img class="company-logo" src="assetsJSP/css/images/CompanyLogo.png" height="375" width="375">
-            </div>
+             </div>
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
                 <div class="text-center my-auto copyright"><span>Copyright © KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</span></div>

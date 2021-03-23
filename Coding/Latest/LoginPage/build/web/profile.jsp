@@ -217,6 +217,7 @@
                             </div>
                              <%    
     try{
+        String uid = (String)session.getAttribute("adminID");
         int count = 0;
         int sqlInt = 0;
         // Create a new clean conneciton.
@@ -232,10 +233,15 @@
         // Connect to Database
         Class.forName(rf.getClassDriver());
         con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
-        Statement st=con.createStatement();
+       // Statement st=con.createStatement();
+       // sqlInt = 12;
+       // s.ReadSQL(sqlInt);
+       // ResultSet rs=st.executeQuery(s.getSQLAll());
+        String query = "select * From adminuserdata where adminID= ('"+uid+"')";
+        PreparedStatement ps = con.prepareStatement(query);
         sqlInt = 12;
         s.ReadSQL(sqlInt);
-        ResultSet rs=st.executeQuery(s.getSQLAll());
+        ResultSet rs=ps.executeQuery( );
     %>
      <% rs.next(); 
     
