@@ -3,6 +3,8 @@
     Created on : Mar 17, 2021, 7:31:23 PM
     Author     : Anthony
 --%>
+<%@page import="readfile.ReadSessions"%>
+<%@page import="readfile.ReadTitles"%>
 <%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <%@page import="java.security.NoSuchAlgorithmException"%>
@@ -21,6 +23,9 @@
     
 </head>
 <%
+    ReadSessions r = new ReadSessions();
+    r.getPost(request, response, session);
+    
     HashSHA512Encryption hashText = new HashSHA512Encryption();
     int sqlInt = 0;
     String adminID=request.getParameter("adminID");
@@ -43,6 +48,8 @@
             ReadFile rf = new ReadFile();
             // Create object
             ReadSQL s = new ReadSQL();
+            // Create object
+            ReadTitles t = new ReadTitles();
             // Run the CSV Reader Class
             rf.ReadFile();
             // Connect to Database
@@ -56,6 +63,8 @@
             ps.setString(2,pinNum );    
             ResultSet rs = ps.executeQuery();    
             if (rs.next()){
+                t.ReadTitles(1);
+                session.removeAttribute(t.getSQLTitles().toString());
                 response.sendRedirect("index.jsp");              
             }
             else{

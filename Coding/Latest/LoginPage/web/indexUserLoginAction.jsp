@@ -94,14 +94,14 @@
                             sqlInt = 22;
                             s.ReadSQL(sqlInt);
                             Statement psps = con.createStatement();
-                            psps.executeUpdate(s.getSQLAll() + userID);
+                            psps.executeUpdate(s.getSQLAll().toString() + userID);
                         }
                         else{
                             // --Bad PIN check--
                             sqlInt = 21;
                             s.ReadSQL(sqlInt);
                             Statement psps = con.createStatement();
-                            psps.executeUpdate(s.getSQLAll() + userID);
+                            psps.executeUpdate(s.getSQLAll().toString() + userID);
                             response.sendRedirect("unacceptable.jsp");                                                
                         }
                     }

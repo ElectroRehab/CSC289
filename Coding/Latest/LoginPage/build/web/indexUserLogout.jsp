@@ -31,10 +31,6 @@
         <link rel="stylesheet" href="assetsJSP/css/popupLoginStyleSheet.css">  
     </head>     
     <body>
-<%
-    ReadSessions r = new ReadSessions();
-    r.getPost(request, response, session);
-%>
         <div class="flex-container">   
             <div class="login-clean-user-login">            
                 <form action="indexUserLogoutAction.jsp" method="post" >  

@@ -27,10 +27,6 @@
     </head>
     
     <body class="body2">      
-<%
-    ReadSessions r = new ReadSessions();
-    r.getPost(request, response, session);
-%>
         <br>
          <div class="image">  
              

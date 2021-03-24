@@ -217,7 +217,7 @@
                             </div>
                              <%    
     try{
-        String uid = (String)session.getAttribute("adminID");
+        
         int count = 0;
         int sqlInt = 0;
         // Create a new clean conneciton.
@@ -233,17 +233,18 @@
         // Connect to Database
         Class.forName(rf.getClassDriver());
         con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
-       // Statement st=con.createStatement();
-       // sqlInt = 12;
-       // s.ReadSQL(sqlInt);
-       // ResultSet rs=st.executeQuery(s.getSQLAll());
-        String query = "select * From adminuserdata where adminID= ('"+uid+"')";
-        PreparedStatement ps = con.prepareStatement(query);
-        sqlInt = 12;
+        // Get current admin's info from present session
+        sqlInt = 1;
+        t.ReadTitles(sqlInt);
+        String uid = (String)session.getAttribute(t.getSQLTitles().toString());
+        // SQL Statement for info stored in the current session.
+        sqlInt = 26;
         s.ReadSQL(sqlInt);
-        ResultSet rs=ps.executeQuery( );
+        // Excecute statement from class files
+        PreparedStatement ps = con.prepareStatement(s.getSQLAll().toString()+uid);
+        ResultSet rs = ps.executeQuery();
     %>
-     <% rs.next(); 
+        <% rs.next(); 
     
             %>
                             <div class="row">
@@ -258,22 +259,18 @@
                                                 
                                                 <div class="form-row">
                                                     <div class="col">
-                                                        <div class="form-group"><label for="first_name"><strong>First Name</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(3);%>
-                <%=rs.getString(t.getSQLTitles())%>" name="first_name"></div>
+                                                        <div class="form-group"><label for="first_name"><strong>First Name</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(3);%><%=rs.getString(t.getSQLTitles())%>" name="first_name"></div>
                                                     </div>
                                                     <div class="col">
-                                                        <div class="form-group"><label for="last_name"><strong>Last Name</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(4);%>
-                 <%=rs.getString(t.getSQLTitles()) %>" name="last_name"></div>
+                                                        <div class="form-group"><label for="last_name"><strong>Last Name</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(4);%><%=rs.getString(t.getSQLTitles()) %>" name="last_name"></div>
                                                     </div>
                                                 </div>
                                                     <div class="form-row">
                                                      <div class="col">
-                                                        <div class="form-group"><label for="phone_nuber"><strong>Phone Number</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(9);%>
-                <%=rs.getString(t.getSQLTitles()) %>" name="last_name"></div>
+                                                        <div class="form-group"><label for="phone_nuber"><strong>Phone Number</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(9);%><%=rs.getString(t.getSQLTitles()) %>" name="last_name"></div>
                                                     </div>
                                                     <div class="col">
-                                                        <div class="form-group"><label for="email"><strong>Email Address</strong></label><input class="form-control" type="email" placeholder="<%t.ReadTitles(10);%>
-                 <%=rs.getString(t.getSQLTitles()) %>" name="email"></div>
+                                                        <div class="form-group"><label for="email"><strong>Email Address</strong></label><input class="form-control" type="email" placeholder="<%t.ReadTitles(10);%><%=rs.getString(t.getSQLTitles()) %>" name="email"></div>
                                                     </div>
                                                 </div>
                                                 <div class="form-group"><button class="btn btn-primary btn-sm" type="submit">Save Settings</button></div>
@@ -286,16 +283,13 @@
                                         </div>
                                         <div class="card-body">
                                             <form>
-                                                <div class="form-group"><label for="address"><strong>Address</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(5);%>
-                 <%=rs.getString(t.getSQLTitles()) %>" name="address"></div>
-                                                <div class="form-group"><label for="city"><strong>City</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(6);%>
-                <%=rs.getString(t.getSQLTitles()) %>" name="address"></div>
+                                                <div class="form-group"><label for="address"><strong>Address</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(5);%><%=rs.getString(t.getSQLTitles()) %>" name="address"></div>
+                                                <div class="form-group"><label for="city"><strong>City</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(6);%><%=rs.getString(t.getSQLTitles()) %>" name="address"></div>
                  
                                                 <div class="form-row">
 
                                                     <div class="col">
-                                                        <div class="form-group"><label for="State"><strong>State</strong></label><input class="form-control" type="text" placeholder=" <%t.ReadTitles(7);%>
-                 <%=rs.getString(t.getSQLTitles()) %>" name="State"></div>
+                                                        <div class="form-group"><label for="State"><strong>State</strong></label><input class="form-control" type="text" placeholder=" <%t.ReadTitles(7);%><%=rs.getString(t.getSQLTitles()) %>" name="State"></div>
                                                     </div>                      
 
                                                 </div>

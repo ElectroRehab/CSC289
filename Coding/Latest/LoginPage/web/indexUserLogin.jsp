@@ -30,10 +30,6 @@
         
     </head>     
     <body>
-<%
-    ReadSessions r = new ReadSessions();
-    r.getPost(request, response, session);
-%>
         <div class="flex-container">        
         <div class="login-clean-user-login">    
             <form action="indexUserLoginAction.jsp" method="post" >  

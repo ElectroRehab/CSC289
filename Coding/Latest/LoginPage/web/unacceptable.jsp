@@ -24,10 +24,6 @@
         <title>Incorrect Credentials</title>
     </head>  
     <body>  
-<%
-    ReadSessions r = new ReadSessions();
-    r.getPost(request, response, session);
-%>
         <nav>  
             <div>
                 <a href="indexMainPage.jsp">Home</a>

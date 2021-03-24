@@ -9,7 +9,6 @@ public class ReadSessions extends HttpServlet {
             ReadTitles t = new ReadTitles();
             t.ReadTitles(1);
             String uid = (String)session.getAttribute(t.getSQLTitles());
-            System.out.println(uid);
             if(uid == null){
                 response.sendRedirect("index.jsp");
             }

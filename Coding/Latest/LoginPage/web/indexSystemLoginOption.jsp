@@ -89,7 +89,7 @@
                 <button data-dismiss="modal" class="close">&times;</button>
             
                 <form action="indexSystemMainLogoutAction.jsp" method="post" >
-                    <div ><h2>Admin Login</h2></div>              
+                    <div ><h2>Admin Logout</h2></div>              
                 
                     <div class="form-group" >                  
                         <input class="form-control" type="text" name="adminID" placeholder="Scan Admin ID"><br>
