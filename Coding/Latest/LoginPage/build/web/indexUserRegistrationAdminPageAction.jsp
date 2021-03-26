@@ -23,6 +23,7 @@
     <title>Dashboard - Brand</title>    
 </head> 
 <%
+    int wrong = 0;
     HashSHA512Encryption hashText = new HashSHA512Encryption();
     int sqlInt = 0;
     String idNum=request.getParameter("rand_num");    
@@ -65,7 +66,7 @@
         // Execute SQL Code to add information to Database
         sqlInt = 10;
         s.ReadSQL(sqlInt);
-        st.executeUpdate(s.getSQLAll() + "('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"')");
+        st.executeUpdate(s.getSQLAll() + "('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"','"+wrong+"')");
         // Execute SQL Code to add information to Database
         sqlInt = 11;
         s.ReadSQL(sqlInt);

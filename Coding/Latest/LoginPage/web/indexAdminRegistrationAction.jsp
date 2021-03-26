@@ -23,6 +23,7 @@
     <title>K & O Tracks</title>    
 </head>
 <%
+    int wrong = 0;
     HashSHA512Encryption hashText = new HashSHA512Encryption();
     int sqlInt = 0;
     // Get Parameters from previous page of user inputted information.
@@ -65,7 +66,7 @@
         // Run the CSV Reader Class
         sqlInt = 7;
         s.ReadSQL(sqlInt);
-        st.executeUpdate(s.getSQLAll() + "('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"')");
+        st.executeUpdate(s.getSQLAll() + "('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"','"+wrong+"')");
         sqlInt = 8;
         s.ReadSQL(sqlInt);
         st.executeUpdate(s.getSQLAll() + "('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"')");

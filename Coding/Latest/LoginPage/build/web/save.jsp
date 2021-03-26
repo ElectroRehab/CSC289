@@ -28,10 +28,6 @@
         </script>
     </head>  
     <body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload=""> 
-<%
-    ReadSessions r = new ReadSessions();
-    r.getPost(request, response, session);
-%>
           <div class="image">            
             <div><img src="assetsJSP/css/images/mainPageBackgroundv3.png" class="image " alt=”K&OLogo”>    </div>              
         </div>

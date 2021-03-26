@@ -3,19 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/23MAR21/VERSION_2/LoginPage/web/indexMainPage.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/23MAR21/VERSION_2/LoginPage/web/unacceptable.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/23MAR21/VERSION_2/LoginPage/web/indexSystemLoginOption.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/23MAR21/VERSION_2/LoginPage/web/indexSystemMainLogoutAction.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/23MAR21/VERSION_2/LoginPage/web/indexUserLogin.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/23MAR21/VERSION_2/LoginPage/src/java/readfile/ReadSessions.java</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/23MAR21/VERSION_2/LoginPage/web/profile.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/23MAR21/VERSION_2/LoginPage/web/indexSystemLogoutAction.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/23MAR21/VERSION_2/LoginPage/web/indexUserLogoutSuccess.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/23MAR21/VERSION_2/LoginPage/web/indexUserLoginAction.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/23MAR21/VERSION_2/LoginPage/web/indexUserLogout.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/23MAR21/VERSION_2/LoginPage/web/indexUserLoginSuccess.jsp</file>
-            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/23MAR21/VERSION_2/LoginPage/web/indexUserLogoutAction.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/25MAR21/VERSION_2/LoginPage/web/indexUserPrintPage.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/25MAR21/VERSION_2/LoginPage/web/indexUserRegistration.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/25MAR21/VERSION_2/LoginPage/web/save.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/25MAR21/VERSION_2/LoginPage/web/taskList.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/25MAR21/VERSION_2/LoginPage/web/indexAdminSystemLoginAction.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/25MAR21/VERSION_2/LoginPage/web/indexUserRegistrationAdminPageAction.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/25MAR21/VERSION_2/LoginPage/web/indexAdminRegistrationAction.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/25MAR21/VERSION_2/LoginPage/web/indexUserRegistrationAction.jsp</file>
         </group>
     </open-files>
 </project-private>
