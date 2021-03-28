@@ -4,6 +4,7 @@
     Author     : Anthony
 --%>
 <%@page import="readfile.ReadSessions"%>
+<%@page import="readfile.ReadTitles"%>
 <%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <%@page import ="java.sql.*"%>
@@ -28,28 +29,92 @@
 <%
     ReadSessions r = new ReadSessions();
     r.getPost(request, response, session);
+     
 %>
  <!DOCTYPE html>
+ 
 <div class="container">
     
-   <div id="myDIV" class="header">
+ 
+    <div id="myDIV" class="header">
         <h2 >My To Do List</h2>
-        <input type="text" id="myInput" placeholder="Title...">
-  <span onclick="newElement()" class="addBtn">Add</span>
+        <form action="taskAction.jsp" method="post">
+        <input type="text" name="task" placeholder="Enter Task..."  >
+        
+         <button class="button" type="submit">Add</button>  
+        </form>
     </div>
-
+   
+   <%    
+    try{
+        String uid = (String)session.getAttribute("adminID");
+        int count = 0;
+        int sqlInt = 0;
+        // Create a new clean conneciton.
+        Connection con = null;
+        // Create object
+        ReadFile rf = new ReadFile();
+        // Create object
+        ReadSQL s = new ReadSQL();
+        //Create Object
+        ReadTitles t = new ReadTitles();
+        // Run the CSV Reader Class
+        rf.ReadFile();
+        // Connect to Database
+        Class.forName(rf.getClassDriver());
+        //con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
+        con = DriverManager.getConnection("jdbc:mysql://sql5.freemysqlhosting.net:3306/sql5400998","sql5400998","7xWESpbAN5");
+        Statement st=con.createStatement();
+        ResultSet rs=st.executeQuery("select * From admintask where adminID= ('"+uid+"')");         
+    %>
+     <%while(rs.next())
+        {
+    
+            %> 
 <ul id="myUL" class="list-list">
    
-</ul> 
+    <form action="deleteTaskAction" method="post">   
+        <table>
+             <tr>
+                <td>
+                 
+                    <%=rs.getString("task") %>          
+                </td> 
+             
+               <div class="form-group">
+                     
+                      <button class="button-delete" type="submit">Delete</button>          
+                </div>    
+                   
+                
+                
+                  </tr>
+        
+        
+             </table>
+            
+            </form>
+            
+            
+      
     
-</div>
-
+    
+</ul> 
+ 
+                        <%}
+}
+    catch(Exception e){
+        out.print(e.getMessage());%><br><%
+    }
+    finally{         
+    }
+    %>
+ </div>
  <div id="wrapper">
     <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-1">
             
             <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="indexAdminControl.jsp">
-                    <div><img src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60"></div>
-                    
+                    <div><img src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60"></div>                    
                 </a>
                 <div class="sidebar-brand-text mx-2" style="color: white"><span><b>Personnel Management</b></span></div>
                 <hr class="sidebar-divider my-0">
@@ -115,6 +180,7 @@ for (i = 0; i < close.length; i++) {
   close[i].onclick = function() {
     var div = this.parentElement;
     div.style.display = "none";
+     
   }
 }
 
@@ -125,33 +191,8 @@ list.addEventListener('click', function(ev) {
     ev.target.classList.toggle('checked');
   }
 }, false);
-
-// Create a new list item when clicking on the "Add" button
-function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("You must write something!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
-}
+ 
 </script>
+ 
 </body>
 </html>

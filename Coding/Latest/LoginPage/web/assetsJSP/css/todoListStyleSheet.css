@@ -38,10 +38,10 @@ ul li {
   cursor: pointer;
   position: relative;
   padding: 12px 8px 12px 40px;
-  background: #eee;
+  background:  #eee;
   font-size: 18px;
   transition: 0.2s;
-
+  color:black;
   /* make the list items unselectable */
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -95,7 +95,7 @@ ul li.checked::before {
 
 /* Style the header */
 .header {
-  background-color: #f44336;
+  background:  linear-gradient(to bottom right,#f7f9fc,#278c9b);
   padding: 30px 40px;
   width:100%;
   color: white;
@@ -135,5 +135,31 @@ input {
 }
 
 .addBtn:hover {
-  background-color: #bbb;
+  background-color:#bbb;
+}
+
+input[type="text"]{
+    font-family: microsoft,himalyan;
+    color:black;
+}
+h2{
+  font-family: microsoft,himalyan;
+  font-size: 1.7vw;  
+  text-align: center;
+  color: black;
+}
+ .button{
+    height: 47px;
+    width:97px;
+    border-radius: 4px;
+    background:  linear-gradient(to bottom ,#f7f9fc, gray);
+    font-family: microsoft, himalayan;
+}
+.button-delete{
+     position: relative ;
+    height: 47px;
+    width:97px;
+    border-radius: 4px;
+    background:  linear-gradient(to bottom ,#f7f9fc, gray);
+    font-family: microsoft, himalayan;
 }
