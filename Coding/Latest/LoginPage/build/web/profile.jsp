@@ -255,22 +255,22 @@
                                         </div>
                                         
                                         <div class="card-body">
-                                            <form>
+                                            <form action="updateInfoOneAction.jsp" method="post" >
                                                 
                                                 <div class="form-row">
                                                     <div class="col">
-                                                        <div class="form-group"><label for="first_name"><strong>First Name</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(3);%><%=rs.getString(t.getSQLTitles())%>" name="first_name"></div>
+                                                        <div class="form-group"><label for="first_name"><strong>First Name</strong></label><input class="form-control" type="text" value="<%t.ReadTitles(3);%><%=rs.getString(t.getSQLTitles())%>" name="first_name"></div>
                                                     </div>
                                                     <div class="col">
-                                                        <div class="form-group"><label for="last_name"><strong>Last Name</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(4);%><%=rs.getString(t.getSQLTitles()) %>" name="last_name"></div>
+                                                        <div class="form-group"><label for="last_name"><strong>Last Name</strong></label><input class="form-control" type="text" value="<%t.ReadTitles(4);%><%=rs.getString(t.getSQLTitles()) %>" name="last_name"></div>
                                                     </div>
                                                 </div>
                                                     <div class="form-row">
                                                      <div class="col">
-                                                        <div class="form-group"><label for="phone_nuber"><strong>Phone Number</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(9);%><%=rs.getString(t.getSQLTitles()) %>" name="last_name"></div>
+                                                        <div class="form-group"><label for="phone_number"><strong>Phone Number</strong></label><input class="form-control" type="text" value="<%t.ReadTitles(9);%><%=rs.getString(t.getSQLTitles()) %>" name="phone"></div>
                                                     </div>
                                                     <div class="col">
-                                                        <div class="form-group"><label for="email"><strong>Email Address</strong></label><input class="form-control" type="email" placeholder="<%t.ReadTitles(10);%><%=rs.getString(t.getSQLTitles()) %>" name="email"></div>
+                                                        <div class="form-group"><label for="email"><strong>Email Address</strong></label><input class="form-control" type="email" value="<%t.ReadTitles(10);%><%=rs.getString(t.getSQLTitles()) %>" name="email"></div>
                                                     </div>
                                                 </div>
                                                 <div class="form-group"><button class="btn btn-primary btn-sm" type="submit">Save Settings</button></div>
@@ -284,12 +284,12 @@
                                         <div class="card-body">
                                             <form>
                                                 <div class="form-group"><label for="address"><strong>Address</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(5);%><%=rs.getString(t.getSQLTitles()) %>" name="address"></div>
-                                                <div class="form-group"><label for="city"><strong>City</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(6);%><%=rs.getString(t.getSQLTitles()) %>" name="address"></div>
+                                                <div class="form-group"><label for="city"><strong>City</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(6);%><%=rs.getString(t.getSQLTitles()) %>" name="city"></div>
                  
                                                 <div class="form-row">
 
                                                     <div class="col">
-                                                        <div class="form-group"><label for="State"><strong>State</strong></label><input class="form-control" type="text" placeholder=" <%t.ReadTitles(7);%><%=rs.getString(t.getSQLTitles()) %>" name="State"></div>
+                                                        <div class="form-group"><label for="State"><strong>State</strong></label><input class="form-control" type="text" placeholder=" <%t.ReadTitles(7);%><%=rs.getString(t.getSQLTitles()) %>" name="state"></div>
                                                     </div>                      
 
                                                 </div>
