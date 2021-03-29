@@ -41,9 +41,9 @@
                 <input class="task-input" type="text" name="task" placeholder="Enter Task..."maxlength="100"> 
                 
                 <%--Add task to database--%>
-                <button class="button" type="submit">Add</button>  
+                <button class="add-button" type="submit">Add</button>  
             </form>
-                <h5>(max 100 char)</h5>
+                <h5>Max char (100)</h5>
     </div>
    
    <%    

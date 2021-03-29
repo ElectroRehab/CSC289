@@ -24,6 +24,7 @@ a{
     margin: 9px;
     padding: 0; 
     font-size: 13px;
+    font-weight: bold;
 }
  
 /* Remove margins and padding from the list */
@@ -96,7 +97,7 @@ ul li.checked::before {
 
 /* Style the header */
 .header {
-  background:  linear-gradient(to bottom right,#f7f9fc,#278c9b);
+  background:  linear-gradient(to bottom right,#f7f9fc,#3057c8);
   padding: 30px 40px;
   width:100%;
   color: white;
@@ -159,21 +160,33 @@ h2{
   text-align: center;
   color: black;
 }
- .button{
+h5{
+  font-family: microsoft,himalyan;
+  font-size: .9vw;  
+  text-align: left;
+  color: black;  
+}
+ .add-button{
     height: 47px;
     width:97px;
     border-radius: 4px;
     background:  linear-gradient(to bottom ,#f7f9fc, gray);
     font-family: microsoft, himalayan;
 }
+.add-button:hover{
+    background:  linear-gradient(to bottom ,#f7f9fc, green);
+     
+}
 .button-delete{
-     position: relative ;
-    
+    position: relative ;   
     height: 40px;
     width:50px;
     border-radius: 4px;
-    background:  linear-gradient(to bottom ,#f7f9fc, red);
+    background:  linear-gradient(to bottom ,#f7f9fc, gray);
     font-family: microsoft, himalayan;
+}
+.button-delete:hover{  
+    background:  linear-gradient(to bottom ,#f7f9fc, red);  
 }
 .list-list{
      word-wrap: normal;

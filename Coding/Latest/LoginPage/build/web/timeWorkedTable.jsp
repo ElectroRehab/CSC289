@@ -41,7 +41,8 @@
                 <hr class="sidebar-divider my-0">
                 <ul class="nav navbar-nav text-light" id="accordionSidebar">
                     <li class="nav-item"><a class="nav-link active" href="indexAdminControl.jsp"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
-                    <li class="nav-item"><a class="nav-link active" href="profile.jsp"><i class="fas fa-user"></i><span>Profile</span></a></li>                    
+                    <li class="nav-item"><a class="nav-link active" href="profile.jsp"><i class="fas fa-user"></i><span>Profile</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="taskList.jsp"><i class="fas fa-tasks"></i><span>Task</span></a></li>                   
                     <li class="nav-item"><a class="nav-link active" href="tableAdmin.jsp"><i class="fas fa-table"></i><span>Admin Table</span></a></li>
                     <li class="nav-item"><a class="nav-link active" href="tableUser.jsp"><i class="fas fa-table"></i><span>Employee Table</span></a></li>
                     <li class="nav-item"><a class="nav-link active" href="workTable.jsp"><i class="fas fa-table"></i><span>Work Table</span></a></li>
