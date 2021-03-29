@@ -282,14 +282,14 @@
                                             <p class="text-primary m-0 font-weight-bold">Contact Settings</p>
                                         </div>
                                         <div class="card-body">
-                                            <form>
-                                                <div class="form-group"><label for="address"><strong>Address</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(5);%><%=rs.getString(t.getSQLTitles()) %>" name="address"></div>
-                                                <div class="form-group"><label for="city"><strong>City</strong></label><input class="form-control" type="text" placeholder="<%t.ReadTitles(6);%><%=rs.getString(t.getSQLTitles()) %>" name="city"></div>
+                                            <form action="updateInfoTwoAction.jsp" method="post" >
+                                                <div class="form-group"><label for="address"><strong>Address</strong></label><input class="form-control" type="text" value="<%t.ReadTitles(5);%><%=rs.getString(t.getSQLTitles()) %>" name="address"></div>
+                                                <div class="form-group"><label for="city"><strong>City</strong></label><input class="form-control" type="text" value="<%t.ReadTitles(6);%><%=rs.getString(t.getSQLTitles()) %>" name="city"></div>
                  
                                                 <div class="form-row">
 
                                                     <div class="col">
-                                                        <div class="form-group"><label for="State"><strong>State</strong></label><input class="form-control" type="text" placeholder=" <%t.ReadTitles(7);%><%=rs.getString(t.getSQLTitles()) %>" name="state"></div>
+                                                        <div class="form-group"><label for="state"><strong>State</strong></label><input class="form-control" type="text" value=" <%t.ReadTitles(7);%><%=rs.getString(t.getSQLTitles()) %>" name="state"></div>
                                                     </div>                      
 
                                                 </div>
@@ -341,7 +341,6 @@
                     </div>
                 </div>
             </div>
-            <img class="company-logo-profile-table" src="assetsJSP/css/images/CompanyLogo.png" height="280" width="280">
             <footer class="bg-white sticky-footer">
                 <div class="container my-auto">
                     <div class="text-center my-auto copyright"><span>Copyright © Brand 2021</span></div>
