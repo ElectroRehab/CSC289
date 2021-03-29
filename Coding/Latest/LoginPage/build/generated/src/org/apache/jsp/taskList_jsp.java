@@ -4,6 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 import readfile.ReadSessions;
+import readfile.ReadTitles;
 import readfile.ReadSQL;
 import readfile.ReadFile;
 import java.sql.*;
@@ -51,6 +52,7 @@ public final class taskList_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("\n");
       out.write("<html>\n");
@@ -72,29 +74,103 @@ public final class taskList_jsp extends org.apache.jasper.runtime.HttpJspBase
 
     ReadSessions r = new ReadSessions();
     r.getPost(request, response, session);
+     
 
       out.write("\n");
       out.write(" <!DOCTYPE html>\n");
+      out.write(" \n");
       out.write("<div class=\"container\">\n");
       out.write("    \n");
-      out.write("   <div id=\"myDIV\" class=\"header\">\n");
+      out.write(" \n");
+      out.write("    <div id=\"myDIV\" class=\"header\">\n");
       out.write("        <h2 >My To Do List</h2>\n");
-      out.write("        <input type=\"text\" name=\"task\" id=\"myInput\" placeholder=\"Title...\">\n");
-      out.write("  <span onclick=\"newElement()\" class=\"addBtn\">Add</span>\n");
+      out.write("        <form action=\"taskAction.jsp\" method=\"post\">\n");
+      out.write("        <input type=\"text\" name=\"task\" placeholder=\"Enter Task...\"  >\n");
+      out.write("        \n");
+      out.write("         <button class=\"button\" type=\"submit\">Add</button>  \n");
+      out.write("        </form>\n");
       out.write("    </div>\n");
+      out.write("   \n");
+      out.write("   ");
+    
+    try{
+        String uid = (String)session.getAttribute("adminID");
+        int count = 0;
+        int sqlInt = 0;
+        // Create a new clean conneciton.
+        Connection con = null;
+        // Create object
+        ReadFile rf = new ReadFile();
+        // Create object
+        ReadSQL s = new ReadSQL();
+        //Create Object
+        ReadTitles t = new ReadTitles();
+        // Run the CSV Reader Class
+        rf.ReadFile();
+        // Connect to Database
+        Class.forName(rf.getClassDriver());
+        //con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
+        con = DriverManager.getConnection("jdbc:mysql://sql5.freemysqlhosting.net:3306/sql5400998","sql5400998","7xWESpbAN5");
+        Statement st=con.createStatement();
+        ResultSet rs=st.executeQuery("select * From admintask where adminID= ('"+uid+"')");         
+    
       out.write("\n");
+      out.write("     ");
+while(rs.next())
+        {
+    
+            
+      out.write(" \n");
       out.write("<ul id=\"myUL\" class=\"list-list\">\n");
       out.write("   \n");
-      out.write("</ul> \n");
+      out.write("    <form action=\"deleteTaskAction\" method=\"post\">   \n");
+      out.write("        <table>\n");
+      out.write("             <tr>\n");
+      out.write("                <td>\n");
+      out.write("                 \n");
+      out.write("                    ");
+      out.print(rs.getString("task") );
+      out.write("          \n");
+      out.write("                </td> \n");
+      out.write("             \n");
+      out.write("               <div class=\"form-group\">\n");
+      out.write("                     \n");
+      out.write("                      <button class=\"button-delete\" type=\"submit\">Delete</button>          \n");
+      out.write("                </div>    \n");
+      out.write("                   \n");
+      out.write("                \n");
+      out.write("                \n");
+      out.write("                  </tr>\n");
+      out.write("        \n");
+      out.write("        \n");
+      out.write("             </table>\n");
+      out.write("            \n");
+      out.write("            </form>\n");
+      out.write("            \n");
+      out.write("            \n");
+      out.write("      \n");
       out.write("    \n");
-      out.write("</div>\n");
+      out.write("    \n");
+      out.write("</ul> \n");
+      out.write(" \n");
+      out.write("                        ");
+}
+}
+    catch(Exception e){
+        out.print(e.getMessage());
+      out.write("<br>");
+
+    }
+    finally{         
+    }
+    
       out.write("\n");
+      out.write(" </div>\n");
       out.write(" <div id=\"wrapper\">\n");
       out.write("    <nav class=\"navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-1\">\n");
       out.write("            \n");
       out.write("            <div class=\"container-fluid d-flex flex-column p-0\"><a class=\"navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0\" href=\"indexAdminControl.jsp\">\n");
-      out.write("                    <div><img src=\"assetsJSP/css/images/CompanyLogo.png\" height=\"60\" width=\"60\"></div>\n");
-      out.write("                    \n");
+      out.write("                    <div><img src=\"assetsJSP/css/images/CompanyLogo.png\" height=\"60\" width=\"60\"></div>                    \n");
       out.write("                </a>\n");
       out.write("                <div class=\"sidebar-brand-text mx-2\" style=\"color: white\"><span><b>Personnel Management</b></span></div>\n");
       out.write("                <hr class=\"sidebar-divider my-0\">\n");
@@ -160,6 +236,7 @@ public final class taskList_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("  close[i].onclick = function() {\n");
       out.write("    var div = this.parentElement;\n");
       out.write("    div.style.display = \"none\";\n");
+      out.write("     \n");
       out.write("  }\n");
       out.write("}\n");
       out.write("\n");
@@ -170,34 +247,9 @@ public final class taskList_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    ev.target.classList.toggle('checked');\n");
       out.write("  }\n");
       out.write("}, false);\n");
-      out.write("\n");
-      out.write("// Create a new list item when clicking on the \"Add\" button\n");
-      out.write("function newElement() {\n");
-      out.write("  var li = document.createElement(\"li\");\n");
-      out.write("  var inputValue = document.getElementById(\"myInput\").value;\n");
-      out.write("  var t = document.createTextNode(inputValue);\n");
-      out.write("  li.appendChild(t);\n");
-      out.write("  if (inputValue === '') {\n");
-      out.write("    alert(\"You must write something!\");\n");
-      out.write("  } else {\n");
-      out.write("    document.getElementById(\"myUL\").appendChild(li);\n");
-      out.write("  }\n");
-      out.write("  document.getElementById(\"myInput\").value = \"\";\n");
-      out.write("\n");
-      out.write("  var span = document.createElement(\"SPAN\");\n");
-      out.write("  var txt = document.createTextNode(\"\\u00D7\");\n");
-      out.write("  span.className = \"close\";\n");
-      out.write("  span.appendChild(txt);\n");
-      out.write("  li.appendChild(span);\n");
-      out.write("\n");
-      out.write("  for (i = 0; i < close.length; i++) {\n");
-      out.write("    close[i].onclick = function() {\n");
-      out.write("      var div = this.parentElement;\n");
-      out.write("      div.style.display = \"none\";\n");
-      out.write("    }\n");
-      out.write("  }\n");
-      out.write("}\n");
+      out.write(" \n");
       out.write("</script>\n");
+      out.write(" \n");
       out.write("</body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {

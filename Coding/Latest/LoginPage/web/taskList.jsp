@@ -33,16 +33,17 @@
 %>
  <!DOCTYPE html>
  
-<div class="container">
-    
- 
+<div class="container"> 
     <div id="myDIV" class="header">
         <h2 >My To Do List</h2>
-        <form action="taskAction.jsp" method="post">
-        <input type="text" name="task" placeholder="Enter Task..."  >
-        
-         <button class="button" type="submit">Add</button>  
-        </form>
+            <form action="taskAction.jsp" method="post">
+                <%--Get Task from user--%>
+                <input class="task-input" type="text" name="task" placeholder="Enter Task..."maxlength="100"> 
+                
+                <%--Add task to database--%>
+                <button class="button" type="submit">Add</button>  
+            </form>
+                <h5>(max 100 char)</h5>
     </div>
    
    <%    
@@ -62,8 +63,7 @@
         rf.ReadFile();
         // Connect to Database
         Class.forName(rf.getClassDriver());
-        //con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
-        con = DriverManager.getConnection("jdbc:mysql://sql5.freemysqlhosting.net:3306/sql5400998","sql5400998","7xWESpbAN5");
+        con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());        
         Statement st=con.createStatement();
         ResultSet rs=st.executeQuery("select * From admintask where adminID= ('"+uid+"')");         
     %>
@@ -71,37 +71,23 @@
         {
     
             %> 
-<ul id="myUL" class="list-list">
-   
-    <form action="deleteTaskAction" method="post">   
+<ul id="myUL" class="list-list">   
+    <form action="deleteTaskAction.jsp" method="post">   
         <table>
-             <tr>
+            <tr>
                 <td>
-                 
-                    <%=rs.getString("task") %>          
+                     <div class="form-group">
+                        <%--Add task to table --%>
+                        
+                        <input type="text" name="task" id="admin-task-name" value="<%=rs.getString("task")%>" readonly="readonly">    
+                        <button class="button-delete" type="submit" value="delete" name="delete-task">X</button>      
+                    </div>                         
                 </td> 
-             
-               <div class="form-group">
-                     
-                      <button class="button-delete" type="submit">Delete</button>          
-                </div>    
-                   
-                
-                
-                  </tr>
-        
-        
-             </table>
-            
-            </form>
-            
-            
-      
-    
-    
-</ul> 
- 
-                        <%}
+            </tr> 
+        </table>
+    </form>
+</ul>  
+<%}
 }
     catch(Exception e){
         out.print(e.getMessage());%><br><%

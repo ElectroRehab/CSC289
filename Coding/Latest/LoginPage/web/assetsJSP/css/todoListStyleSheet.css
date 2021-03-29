@@ -31,6 +31,7 @@ ul {
   margin: 0;
   padding: 0;
   width: 100%;
+  color: black;
 }
 
 /* Style the list items */
@@ -108,13 +109,22 @@ ul li.checked::before {
   display: table;
   clear: both;
 }
-
+/* Style the input */
+ .task-input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width:700px;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
 /* Style the input */
 input {
   margin: 0;
   border: none;
   border-radius: 0;
-  width: 75%;
+  width:900px;
   padding: 10px;
   float: left;
   font-size: 16px;
@@ -141,6 +151,7 @@ input {
 input[type="text"]{
     font-family: microsoft,himalyan;
     color:black;
+    
 }
 h2{
   font-family: microsoft,himalyan;
@@ -157,9 +168,13 @@ h2{
 }
 .button-delete{
      position: relative ;
-    height: 47px;
-    width:97px;
+    
+    height: 40px;
+    width:50px;
     border-radius: 4px;
-    background:  linear-gradient(to bottom ,#f7f9fc, gray);
+    background:  linear-gradient(to bottom ,#f7f9fc, red);
     font-family: microsoft, himalayan;
+}
+.list-list{
+     word-wrap: normal;
 }

@@ -1,13 +1,10 @@
 <%-- 
-    Document   : taskAction
-    Created on : Mar 23, 2021, 2:24:03 PM
+    Document   : deleteTaskAction
+    Created on : Mar 29, 2021, 7:44:41 AM
     Author     : Anthony
 --%>
+
 <%@page import="readfile.ReadSessions"%>
-<%@page import="java.security.NoSuchAlgorithmException"%>
-<%@page import="java.security.MessageDigest"%>
-<%@page import="java.math.BigInteger"%>
-<%@page import="java.util.Random"%>
 <%@page import="java.sql.*"%>
 <%@page import="com.itextpdf.text.pdf.BarcodeEAN"%>
 <%@page import="java.io.FileOutputStream"%>
@@ -30,10 +27,11 @@
     int sqlInt = 0;
     // Get Parameters from previous page of user inputted information.
     String task=request.getParameter("task"); 
-    task = "\u002D " + task;
+    
     String uid = (String)session.getAttribute("adminID");
-    String timeBase = "00:00:00";   
+ 
         try{
+            PreparedStatement pst = null;
         // Create a new clean conneciton.
         Connection con = null;
         // Create object
@@ -47,10 +45,12 @@
         con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());         
         Class.forName("com.mysql.jdbc.Driver");      
         //Statement st=con.createStatement();
-        String query = "insert into admintask(adminID,task) values('"+uid+"','"+task+"')";        
-        Statement st=con.createStatement();
-        st.executeUpdate(query);
-        //ResultSet rs=st.executeQuery(query);       
+        
+        String query = "DELETE FROM admintask WHERE adminID = ? && task = ?";      
+        pst = con.prepareStatement(query);        
+        pst.setString(1,uid);
+        pst.setString(2,task);
+        pst.executeUpdate();              
         response.sendRedirect("taskList.jsp");  
     }    
     // Catch
