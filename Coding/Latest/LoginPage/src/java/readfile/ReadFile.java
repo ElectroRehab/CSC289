@@ -15,6 +15,10 @@ public class ReadFile {
     String user;
     // String used for password to the Remote Database
     String pass;
+    // String used for no reply email in the Remote Database
+    String emailUser;
+    // String used for no reply password in the Remote Database
+    String emailPass;
     // Row Count
     int i = 0;
     // Individual Element Count
@@ -54,6 +58,14 @@ public class ReadFile {
                     else if(p == 7){
                         pass = readBlock[j];
                     }
+                    // Remote Database Password information storage.
+                    else if(p == 10){
+                        emailUser = readBlock[j];
+                    }
+                    // Remote Database Password information storage.
+                    else if(p == 11){
+                        emailPass = readBlock[j];
+                    }
                     p++;
                 }
                 else{
@@ -75,6 +87,12 @@ public class ReadFile {
     }
     public String getPass(){
         return pass;
+    }
+    public String getEmailUser(){
+        return emailUser;
+    }
+    public String getEmailPass(){
+        return emailPass;
     }
 }
 

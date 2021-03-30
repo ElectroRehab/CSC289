@@ -25,7 +25,9 @@
 <%
     int wrong = 0;
     HashSHA512Encryption hashText = new HashSHA512Encryption();
-    int sqlInt = 0;
+    int sqlInt = 0;    
+    // Long Integer for 6 digit random authorization email code.
+    long eCode = Math.round(Math.random() *999999);
     // Get Parameters from previous page of user inputted information.
     String idNum=request.getParameter("rand_num"); 
     String fname=request.getParameter("fname");
@@ -41,15 +43,14 @@
     String image="https://drive.google.com/uc?export=view&id=1dYZ2xxA1DIwNcwdEwqRypTDkc4danQos";
     String ident = "admin";
     String timeBase = "00:00:00";
+    String auth = Long.toString(eCode);
     
-    /*if(password != passwordCheck || password.length() < 4 && passwordCheck.length() < 4 || password.length() > 10 && passwordCheck.length() > 10 ){
-       out.print("Pins Do not Match");
-       response.sendRedirect("regError.jsp");
-    }
-    else{*/
-        hashText.setHashText(password);
-        password = hashText.getHashText();
-        try{
+    
+    
+    
+    hashText.setHashText(password);
+    password = hashText.getHashText();
+    try{
         // Create a new clean conneciton.
         Connection con = null;
         // Create object
@@ -66,7 +67,7 @@
         // Run the CSV Reader Class
         sqlInt = 7;
         s.ReadSQL(sqlInt);
-        st.executeUpdate(s.getSQLAll() + "('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"','"+wrong+"')");
+        st.executeUpdate(s.getSQLAll() + "('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"','"+wrong+"','"+auth+"')");
         sqlInt = 8;
         s.ReadSQL(sqlInt);
         st.executeUpdate(s.getSQLAll() + "('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"')");
@@ -75,7 +76,7 @@
         st.executeUpdate(s.getSQLAll() + "('"+idNum+"','"+timeBase+"','"+timeBase+"','"+timeBase+"','"+password+"','"+"Out"+"')");
         // Show user that the information has been saved and display some
         // of that information. 
-        response.sendRedirect("save.jsp");    
+        response.sendRedirect("emailAuth.jsp");    
     }
     // Catch
     catch(Exception e){ 
