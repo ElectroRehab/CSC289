@@ -36,10 +36,12 @@
             ReadTitles t = new ReadTitles();
             Properties props = new Properties();
             // Initiate Strings for email
-            final String subject = "Verify Email";
+            final String subject = "T&O Registration - Verify Email";
             String to = "";
             String userBarCode = "";
             String mess = "";
+            String authCode = "";
+            String greetings = "";
             // From No reply Email
             rf.ReadFile();
             String from = rf.getEmailUser().toString();
@@ -62,6 +64,15 @@
                 ResultSet rs = st.executeQuery(s.getSQLAll());
                 // Get the info out of the database
                 while(rs.next()){
+                    // Authorization Number
+                    sqlInt = 20;
+                    t.ReadTitles(sqlInt);
+                    authCode = rs.getString(t.getSQLTitles().toString());
+                    System.out.println("Code1" + authCode);
+                    // First Name
+                    sqlInt = 3;
+                    t.ReadTitles(sqlInt);
+                    greetings = rs.getString(t.getSQLTitles().toString());
                     // User's E-Mail
                     sqlInt = 10;
                     t.ReadTitles(sqlInt);
@@ -70,6 +81,7 @@
                     sqlInt = 2;
                     t.ReadTitles(sqlInt);
                     userBarCode = rs.getString(t.getSQLTitles().toString());
+                    
                     // Message to user
                     mess = "This is a test email!";
                 }
@@ -139,6 +151,7 @@
             // Send confirmation email to user requesting the verification of 
             // created account so that they can start using theie account.
             try{
+                System.out.println("Code2" + authCode);
                 // Create message to send.
                 MimeMessage message = new MimeMessage(mailSession);
                 // Set who the message is from.
@@ -149,7 +162,14 @@
                 // Set the subject of the email. 
                 message.setSubject(subject);
                 // Set the message body.  
-                message.setText(finalMesseg);
+                //message.setText(finalMesseg);
+                // Set the message body.
+                message.setContent("<h1><center>Hello "+ greetings +", \n"
+                        + "please follow the link below to activate your account.</center></h1>"
+                        + "<h2>" + greetings + "'s Unique ID: " + userBarCode + "<br>"
+                        + greetings + "'s Activation Code: " + authCode + "<br><br>"
+                        + "Click on the link <a href='https://kandopersonnelmanagementsystems.com/activateAccount.jsp'>here</a> to activate your account.</h2>", 
+                        "text/html");
                 // Attempt to send email
                 Transport.send(message);                
             }

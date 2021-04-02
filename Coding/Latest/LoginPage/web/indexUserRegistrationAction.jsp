@@ -23,9 +23,11 @@
     <title>Dashboard - Brand</title>    
 </head> 
 <%
-    int wrong = 0;
+    int wrong = 3;
     HashSHA512Encryption hashText = new HashSHA512Encryption();
     int sqlInt = 0;
+    // Long Integer for 6 digit random authorization email code.
+    long eCode = Math.round(Math.random() *999999);
     String idNum=request.getParameter("rand_num");    
     String fname=request.getParameter("fname");
     String lname=request.getParameter("lname");
@@ -40,16 +42,10 @@
     String image="https://drive.google.com/uc?export=view&id=1AhrTHw6xzWn-AOOxnNsPlKyZLX3l9g3i";
     String ident = "user";
     String timeBase = "00:00:00";
-
-     /*if(password != passwordCheck || password.length() < 4 && passwordCheck.length() < 4  || password.length() > 10 && passwordCheck.length() > 10 ){
-       out.print("Pins Do not Match");
-       response.sendRedirect("regError.jsp");
-    }
-    else{*/
-      //Make changes to the connection string(database name, user/password)
-      //Make changes to the String query(change table name)
-      hashText.setHashText(password);
-      password = hashText.getHashText();
+    String auth = Long.toString(eCode);
+    
+    hashText.setHashText(password);
+    password = hashText.getHashText();
     try{
         // Create a new clean conneciton.
         Connection con = null;
@@ -66,7 +62,7 @@
         // Execute SQL Code to add information to Database
         sqlInt = 10;
         s.ReadSQL(sqlInt);
-        st.executeUpdate(s.getSQLAll() + "('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"','"+wrong+"')");
+        st.executeUpdate(s.getSQLAll() + "('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"','"+wrong+"','"+auth+"')");
         // Execute SQL Code to add information to Database
         sqlInt = 11;
         s.ReadSQL(sqlInt);

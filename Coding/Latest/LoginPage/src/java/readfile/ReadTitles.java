@@ -66,6 +66,9 @@ public class ReadTitles {
         else if(p == 19){
             sqlAll = "wrong";
         }
+        else if(p == 20){
+            sqlAll = "auth";
+        }
         else{
             sqlAll = "NULL";
         }        

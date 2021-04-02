@@ -23,7 +23,7 @@
     <title>K & O Tracks</title>    
 </head>
 <%
-    int wrong = 0;
+    int wrong = 3;
     HashSHA512Encryption hashText = new HashSHA512Encryption();
     int sqlInt = 0;    
     // Long Integer for 6 digit random authorization email code.
