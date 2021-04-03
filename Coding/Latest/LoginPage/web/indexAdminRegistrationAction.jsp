@@ -24,6 +24,7 @@
 </head>
 <%
     int wrong = 3;
+    int test = 0;
     HashSHA512Encryption hashText = new HashSHA512Encryption();
     int sqlInt = 0;    
     // Long Integer for 6 digit random authorization email code.
@@ -53,6 +54,8 @@
     try{
         // Create a new clean conneciton.
         Connection con = null;
+        //
+        ResultSet rs = null;
         // Create object
         ReadFile rf = new ReadFile();
         // Create object
@@ -68,9 +71,20 @@
         sqlInt = 7;
         s.ReadSQL(sqlInt);
         st.executeUpdate(s.getSQLAll() + "('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"','"+wrong+"','"+auth+"')");
+        //
+        sqlInt = 15;
+        s.ReadSQL(sqlInt);
+        rs = st.executeQuery(s.getSQLAll().toString());
+        while(rs.next()){
+            test = rs.getInt("ID");
+        }
+        System.out.println(test);
+        
+        
+        
         sqlInt = 8;
         s.ReadSQL(sqlInt);
-        st.executeUpdate(s.getSQLAll() + "('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"')");
+        st.executeUpdate(s.getSQLAll() + "('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"','"+test+"')");
         sqlInt = 9;
         s.ReadSQL(sqlInt);
         st.executeUpdate(s.getSQLAll() + "('"+idNum+"','"+timeBase+"','"+timeBase+"','"+timeBase+"','"+password+"','"+"Out"+"')");
