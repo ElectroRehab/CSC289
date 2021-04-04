@@ -28,7 +28,7 @@
         </script>
     </head>  
     <body>
-        <%
+        <%            
             // Create objects
             ReadFile rf = new ReadFile();
             ReadEmail re = new ReadEmail();
@@ -39,7 +39,6 @@
             final String subject = "T&O Registration - Verify Email";
             String to = "";
             String userBarCode = "";
-            String mess = "";
             String authCode = "";
             String greetings = "";
             // From No reply Email
@@ -68,7 +67,6 @@
                     sqlInt = 20;
                     t.ReadTitles(sqlInt);
                     authCode = rs.getString(t.getSQLTitles().toString());
-                    System.out.println("Code1" + authCode);
                     // First Name
                     sqlInt = 3;
                     t.ReadTitles(sqlInt);
@@ -81,9 +79,6 @@
                     sqlInt = 2;
                     t.ReadTitles(sqlInt);
                     userBarCode = rs.getString(t.getSQLTitles().toString());
-                    
-                    // Message to user
-                    mess = "This is a test email!";
                 }
             }
             catch(Exception e){
@@ -107,8 +102,6 @@
             final String port = re.getSQLEmail().toString();
             // Selected user's email address stored in the database. 
             final String finalTo = to.toString();
-            // Stored generic message verification
-            final String finalMesseg = mess;
             // No reply Email
             final String finalFrom = from;
             // No reply Email password.
@@ -151,7 +144,6 @@
             // Send confirmation email to user requesting the verification of 
             // created account so that they can start using theie account.
             try{
-                System.out.println("Code2" + authCode);
                 // Create message to send.
                 MimeMessage message = new MimeMessage(mailSession);
                 // Set who the message is from.
@@ -164,11 +156,24 @@
                 // Set the message body.  
                 //message.setText(finalMesseg);
                 // Set the message body.
-                message.setContent("<h1><center>Hello "+ greetings +", \n"
-                        + "please follow the link below to activate your account.</center></h1>"
-                        + "<h2>" + greetings + "'s Unique ID: " + userBarCode + "<br>"
-                        + greetings + "'s Activation Code: " + authCode + "<br><br>"
-                        + "Click on the link <a href='https://kandopersonnelmanagementsystems.com/activateAccount.jsp'>here</a> to activate your account.</h2>", 
+                message.setContent(""
+                        + "<!DOCTYPE html>"
+                        + "<html>"
+                        + "<head>"
+                        + "<style>"
+                        + "h1   {font-size: 20px; font-family: microsoft, himalayan; color: #191970;}"
+                        + "h2   {font-size: 16px; font-family: microsoft, himalayan; color: #191970;}"
+                        + "p    {font-size: 14px; font-family: microsoft, himalayan; color: #191970;}"
+                        + "</style>"
+                        + "</head>"
+                        + "<body>"
+                        + "<h1><center>K&O Registration - Verify Email</center></h1>"
+                        + "<p>Hello "+ greetings +", <br>"
+                        + "Please follow the link <a href='https://kandopersonnelmanagementsystems.com/activateAccount.jsp'>here</a> to activate your account.</p>"
+                        + "<p>" + greetings + "'s Unique ID: <b>" + userBarCode + "</b><br>"
+                        + greetings + "'s Activation Code: <b>" + authCode + "</b></p>"
+                        + "</body>"
+                        + "</html>",
                         "text/html");
                 // Attempt to send email
                 Transport.send(message);                
