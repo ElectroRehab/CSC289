@@ -59,7 +59,7 @@
                     <input class="form-control" type="text" name="userID" placeholder="Enter Unique ID" required="" id="holder"><br>                     
                 </div>
                  
-            </div>  
+            </div>
                 <div class="section-two">
                     <div class="form-group">
                         <input class="form-control" type="text" name="activate" placeholder="Enter Activation Code" required=""><br> 

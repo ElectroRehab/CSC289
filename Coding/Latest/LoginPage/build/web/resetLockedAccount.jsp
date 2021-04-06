@@ -219,6 +219,7 @@
                                             <th>Last Name</th>
                                             <th>User ID</th>                                             
                                             <th>Identifier</th>
+                                            <th>Authorized</th>
                                             <th>Enter New PIN</th>  
                                             <th>Pin Reset</th>
                                         </tr>
@@ -243,6 +244,15 @@
                 <!--Identifier-->
                 <%t.ReadTitles(13);%>
                 <td><input class="form-control" type="text" name="identifier" value="<%out.print(rs.getString(t.getSQLTitles()));%>" readonly="readonly"></td>
+                <!--Activated Account-->
+                <%t.ReadTitles(20);
+                if(rs.getInt(t.getSQLTitles()) != 0){
+                    %><td><input class="form-control" type="text" name="authorized" value="Unauthorized" readonly="readonly"></td><%
+                }
+                else{
+                    %><td><input class="form-control" type="text" name="authorized" value="Authorized" readonly="readonly"></td><%
+                }
+                %>
                 <!--PIN RESET-->
                 <td><div class="form-group">
                         <div class="pass-inst "><p>
@@ -264,7 +274,7 @@
                                     return false;
                                 }
                             }
-                            </script>                            
+                        </script>                            
                 </td>
                  
             </tr>
