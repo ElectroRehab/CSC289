@@ -169,7 +169,7 @@
                         + "<body>"
                         + "<h1><center>K&O Registration - Verify Email</center></h1>"
                         + "<p>Hello "+ greetings +", <br>"
-                        + "Please follow the link <a href='https://kandopersonnelmanagementsystems.com/activateAccount.jsp?userID=199795218985'>here</a> to activate your account.</p>"
+                        + "Please follow the link <a href='https://kandopersonnelmanagementsystems.com/activateAccount.jsp'>here</a> to activate your account.</p>"
                         + "<p>" + greetings + "'s Unique ID: <b>" + userBarCode + "</b><br>"
                         + greetings + "'s Activation Code: <b>" + authCode + "</b></p>"
                         + "</body>"
