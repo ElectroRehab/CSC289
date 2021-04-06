@@ -167,11 +167,16 @@
                         + "</style>"
                         + "</head>"
                         + "<body>"
-                        + "<h1><center>K&O Registration - Verify Email</center></h1>"
+                        + "<h1><center>K&O Personnel Management Systems - Verify Email</center></h1>"
                         + "<p>Hello "+ greetings +", <br>"
-                        + "Please follow the link <a href='https://kandopersonnelmanagementsystems.com/activateAccount.jsp'>here</a> to activate your account.</p>"
+                        + "This e-mail confirms that you created your K&O Personnel Management Systems account a short time ago. "
+                        + "Before you can continue any actions with your account, please click "
+                        + "<a href='https://kandopersonnelmanagementsystems.com/activateAccount.jsp'>here</a> to activate your account."
+                        + "The information provided below is what you will need to complete your registration.</p>"
                         + "<p>" + greetings + "'s Unique ID: <b>" + userBarCode + "</b><br>"
                         + greetings + "'s Activation Code: <b>" + authCode + "</b></p>"
+                        + "<p>If you have any issues or concerns with your registration, please contact your supervisor.</p>"
+                        + "<p>Sincerely, <br> K&O Personnel Management Systems</p>"
                         + "</body>"
                         + "</html>",
                         "text/html");

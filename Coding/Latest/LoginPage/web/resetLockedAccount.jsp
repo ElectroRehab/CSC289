@@ -234,10 +234,10 @@
                 <form  action="resetLockedAccountAction.jsp" method="post">    
                 <!--First Name-->
                 <%t.ReadTitles(3);%>
-                <td><%=rs.getString(t.getSQLTitles())%></td>
+                <td><input class="form-control" type="text" name="fname" value="<%out.print(rs.getString(t.getSQLTitles()));%>" readonly="readonly"></td>
                 <!--Last Name-->
                 <%t.ReadTitles(4);%>
-                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <td><input class="form-control" type="text" name="lname" value="<%out.print(rs.getString(t.getSQLTitles()));%>" readonly="readonly"></td>
                 <!--User ID-->
                 <%t.ReadTitles(2);%>                
                 <td><input class="form-control" type="text" name="user_id" value="<%out.print(rs.getString(t.getSQLTitles()));%>" readonly="readonly"></td>
