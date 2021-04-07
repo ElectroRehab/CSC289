@@ -26,9 +26,19 @@
     
     HashSHA512Encryption hashText = new HashSHA512Encryption();
     int sqlInt = 0;
-    String adminID=request.getParameter("adminID");
-    
+    //Get Current date and time   
+    java.util.Date date=new java.util.Date();
+    // Date and Time Check 
+    Timestamp timeIn =new java.sql.Timestamp(date.getTime());
+    // Starting Time Format
+    String timeOut = "00:00:00";
+    //Get parameters from login form
+    String adminID=request.getParameter("adminID");    
     String pinNum=request.getParameter("pinNum");
+    //Declare and initialize status variable
+    String status = "In";    
+    //Display error page if input is not a proper input
+    
     if(adminID == "" || pinNum == ""){
         response.sendRedirect("notAdminError.jsp");
     }
@@ -65,18 +75,47 @@
                 sqlInt = 1;
                 t.ReadTitles(sqlInt);
                 session.setAttribute(t.getSQLTitles().toString(), adminID);                
-                response.sendRedirect("indexSystemLoginOption.jsp");                
+                               
             }
             else{
                 response.sendRedirect("notAdminError.jsp");
             }
+            // Create a Prepared Statement to run query from database.
+            sqlInt = 3;
+            s.ReadSQL(sqlInt);            
+            PreparedStatement p = con.prepareStatement(s.getSQLAll());
+            // Set Strings to locations in the database.
+            p.setString(1,adminID);
+            p.setString(2,pinNum);
+            // Iterate through database to set new fields
+            ResultSet rlst = ps.executeQuery();
+            if(rlst.next()){
+                sqlInt = 4;
+                s.ReadSQL(sqlInt);
+                p = con.prepareStatement(s.getSQLAll());
+                p.setString(1,adminID);
+                p.setTimestamp(2,timeIn); 
+                p.setString(3,timeOut); 
+                p.setString(4,pinNum); 
+                p.setString(5,status);  
+                p.setString(6,adminID);  
+                p.setString(7,pinNum);
+                p.executeUpdate();
+                response.sendRedirect("indexSystemLoginOption.jsp");
+            }     
+            else{
+                
+                response.sendRedirect("errorUserLogin.jsp");
+            }
+            // Close all recently opened connections. 
             ps.close();
             rs.close();
             con.close();
-            }
+        }
         catch(Exception e){     
             out.println(e); 
-        }   
+        } 
+        
     }
 %> 
 </html>
