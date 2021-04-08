@@ -1,0 +1,213 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 6, 2021, 3:09:35 PM
+    Author     : Anthony
+*/
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 4, 2021, 6:35:03 AM
+    Author     : Anthony
+*/
+* {
+  box-sizing: border-box;
+}
+
+/*CEO Section--------------------------------------------------------*/
+.ceo-contact-form{
+    position:absolute;
+    background:  transparent;
+    height: auto;
+    width: 21%;
+    left:1.2%;
+    border-radius: 4px;
+    top:15%;
+     
+}
+ .container-fluid .flex-container-about .ceo-contact-form p {
+    
+    font-size: .8vw;
+    color: black;
+}
+ .container-fluid .flex-container-about h4 {
+    text-align: center;
+    font-size: 1vw;
+    color: black;
+}
+ 
+@media screen and (max-width: 600px) {
+ .ceo-contact-form .security-contact-form .admin-contact-form .operations-contact-form .human-resource-contact-form .finance-contact-form {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.image-phone{
+    opacity: .1;
+    position: relative; 
+    left: 25%;
+}
+.career-title{
+    margin: 0;
+    padding: 0;    
+    text-align: center;
+    background: #232f3e;
+    width: 100%;
+    height: 20%;
+}
+.flex-container-learn{
+    background:   #dddde2;    
+    padding: 25px;    
+    height: 20%;
+}
+.learn-paragraph p{
+    color: white;
+}
+.career-title h1{
+    color:white;
+}
+
+/*Learn container section--------------------------------------------------*/
+.flex-container-learn-btn{
+   padding:40px;
+    background: #278c9b;
+    align-content: center;
+    justify-content: center;
+    display: flex;   
+    align-content: center;
+    height: 100%;
+    width: 20%;
+    top: 32%;
+    left:70%;
+    float: right;    
+}
+ .learn-btn{
+     
+    cursor: pointer;
+    height: auto;
+    width:50%;     
+    background:  transparent;
+    color: white;     
+    font-size: 1.3vw;
+    border: .3vw white solid;       
+}
+.learn-btn:hover{
+    background: white;   
+    color: black;         
+}
+
+/*image container section--------------------------------------------------*/
+.flex-container-image {
+    padding:40px;
+    background: #278c9b;
+    float: left;
+     
+    display: flex;   
+    align-content: center;
+    height: 100%;
+    width: 20%;
+    top: 32%;
+    left:70%;
+        
+} 
+.flex-container-section {
+    background: #1d2834;    
+    padding: 25px;    
+    height: 20%;
+}
+.flex-container-1 {
+    padding:40px;
+    margin:10px;
+    align-content: center;
+    justify-content: center;
+    background:  #ffffff;
+    float: left;     
+    display: flex;   
+    align-content: center;
+    height: 100%;
+    width: 20%;
+    top: 32%;
+    left:70%;   
+    
+} 
+.flex-container-2 {
+    padding:40px;
+    margin:10px;
+   background:  #ffffff;
+    float: left;     
+    display: flex;   
+    align-content: center;
+    height: 100%;
+    width: 20%;
+    top: 32%;
+    left:70%;        
+} 
+.flex-container-3 {
+    padding:40px;
+    margin:10px;
+    background:  #ffffff;
+    float: left;     
+    display: flex;   
+    align-content: center;
+    height: 100%;
+    width: 20%;
+    top: 32%;
+    left:70%;        
+} 
+.flex-container-4 {
+    padding:40px;
+    margin:10px;
+    background:  #ffffff;
+    float: left;     
+    display: flex;   
+    align-content: center;
+    height: 100%;
+    width: 20%;
+    top: 32%;
+    left:70%;        
+} 
+.learn-btn-1, .learn-btn-2,.learn-btn-3,.learn-btn-4{
+    position: static;
+    padding:0;
+    margin: 0 ;
+     
+    height: 75%;
+    width:40%;     
+    background:  transparent;
+    color: black;     
+    font-size: 1.3vw;
+    border: .2vw black solid; 
+}
+.learn-btn-1:hover, .learn-btn-2:hover,.learn-btn-3:hover,.learn-btn-4:hover{
+    background: black;   
+    color: white;         
+} 
+.image-world{
+    position: absolute;
+    display: inline-block;
+    float: left; 
+    height: 20%;
+    width: 30%;
+     
+     
+}
+ h4{
+    position:    static;
+    bottom: 43%; 
+    font-size: 1vw;
+    color: black;
+    
+}
+.footer-dark{
+    background:  #dddde2;
+}
+     
+ 

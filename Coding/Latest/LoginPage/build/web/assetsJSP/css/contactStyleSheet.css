@@ -10,10 +10,11 @@ and open the template in the editor.
 * {
   box-sizing: border-box;
 }
+
 /*CEO Section--------------------------------------------------------*/
 .ceo-contact-form{
     position:absolute;
-    background: whitesmoke;
+    background:  transparent;
     height: auto;
     width: 21%;
     left:1.2%;
@@ -34,7 +35,7 @@ and open the template in the editor.
 /*SECURITY Section--------------------------------------------------------*/
 .security-contact-form {
     position:absolute;
-    background: whitesmoke;
+    background:  transparent;
     height: auto;
     width: 21%;
     top:40%;
@@ -54,7 +55,7 @@ and open the template in the editor.
 /*ADMIN Section--------------------------------------------------------*/
 .admin-contact-form {
     position:absolute;
-    background: whitesmoke;
+    background:  transparent;
     height: auto;
     width: 22%;
     top:15%;
@@ -74,7 +75,7 @@ and open the template in the editor.
 /*OPERATIONS Section--------------------------------------------------------*/
 .operations-contact-form {
     position:absolute;
-    background: whitesmoke;
+    background:  transparent;
     height: auto;
     width: 22%;
     top:40%;
@@ -94,7 +95,7 @@ and open the template in the editor.
 /*FINANCE Section--------------------------------------------------------*/
 .finance-contact-form {
     position:absolute;
-    background: whitesmoke;
+    background:  transparent;
     height: auto;
     width: 22%;
     top:65%;
@@ -114,7 +115,7 @@ and open the template in the editor.
 /*HR Section--------------------------------------------------------*/
 .human-resource-contact-form {
     position:absolute;
-    background: whitesmoke;
+    background:  transparent;
     height: auto;
     width: 21%;
     top:65%;
@@ -126,9 +127,12 @@ and open the template in the editor.
     font-size: .8vw;
     color: black;
 }
- .container-fluid .flex-container-about h4 {
-     
-    font-size: 1vw;
+ .container-fluid .flex-container-about h4 {     
+    font-size: 1.2vw;
+    font-weight: bold;
+    border-bottom: 1px black ;
+    text-decoration: underline;
+    text-align: left;
     color: black;
 } 
 @media screen and (max-width: 600px) {
@@ -139,7 +143,16 @@ and open the template in the editor.
 }
 
 .image-phone{
-    opacity: .5;
-     
-    width: auto;
+    opacity: .1;
+    position: relative; 
+    left: 25%;
 }
+.contact-title{
+     
+    text-align: center;
+}
+.footer-dark{
+    background:  #dddde2;
+}
+     
+ 
