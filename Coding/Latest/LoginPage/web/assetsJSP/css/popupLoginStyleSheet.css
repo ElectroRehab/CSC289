@@ -58,20 +58,21 @@ h1 {
   font-weight: bold;
   color: #fff;
 } 
-.home-main:hover {    
+.learn-btn:hover {    
    
   background: linear-gradient(to bottom,#f7f9fc,#36b9cc);
-  padding: 5px 20px;
+   
   color:  #000;
   border-radius: 5px;
   font-size: 1.2vw;
+  text-decoration: none;
  
 }
-.home-main{   
-  
+.learn-btn{   
+  position:absolute;
   font-family: microsoft, himalayan;
-  text-align: center;   
-  padding: 5px 20px 5px;   
+  text-align: right;  
+  
   color:  #000;   
   font-weight: bold;
   transition: all .5s;       
@@ -89,7 +90,7 @@ h1 {
   margin:0;
   font-family: microsoft, himalayan;
   text-align: center;
-  padding: 12px 20px; 
+  padding: 12px 20px;
     
   color:  #000;
   font-size: 1.1vw;

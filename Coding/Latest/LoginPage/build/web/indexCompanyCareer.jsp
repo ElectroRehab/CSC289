@@ -96,100 +96,116 @@
         </div>
     </div>  
     </div>
-     <div class="container-fluid">
-        <div class="flex-container-title">
-            <div class="flex-column-title">                
-                <div class="career-title"><h1>Company Careers</h1></div>
-                
-            </div>         
+    <div class="flex-container-title">
+        <div class="flex-column-title">                
+            <div class="career-title"><h1>Company Careers</h1></div>
         </div>        
-    </div>  
-    <div class="container-fluid">    
-        <img class="image-world"  src="assetsJSP/css/images/worldImage.png">
+    </div>   
+    <div class="flex-container-section-0">    
         
-        <div class="flex-container-learn">            
-            <div class="flex-column-learn"> 
-                 
-                <div class="container-fluid"> 
-                    
-                    <div class="flex-container-learn-btn">                                        
-                        <input type="button" class="learn-btn" value="Learn"<a href="learn.jsp" ></a>                                
-                    </div>        
-                </div>
-            </div>            
-        </div>   
-        <div class="flex-container-section">            
-            <div class="flex-column-1">           
-                <div class="container-fluid">   
-                 
-                    <div class="flex-container-1">   
-                        <form>
-                            <h4>Student Opportunities</h4> 
-                            <input type="button" class="learn-btn-1" value="Learn"<a href="learn.jsp" ></a> 
-                            
-                        </form>
-                        
-                        
-                    </div>       
-                    
-                </div>
-            </div> 
-            <div class="flex-column-2">           
-                <div class="container-fluid">                   
-                    <div class="flex-container-2">    
-                        <form>
-                            <h4>Student Opportunities</h4> 
-                            <input type="button" class="learn-btn-1" value="Learn"<a href="learn.jsp" ></a> 
-                            
-                        </form>
-                            
-                            
-                                                     
-                    </div>        
-                </div>
-            </div>    
-            <div class="flex-column-3">           
-                <div class="container-fluid">                   
-                    <div class="flex-container-3">                    
-                       <form>
-                            <h4>Student Opportunities</h4> 
-                            <input type="button" class="learn-btn-1" value="Learn"<a href="learn.jsp" ></a> 
-                            
-                        </form>                                 
-                    </div>        
-                </div>
+        <div class="flex-container-title-0" >                                        
+            <p>Sample Company Career Page</p>                                
+        </div> 
+         
+         <div class="flex-container-0">   
+            <form>               
+                <span class="navbar-text actions"> <a class="learn-btn" href="indexAdminLogin.jsp" data-target="#admin-login" data-toggle="modal" >Learn</a> </span>
+            </form> 
+         </div>  
+    </div>             
+    
+    
+        
+        
+          
+        <div class="flex-container-section-2">            
+             
+            <div class="flex-container-1">   
+                <form>
+                    <h4>Employment Opportunities</h4> 
+                    <span class="navbar-text actions"> <a class="learn-btn" href="indexAdminLogin.jsp">Learn</a> </span>                           
+                </form> 
+            </div>  
+            <div class="flex-container-2">   
+                <form>
+                    <h4>Student/Intern Opportunities</h4> 
+                    <span class="navbar-text actions"> <a class="learn-btn" href="indexAdminLogin.jsp">Learn</a> </span>                             
+                </form> 
             </div>
-             <div class="flex-column-4">           
-                <div class="container-fluid">                   
-                    <div class="flex-container-3">                    
-                          <form>
-                            <h4>Student Opportunities</h4> 
-                            <input type="button" class="learn-btn-1" value="Learn"<a href="learn.jsp" ></a> 
-                            
-                        </form>                            
-                    </div>        
-                </div>
+            <div class="flex-container-3">   
+                <form>
+                    <h4>Remote Opportunities</h4> 
+                    <span class="navbar-text actions"> <a class="learn-btn" href="indexAdminLogin.jsp">Learn</a> </span>
+                             
+                </form> 
+            </div>
+            <div class="flex-container-4">   
+                <form>
+                    <h4>Apprentice Opportunities</h4> 
+                    <span class="navbar-text actions"> <a class="learn-btn" href="indexAdminLogin.jsp" >Learn</a> </span>
+                           
+                </form> 
+            </div>   
+        </div>
+        <div class="flex-container-section-3">  
+            <div class="flex-container-5">    
+                <form>
+                    <div><img class="image-worker1"  src="assetsJSP/css/images/worker-image.png">      </div>   
+                </form>                
+                                   
+            </div>        
+  <div class="container-contact">
+  <form action="/action_page.php">
+        <h2>Contact Us</h2>
+        <div class="row">
+            <div class="col-25">
+                <label for="fname">First Name</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
             </div>
         </div>
-    </div>       
-    <div class="container-fluid">
-        <div class="flex-container-about">
-            <div class="flex-column-about">                
-                 
-            </div>         
-        </div>        
-    </div>      
-    <div class="container-fluid">
-        <div class="flex-container-about">
-            <div class="flex-column-about">                
-                
-            </div>         
-        </div>        
-    </div> 
-     
-    
-    
-     
+        <div class="row">
+            <div class="col-25">
+            <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+      <div class="row">
+      <div class="col-25">
+        <label for="lname">Email</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="email" name="Email" placeholder="Enter Email..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Country</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
     <div class="footer-dark">
         <footer>
             <div class="container">
