@@ -40,7 +40,7 @@
         <title>User Activation</title>        
     </head>
     <body>
-       <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
             <div class="container"><img src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60"><a class="user-login" href="indexMainPage.jsp">Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav mr-auto">                                    
@@ -49,36 +49,29 @@
                 </div>
             </div>
         </nav>
-        <div ><img class="image-reg" src="assetsJSP/css/images/mainPageBackgroundv3.png"</div>      
+        <div><img class="image-reg" src="assetsJSP/css/images/mainPageBackgroundv3.png"></div>
         <p id="random_number"></p>        
-    <div class="form-container" >                          
+        <div class="form-container" >                          
             <h1 class="reg-form-title">Complete the User Activation</h1>
-           <form onsubmit="return validationForm()" action="activateAccountAction.jsp" method="post" >                 
-            <div class="section-one">
-                <div class="form-group">
-                    <input class="form-control" type="text" name="userID" placeholder="Enter Unique ID" required="" id="holder"><br>                     
-                </div>
-                 
-            </div>
-                <div class="section-two">
+            <form onsubmit="return validationForm()" action="activateAccountAction.jsp" method="post">
+                <div class="section-one">
                     <div class="form-group">
                         <input class="form-control" type="text" name="activate" placeholder="Enter Activation Code" required=""><br> 
                     </div>   
                 <button type="submit" class="form-submit-button">Confirm</button>
-                    
                 </div>                    
-                         
-                </div>              
-            </form>       
-    </div>
-               
-    <div class="flex-container">             
-        <footer>            
-            <div class = "sticky-footer">           
-                <p>&copy; KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p>
-            </div>
-        </footer>              
-    </div>
+            </form>
+        </div>              
+
+        </div>
+
+        <div class="flex-container">             
+            <footer>            
+                <div class = "sticky-footer">           
+                    <p>&copy; KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p>
+                </div>
+            </footer>              
+        </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>

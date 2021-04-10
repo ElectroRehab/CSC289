@@ -27,9 +27,7 @@
     int wrong = 0;
     int sqlInt = 0;
     String resetAuth = "0";
-    String idNum=request.getParameter("userID");    
     String authNum=request.getParameter("activate");
-
     try{
         // Create a new clean conneciton.
         Connection con = null;
@@ -44,19 +42,17 @@
         // Connect to Database
         Class.forName(rf.getClassDriver());
         con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
-        sqlInt = 32;
+        sqlInt = 36;
         s.ReadSQL(sqlInt);
         PreparedStatement ps = con.prepareStatement(s.getSQLAll());
-        ps.setString(1,idNum);
-        ps.setString(2,authNum);    
-        ResultSet rs = ps.executeQuery();
-        
+        ps.setString(1,authNum);    
+        ResultSet rs = ps.executeQuery();        
         if (rs.next()){
             t.ReadTitles(1);        
             //Update user database info
-            sqlInt = 31;
+            sqlInt = 35;
             s.ReadSQL(sqlInt);
-            PreparedStatement userPS = con.prepareStatement(s.getSQLAll() + idNum);
+            PreparedStatement userPS = con.prepareStatement(s.getSQLAll() + authNum);
             userPS.setInt(1,wrong);
             userPS.setString(2,resetAuth);
             userPS.executeUpdate();
@@ -65,8 +61,7 @@
         }
         else{
             response.sendRedirect("authFail.jsp");
-        }
-        
+        }        
     }
     // Catch
     catch(Exception e){ 
