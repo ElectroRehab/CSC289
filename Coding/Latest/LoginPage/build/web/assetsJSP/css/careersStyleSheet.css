@@ -1,12 +1,4 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
 /* 
-    Created on : Apr 6, 2021, 3:09:35 PM
-    Author     : Anthony
- 
 top margin is 10px
 right margin is 5px
 bottom margin is 15px
@@ -77,7 +69,7 @@ and open the template in the editor.
 }
 /*Flex Conatiners--------------------------------------*/
 .flex-container-section-0{
-    background:  #dddde2;    
+    background:   #dddde2;    
     padding: 25px;    
     height: 20%;
 }
@@ -148,8 +140,7 @@ and open the template in the editor.
 .flex-container-image {
     padding:40px;
     background: #278c9b;
-    float: left;
-     
+    float: left;     
     display: flex;   
     align-content: center;
     height: 100%;
@@ -162,8 +153,7 @@ and open the template in the editor.
 /*Flex Container one containers-------------------------------------*/
 .flex-container-1 {
     padding:40px;
-    margin:10px;
-    
+    margin:10px;    
     align-content: center;
     justify-content: center;
     background:  #ffffff;
@@ -238,23 +228,26 @@ and open the template in the editor.
  
  
 /*Flex Container 1 buttons-------------------------------------*/
-.learn-btn-1, .learn-btn-2,.learn-btn-3,.learn-btn-4{
-    position: relative;
-    text-align: center;
-    padding:0;
-    margin: 0 ;     
-    height: 100%;
-    width:40%;     
-    background:  transparent;
-    color: black;     
-    font-size: .9vw;
-    border: .2vw black solid; 
-    border-radius: 8px;
+.learn-btn-career{
+   margin:0;
+  font-family: microsoft, himalayan;
+  text-align: center;
+  padding: 12px 20px;    
+  color:  #000;
+  font-size: 1.1vw;
+  font-weight: bold;
+  transition: all .5s; 
 }
-.learn-btn-1:hover, .learn-btn-2:hover,.learn-btn-3:hover,.learn-btn-4:hover{
-    background: black;   
-    color: white;         
+.learn-btn-career:hover{
+    background: crimson;
+    background: #1d2834;  
+    padding: 12px 20px; 
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.1vw;  
+    text-decoration: none;
 } 
+ 
 /*Flex Container one end buttons------------------------------------*/
 .image-world{
     position: relative;
@@ -299,7 +292,7 @@ label {
 }
 
 input[type=submit] {
-  background-color: #4CAF50;
+  background-color: #f4b30d;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -309,7 +302,8 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: goldenrod;
+  color:  #000;
 }
 
 .container-contact {

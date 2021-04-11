@@ -142,7 +142,7 @@
                         <ul>
                             <li><a href="ohNo.jsp">Company</a></li>
                             <li><a href="indexTeam.jsp">Team</a></li>
-                            <li><a href="ohNo.jsp">Careers</a></li>
+                            <li><a href="indexCompanyCareer.jsp">Careers</a></li>
                         </ul>
                     </div>                   
                     <div class="col item social">

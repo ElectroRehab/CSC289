@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="assetsJSP/css/popupLoginStyleSheet.css">
 </head> 
 <body>
+    <%--Navigation bar items--%>
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
         <div class="container"><img class="item-co-logo" src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60">&nbsp;&nbsp;&nbsp;<a class="home-main" href="indexMainPage.jsp">Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
@@ -46,55 +47,50 @@
             </div>
         </div>
     </nav> 
-       <div id="admin-login" class="modal fade" role="dialog">
+     <%--Displays admin login with popup form--%>
+    <div id="admin-login" class="modal fade" role="dialog">
         <div class="modal-dialog">
-    
-        <div class="modal-content">
-            <div class="modal-body">
-                <button data-dismiss="modal" class="close">&times;</button>
-             
-                <form action="indexAdminLoginAction.jsp" method="post" >
-                    <div ><h2>Admin Login</h2></div>              
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button data-dismiss="modal" class="close">&times;</button>
+                        <form action="indexAdminLoginAction.jsp" method="post" >
+                            <div ><h2>Admin Login</h2></div>              
                 
-                    <div class="form-group" >                  
-                        <input class="form-control" type="text" name="adminID" placeholder="Scan ID"><br>
-                    </div>   
-                    <div class="form-group">
-                        <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
-                    </div>  
-                    <div class="form-group">
-                        <button class="home-popup-login" type="submit">Login</button>             
-                    </div> 
-             
-                </form>
+                            <div class="form-group" >                  
+                                <input class="form-control" type="text" name="adminID" placeholder="Scan ID"><br>
+                            </div>   
+                            <div class="form-group">
+                                <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
+                            </div>  
+                            <div class="form-group">
+                                <button class="home-popup-login" type="submit">Login</button>             
+                            </div> 
+                        </form>
+                </div>
             </div>
-        </div>
-    </div>  
+        </div>  
     </div>
+     <%--Displays admin login with popup form--%>
     <div id="login" class="modal fade" role="dialog">
         <div class="modal-dialog">
-    
-        <div class="modal-content">
-            <div class="modal-body">
-                <button data-dismiss="modal" class="close">&times;</button>
-            
-                <form action="indexAdminLoginRegistrationAction.jsp" method="post" >
-                    <div ><h1>Admin Login Required</h1></div>              
-                
-                    <div class="form-group" >                  
-                        <input class="form-control" type="text" name="adminID" placeholder="Scan ID"><br>
-                    </div>   
-                    <div class="form-group">
-                        <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
-                    </div>  
-                    <div class="form-group">
-                        <button class="home-popup-login" type="submit">Login</button>             
-                    </div> 
-             
-                </form>
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button data-dismiss="modal" class="close">&times;</button>
+                        <form action="indexAdminLoginRegistrationAction.jsp" method="post" >
+                            <div ><h1>Admin Login Required</h1></div>              
+                            <div class="form-group" >                  
+                                <input class="form-control" type="text" name="adminID" placeholder="Scan ID"><br>
+                            </div>   
+                            <div class="form-group">
+                                <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
+                            </div>  
+                            <div class="form-group">
+                                <button class="home-popup-login" type="submit">Login</button>             
+                            </div> 
+                        </form>
+                </div>
             </div>
-        </div>
-    </div>  
+        </div>  
     </div>
     <div class="flex-container-title">
         <div class="flex-column-title">                
@@ -109,103 +105,104 @@
          
          <div class="flex-container-0">   
             <form>               
-                <span class="navbar-text actions"> <a class="learn-btn" href="indexAdminLogin.jsp" data-target="#admin-login" data-toggle="modal" >Learn</a> </span>
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#admin-login" data-toggle="modal" >Learn</a> </span>
             </form> 
          </div>  
-    </div>             
-    
-    
-        
-        
-          
-        <div class="flex-container-section-2">            
-             
-            <div class="flex-container-1">   
-                <form>
-                    <h4>Employment Opportunities</h4> 
-                    <span class="navbar-text actions"> <a class="learn-btn" href="indexAdminLogin.jsp">Learn</a> </span>                           
-                </form> 
-            </div>  
-            <div class="flex-container-2">   
-                <form>
-                    <h4>Student/Intern Opportunities</h4> 
-                    <span class="navbar-text actions"> <a class="learn-btn" href="indexAdminLogin.jsp">Learn</a> </span>                             
-                </form> 
-            </div>
-            <div class="flex-container-3">   
-                <form>
-                    <h4>Remote Opportunities</h4> 
-                    <span class="navbar-text actions"> <a class="learn-btn" href="indexAdminLogin.jsp">Learn</a> </span>
-                             
-                </form> 
-            </div>
-            <div class="flex-container-4">   
-                <form>
-                    <h4>Apprentice Opportunities</h4> 
-                    <span class="navbar-text actions"> <a class="learn-btn" href="indexAdminLogin.jsp" >Learn</a> </span>
-                           
-                </form> 
-            </div>   
+    </div>
+    <div class="flex-container-section-2">            
+        <div class="flex-container-1">   
+            <form>
+                <h4>Employment Opportunities</h4> 
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp">Learn</a> </span>                           
+            </form> 
+        </div>  
+        <div class="flex-container-2">   
+            <form>
+                <h4>Student/Intern Opportunities</h4> 
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp">Learn</a> </span>                             
+            </form> 
         </div>
-        <div class="flex-container-section-3">  
-            <div class="flex-container-5">    
-                <form>
-                    <div><img class="image-worker1"  src="assetsJSP/css/images/worker-image.png">      </div>   
-                </form>                
-                                   
-            </div>        
-  <div class="container-contact">
-  <form action="/action_page.php">
-        <h2>Contact Us</h2>
-        <div class="row">
-            <div class="col-25">
-                <label for="fname">First Name</label>
-            </div>
-            <div class="col-75">
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
-            </div>
+        <div class="flex-container-3">   
+            <form>
+                <h4>Remote Opportunities</h4> 
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp">Learn</a> </span>
+            </form> 
         </div>
-        <div class="row">
-            <div class="col-25">
-            <label for="lname">Last Name</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-      </div>
+        <div class="flex-container-4">   
+            <form>
+                <h4>Apprentice Opportunities</h4> 
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" >Learn</a> </span>
+            </form> 
+        </div>   
     </div>
-      <div class="row">
-      <div class="col-25">
-        <label for="lname">Email</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="email" name="Email" placeholder="Enter Email..">
-      </div>
+    <div class="flex-container-section-3">  
+        <div class="flex-container-5">    
+            <form>
+                <div><img class="image-worker1"  src="assetsJSP/css/images/worker-image.png">      </div>   
+            </form>                
+        </div>  
+      <%--Displays conatct form--%>
+        <div class="container-contact">
+            <form action=" ">
+                <h2>Contact Us</h2>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fname">First Name</label>
+                    </div>
+                     <div class="col-75">
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Last Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Email</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="email" name="Email" placeholder="Enter Email..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="country">Country</label>
+                    </div>
+                <div class="col-75">
+                    <select id="country" name="country">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                    </select>
+                </div>
+                </div>
+                 <div class="row">
+                    <div class="col-25">
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="file">Upload Resume</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="file" id="myFile" name="filename">
+                    </div>
+                </div>       
+                <div class="row">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
     </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="country">Country</label>
-      </div>
-      <div class="col-75">
-        <select id="country" name="country">
-          <option value="australia">Australia</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
-        </select>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="subject">Subject</label>
-      </div>
-      <div class="col-75">
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-      </div>
-    </div>
-    <div class="row">
-      <input type="submit" value="Submit">
-    </div>
-  </form>
-</div>
     <div class="footer-dark">
         <footer>
             <div class="container">
