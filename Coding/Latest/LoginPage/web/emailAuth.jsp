@@ -1,3 +1,4 @@
+<%@page import="readfile.ConnectDB"%>
 <%@page import="readfile.ReadEmail"%>
 <%@page import="javax.mail.*"%>
 <%@page import="java.util.*"%>
@@ -49,13 +50,10 @@
             int sqlInt = 0;
             // Connect to database and find the most recent ID
             try{
-                // Create a new clean conneciton.
-                Connection con = null;                
-                // Run the CSV Reader Class
-                rf.ReadFile();
-                // Connect to Database
-                Class.forName(rf.getClassDriver());
-                con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
+                // Create a new clean connection to database.          
+                ConnectDB dbc = new ConnectDB();
+                dbc.ConnectDB();
+                Connection con = dbc.getConnections();
                 // String used for SQL Query
                 sqlInt = 1;
                 s.ReadSQL(sqlInt);

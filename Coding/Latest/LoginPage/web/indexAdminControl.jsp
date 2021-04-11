@@ -3,6 +3,7 @@
     Created on : Feb 3, 2021, 6:40:30 AM
     Author     : Anthony
 --%>
+<%@page import="readfile.ConnectDB"%>
 <%@page import="readfile.ReadSessions"%>
 <%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
@@ -175,25 +176,12 @@
                                             <div class="text-dark font-weight-bold h5 mb-0"> 
                                                 <%    
     try{
-        // Create a new clean conneciton.
-        Connection con = null;
-        // Create object
-        ReadFile rf = new ReadFile();
         // Create object
         ReadSQL s = new ReadSQL();
-        // Run the CSV Reader Class
-        rf.ReadFile();
-        // String for the JBDC Driver Info
-        String classDriver = rf.getClassDriver();
-        // String used for link to the Remote Database
-        String link = rf.getLink();
-        // String used for username of the Remote Database
-        String user = rf.getUser();
-        // String used for password to the Remote Database
-        String pass = rf.getPass();
-        // Coneect to Database
-        Class.forName(classDriver);
-        con = DriverManager.getConnection(link,user,pass);
+        // Create a new clean connection to database.          
+        ConnectDB dbc = new ConnectDB();
+        dbc.ConnectDB();
+        Connection con = dbc.getConnections();
         Statement st=con.createStatement();
         s.ReadSQL(19);
         ResultSet rs=st.executeQuery(s.getSQLAll().toString());
@@ -230,17 +218,12 @@
                                             <div class="text-dark font-weight-bold h5 mb-0">                                            <%    
     try{
         
-        // Create a new clean conneciton.
-        Connection con = null;
-        // Create object
-        ReadFile rf = new ReadFile();        
         // Create object
         ReadSQL s = new ReadSQL();
-        // Run the CSV Reader Class
-        rf.ReadFile();
-        // Coneect to Database
-        Class.forName(rf.getClassDriver());
-        con = DriverManager.getConnection(rf.getLink(), rf.getUser(), rf.getPass());
+        // Create a new clean connection to database.          
+        ConnectDB dbc = new ConnectDB();
+        dbc.ConnectDB();
+        Connection con = dbc.getConnections();
         Statement st=con.createStatement();
         // Run the SQL Reader Class
         s.ReadSQL(20);

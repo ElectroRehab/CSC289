@@ -3,6 +3,7 @@
     Created on : Feb 13, 2021, 8:02:32 PM
     Author     : Anthony
 --%>
+<%@page import="readfile.ConnectDB"%>
 <%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <%@page import ="java.sql.*"%>
@@ -26,19 +27,13 @@
 
     //Make changes to the connection string(database name, user/password)
     //Make changes to the String query(change table name)
-    try
-    {
-    // Create a new clean conneciton.
-        Connection con = null;
-        // Create object
-        ReadFile rf = new ReadFile();
+    try{
+        // Create a new clean connection to database.          
+        ConnectDB dbc = new ConnectDB();
+        dbc.ConnectDB();
+        Connection con = dbc.getConnections();
         // Create object
         ReadSQL s = new ReadSQL();
-        // Run the CSV Reader Class
-        rf.ReadFile();
-        // Connect to Database
-        Class.forName(rf.getClassDriver());
-        con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
         // Create a Statement to run query from database.
         sqlInt = 18;
         s.ReadSQL(sqlInt);

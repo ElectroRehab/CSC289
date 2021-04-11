@@ -3,6 +3,7 @@
     Created on : Feb 11, 2021, 6:13:48 PM
     Author     : Anthony
 --%> 
+<%@page import="readfile.ConnectDB"%>
 <%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <%@page import ="java.sql.*"%>
@@ -23,49 +24,43 @@
     Timestamp timeOut =new java.sql.Timestamp(date.getTime());
     Timestamp totalTime =new java.sql.Timestamp(date.getTime());
     String userID=request.getParameter("userID");    
-    String pinCode=request.getParameter("pinCode");
-    
+    String pinCode=request.getParameter("pinCode");    
     //Declare and initialize status variable
     String status = "Out";     
     //Display error page if input is null
     if(userID == "" || pinCode == ""){
-    response.sendRedirect("error.jsp");
-}
-else
-{
-    //Make changes to the connection string(database name, user/password)
-    //Make changes to the String query(change table name)
-    try{// Create a new clean conneciton.
-        Connection con = null;
-        // Create object
-        ReadFile rf = new ReadFile();
-        // Create object
-        ReadSQL s = new ReadSQL();
-        // Run the CSV Reader Class
-        rf.ReadFile();
-        // Connect to Database
-        Class.forName(rf.getClassDriver());
-        con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());     
-        sqlInt = 5;
-        s.ReadSQL(sqlInt);
-        PreparedStatement ps = con.prepareStatement(s.getSQLAll());   
-        ps.setTimestamp(1,timeOut);
-        ps.setString(2,status);               
-        ps.setString(3,userID);           
-        ps.executeUpdate();
-        sqlInt = 14;
-        s.ReadSQL(sqlInt);
-        ps = con.prepareStatement(s.getSQLAll()); 
-        ps.setString(1,userID);  
-        ps.executeUpdate();       
-        response.sendRedirect("indexUserLogoutSuccess.jsp");            
-        //Close connections
-        ps.close();        
-        con.close();
+        response.sendRedirect("error.jsp");
     }
-    catch(Exception e){     
-        out.println(e); 
-    }   
-}
+    else{
+        //Make changes to the connection string(database name, user/password)
+        //Make changes to the String query(change table name)
+        try{
+            // Create a new clean connection to database.          
+            ConnectDB dbc = new ConnectDB();
+            dbc.ConnectDB();
+            Connection con = dbc.getConnections();
+            // Create object
+            ReadSQL s = new ReadSQL();
+            sqlInt = 5;
+            s.ReadSQL(sqlInt);
+            PreparedStatement ps = con.prepareStatement(s.getSQLAll());   
+            ps.setTimestamp(1,timeOut);
+            ps.setString(2,status);               
+            ps.setString(3,userID);           
+            ps.executeUpdate();
+            sqlInt = 14;
+            s.ReadSQL(sqlInt);
+            ps = con.prepareStatement(s.getSQLAll()); 
+            ps.setString(1,userID);  
+            ps.executeUpdate();       
+            response.sendRedirect("indexUserLogoutSuccess.jsp");            
+            //Close connections
+            ps.close();        
+            con.close();
+        }
+        catch(Exception e){     
+            out.println(e); 
+        }   
+    }
 %> 
 </html>

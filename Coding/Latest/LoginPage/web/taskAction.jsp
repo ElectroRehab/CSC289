@@ -3,6 +3,7 @@
     Created on : Mar 23, 2021, 2:24:03 PM
     Author     : Anthony
 --%>
+<%@page import="readfile.ConnectDB"%>
 <%@page import="readfile.ReadSessions"%>
 <%@page import="java.security.NoSuchAlgorithmException"%>
 <%@page import="java.security.MessageDigest"%>
@@ -34,18 +35,10 @@
     String uid = (String)session.getAttribute("adminID");
     String timeBase = "00:00:00";   
         try{
-        // Create a new clean conneciton.
-        Connection con = null;
-        // Create object
-        ReadFile rf = new ReadFile();
-        // Create object
-        ReadSQL s = new ReadSQL();
-        // Run the CSV Reader Class
-        rf.ReadFile();
-        // Connect to Database
-        Class.forName(rf.getClassDriver());
-        con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());         
-        Class.forName("com.mysql.jdbc.Driver");      
+        // Create a new clean connection to database.          
+        ConnectDB dbc = new ConnectDB();
+        dbc.ConnectDB();
+        Connection con = dbc.getConnections();
         //Statement st=con.createStatement();
         String query = "insert into admintask(adminID,task) values('"+uid+"','"+task+"')";        
         Statement st=con.createStatement();

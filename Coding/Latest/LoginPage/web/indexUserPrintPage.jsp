@@ -3,6 +3,7 @@
     Created on : Mar 18, 2021, 7:03:33 AM
     Author     : Anthony
 --%>
+<%@page import="readfile.ConnectDB"%>
 <%@page import="readfile.ReadTitles"%>
 <%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
@@ -57,19 +58,14 @@
                 String userBarCode = "";
                 // Connect to database and find the most recent ID
                 try{
-                    // Create a new clean conneciton.
-                    Connection con = null;
-                    // Create object
-                    ReadFile rf = new ReadFile();
+                    // Create a new clean connection to database.          
+                    ConnectDB dbc = new ConnectDB();
+                    dbc.ConnectDB();
+                    Connection con = dbc.getConnections();
                     // Create object
                     ReadSQL s = new ReadSQL();
                     // Create Object 
                     ReadTitles t = new ReadTitles();
-                    // Run the CSV Reader Class
-                    rf.ReadFile();
-                    // Connect to Database
-                    Class.forName(rf.getClassDriver());
-                    con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
                     // String used for SQL Query
                     sqlInt = 1;
                     s.ReadSQL(sqlInt);

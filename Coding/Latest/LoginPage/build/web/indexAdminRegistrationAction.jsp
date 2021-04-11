@@ -3,6 +3,7 @@
     Created on : Feb 2, 2021, 6:27:44 PM
     Author     : Anthony
 --%>
+<%@page import="readfile.ConnectDB"%>
 <%@page import="java.security.NoSuchAlgorithmException"%>
 <%@page import="java.security.MessageDigest"%>
 <%@page import="java.math.BigInteger"%>
@@ -49,19 +50,12 @@
     hashText.setHashText(password);
     password = hashText.getHashText();
     try{
-        // Create a new clean conneciton.
-        Connection con = null;
-        //
-        ResultSet rs = null;
-        // Create object
-        ReadFile rf = new ReadFile();
         // Create object
         ReadSQL s = new ReadSQL();
-        // Run the CSV Reader Class
-        rf.ReadFile();
-        // Connect to Database
-        Class.forName(rf.getClassDriver());
-        con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
+        // Create a new clean connection to database.          
+        ConnectDB dbc = new ConnectDB();
+        dbc.ConnectDB();
+        Connection con = dbc.getConnections();
         Statement st=con.createStatement();
         // Execute SQL Code to add information to Databases
         // Run the CSV Reader Class
@@ -70,7 +64,7 @@
         st.executeUpdate(s.getSQLAll() + "('"+idNum+"','"+fname+"','"+lname+"','"+address+"','"+city+"','"+state+"','"+zipcode+"','"+mobileNo+"','"+email+"','"+password+"','"+image+"','"+ident+"','"+wrong+"','"+auth+"')");
         sqlInt = 15;
         s.ReadSQL(sqlInt);
-        rs = st.executeQuery(s.getSQLAll().toString());
+        ResultSet rs = st.executeQuery(s.getSQLAll().toString());
         while(rs.next()){
             primID = rs.getInt("ID");
         }

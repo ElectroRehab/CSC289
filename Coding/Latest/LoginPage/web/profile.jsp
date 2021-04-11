@@ -3,6 +3,7 @@
     Created on : Feb 9, 2021, 5:29:48 PM
     Author     : Anthony
 --%>
+<%@page import="readfile.ConnectDB"%>
 <%@page import="readfile.ReadSessions"%>
 <%@page import="readfile.ReadTitles"%>
 <%@page import="readfile.ReadSQL"%>
@@ -221,19 +222,14 @@
         
         int count = 0;
         int sqlInt = 0;
-        // Create a new clean conneciton.
-        Connection con = null;
-        // Create object
-        ReadFile rf = new ReadFile();
+        // Create a new clean connection to database.          
+        ConnectDB dbc = new ConnectDB();
+        dbc.ConnectDB();
+        Connection con = dbc.getConnections();
         // Create object
         ReadSQL s = new ReadSQL();
         //Create Object
-        ReadTitles t = new ReadTitles();
-        // Run the CSV Reader Class
-        rf.ReadFile();
-        // Connect to Database
-        Class.forName(rf.getClassDriver());
-        con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
+        ReadTitles t = new ReadTitles();        
         // Get current admin's info from present session
         sqlInt = 1;
         t.ReadTitles(sqlInt);

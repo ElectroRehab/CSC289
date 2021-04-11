@@ -1,4 +1,5 @@
- <%@page import="readfile.ReadTitles"%>
+ <%@page import="readfile.ConnectDB"%>
+<%@page import="readfile.ReadTitles"%>
 <%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
 <%@page import="java.security.NoSuchAlgorithmException"%>
@@ -35,19 +36,14 @@
         hashText.setHashText(pinNum);
         pinNum = hashText.getHashText();
         try{            
-            // Create a new clean conneciton.
-            Connection con = null;
-            // Create object
-            ReadFile rf = new ReadFile();
             // Create object
             ReadSQL s = new ReadSQL();
             // Create object
             ReadTitles t = new ReadTitles();
-            // Run the CSV Reader Class
-            rf.ReadFile();
-            // Connect to Database
-            Class.forName(rf.getClassDriver());
-            con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
+            // Create a new clean connection to database.          
+            ConnectDB dbc = new ConnectDB();
+            dbc.ConnectDB();
+            Connection con = dbc.getConnections();
             // String used for SQL Query
             sqlInt = 2;
             s.ReadSQL(sqlInt);

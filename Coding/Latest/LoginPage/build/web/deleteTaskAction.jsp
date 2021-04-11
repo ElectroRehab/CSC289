@@ -4,6 +4,7 @@
     Author     : Anthony
 --%>
 
+<%@page import="readfile.ConnectDB"%>
 <%@page import="readfile.ReadSessions"%>
 <%@page import="java.sql.*"%>
 <%@page import="com.itextpdf.text.pdf.BarcodeEAN"%>
@@ -30,20 +31,12 @@
     
     String uid = (String)session.getAttribute("adminID");
  
-        try{
-            PreparedStatement pst = null;
-        // Create a new clean conneciton.
-        Connection con = null;
-        // Create object
-        ReadFile rf = new ReadFile();
-        // Create object
-        ReadSQL s = new ReadSQL();
-        // Run the CSV Reader Class
-        rf.ReadFile();
-        // Connect to Database
-        Class.forName(rf.getClassDriver());
-        con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());         
-        Class.forName("com.mysql.jdbc.Driver");      
+    try{
+        PreparedStatement pst = null;
+        // Create a new clean connection to database.          
+        ConnectDB dbc = new ConnectDB();
+        dbc.ConnectDB();
+        Connection con = dbc.getConnections();
         //Statement st=con.createStatement();
         
         String query = "DELETE FROM admintask WHERE adminID = ? && task = ?";      

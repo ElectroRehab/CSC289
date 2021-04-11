@@ -3,6 +3,7 @@
     Created on : Mar 18, 2021, 7:05:44 AM
     Author     : Anthony
 --%>
+<%@page import="readfile.ConnectDB"%>
 <%@page import="java.security.NoSuchAlgorithmException"%>
 <%@page import="java.security.MessageDigest"%>
 <%@page import="java.math.BigInteger"%>
@@ -47,17 +48,13 @@
     hashText.setHashText(password);
     password = hashText.getHashText();
     try{
-        // Create a new clean conneciton.
-        Connection con = null;
-        // Create object
-        ReadFile rf = new ReadFile();
+        // Create a new clean connection to database.          
+        ConnectDB dbc = new ConnectDB();
+        dbc.ConnectDB();
+        Connection con = dbc.getConnections();
         // Create object
         ReadSQL s = new ReadSQL();
-        // Run the CSV Reader Class
-        rf.ReadFile();
-        // Connect to Database
-        Class.forName(rf.getClassDriver());
-        con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
+        
         Statement st=con.createStatement();
         // Execute SQL Code to add information to Database
         sqlInt = 10;

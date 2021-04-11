@@ -3,6 +3,7 @@
     Created on : Feb 7, 2021, 5:39:52 PM
     Author     : Anthony
 --%> 
+<%@page import="readfile.ConnectDB"%>
 <%@page import="readfile.ReadTitles"%>
 <%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
@@ -51,19 +52,14 @@
         //Return hashText and set pinCode to hash
         pinCode = hashText.getHashText();
         try{
-            // Create a new clean conneciton.
-            Connection con = null;
-            // Create object
-            ReadFile rf = new ReadFile();
+            // Create a new clean connection to database.          
+            ConnectDB dbc = new ConnectDB();
+            dbc.ConnectDB();
+            Connection con = dbc.getConnections();
             // Create object
             ReadSQL s = new ReadSQL();
             // Create Object 
             ReadTitles t = new ReadTitles();
-            // Run the CSV Reader Class
-            rf.ReadFile();
-            // Connect to Database
-            Class.forName(rf.getClassDriver());
-            con = DriverManager.getConnection(rf.getLink(),rf.getUser(),rf.getPass());
             // Create a Statement to run query from database.
             sqlInt = 15;
             s.ReadSQL(sqlInt);

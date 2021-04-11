@@ -3,6 +3,7 @@
     Created on : Feb 13, 2021, 8:05:37 PM
     Author     : Anthony
 --%>
+<%@page import="readfile.ConnectDB"%>
 <%@page import="readfile.ReadSessions"%>
 <%@page import="readfile.HashSHA512Encryption"%>
 <%@page import="readfile.ReadTitles"%>
@@ -192,24 +193,19 @@
         HashSHA512Encryption hashText = new HashSHA512Encryption();
         int sqlInt = 0;
         java.util.Date date=new java.util.Date();			
-        // Create a new clean conneciton.
-        Connection con = null;
-        // Create object
-        ReadFile rf = new ReadFile();
-        // Run the CSV Reader Class
-        rf.ReadFile();
+        // Create a new clean connection to database.          
+        ConnectDB dbc = new ConnectDB();
+        dbc.ConnectDB();
+        Connection con = dbc.getConnections();
         // Create object
         ReadSQL s = new ReadSQL();
         // Create object
         ReadTitles t = new ReadTitles();
-        // Connect to Database
-        Class.forName(rf.getClassDriver());
-        con = DriverManager.getConnection(rf.getLink(), rf.getUser(), rf.getPass());
+        
         Statement st=con.createStatement();
         sqlInt = 23;
         s.ReadSQL(sqlInt);
-        ResultSet rs=st.executeQuery(s.getSQLAll());
-        
+        ResultSet rs=st.executeQuery(s.getSQLAll());        
 %>
                             <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
                                 <table class="table my-0" id="dataTable">
