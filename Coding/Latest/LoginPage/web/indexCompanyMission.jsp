@@ -144,7 +144,7 @@
                             <li><a href="indexTeam.jsp">Team</a></li>
                             <li><a href="indexCompanyCareer.jsp">Careers</a></li>
                         </ul>
-                    </div>                   
+                    </div>                    
                     <div class="col item social">
                         <h3>Connect With Us</h3>
                         <a  href="https://www.facebook.com/" target="blank"><i class="fa  fa-facebook"></i></a>

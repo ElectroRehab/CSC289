@@ -213,9 +213,17 @@
                         <ul>
                             <li><a href="ohNo.jsp">Company</a></li>
                             <li><a href="indexTeam.jsp">Team</a></li>
-                            <li><a href="ohNo.jsp">Careers</a></li>
+                            <li><a href="indexCompanyCareer.jsp">Careers</a></li>
                         </ul>
-                    </div>                    
+                    </div>  
+                     <div class="col-sm-6 col-md-3 item">
+                        <h3>Help</h3>
+                        <ul>
+                            <li><a href="ohNo.jsp">Create Account</a></li>
+                            <li><a href="indexTeam.jsp">Remove Account</a></li>
+                            <li><a href="indexCompanyCareer.jsp">Forgot Username/Password</a></li>
+                        </ul>
+                    </div>
                     <div class="col item social">
                         <h3>Connect With Us</h3>
                         <a  href="https://www.facebook.com/" target="blank"><i class="fa  fa-facebook"></i></a>

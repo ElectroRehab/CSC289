@@ -130,11 +130,11 @@
                     <div class="col-sm-6 col-md-3 item">
                         <h3>About</h3>
                         <ul>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Careers</a></li>
+                            <li><a href="ohNo.jsp">Company</a></li>
+                            <li><a href="indexTeam.jsp">Team</a></li>
+                            <li><a href="indexCompanyCareer.jsp">Careers</a></li>
                         </ul>
-                    </div>                 
+                    </div>                  
                     
                     <div class="col item social">
                         <h3>Connect With Us</h3>
