@@ -113,7 +113,7 @@
         <div class="flex-container-1">   
             <form>
                 <h4>Employment Opportunities</h4> 
-                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp">Learn</a> </span>                           
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexEmploymentOpportunities.jsp">Learn</a> </span>                           
             </form> 
         </div>  
         <div class="flex-container-2">   

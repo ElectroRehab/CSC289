@@ -23,6 +23,12 @@ h1 {
   font-family: microsoft, himalayan;
   color:  #000;
 }
+label{
+    color: black;
+}
+option{
+    font-size: 1.2vw;
+}
 .close {
   color: #fff;
   transform: scale(1.2)
@@ -33,6 +39,73 @@ h1 {
   border: 3px  inset   #000; 
   
 }
+.modal-content-res-form {
+  font-weight: bold;
+  background: linear-gradient(to bottom right,white, gray );
+  border: 3px  inset   #000; 
+  
+}
+.flex-container-6 h2{
+    color:white;
+    font-size: 1.1vw;
+}
+.contact-form, .form-group, .form-control textarea{
+    height:available;
+    width:100%;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #f4b30d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: goldenrod;
+  color:  #000;
+}
+
+.container-contact {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .form-control {
   margin: 1em 0;
   

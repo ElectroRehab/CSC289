@@ -1,9 +1,9 @@
 <%-- 
-    Document   : indexCompanyCareer
-    Created on : Apr 6, 2021, 3:07:42 PM
+    Document   : indexEmploymentOpportunities
+    Created on : Apr 14, 2021, 1:49:30 PM
     Author     : Anthony
 --%>
- 
+
 <html>
 
 <head>
@@ -100,7 +100,7 @@
     <div class="flex-container-section-0">    
         
         <div class="flex-container-title-0" >                                        
-            <p>Sample Company Career Page</p>                                
+            <p>Sample Application Page</p>                                
         </div> 
          
          <div class="flex-container-0">   
@@ -112,39 +112,56 @@
     <div class="flex-container-section-2">            
         <div class="flex-container-1">   
             <form>
-                <h4>Employment Opportunities</h4> 
-                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexEmploymentOpportunities.jsp">Learn</a> </span>                           
+                <h4>Management Opportunities</h4> 
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="ohNo.jsp" data-target="#resume-form" data-toggle="modal" >Apply</a> </span>                           
             </form> 
         </div>  
         <div class="flex-container-2">   
             <form>
-                <h4>Student/Intern Opportunities</h4> 
-                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp">Learn</a> </span>                             
+                <h4>Information Technology</h4> 
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#resume-form" data-toggle="modal">Apply</a> </span>                             
             </form> 
         </div>
         <div class="flex-container-3">   
             <form>
-                <h4>Remote Opportunities</h4> 
-                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp">Learn</a> </span>
+                <h4>Administration</h4> 
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#resume-form" data-toggle="modal">Apply</a> </span>
             </form> 
         </div>
         <div class="flex-container-4">   
             <form>
-                <h4>Apprentice Opportunities</h4> 
-                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" >Learn</a> </span>
+                <h4>Security</h4> 
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#resume-form" data-toggle="modal">Apply</a> </span>
             </form> 
         </div>   
+         <div class="flex-container-4">   
+            <form>
+                <h4>Human Resource</h4> 
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#resume-form" data-toggle="modal">Apply</a> </span>
+            </form> 
+        </div>
+         <div class="flex-container-4">   
+            <form>
+                <h4>Finance </h4> 
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#resume-form" data-toggle="modal">Apply</a> </span>
+            </form> 
+        </div>
     </div>
     <div class="flex-container-section-3">  
         <div class="flex-container-5">    
             <form>
                 <div><img class="image-worker1"  src="assetsJSP/css/images/worker-image.png">      </div>   
             </form>                
-        </div>  
-      <%--Displays conatct form--%>
-        <div class="container-contact">
-            <form action=" ">
-                <h2>Contact Us</h2>
+        </div>          
+    </div>
+           <%--Displays Application/resume upload form--%>
+    <div id="resume-form" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button data-dismiss="modal" class="close">&times;</button>
+                         <form action=" ">
+                <h2>Resume Upload</h2>
                 <div class="row">
                     <div class="col-25">
                         <label for="fname">First Name</label>
@@ -181,12 +198,25 @@
                     </select>
                 </div>
                 </div>
-                 <div class="row">
+                <div class="row">
                     <div class="col-25">
-                        <label for="subject">Subject</label>
+                        <label for="subject">Position</label>
                     </div>
                     <div class="col-75">
-                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                        <select id="country" name="country">
+                        <option value="supervisor">Supervisor</option>
+                        <option value="student">Student/Intern</option>
+                        <option value="apprentice">Apprenticeship</option>
+                        <option value="remote">Remote Position</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="subject">Phone Number</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="position" name="empPosition" placeholder="Enter Number"  >
                     </div>
                 </div>
                 <div class="row">
@@ -201,7 +231,9 @@
                     <input type="submit" value="Submit">
                 </div>
             </form>
-        </div>
+                </div>
+            </div>
+        </div>  
     </div>
     <div class="footer-dark">
         <footer>
