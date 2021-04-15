@@ -29,10 +29,17 @@
     r.getPost(request, response, session);
     
     HashSHA512Encryption hashText = new HashSHA512Encryption();
-    int sqlInt = 0;
-    String adminID=request.getParameter("adminID");
     
+    int sqlInt = 0;    
+    // Get Current date and time   
+    java.util.Date date=new java.util.Date();
+    Timestamp timeOut =new java.sql.Timestamp(date.getTime());
+    // 
+    String adminID=request.getParameter("adminID");    
     String pinNum=request.getParameter("pinNum");
+    // Declare and initialize status variable
+    String status = "Out";     
+    // Display error page if input is null
     if(adminID == "" || pinNum == ""){
         response.sendRedirect("error.jsp");
     }
@@ -51,13 +58,27 @@
             ReadSQL s = new ReadSQL();
             // Create object
             ReadTitles t = new ReadTitles();
+            // Clock-out of the system
+            sqlInt = 5;
+            s.ReadSQL(sqlInt);
+            PreparedStatement ps = con.prepareStatement(s.getSQLAll());   
+            ps.setTimestamp(1,timeOut);
+            ps.setString(2,status);               
+            ps.setString(3,adminID);           
+            ps.executeUpdate();
+            // Calculate the total time from login-logout as admin.
+            sqlInt = 14;
+            s.ReadSQL(sqlInt);
+            ps = con.prepareStatement(s.getSQLAll()); 
+            ps.setString(1,adminID);  
+            ps.executeUpdate();
             // String used for SQL Query
             sqlInt = 2;
             s.ReadSQL(sqlInt);
-            PreparedStatement ps = con.prepareStatement(s.getSQLAll());
-            ps.setString(1,adminID );
-            ps.setString(2,pinNum );    
-            ResultSet rs = ps.executeQuery();    
+            PreparedStatement psp = con.prepareStatement(s.getSQLAll());
+            psp.setString(1,adminID );
+            psp.setString(2,pinNum );    
+            ResultSet rs = psp.executeQuery();    
             if (rs.next()){
                 t.ReadTitles(1);
                 session.removeAttribute(t.getSQLTitles().toString());
@@ -67,6 +88,7 @@
                 response.sendRedirect("error.jsp");
             }
             ps.close();
+            psp.close();
             rs.close();
             con.close();
             }

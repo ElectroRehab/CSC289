@@ -67,8 +67,7 @@
             if (rs.next()){
                 sqlInt = 1;
                 t.ReadTitles(sqlInt);
-                session.setAttribute(t.getSQLTitles().toString(), adminID);                
-                               
+                session.setAttribute(t.getSQLTitles().toString(), adminID);
             }
             else{
                 response.sendRedirect("notAdminError.jsp");

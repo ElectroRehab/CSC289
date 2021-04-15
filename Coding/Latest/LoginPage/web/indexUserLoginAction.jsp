@@ -29,9 +29,9 @@
     int reset = 0;
     
     //Get Current date and time   
-    java.util.Date date=new java.util.Date();
+    java.util.Date date = new java.util.Date();
     // Date and Time Check 
-    Timestamp timeIn =new java.sql.Timestamp(date.getTime());
+    Timestamp timeIn = new java.sql.Timestamp(date.getTime());
     // Starting Time Format
     String timeOut = "00:00:00";
     //Get parameters from login form
@@ -105,26 +105,28 @@
                 }
             }
             // Create a Prepared Statement to run query from database.
+            dbc.ConnectDB();
+            con = dbc.getConnections();
             sqlInt = 3;
             s.ReadSQL(sqlInt);            
-            PreparedStatement ps = con.prepareStatement(s.getSQLAll());
+            PreparedStatement p = con.prepareStatement(s.getSQLAll());
             // Set Strings to locations in the database.
-            ps.setString(1,userID );
-            ps.setString(2,pinCode );
+            p.setString(1,userID);
+            p.setString(2,pinCode);
             // Iterate through database to set new fields
-            ResultSet rs = ps.executeQuery();
-            if(rs.next()){
+            ResultSet rlst = p.executeQuery();
+            if(rlst.next()){
                 sqlInt = 4;
                 s.ReadSQL(sqlInt);
-                ps = con.prepareStatement(s.getSQLAll());
-                ps.setString(1,userID );
-                ps.setTimestamp(2,timeIn ); 
-                ps.setString(3,timeOut ); 
-                ps.setString(4,pinCode ); 
-                ps.setString(5,status );  
-                ps.setString(6,userID );  
-                ps.setString(7,pinCode );      
-                ps.executeUpdate();  
+                p = con.prepareStatement(s.getSQLAll());
+                p.setString(1,userID);
+                p.setTimestamp(2,timeIn); 
+                p.setString(3,timeOut); 
+                p.setString(4,pinCode); 
+                p.setString(5,status);  
+                p.setString(6,userID);  
+                p.setString(7,pinCode);      
+                p.executeUpdate();  
                 response.sendRedirect("indexUserLoginSuccess.jsp");              
             }     
             else{
@@ -132,8 +134,8 @@
                 response.sendRedirect("errorUserLogin.jsp");
             }
             // Close all recently opened connections. 
-            ps.close();
-            rs.close();
+            p.close();
+            rlst.close();
             con.close();        
         }        
         catch(Exception e){
