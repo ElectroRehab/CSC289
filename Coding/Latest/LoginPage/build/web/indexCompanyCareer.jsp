@@ -136,7 +136,7 @@
         </div>   
     </div>
     <div class="flex-container-section-3">  
-        <div class="flex-container-5">    
+        <div class="flex-container-1-image">    
             <form>
                 <div><img class="image-worker1"  src="assetsJSP/css/images/worker-image.png">      </div>   
             </form>                
@@ -189,14 +189,7 @@
                         <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-25">
-                        <label for="file">Upload Resume</label>
-                    </div>
-                    <div class="col-75">
-                        <input type="file" id="myFile" name="filename">
-                    </div>
-                </div>       
+                     
                 <div class="row">
                     <input type="submit" value="Submit">
                 </div>

@@ -94,13 +94,13 @@
     </div>
     <div class="flex-container-title">
         <div class="flex-column-title">                
-            <div class="career-title"><h1>Company Careers</h1></div>
+            <div class="career-title"><h1>Employment Opportunities</h1></div>
         </div>        
     </div>   
     <div class="flex-container-section-0">    
         
         <div class="flex-container-title-0" >                                        
-            <p>Sample Application Page</p>                                
+            <h1>Current Job Positions</h1>                          
         </div> 
          
          <div class="flex-container-0">   
@@ -109,8 +109,10 @@
             </form> 
          </div>  
     </div>
-    <div class="flex-container-section-2">            
+    <div class="flex-container-section-2"> 
+        
         <div class="flex-container-1">   
+            
             <form>
                 <h4>Management Opportunities</h4> 
                 <span class="navbar-text actions"> <a class="learn-btn-career" href="ohNo.jsp" data-target="#resume-form" data-toggle="modal" >Apply</a> </span>                           
@@ -134,26 +136,58 @@
                 <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#resume-form" data-toggle="modal">Apply</a> </span>
             </form> 
         </div>   
-         <div class="flex-container-4">   
+         <div class="flex-container-5">   
             <form>
                 <h4>Human Resource</h4> 
                 <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#resume-form" data-toggle="modal">Apply</a> </span>
             </form> 
         </div>
-         <div class="flex-container-4">   
+         <div class="flex-container-6">   
             <form>
-                <h4>Finance </h4> 
+                <h4>Finance/Accounting </h4> 
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#resume-form" data-toggle="modal">Apply</a> </span>
+            </form> 
+        </div>
+        <div class="flex-container-7">   
+            <form>
+                <h4>Marketing </h4> 
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#resume-form" data-toggle="modal">Apply</a> </span>
+            </form> 
+        </div>
+        <div class="flex-container-8">   
+            <form>
+                <h4>Products and Services </h4> 
                 <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#resume-form" data-toggle="modal">Apply</a> </span>
             </form> 
         </div>
     </div>
     <div class="flex-container-section-3">  
-        <div class="flex-container-5">    
+        <div class="flex-container-1-image">    
             <form>
                 <div><img class="image-worker1"  src="assetsJSP/css/images/worker-image.png">      </div>   
             </form>                
-        </div>          
+        </div>   
+        <div class="flex-container-2-image">    
+            <form>
+                <%--Attributed Image Source: Photo by <a href="https://unsplash.com/@austindistel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Austin Distel</a> on <a href="https://unsplash.com/s/photos/working?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                --%>
+                <div><img class="image-worker1"  src="assetsJSP/css/images/tim-van-der-kuip-CPs2X8JYmS8-unsplash.jpg"></div>   
+            </form>                
+        </div>
+        <div class="flex-container-2-image">    
+            <form>
+                <%--Attributed Image Source:Photo by <a href="https://unsplash.com/@austindistel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Austin Distel</a> on <a href="https://unsplash.com/s/photos/working?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+   
+                --%>
+                <div><img class="image-worker1"  src="assetsJSP/css/images/austin-distel-wD1LRb9OeEo-unsplash.jpg">      </div>   
+            </form>                
+        </div>
     </div>
+    <div class="flex-container-section-4">  
+            
+    </div>
+   
+     
            <%--Displays Application/resume upload form--%>
     <div id="resume-form" class="modal fade" role="dialog">
         <div class="modal-dialog">

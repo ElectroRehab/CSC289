@@ -91,9 +91,13 @@ and open the template in the editor.
 .flex-container-section-3 {
     background: #1d2834;    
     padding: 25px;    
-    height: 100%;
+    height: 80%;
 }
- 
+ .flex-container-section-4 {
+    background:  #f2f2f2;    
+    padding: 25px;    
+    height: 20%;
+}
 .learn-paragraph p{
     color: white;
 }
@@ -151,7 +155,8 @@ and open the template in the editor.
 } 
 
 /*Flex Container one containers-------------------------------------*/
-.flex-container-1 {
+.flex-container-1,.flex-container-2,.flex-container-3,.flex-container-4,
+.flex-container-5,.flex-container-6,.flex-container-7,.flex-container-8 {
     padding:40px;
     margin:10px;    
     align-content: center;
@@ -165,44 +170,9 @@ and open the template in the editor.
     top: 32%;
     left:70%;   
     
-} 
-.flex-container-2 {
-    padding:40px;
-    margin:10px;
-    background:  #ffffff;
-    float: left;     
-    display: flex;   
-    align-content: center;
-    height: 100%;
-    width: 20%;
-    top: 32%;
-    left:70%;        
-} 
-.flex-container-3 {
-    padding:40px;
-    margin:10px;
-    background:  #ffffff;
-    float: left;     
-    display: flex;   
-    align-content: center;
-    height: 100%;
-    width: 20%;
-    top: 32%;
-    left:70%;        
-} 
-.flex-container-4 {
-    padding:40px;
-    margin:10px;
-    background:  #ffffff;
-    float: left;     
-    display: flex;   
-    align-content: center;
-    height: 100%;
-    width: 20%;
-    top: 32%;
-    left:70%;        
-} 
-.flex-container-5 {
+}
+ 
+.flex-container-1-image {
      
     margin:10px 100px 10px 10px;
     float: left;     
@@ -212,15 +182,15 @@ and open the template in the editor.
     width: auto;
             
 } 
-.flex-container-6{
+.flex-container-2-image {     
     margin:10px 100px 10px 10px;
     float: left;     
     display: flex;   
     align-content: center;
     height: 100%;
-    width: auto;
-                  
+    width: auto;            
 } 
+  
  
  
 /*Flex Container one containers-------------------------------------*/
@@ -229,20 +199,22 @@ and open the template in the editor.
  
 /*Flex Container 1 buttons-------------------------------------*/
 .learn-btn-career{
-   margin:0;
-  font-family: microsoft, himalayan;
-  text-align: center;
-  padding: 12px 20px;    
-  color:  #000;
-  font-size: 1.1vw;
-  font-weight: bold;
-  transition: all .5s; 
+    
+   position:  absolute;
+   text-align: left;
+   font-family: microsoft, himalayan;
+   float: bottom; 
+   box-sizing: content-box;
+   color:  #000;
+   font-size: 1.1vw;
+   font-weight: bold;
+   transition: all .5s; 
 }
-.learn-btn-career:hover{
+.learn-btn-career:hover{    
     background: crimson;
-    background: #1d2834;  
+    background:  #f4b30d;  
     padding: 12px 20px; 
-    color: #fff;
+    color:   black;
     border-radius: 5px;
     font-size: 1.1vw;  
     text-decoration: none;
@@ -339,7 +311,8 @@ input[type=submit]:hover {
   }
 }
  h4{
-    position:    static;
+   
+    text-align: left;
     bottom: 43%; 
     font-size: 1vw;
     color: black;
