@@ -26,6 +26,7 @@
 <%
     ReadSessions r = new ReadSessions();
     r.getPost(request, response, session);
+    int count = 0;
 %>
     <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
@@ -203,7 +204,7 @@
                                     <tbody>
                                         <tbody>
         <%while(rs.next()){
-            
+            count++;
             %>               
             <tr>
                 <!--First Name-->
@@ -243,7 +244,14 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-6 align-self-center">
-                                    <p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to 10 of 27</p>
+                                    <%
+                                        if(count < 10){
+                                            %><p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to <%out.print(count);%> of <%out.print(count);%></p><%
+                                        }
+                                        else{
+                                            %><p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to <%out.print(count);%></p><%
+                                        }
+                                    %>
                                 </div>
                                 <div class="col-md-6">
                                     <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
