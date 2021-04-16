@@ -100,7 +100,12 @@
     <div class="flex-container-section-0">    
         
         <div class="flex-container-title-0" >                                        
-            <p>Sample Company Career Page</p>                                
+            <h1>K&O Career Opportunities</h1>
+             <p>The K&O Personnel Management Systems Company, offers many career opportunities for anyone interested in working for our 
+             company. Opportunities include, management, Information Technology, Administration, Physical/Cyber,
+             Human Resources, Finance, Marketing, and products and services. We also offer interships for students, 
+             Remote/work from home, and Apprentice opportunities. Here at K&O we value our employees and welcome anyone who is willing
+             to be part of our team.</p>
         </div> 
          
          <div class="flex-container-0">   
@@ -119,7 +124,7 @@
         <div class="flex-container-2">   
             <form>
                 <h4>Student/Intern Opportunities</h4> 
-                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp">Learn</a> </span>                             
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexStudentOpportunities.jsp">Learn</a> </span>                             
             </form> 
         </div>
         <div class="flex-container-3">   

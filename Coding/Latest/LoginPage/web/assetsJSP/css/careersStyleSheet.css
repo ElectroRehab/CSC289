@@ -71,13 +71,14 @@ and open the template in the editor.
 .flex-container-section-0{
     background:   #dddde2;    
     padding: 25px;    
-    height: 20%;
+    height: 30%;
 }
 .flex-container-title-0{
    position:absolute;
    text-align: center;
    font-size: 2vw;
 }
+ 
 .flex-container-section-1{
     background: #1d2834;    
     padding: 25px;    
@@ -106,6 +107,14 @@ and open the template in the editor.
 }
 
 /*Learn container section--------------------------------------------------*/
+.flex-container-title-0{   
+    margin:0;     
+    align-content: center;
+    justify-content: center;     
+    height: 50%;
+    width: 20%;    
+     
+}
 .flex-container-0{
     padding:40px;
     margin:0;
@@ -114,7 +123,7 @@ and open the template in the editor.
     justify-content: center;
     display: flex;   
     align-content: center;
-    height: 100%;
+    height: 50%;
     width: 20%;
     top: 32%;
     left:70%;
@@ -311,13 +320,20 @@ input[type=submit]:hover {
   }
 }
  h4{
-   
+    
     text-align: left;
     bottom: 43%; 
     font-size: 1vw;
     color: black;
     
 }
+.flex-container-title-0{
+    width: 50%;
+    font-size: 1vw;
+     text-align: Left;
+}
+ 
+
 .footer-dark{
     background:  #dddde2;
 }

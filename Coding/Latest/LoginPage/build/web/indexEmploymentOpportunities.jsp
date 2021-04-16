@@ -92,11 +92,13 @@
             </div>
         </div>  
     </div>
+     <%--Title Section--%>
     <div class="flex-container-title">
         <div class="flex-column-title">                
             <div class="career-title"><h1>Employment Opportunities</h1></div>
         </div>        
-    </div>   
+    </div>  
+     <%--Section 0 containers--%>
     <div class="flex-container-section-0">    
         
         <div class="flex-container-title-0" >                                        
@@ -109,58 +111,60 @@
             </form> 
          </div>  
     </div>
+    <%--Section 2 containers--%>
     <div class="flex-container-section-2"> 
         
         <div class="flex-container-1">   
             
             <form>
                 <h4>Management Opportunities</h4> 
-                <span class="navbar-text actions"> <a class="learn-btn-career" href="ohNo.jsp" data-target="#resume-form" data-toggle="modal" >Apply</a> </span>                           
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="ohNo.jsp" data-target="#management-form" data-toggle="modal" >Apply</a> </span>                           
             </form> 
         </div>  
         <div class="flex-container-2">   
             <form>
                 <h4>Information Technology</h4> 
-                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#resume-form" data-toggle="modal">Apply</a> </span>                             
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#InfoTech-form" data-toggle="modal">Apply</a> </span>                             
             </form> 
         </div>
         <div class="flex-container-3">   
             <form>
                 <h4>Administration</h4> 
-                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#resume-form" data-toggle="modal">Apply</a> </span>
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#admin-form" data-toggle="modal">Apply</a> </span>
             </form> 
         </div>
         <div class="flex-container-4">   
             <form>
                 <h4>Security</h4> 
-                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#resume-form" data-toggle="modal">Apply</a> </span>
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#security-form" data-toggle="modal">Apply</a> </span>
             </form> 
         </div>   
          <div class="flex-container-5">   
             <form>
                 <h4>Human Resource</h4> 
-                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#resume-form" data-toggle="modal">Apply</a> </span>
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#unavailable-job" data-toggle="modal">Apply</a> </span>
             </form> 
         </div>
          <div class="flex-container-6">   
             <form>
                 <h4>Finance/Accounting </h4> 
-                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#resume-form" data-toggle="modal">Apply</a> </span>
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#unavailable-job" data-toggle="modal">Apply</a> </span>
             </form> 
         </div>
         <div class="flex-container-7">   
             <form>
                 <h4>Marketing </h4> 
-                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#resume-form" data-toggle="modal">Apply</a> </span>
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#unavailable-job" data-toggle="modal">Apply</a> </span>
             </form> 
         </div>
         <div class="flex-container-8">   
             <form>
                 <h4>Products and Services </h4> 
-                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#resume-form" data-toggle="modal">Apply</a> </span>
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" data-target="#unavailable-job" data-toggle="modal">Apply</a> </span>
             </form> 
         </div>
     </div>
+    <%--Section 3 containers--%>
     <div class="flex-container-section-3">  
         <div class="flex-container-1-image">    
             <form>
@@ -183,13 +187,14 @@
             </form>                
         </div>
     </div>
+    <%--Section 4 containers--%>
     <div class="flex-container-section-4">  
             
-    </div>
-   
-     
-           <%--Displays Application/resume upload form--%>
-    <div id="resume-form" class="modal fade" role="dialog">
+    </div>  
+    <%--//////////////////////////////////////////////////////////////////////
+    Displays Application/resume upload form for Management--%>
+    
+    <div id="management-form" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
@@ -237,11 +242,11 @@
                         <label for="subject">Position</label>
                     </div>
                     <div class="col-75">
-                        <select id="country" name="country">
-                        <option value="supervisor">Supervisor</option>
-                        <option value="student">Student/Intern</option>
-                        <option value="apprentice">Apprenticeship</option>
-                        <option value="remote">Remote Position</option>
+                        <select id="position" name="position">
+                        <option value="cfo">Chief Finance Officer</option>
+                        <option value="cso">Chief Security Officer</option>
+                        <option value="cmo">Chief Marketing Officer</option>
+                        <option value="sen-hro">Senior Human Resource Officer</option>
                     </select>
                     </div>
                 </div>
@@ -264,6 +269,271 @@
                 <div class="row">
                     <input type="submit" value="Submit">
                 </div>
+            </form>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <%--Information Technology Resume Section/////////////////////////////--%>
+    <div id="InfoTech-form" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button data-dismiss="modal" class="close">&times;</button>
+                         <form action=" ">
+                <h2>Resume Upload</h2>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fname">First Name</label>
+                    </div>
+                     <div class="col-75">
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Last Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Email</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="email" name="Email" placeholder="Enter Email..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="country">Country</label>
+                    </div>
+                <div class="col-75">
+                    <select id="country" name="country">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                    </select>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="subject">Position</label>
+                    </div>
+                    <div class="col-75">
+                        <select id="position" name="position">
+                        <option value="cto">Chief Technology Officer</option>
+                        <option value="sec-sup">Section Supervisor </option>
+                        <option value="technician">Technician</option>
+                        <option value="software-dev">Software Developer</option>
+                        <option value="jr-software-dev">Junior Software Developer</option>
+                        <option value="apprentice-position">Apprentice Position</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="subject">Phone Number</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="position" name="empPosition" placeholder="Enter Number"  >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="file">Upload Resume</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="file" id="myFile" name="filename">
+                    </div>
+                </div>       
+                <div class="row">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+                </div>
+            </div>
+        </div>  
+    </div>
+     <%--Admininstration Resume Section/////////////////////////////--%>
+    <div id="admin-form" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button data-dismiss="modal" class="close">&times;</button>
+                         <form action=" ">
+                <h2>Resume Upload</h2>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fname">First Name</label>
+                    </div>
+                     <div class="col-75">
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Last Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Email</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="email" name="Email" placeholder="Enter Email..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="country">Country</label>
+                    </div>
+                <div class="col-75">
+                    <select id="country" name="country">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                    </select>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="subject">Position</label>
+                    </div>
+                    <div class="col-75">
+                        <select id="position" name="position">
+                        <option value="cao">Chief Administration Officer</option>
+                        <option value="sec-sup">Section Supervisor </option>
+                        <option value="per-serv-advr">Personnel Services Advisor</option>
+                        <option value="per-serv-advisor">Personnel Services Advisor</option>
+                         
+                    </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="subject">Phone Number</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="position" name="empPosition" placeholder="Enter Number"  >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="file">Upload Resume</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="file" id="myFile" name="filename">
+                    </div>
+                </div>       
+                <div class="row">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+                </div>
+            </div>
+        </div>  
+    </div>
+     <%--Security Section/////////////////////////////--%>
+    <div id="security-form" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button data-dismiss="modal" class="close">&times;</button>
+                         <form action=" ">
+                <h2>Resume Upload</h2>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fname">First Name</label>
+                    </div>
+                     <div class="col-75">
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Last Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Email</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="email" name="Email" placeholder="Enter Email..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="country">Country</label>
+                    </div>
+                <div class="col-75">
+                    <select id="country" name="country">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">USA</option>
+                    </select>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="subject">Position</label>
+                    </div>
+                    <div class="col-75">
+                        <select id="position" name="position">
+                        <option value="cso">Chief Security Officer</option>
+                        <option value="sec-sup">Section Supervisor </option>
+                        <option value="cyber-sec-anlst">Cyber Security Specialist </option>
+                        <option value="it-sec-anlst">Information Security Analyst</option>
+                        <option value="sec-tech">Security Technician</option>
+                        <option value="apprentice-pos">Apprentice Position</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="subject">Phone Number</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="position" name="empPosition" placeholder="Enter Number"  >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="file">Upload Resume</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="file" id="myFile" name="filename">
+                    </div>
+                </div>       
+                <div class="row">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <%--Error-Unavailable-Jobs--%>
+     <div id="unavailable-job" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button data-dismiss="modal" class="close">&times;</button>
+            <form action=" ">
+                <h2>Currently, all positions are filled. Feel free to contact the company with questions or concerns. </h2>
+                <div class="row">
+                    
+                </div>            
+                 
             </form>
                 </div>
             </div>
