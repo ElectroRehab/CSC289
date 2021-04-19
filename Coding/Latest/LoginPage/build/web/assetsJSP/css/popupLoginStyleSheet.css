@@ -35,8 +35,9 @@ option{
 }
 .modal-content {
   font-weight: bold;
-  background: linear-gradient(to bottom right,#f7f9fc,#278c9b);
+  background: whitesmoke;
   border: 3px  inset   #000; 
+  height: 35vw;
   
 }
 .modal-content-res-form {

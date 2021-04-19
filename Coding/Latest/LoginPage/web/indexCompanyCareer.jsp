@@ -42,7 +42,7 @@
                     </li>
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Info </a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="indexAboutCompany.jsp">About</a><a class="dropdown-item" href="indexCompanyMission.jsp">Mission</a><a class="dropdown-item" href="indexContact.jsp">Contact</a></div>
-                    </li>                    
+                    </li>  
                 </ul><span class="navbar-text actions"> <a class="home-admin-login" href="indexAdminLogin.jsp" data-target="#admin-login" data-toggle="modal" >Admin Log In</a> </span>
             </div>
         </div>
@@ -140,17 +140,25 @@
                 <h4>Apprentice Opportunities</h4> 
                 <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" >Learn</a> </span>
             </form> 
-        </div>   
-    </div>
-    <div class="flex-container-section-3">  
+        </div>       
+    </div>                    
+        
+    <div class="flex-container-section-3">    
         <div class="flex-container-1-image">    
             <form>
-                <div><img class="image-worker1"  src="assetsJSP/css/images/worker-image.png">      </div>   
-            </form>                
-        </div>  
-      <%--Displays conatct form--%>
-        <div class="container-contact">
-            <form action=" ">
+                <div><img class="image-worker4"  src="assetsJSP/css/images/worker-image.png">      </div>   
+                 
+            </form>           
+        </div>
+         
+    </div>
+         
+        <div id="contact-us-form" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button data-dismiss="modal" class="close">&times;</button>
+                        <form class="contact-form" action=" ">
                 <h2>Contact Us</h2>
                 <div class="row">
                     <div class="col-25">
@@ -193,7 +201,7 @@
                         <label for="subject">Subject</label>
                     </div>
                     <div class="col-75">
-                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                        <textarea id="subject" name="subject" placeholder="Write something.." ></textarea>
                     </div>
                 </div>
                      
@@ -201,7 +209,12 @@
                     <input type="submit" value="Submit">
                 </div>
             </form>
-        </div>
+                </div>
+            </div>
+        </div>  
+           
+    </div>      
+    <%--Displays conatct form--%>         
     </div>
     <div class="footer-dark">
         <footer>
@@ -231,8 +244,11 @@
                         <a href="https://myaccount.google.com/intro/profile" target="blank"><i class="fa  fa-google-plus"></i></a>
                         <a href="https://www.youtube.com/" target="blank"><i class="fa  fa-youtube"></i></a>
                     </div>
+                    <div class="flex-container-contact">    
+                    <div><a class="contact-us-btn" href="indexAdminLogin.jsp" data-target="#contact-us-form" data-toggle="modal" >Contact us</a></div>     
+        </div> 
                 </div>
-                <p class="copyright">&nbsp;© 2021 KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p>
+                 
             </div>
         </footer>
     </div>

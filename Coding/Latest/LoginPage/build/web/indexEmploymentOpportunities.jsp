@@ -163,14 +163,14 @@
     <div class="flex-container-section-3">  
         <div class="flex-container-1-image">    
             <form>
-                <div><img class="image-worker1"  src="assetsJSP/css/images/worker-image.png">      </div>   
+                <div><img class="image-worker-1-emp"  src="assetsJSP/css/images/worker-image.png">      </div>   
             </form>                
         </div>   
         <div class="flex-container-2-image">    
             <form>
                 <%--Attributed Image Source: Photo by <a href="https://unsplash.com/@austindistel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Austin Distel</a> on <a href="https://unsplash.com/s/photos/working?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                 --%>
-                <div><img class="image-worker2"  src="assetsJSP/css/images/tim-van-der-kuip-CPs2X8JYmS8-unsplash.jpg"></div>   
+                <div><img class="image-worker-2-emp"  src="assetsJSP/css/images/tim-van-der-kuip-CPs2X8JYmS8-unsplash.jpg"></div>   
             </form>                
         </div>
         <div class="flex-container-2-image">    
@@ -178,7 +178,7 @@
                 <%--Attributed Image Source:Photo by <a href="https://unsplash.com/@austindistel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Austin Distel</a> on <a href="https://unsplash.com/s/photos/working?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
    
                 --%>
-                <div><img class="image-worker3"  src="assetsJSP/css/images/austin-distel-wD1LRb9OeEo-unsplash.png"></div>   
+                <div><img class="image-worker-3-emp"  src="assetsJSP/css/images/austin-distel-wD1LRb9OeEo-unsplash.png"></div>   
             </form>                
         </div>
     </div>

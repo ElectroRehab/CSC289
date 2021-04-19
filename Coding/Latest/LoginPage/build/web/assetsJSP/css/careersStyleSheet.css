@@ -38,21 +38,7 @@ and open the template in the editor.
     font-size: 1vw;
     color: black;
 }
- 
-@media screen and (max-width: 600px) {
- .ceo-contact-form .security-contact-form .admin-contact-form .operations-contact-form .human-resource-contact-form .finance-contact-form  {
-    width: 100%;
-    margin-top: 0;
-  }
-  .flex-container-section-1,.flex-container-section-2{
-     width: 100%; 
-  }
-  .image-worker{
-    width: 100%;
-    margin-top: 0;
-    height: 5vw;
-  }
-}
+
 
 .image-phone{
     opacity: .1;
@@ -110,6 +96,11 @@ and open the template in the editor.
     padding: 25px;    
     height: 7vw;
 }
+.container{
+     
+   width:100%;
+   height: 7vw;
+}
 .flex-container-title-0 {
    position:absolute;
    text-align: center;
@@ -129,7 +120,7 @@ and open the template in the editor.
 .flex-container-section-3 {
     background: #1d2834;    
     padding: 25px;    
-    height: 80%;
+    height: 15vw;
 }
  .flex-container-section-4 {
     background:  #f2f2f2;    
@@ -225,6 +216,15 @@ and open the template in the editor.
     left:70%;   
     
 }
+.contact-us-btn{
+     color:whitesmoke;     
+     text-decoration: none;
+}
+.contact-us-btn:hover{
+     border-radius: 8px;
+     background:   ;
+     text-decoration: none;
+}
  
 .flex-container-1-image {
      
@@ -285,9 +285,8 @@ and open the template in the editor.
 .image-worker{ 
     position: relative; 
     display: inline ;
-    float: top; 
-    left: 65%;
-    
+    float: top;  
+    left:65%;    
     height: 12vw;
     width: 25vw;
      
@@ -322,17 +321,54 @@ and open the template in the editor.
     height: 12vw;
     width: 11vw;
 }
- 
+ .image-worker4{ 
+    
+    display: inline ;
+    float: top;        
+    height: 12vw;
+     
+    width: 25vw;
+}
+.image-worker-1-emp{ 
+    padding:0;
+    margin: 0;   
+    display: inline ;
+    float: top;       
+    height: 12vw;
+    width: 15vw;
+}
+.image-worker-2-emp{ 
+    padding:0;
+    margin: 0;     
+    display: inline ;
+    float: top;        
+    height: 12vw;
+    width: 15vw;
+}
+.image-worker-3-emp{ 
+    padding:0;
+    margin: 0;   
+    display: inline ;
+    float: top;       
+    height: 12vw;
+    width: 15vw;
+}
 .flex-container-6 h2{
     color:white;
     font-size: 1.1vw;
 }
-.contact-form, .form-group, .form-control textarea{
+.contact-form, .form-group, .form-control{
+    margin: 0;
+    padding: 0;
     height:available;
     width:100%;
 }
+ 
+.contact-form{
+    width: 20vw;
+}
 input[type=text], select, textarea {
-  width: 100%;
+  width: 20vw;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -342,10 +378,15 @@ input[type=text], select, textarea {
 label {
   padding: 12px 12px 12px 0;
   display: inline-block;
+  font-size: 1vw;
 }
 
 input[type=submit] {
+  position:  absolute;
   background-color: #f4b30d;
+  font-size: 1vw;
+  left: 70%;
+  bottom: 5%;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -360,21 +401,34 @@ input[type=submit]:hover {
 }
 
 .container-contact {
+  position: absolute; 
+  left: 55%;
+  width:40vw;
+  height:27vw;
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 20px;
 }
-
+.flex-container-contact{
+  display: inline;
+  color:  #f2f2f2;
+  float: right;
+  background: linear-gradient(to bottom, #1d2834 , #1d2834  ); 
+  border-radius: 5px;
+  
+  padding: 10px;
+  height:20%;
+}
 .col-25 {
   float: left;
-  width: 25%;
+  width: 15%;
   margin-top: 6px;
 }
 
 .col-75 {
   float: left;
-  width: 75%;
-  margin-top: 6px;
+  width: 20vw;
+  margin-top: 4px;
 }
 
 /* Clear floats after the columns */
@@ -382,22 +436,13 @@ input[type=submit]:hover {
   content: "";
   display: table;
   clear: both;
+ 
 }
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
- h4{
-    
+ h4{    
     text-align: left;
     bottom: 43%; 
     font-size: 1vw;
-    color: black;
-    
+    color: black;    
 }
 h1{
     font-size:2vw;
@@ -407,10 +452,106 @@ h1{
     font-size: 1vw;
      text-align: Left;
 }
- 
+.container{
+     
+   width:100%;
+   padding-right:.75rem;
+   padding-left:.75rem;
+   margin-right:auto;
+   margin-left:auto;
+}
 
 .footer-dark{
-    background:  #dddde2;
+    background:   #dddde2;
+     
 }
+a, .copyright{
+    font-size: 1vw;
+}
+ 
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+   
+  h2
+  {
+        font-size: 3vw;
+  }
+  input[type=submit] {
+   width:2vw;
+   text-align: center;
+   height:.7vw;
+   font-size: 1vw;
+}
+input[type=text], select, textarea {
+  width: 20vw;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+  .flex-container-section-3 {
+    background: #1d2834;    
+    padding: 25px;    
+    height: 30%;
+}
+.contact-form, .row,.col-25,.col-75,l.form-group, .form-control{
+    margin: 0;
+    padding: 0;
+    height: 25%; 
+}
+.container-contact {
+  position: absolute; 
+  top: 40%;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+  height: 25%;
+   
+}
+.image-worker-1-emp{ 
+    padding:0;
+    margin: 0;   
+    display: inline ;
+    float: top;  
+    
+    height: 12vw;
+    width: 15vw;
+}
+.image-worker-2-emp{ 
+    
+    position: absolute;
+    padding:0;
+    margin: 0;     
+    display: inline ;
+    float: top;    
+    left:33%;    
+    height: 12vw;
+    width: 15vw;
+}
+.image-worker-3-emp{ 
+    position: relative;
+    padding:0;
+    margin: 0;   
+    display: inline ;
+    left:15%;  
+    float: top;       
+    height: 12vw;
+    width: 15vw;
+}
+.footer-dark{
+    position: relative;
+    top: 0%;
+    height:50%;
+}
+.flex-container-section-3 {
+    background: #1d2834;    
+    padding: 25px;    
+    height: 30vw;
+}
+.container{
+    height: 0%;
+}
+}
+ 
+ 
      
  
