@@ -293,7 +293,7 @@
                                             %><p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to <%out.print(count);%> of <%out.print(count);%></p><%
                                         }
                                         else{
-                                            %><p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to 10 of <%out.print(count);%></p><%
+                                            %><p id="dataTable_info" class="dataTables_info" role="status" aria-live="polite">Showing 1 to <%out.print(count);%></p><%
                                         }
                                     %>
                                 </div>

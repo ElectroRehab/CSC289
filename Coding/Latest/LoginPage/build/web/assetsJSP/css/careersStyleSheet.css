@@ -222,7 +222,7 @@ and open the template in the editor.
 }
 .contact-us-btn:hover{
      border-radius: 8px;
-     background:   ;
+     background: #dddde2;
      text-decoration: none;
 }
  
@@ -457,7 +457,7 @@ h1{
 .flex-container-title-0{
     width: 50%;
     font-size: 1vw;
-     text-align: Left;
+    text-align: Left;
 }
 .container{
      

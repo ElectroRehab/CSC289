@@ -27,8 +27,9 @@
     int wrong = 3;
     HashSHA512Encryption hashText = new HashSHA512Encryption();
     int sqlInt = 0;
-    // Long Integer for 6 digit random authorization email code.
+    // Long Integer for 9 digit random authorization email code.
     long eCode = Math.round(Math.random() *999999);
+    long eCodeTwo = Math.round(Math.random() *999);
     String idNum=request.getParameter("rand_num");    
     String fname=request.getParameter("fname");
     String lname=request.getParameter("lname");
@@ -43,7 +44,7 @@
     String image="https://drive.google.com/uc?export=view&id=1AhrTHw6xzWn-AOOxnNsPlKyZLX3l9g3i";
     String ident = "user";
     String timeBase = "00:00:00";
-    String auth = Long.toString(eCode);
+    String auth = Long.toString(eCode) + Long.toString(eCodeTwo);
     
     hashText.setHashText(password);
     password = hashText.getHashText();
