@@ -173,7 +173,7 @@
                 <div><img class="image-worker-2-emp"  src="assetsJSP/css/images/tim-van-der-kuip-CPs2X8JYmS8-unsplash.jpg"></div>   
             </form>                
         </div>
-        <div class="flex-container-2-image">    
+        <div class="flex-container-3-image">    
             <form>
                 <%--Attributed Image Source:Photo by <a href="https://unsplash.com/@austindistel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Austin Distel</a> on <a href="https://unsplash.com/s/photos/working?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
    
@@ -563,7 +563,7 @@
                         <a href="https://www.youtube.com/" target="blank"><i class="fa  fa-youtube"></i></a>
                     </div>
                 </div>
-                <p class="copyright">&nbsp;© 2021 KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p>
+               <%-- <p class="copyright">&nbsp;© 2021 KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p> --%>
             </div>
         </footer>
     </div>

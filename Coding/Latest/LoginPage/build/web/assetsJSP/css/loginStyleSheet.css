@@ -98,7 +98,7 @@ h1{
   background-color:  #278c9b; 
 } 
 .home-system-logout{
-    
+    font-size: 1vw;
 }
 .login-clean-main form {
   
@@ -550,11 +550,17 @@ h1{
         bottom:-15%;
         top:-1%;
         right: 65%;
-        height: 1000px;     
+        height: 50%;     
         background-size: cover;
         background-repeat: no-repeat;
         position: absolute;
      }
+     .image-main{
+         background-size:  contain;
+          
+        background-repeat: no-repeat;
+     }
+     
  }
   @media screen and (max-width: 1400px) {
      .login-clean-admin{
@@ -562,7 +568,7 @@ h1{
         padding:0;
         bottom:-15%;
         top:-1%;
-        right: 15%;
+        right: 5%;
         height: 50%;     
         background-size: cover;
         background-repeat: no-repeat;
@@ -579,5 +585,6 @@ h1{
         background-repeat: no-repeat;
         position: absolute;
      }
+     
  }
  

@@ -215,7 +215,7 @@
            
     </div>      
     <%--Displays conatct form--%>         
-    </div>
+     
     <div class="footer-dark">
         <footer>
             <div class="container">
@@ -246,7 +246,7 @@
                     </div>
                     <div class="flex-container-contact">    
                     <div><a class="contact-us-btn" href="indexAdminLogin.jsp" data-target="#contact-us-form" data-toggle="modal" >Contact us</a></div>     
-        </div> 
+                    </div> 
                 </div>
                  
             </div>

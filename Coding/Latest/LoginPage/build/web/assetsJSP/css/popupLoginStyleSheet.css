@@ -35,9 +35,9 @@ option{
 }
 .modal-content {
   font-weight: bold;
-  background: whitesmoke;
-  border: 3px  inset   #000; 
-  height: 35vw;
+  background:   #fff;
+  border: 4px  inset   #000; 
+  height: auto;
   
 }
 .modal-content-res-form {
@@ -53,13 +53,14 @@ option{
 .contact-form, .form-group, .form-control textarea{
     height:available;
     width:100%;
+    
 }
 input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  resize: vertical;
+   
 }
 
 label {
@@ -109,6 +110,7 @@ input[type=submit]:hover {
 
 .form-control {
   margin: 1em 0;
+ 
   
 }
 .form-control:hover, .form-control:focus {
@@ -126,10 +128,12 @@ input[type=submit]:hover {
   background: transparent;  
 }
 .form-control::-webkit-input-placeholder {
-  color:  #000;  
+  color:  #000;
+ font-size: 22px;  
 }
 .form-control:focus::-webkit-input-placeholder {
   font-weight: bold;
+   
   color: #fff;
 } 
 .learn-btn:hover {    
@@ -181,7 +185,7 @@ input[type=submit]:hover {
     
   color:  #000;
   font-weight: bold;
-  font-size: 1.1vw;
+  font-size: 20px;
   transition: all .5s;  
     
 }
