@@ -149,7 +149,7 @@
             <form>
                 <%--Attributed Image Source: Photo by <a href="https://unsplash.com/@austindistel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Austin Distel</a> on <a href="https://unsplash.com/s/photos/working?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                 --%>
-                <div><img class="image-worker1"  src="assetsJSP/css/images/jodyhongfilms-sI1mbxJFFpU-unsplash.jpg"></div>   
+                <div><img class="image-worker2"  src="assetsJSP/css/images/jodyhongfilms-sI1mbxJFFpU-unsplash.jpg"></div>   
             </form>                
         </div>
         <div class="flex-container-3-image">    
@@ -157,7 +157,7 @@
                 <%--Attributed Image Source:Photo by <a href="https://unsplash.com/@austindistel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Austin Distel</a> on <a href="https://unsplash.com/s/photos/working?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
    
                 --%>
-                <div><img class="image-worker1"  src="assetsJSP/css/images/austin-distel-wD1LRb9OeEo-unsplash.png"></div>   
+                <div><img class="image-worker3"  src="assetsJSP/css/images/austin-distel-wD1LRb9OeEo-unsplash.png"></div>   
             </form>                
         </div>
     </div>
@@ -168,13 +168,13 @@
     <%--//////////////////////////////////////////////////////////////////////
     Displays Application/resume upload internship--%>
     
-    <div id="inter-form" class="modal fade" role="dialog">
+    <div id="intern-form" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
                     <button data-dismiss="modal" class="close">&times;</button>
                          <form action=" ">
-                <h2>Resume Upload</h2>
+                <h2>Resume Upload (Intern)</h2>
                 <div class="row">
                     <div class="col-25">
                         <label for="fname">First Name</label>
@@ -255,7 +255,7 @@
                 <div class="modal-body">
                     <button data-dismiss="modal" class="close">&times;</button>
                          <form action=" ">
-                <h2>Resume Upload</h2>
+                <h2>Resume Upload (Recent Grad)</h2>
                 <div class="row">
                     <div class="col-25">
                         <label for="fname">First Name</label>
@@ -366,9 +366,10 @@
                      <div class="col-sm-6 col-md-3 item">
                         <h3>Help</h3>
                         <ul>
-                            <li><a href="ohNo.jsp">Create Account</a></li>
-                            <li><a href="indexTeam.jsp">Remove Account</a></li>
-                            <li><a href="indexCompanyCareer.jsp">Forgot Username/Password</a></li>
+                            <li><a href="ohNo.jsp">Create Account(Pending)</a></li>
+                            <li><a href="ohNo.jsp">Remove Account(Pending)</a></li>
+                            <li><a href="indexCompanyCareer.jsp">Forgot Username/Password(Pending)</a></li>
+                            <li><a href="https://drive.google.com/uc?export=downloads&id=1apJITNAdvz2fENDHv_0nAczogpJ6hXhC" download="k&omanual">K&O Manual(Download Doc.)</a></li>
                         </ul>
                     </div>
                     <div class="col item social">
