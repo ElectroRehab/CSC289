@@ -136,13 +136,13 @@
         <div class="flex-container-3">   
             <form>
                 <h4>Remote Opportunities</h4> 
-                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp">Learn</a> </span>
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="ohNo.jsp">Learn</a> </span>
             </form> 
         </div>
         <div class="flex-container-4">   
             <form>
                 <h4>Apprentice Opportunities</h4> 
-                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" >Learn</a> </span>
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="ohNo.jsp" >Learn</a> </span>
             </form> 
         </div>       
     </div>                    
@@ -241,8 +241,7 @@
                             <li><a href="ohNo.jsp">Create Account(Pending)</a></li>
                             <li><a href="ohNo.jsp">Remove Account(Pending)</a></li>
                             <li><a href="indexCompanyCareer.jsp">Forgot Username/Password(Pending)</a></li>
-                            <li><a href="https://drive.google.com/uc?export=downloads&id=1apJITNAdvz2fENDHv_0nAczogpJ6hXhC" download="k&omanual">K&O Manual(Download Doc.)</a></li>
-                        </ul>
+                         </ul>
                     </div>
                      
                     <div class="col item social">

@@ -182,10 +182,7 @@
             </form>                
         </div>
     </div>
-    <%--Section 4 containers--%>
-    <div class="flex-container-section-4">  
-            
-    </div>  
+    
     <%--//////////////////////////////////////////////////////////////////////
     Displays Application/resume upload form for Management--%>
     
@@ -534,6 +531,8 @@
             </div>
         </div>  
     </div>
+      <div><img class="image-main-2"  src="assetsJSP/css/images/mainPageBackgroundv2.png"></div>    
+
     <div class="footer-dark">
         <footer>
             <div class="container">
@@ -553,8 +552,7 @@
                             <li><a href="ohNo.jsp">Create Account(Pending)</a></li>
                             <li><a href="ohNo.jsp">Remove Account(Pending)</a></li>
                             <li><a href="indexCompanyCareer.jsp">Forgot Username/Password(Pending)</a></li>
-                            <li><a href="https://drive.google.com/uc?export=downloads&id=1apJITNAdvz2fENDHv_0nAczogpJ6hXhC" download="k&omanual">K&O Manual(Download Doc.)</a></li>
-                        </ul>
+                         </ul>
                     </div>
                     <div class="col item social">
                         <h3>Connect With Us</h3>

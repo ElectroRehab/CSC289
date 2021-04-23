@@ -369,8 +369,7 @@
                             <li><a href="ohNo.jsp">Create Account(Pending)</a></li>
                             <li><a href="ohNo.jsp">Remove Account(Pending)</a></li>
                             <li><a href="indexCompanyCareer.jsp">Forgot Username/Password(Pending)</a></li>
-                            <li><a href="https://drive.google.com/uc?export=downloads&id=1apJITNAdvz2fENDHv_0nAczogpJ6hXhC" download="k&omanual">K&O Manual(Download Doc.)</a></li>
-                        </ul>
+                         </ul>
                     </div>
                     <div class="col item social">
                         <h3>Connect With Us</h3>

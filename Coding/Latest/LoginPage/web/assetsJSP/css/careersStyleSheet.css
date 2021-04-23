@@ -113,17 +113,20 @@ body
  
 .flex-container-section-1{
     background: #1d2834;    
-    padding: 25px;    
+    padding: 25px; 
+    margin: 200px;
     height: 5vw;
 }
 .flex-container-section-2{
     background: #1d2834;    
-    padding: 15px;    
-    height: 15.6vw;
+    padding: 0; 
+    margin: 0;
+    height: 35vw;
 }
 .flex-container-section-3 {
     background: #1d2834;    
-    padding: 25px;    
+    margin: 0 ;
+    padding: 0;    
     height: 25vw;
 }
  .flex-container-section-4 {
@@ -214,7 +217,7 @@ body
     float: left;     
     display: flex;   
     align-content: center;
-    height:15vw;
+    height:10vw;
     width: 30%;
     top: 32%;
     left:80%;   
@@ -362,27 +365,33 @@ body
 }
 .image-worker-1-emp{ 
     padding:0;
-    margin: 0;   
+    margin:0;
+    position: absolute; 
     display: inline ;
-    float: top;       
-    height: 12vw;
-    width: 15vw;
+    float: bottom; 
+    left: 5%;    
+    height: 20vw;
+    width: 30vw;
 }
 .image-worker-2-emp{ 
-    padding:0;
-    margin: 0;     
+      padding:0;
+    margin: 0;
+    position: absolute; 
     display: inline ;
-    float: top;        
-    height: 12vw;
-    width: 15vw;
+    float: top; 
+    left: 35%;    
+    height: 20vw;
+    width: 35vw;
 }
 .image-worker-3-emp{ 
-    padding:0;
-    margin: 0;   
+   padding:0;
+    margin: 0;
+    position: absolute; 
     display: inline ;
-    float: top;       
-    height: 12vw;
-    width: 15vw;
+    float: top; 
+    left: 65%;    
+    height: 20vw;
+    width: 30vw;
 }
 .flex-container-6 h2{
     color:white;
@@ -497,8 +506,9 @@ input[type=text], select, textarea {
 }
   .flex-container-section-3 {
     background: #1d2834;    
-    padding: 25px;    
-    height: 30%;
+    padding: 25px;   
+    margin:0px;
+    height: 10%;
 }
 .contact-form, .row,.col-25,.col-75,l.form-group, .form-control{
     margin: 0;
@@ -516,32 +526,20 @@ input[type=text], select, textarea {
 .image-worker-1-emp{ 
     padding:0;
     margin: 0;   
-    display: inline ;
-    float: top;  
-    
-    height: 12vw;
-    width: 15vw;
+     
 }
 .image-worker-2-emp{ 
     
     position: absolute;
     padding:0;
     margin: 0;     
-    display: inline ;
-    float: top;    
-    left:33%;    
-    height: 12vw;
-    width: 15vw;
+     
 }
 .image-worker-3-emp{ 
-    position: relative;
+    position: absolute;
     padding:0;
     margin: 0;   
-    display: inline ;
-    left:15%;  
-    float: top;       
-    height: 12vw;
-    width: 15vw;
+  
 }
  
 .flex-container-section-3 {
@@ -554,9 +552,9 @@ input[type=text], select, textarea {
     height: 0%;
 }
  .flex-container-1-image {
-     
+     position: absolute;
     margin:10px 100px 10px 10px;
-    float: left;     
+    float: bottom;     
     display:  inline;   
     align-content: center;
     height: 100%;
@@ -564,14 +562,16 @@ input[type=text], select, textarea {
             
 } 
 .flex-container-2-image {     
+    position: absolute;
     margin:10px 45px 10px 10px;
     float: left;     
     display:  inline;    
-    align-content: center;
+   
     height: 100%;
     width: auto;            
 } 
-.flex-container-3-image {     
+.flex-container-3-image {    
+    position: absolute;
     margin:10px 10px 10px 10px;
     float: left;     
     display:  inline;     
@@ -591,7 +591,26 @@ input[type=text], select, textarea {
     height: 30.2vw;     
     width: 59.5vw;
 }
+.image-main-1{
+    background-image: url("assetsJSP/css/images/mainPageBackgroundv2.png");
+    background-size:  cover;
+    width:100%;
+    padding:0;
+    margin:-110px 0 20px;
+    height:50vw;  
+ 
 }
+.image-main-2{
+    background-image: url("assetsJSP/css/images/mainPageBackgroundv2.png");
+    background-size:  cover;
+    width:100%;
+    padding:0;
+    margin:-20px 0 20px;
+    height:20vw;  
+    
+}
+}
+  
  
  
      

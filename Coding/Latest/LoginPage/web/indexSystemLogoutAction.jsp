@@ -82,7 +82,7 @@
             if (rs.next()){
                 t.ReadTitles(1);
                 session.removeAttribute(t.getSQLTitles().toString());
-                response.sendRedirect("indexSystemLoginOption.jsp");              
+                response.sendRedirect("index.jsp");              
             }
             else{
                 response.sendRedirect("error.jsp");
