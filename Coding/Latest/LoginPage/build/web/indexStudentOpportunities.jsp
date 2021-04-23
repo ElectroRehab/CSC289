@@ -91,9 +91,26 @@
             </div>
         </div>  
     </div>
+     <div id="covid-19-info" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button data-dismiss="modal" class="close">&times;</button>
+                        <form action="indexAdminLoginRegistrationAction.jsp" method="post" >
+                            <div ><h1>Covid-19 Information</h1></div>              
+                            <p>Due to the Covid-19 pandemic, the company has reduced
+                            the number of interns and apprentices. We will continue to 
+                            evaluate the current situation, and send updates regularly.</p> 
+                        </form> 
+                </div>
+            </div>
+        </div>  
+    </div>
      <%--Title Section--%>
     <div class="flex-container-title">
-        <div class="flex-column-title">                
+        <div class="flex-column-title"> 
+            <span class="navbar-text actions"> <a class="covid-19-btn" href="indexAdminLogin.jsp" data-target="#covid-19-info" data-toggle="modal">Covid-19 Info</a> </span>                             
+
             <div class="career-title-stu"><h1>Student Employment</h1></div>
         </div>        
     </div>  
@@ -162,9 +179,7 @@
         </div>
     </div>
     <%--Section 4 containers--%>
-    <div class="flex-container-section-4">  
-            
-    </div>  
+     
     <%--//////////////////////////////////////////////////////////////////////
     Displays Application/resume upload internship--%>
     
@@ -377,10 +392,12 @@
                         <a href="https://twitter.com/?lang=en" target="blank"><i class="fa  fa-twitter"></i></a>
                         <a href="https://myaccount.google.com/intro/profile" target="blank"><i class="fa  fa-google-plus"></i></a>
                         <a href="https://www.youtube.com/" target="blank"><i class="fa  fa-youtube"></i></a>
+                        <p class="copyright">&nbsp;© 2021 KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p>
                     </div>
                 </div>
-                <p class="copyright">&nbsp;© 2021 KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p>
+                
             </div>
+            
         </footer>
     </div>
     <script src="assets/js/jquery.min.js"></script>

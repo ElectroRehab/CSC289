@@ -160,7 +160,7 @@
         </div>
     </div>
     <%--Section 3 containers--%>
-    <div class="flex-container-section-3">  
+    <div class="flex-container-section-3-emp">  
         <div class="flex-container-1-image">    
             <form>
                 <div><img class="image-worker-1-emp"  src="assetsJSP/css/images/worker-image.png">      </div>   
@@ -560,9 +560,10 @@
                         <a href="https://twitter.com/?lang=en" target="blank"><i class="fa  fa-twitter"></i></a>
                         <a href="https://myaccount.google.com/intro/profile" target="blank"><i class="fa  fa-google-plus"></i></a>
                         <a href="https://www.youtube.com/" target="blank"><i class="fa  fa-youtube"></i></a>
+                        <p class="copyright">&nbsp;© 2021 KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p>
                     </div>
                 </div>
-               <%-- <p class="copyright">&nbsp;© 2021 KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p> --%>
+                
             </div>
         </footer>
     </div>

@@ -250,10 +250,11 @@
                         <a href="https://twitter.com/?lang=en" target="blank"><i class="fa  fa-twitter"></i></a>
                         <a href="https://myaccount.google.com/intro/profile" target="blank"><i class="fa  fa-google-plus"></i></a>
                         <a href="https://www.youtube.com/" target="blank"><i class="fa  fa-youtube"></i></a></div>
+                        <p class="copyright">&nbsp;© 2021 KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p>
                 </div>
                 
             </div>
-            <p class="copyright">&nbsp;© 2021 KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p>
+             
         </footer>
     </div>
     <script src="assets/js/jquery.min.js"></script>
