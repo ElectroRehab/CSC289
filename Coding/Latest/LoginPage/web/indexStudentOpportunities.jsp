@@ -178,8 +178,9 @@
             </form>                
         </div>
     </div>
+                
     <%--Section 4 containers--%>
-     
+    
     <%--//////////////////////////////////////////////////////////////////////
     Displays Application/resume upload internship--%>
     

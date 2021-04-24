@@ -226,7 +226,10 @@ body
     height:10vw;
     width: 30%;
     top: 32%;
-    left:80%;   
+    left:80%; 
+    box-shadow:     
+    0 0 5px #fff;/* outer white */
+   
     
 }
 .flex-container-1,.flex-container-2,.flex-container-3,.flex-container-4{
@@ -288,10 +291,10 @@ body
  
 /*Flex Container 1 buttons-------------------------------------*/
 .learn-btn-career{
-    position: relative;
+   position: absolute;
    padding: 12px 20px;  
-   
-   text-align: left;
+  
+   text-align: center;
    font-family: microsoft, himalayan;
    float: bottom;    
    box-sizing: content-box;
@@ -300,6 +303,18 @@ body
    font-weight: bold;
    transition: all .5s; 
 }
+.learn-btn-career:hover{    
+    position: absolute;
+    background:   #1d2834;  
+    padding: 12px 20px; 
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.1vw;  
+    text-decoration: none;
+    box-shadow:     
+    0 0 22px   #000;/* outer white */
+     
+} 
 .covid-19-btn{
    
    position:  absolute;
@@ -327,15 +342,7 @@ body
     font-size: 1.1vw;  
     text-decoration: none;
 } 
-.learn-btn-career:hover{    
-    position: absolute;
-    background:  #f4b30d;  
-    padding: 12px 20px; 
-    color:   black;
-    border-radius: 5px;
-    font-size: 1.1vw;  
-    text-decoration: none;
-} 
+
  
 /*Flex Container one end buttons------------------------------------*/
 .image-world{
@@ -457,7 +464,7 @@ input[type=submit] {
   left: 70%;
   bottom: 5%;
   color: white;
-  padding: 12px 20px;
+  padding: 12px 26px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -467,6 +474,7 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: goldenrod;
   color:  #000;
+  box-shadow: 0 0 10px  ;           /* outer white */
 }
 
 .container-contact {
@@ -498,7 +506,7 @@ input[type=submit]:hover {
  
 }
  h4{    
-    text-align: center;
+    text-align: left;
     bottom: 53%; 
     font-size: 1vw;
     color: black;    
@@ -924,9 +932,9 @@ input[type=text], select, textarea {
         font-size: 3vw;
   }
   input[type=submit] {
-   width:2vw;
+   width:7vw;
    text-align: center;
-   height:.7vw;
+   height:2.5vw;
    font-size: 1vw;
 }
 input[type=text], select, textarea {
