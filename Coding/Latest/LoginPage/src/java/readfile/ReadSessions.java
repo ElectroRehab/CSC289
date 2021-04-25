@@ -10,7 +10,8 @@ public class ReadSessions extends HttpServlet {
             t.ReadTitles(1);
             String uid = (String)session.getAttribute(t.getSQLTitles());
             if(uid == null){
-                response.sendRedirect("index.jsp");
+                //response.sendRedirect("javascript:history.go(-1)");
+                response.sendRedirect("notAdminAvailable.jsp");
             }
             else{
                 session.setAttribute(t.getSQLTitles(), uid);

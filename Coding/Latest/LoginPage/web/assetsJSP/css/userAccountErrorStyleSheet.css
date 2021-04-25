@@ -57,14 +57,13 @@ nav a{
 }
 .error h1{
     color: red;
-    margin: 0px;
+    margin: 100px;
     padding:0px;
     position: absolute;
     top:5%;
-    left:23%;
-    font-size: 80px;
+    left:75%;
+    font-size: 50px;
     font-family: Didot, serif;
-    text-align: center;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     
 } 
@@ -72,8 +71,8 @@ nav a{
     margin: 0px;
     padding:0px;
     position: absolute;
-    top:70%;
-    left:25%;
+    top:30%;
+    left:75%;
     font-size: 40px;
     color: red;
     text-align: center;
@@ -84,7 +83,7 @@ nav a{
     padding:0px;
     position: absolute;
     top:82%;
-    left:28%;
+    left:10%;
     font-size: 30px;
     color: red;
     text-align: center;

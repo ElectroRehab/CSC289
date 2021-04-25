@@ -33,6 +33,8 @@
     Timestamp timeIn =new java.sql.Timestamp(date.getTime());
     // Starting Time Format
     String timeOut = "00:00:00";
+    // Salary Time
+    String salaryTime = "23:59:59";
     //Get parameters from login form
     String adminID=request.getParameter("adminID");    
     String pinNum=request.getParameter("pinNum");
@@ -82,18 +84,19 @@
             // Iterate through database to set new fields
             ResultSet rlst = ps.executeQuery();
             if(rlst.next()){
-                sqlInt = 4;
+                sqlInt = 37;
                 s.ReadSQL(sqlInt);
                 p = con.prepareStatement(s.getSQLAll());
                 p.setString(1,adminID);
-                p.setTimestamp(2,timeIn); 
-                p.setString(3,timeOut); 
-                p.setString(4,pinNum); 
-                p.setString(5,status);  
-                p.setString(6,adminID);  
-                p.setString(7,pinNum);
+                p.setString(2,salaryTime);
+                p.setString(3,salaryTime);
+                p.setString(4,salaryTime);
+                p.setString(5,pinNum); 
+                p.setString(6,status);  
+                p.setString(7,adminID);  
+                p.setString(8,pinNum);
                 p.executeUpdate();
-                response.sendRedirect("indexSystemLoginOption.jsp");
+                response.sendRedirect("indexMainPage.jsp");
             }     
             else{
                 

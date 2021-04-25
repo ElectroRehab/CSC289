@@ -33,7 +33,6 @@
     int sqlInt = 0;    
     // Get Current date and time   
     java.util.Date date=new java.util.Date();
-    Timestamp timeOut =new java.sql.Timestamp(date.getTime());
     // 
     String adminID=request.getParameter("adminID");    
     String pinNum=request.getParameter("pinNum");
@@ -59,18 +58,11 @@
             // Create object
             ReadTitles t = new ReadTitles();
             // Clock-out of the system
-            sqlInt = 5;
+            sqlInt = 38;
             s.ReadSQL(sqlInt);
-            PreparedStatement ps = con.prepareStatement(s.getSQLAll());   
-            ps.setTimestamp(1,timeOut);
-            ps.setString(2,status);               
-            ps.setString(3,adminID);           
-            ps.executeUpdate();
-            // Calculate the total time from login-logout as admin.
-            sqlInt = 14;
-            s.ReadSQL(sqlInt);
-            ps = con.prepareStatement(s.getSQLAll()); 
-            ps.setString(1,adminID);  
+            PreparedStatement ps = con.prepareStatement(s.getSQLAll());
+            ps.setString(1,status);               
+            ps.setString(2,adminID);           
             ps.executeUpdate();
             // String used for SQL Query
             sqlInt = 2;

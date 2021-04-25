@@ -91,26 +91,9 @@
             </div>
         </div>  
     </div>
-     <div id="covid-19-info" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button data-dismiss="modal" class="close">&times;</button>
-                        <form action="indexAdminLoginRegistrationAction.jsp" method="post" >
-                            <div ><h1>Covid-19 Information</h1></div>              
-                            <p>Due to the Covid-19 pandemic, the company has reduced
-                            the number of interns and apprentices. We will continue to 
-                            evaluate the current situation, and send updates regularly.</p> 
-                        </form> 
-                </div>
-            </div>
-        </div>  
-    </div>
      <%--Title Section--%>
     <div class="flex-container-title">
-        <div class="flex-column-title"> 
-            <span class="navbar-text actions"> <a class="covid-19-btn" href="indexAdminLogin.jsp" data-target="#covid-19-info" data-toggle="modal">Covid-19 Info</a> </span>                             
-
+        <div class="flex-column-title">                
             <div class="career-title-stu"><h1>Student Employment</h1></div>
         </div>        
     </div>  
@@ -166,7 +149,7 @@
             <form>
                 <%--Attributed Image Source: Photo by <a href="https://unsplash.com/@austindistel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Austin Distel</a> on <a href="https://unsplash.com/s/photos/working?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                 --%>
-                <div><img class="image-worker2"  src="assetsJSP/css/images/jodyhongfilms-sI1mbxJFFpU-unsplash.jpg"></div>   
+                <div><img class="image-worker1"  src="assetsJSP/css/images/jodyhongfilms-sI1mbxJFFpU-unsplash.jpg"></div>   
             </form>                
         </div>
         <div class="flex-container-3-image">    
@@ -174,23 +157,24 @@
                 <%--Attributed Image Source:Photo by <a href="https://unsplash.com/@austindistel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Austin Distel</a> on <a href="https://unsplash.com/s/photos/working?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
    
                 --%>
-                <div><img class="image-worker3"  src="assetsJSP/css/images/austin-distel-wD1LRb9OeEo-unsplash.png"></div>   
+                <div><img class="image-worker1"  src="assetsJSP/css/images/austin-distel-wD1LRb9OeEo-unsplash.png"></div>   
             </form>                
         </div>
     </div>
-                
     <%--Section 4 containers--%>
-    
+    <div class="flex-container-section-4">  
+            
+    </div>  
     <%--//////////////////////////////////////////////////////////////////////
     Displays Application/resume upload internship--%>
     
-    <div id="intern-form" class="modal fade" role="dialog">
+    <div id="inter-form" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
                     <button data-dismiss="modal" class="close">&times;</button>
                          <form action=" ">
-                <h2>Resume Upload (Intern)</h2>
+                <h2>Resume Upload</h2>
                 <div class="row">
                     <div class="col-25">
                         <label for="fname">First Name</label>
@@ -271,7 +255,7 @@
                 <div class="modal-body">
                     <button data-dismiss="modal" class="close">&times;</button>
                          <form action=" ">
-                <h2>Resume Upload (Recent Grad)</h2>
+                <h2>Resume Upload</h2>
                 <div class="row">
                     <div class="col-25">
                         <label for="fname">First Name</label>
@@ -382,10 +366,10 @@
                      <div class="col-sm-6 col-md-3 item">
                         <h3>Help</h3>
                         <ul>
-                            <li><a href="ohNo.jsp">Create Account(Pending)</a></li>
-                            <li><a href="ohNo.jsp">Remove Account(Pending)</a></li>
-                            <li><a href="indexCompanyCareer.jsp">Forgot Username/Password(Pending)</a></li>
-                         </ul>
+                            <li><a href="ohNo.jsp">Create Account</a></li>
+                            <li><a href="indexTeam.jsp">Remove Account</a></li>
+                            <li><a href="indexCompanyCareer.jsp">Forgot Username/Password</a></li>
+                        </ul>
                     </div>
                     <div class="col item social">
                         <h3>Connect With Us</h3>
@@ -393,12 +377,10 @@
                         <a href="https://twitter.com/?lang=en" target="blank"><i class="fa  fa-twitter"></i></a>
                         <a href="https://myaccount.google.com/intro/profile" target="blank"><i class="fa  fa-google-plus"></i></a>
                         <a href="https://www.youtube.com/" target="blank"><i class="fa  fa-youtube"></i></a>
-                        <p class="copyright">&nbsp;© 2021 KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p>
                     </div>
                 </div>
-                
+                <p class="copyright">&nbsp;© 2021 KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p>
             </div>
-            
         </footer>
     </div>
     <script src="assets/js/jquery.min.js"></script>

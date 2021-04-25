@@ -160,7 +160,7 @@
         </div>
     </div>
     <%--Section 3 containers--%>
-    <div class="flex-container-section-3-emp">  
+    <div class="flex-container-section-3">  
         <div class="flex-container-1-image">    
             <form>
                 <div><img class="image-worker-1-emp"  src="assetsJSP/css/images/worker-image.png">      </div>   
@@ -182,7 +182,10 @@
             </form>                
         </div>
     </div>
-    
+    <%--Section 4 containers--%>
+    <div class="flex-container-section-4">  
+            
+    </div>  
     <%--//////////////////////////////////////////////////////////////////////
     Displays Application/resume upload form for Management--%>
     
@@ -531,8 +534,6 @@
             </div>
         </div>  
     </div>
-      <div><img class="image-main-2"  src="assetsJSP/css/images/mainPageBackgroundv2.png"></div>    
-
     <div class="footer-dark">
         <footer>
             <div class="container">
@@ -549,10 +550,10 @@
                      <div class="col-sm-6 col-md-3 item">
                         <h3>Help</h3>
                         <ul>
-                            <li><a href="ohNo.jsp">Create Account(Pending)</a></li>
-                            <li><a href="ohNo.jsp">Remove Account(Pending)</a></li>
-                            <li><a href="indexCompanyCareer.jsp">Forgot Username/Password(Pending)</a></li>
-                         </ul>
+                            <li><a href="ohNo.jsp">Create Account</a></li>
+                            <li><a href="indexTeam.jsp">Remove Account</a></li>
+                            <li><a href="indexCompanyCareer.jsp">Forgot Username/Password</a></li>
+                        </ul>
                     </div>
                     <div class="col item social">
                         <h3>Connect With Us</h3>
@@ -560,10 +561,9 @@
                         <a href="https://twitter.com/?lang=en" target="blank"><i class="fa  fa-twitter"></i></a>
                         <a href="https://myaccount.google.com/intro/profile" target="blank"><i class="fa  fa-google-plus"></i></a>
                         <a href="https://www.youtube.com/" target="blank"><i class="fa  fa-youtube"></i></a>
-                        <p class="copyright">&nbsp;© 2021 KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p>
                     </div>
                 </div>
-                
+               <%-- <p class="copyright">&nbsp;© 2021 KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p> --%>
             </div>
         </footer>
     </div>

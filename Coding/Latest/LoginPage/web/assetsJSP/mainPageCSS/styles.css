@@ -14,24 +14,6 @@ p{
     height:1000px;    
     background-position: center;
 }
- .image-main-1{
-    background-image: url("assetsJSP/css/images/mainPageBackgroundv2.png");
-    background-size:  cover;
-    width:100%;
-    padding:0;
-    margin:-20px 0 20px;
-    height:30vw;  
-     
-}
- .image-main-2{
-    background-image: url("assetsJSP/css/images/mainPageBackgroundv2.png");
-    background-size:  cover;
-    width:100%;
-    padding:0;
-    margin:-110px 0px 50px;
-    height:30vw;  
-     
-}
 .image-ohNo{
     background-size:cover;
     width:100%;

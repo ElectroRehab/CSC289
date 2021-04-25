@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="refresh" content="5;url=indexUserLogin.jsp" />
+        <meta http-equiv="refresh" content="6;url=indexUserLogin.jsp" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta charset="UTF-8">
         <meta http-equiv="Content-Security-Policy" content="default-src;        
@@ -22,19 +22,13 @@
         <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
         <title>Incorrect Credentials</title>
     </head>  
-    <body>  
-        <nav>  
-            <div>
-                <a href="indexUserLogin.jsp">Home</a>
-            </div>
-        </nav>
+    <body>
         <header class="error">
-            <h1>Incorrect Credentials </h1>
+            <h1>Incorrect Credentials</h1>
             <%-- Set paragraph to display message--%>
             <br>
-            <p><i class="fas fa-exclamation-triangle"></i>This is not an Admin Account.<i class="fas fa-exclamation-triangle"></i><br><br></p>
-            
-            <b><i class="fas fa-exclamation-triangle"></i>You will be redirected in 5 seconds.<i class="fas fa-exclamation-triangle"></i></b>
+            <p><i class="fas fa-exclamation-triangle"></i>This is not an Admin Account.<i class="fas fa-exclamation-triangle"></i><br><br>
+            <i class="fas fa-exclamation-triangle"></i>You will be redirected in 5 seconds.<i class="fas fa-exclamation-triangle"></i></p>
         </header>   
     </body>
 </html>

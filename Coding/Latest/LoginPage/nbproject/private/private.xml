@@ -3,9 +3,31 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Anthony/Desktop/ProjectFolder/CSC289/Coding/Latest/LoginPage/web/assetsJSP/css/careersStyleSheet.css</file>
-            <file>file:/C:/Users/Anthony/Desktop/ProjectFolder/CSC289/Coding/Latest/LoginPage/web/indexCompanyCareer.jsp</file>
-            <file>file:/C:/Users/Anthony/Desktop/ProjectFolder/CSC289/Coding/Latest/LoginPage/web/assetsJSP/mainPageCSS/styles.css</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/web/assetsJSP/css/errorPageStyleSheet.css</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/web/ohNo.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/web/indexUserLogin.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/web/assetsJSP/css/userAccountErrorStyleSheet.css</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/web/indexUserRegistration.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/src/java/readfile/ReadFile.java</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/web/emailAuth.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/web/error.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/src/java/readfile/ReadSQL.java</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/web/notAdminReqError.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/web/workTable.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/web/index.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/web/indexSystemLogoutAction.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/web/indexSystemLoginAction.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/web/indexMainPage.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/web/assetsJSP/css/loginStyleSheet.css</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/web/indexUserLogoutSuccess.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/src/java/readfile/ReadTitles.java</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/web/indexSystemLoginOption.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/web/indexUserRegistrationAction.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/web/timeWorkedTable.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/web/notAdminAvailable.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/src/java/readfile/ReadEmail.java</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/web/notAdminError.jsp</file>
+            <file>file:/D:/SCHOOL/SPRING2021/CSC-289-0B01-Programming%20Capstone%20Project/MODULE_4/CODING/21APR21/VERSION_2/LoginPage/src/java/readfile/ReadSessions.java</file>
         </group>
     </open-files>
 </project-private>

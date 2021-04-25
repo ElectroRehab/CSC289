@@ -49,7 +49,7 @@
                         <div class="dropdown-menu"><a class="dropdown-item" href="indexAboutCompany.jsp">About</a><a class="dropdown-item" href="indexCompanyMission.jsp">Mission</a><a class="dropdown-item" href="indexContact.jsp">Contact</a></div>
                     </li>                    
                 </ul>
-                <span class="navbar-text actions"> <a class="home-admin-login" href="indexAdminLogin.jsp" data-target="#admin-login" data-toggle="modal" >Admin Log In</a> <a class="home-system-logout" href="indexAdminLogin.jsp"data-target="#logout" data-toggle="modal" >System Logout</a></span> 
+                <span class="navbar-text actions"> <a class="home-admin-login" href="indexAdminLogin.jsp" data-target="#admin-login" data-toggle="modal" >Admin Log In</a> <a class="home-system-logout" href="indexSystemLogoutAction.jsp"data-target="#logout" data-toggle="modal" >System Logout</a></span> 
             </div>
         </div>
     </nav>

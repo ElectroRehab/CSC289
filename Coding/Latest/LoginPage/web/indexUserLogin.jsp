@@ -59,8 +59,7 @@
                     </li>
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Create Account </a>
                         <div class="dropdown-menu"> <a class="dropdown-item" href="indexUserRegistration.jsp">Create User Account</a></div>
-                    </li>
-                                         
+                    </li>                   
                 </ul>
                 <span class=" "> <a class="home-system-logout" href="indexAdminLogin.jsp"data-target="#admin-login" data-toggle="modal" >System Logout</a></span> 
 

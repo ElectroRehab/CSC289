@@ -27,6 +27,7 @@
     ReadSessions r = new ReadSessions();
     r.getPost(request, response, session);
     int count = 0;
+    String salary = "";
 %>
     <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
@@ -217,14 +218,35 @@
                 <%t.ReadTitles(2);%>
                 <td><%=rs.getString(t.getSQLTitles()) %></td>
                 <!--Time In-->
-                <%t.ReadTitles(17);%>
-                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <%t.ReadTitles(17);
+                salary = rs.getString((t.getSQLTitles()));
+                if(salary.contains("23:59:59")){
+                    %><td>Salary</td><%
+                }
+                else{
+                    %><td><%=rs.getString(t.getSQLTitles()) %></td><%
+                }
+                %>                
                 <!--Time Out-->
-                <%t.ReadTitles(18);%>
-                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <%t.ReadTitles(18);
+                salary = rs.getString((t.getSQLTitles()));
+                if(salary.contains("23:59:59")){
+                    %><td>Salary</td><%
+                }
+                else{
+                    %><td><%=rs.getString(t.getSQLTitles()) %></td><%
+                }
+                %>
                 <!--Total Time-->
-                <%t.ReadTitles(15);%>
-                <td><%=rs.getString(t.getSQLTitles()) %></td>
+                <%t.ReadTitles(15);
+                salary = rs.getString((t.getSQLTitles()));
+                if(salary.contains("23:59:59")){
+                    %><td>Salary</td><%
+                }
+                else{
+                    %><td><%=rs.getString(t.getSQLTitles())%></td><%
+                }
+                %>
                 <!--Status-->
                 <%t.ReadTitles(16);%>
                 <td><%=rs.getString(t.getSQLTitles()) %></td>

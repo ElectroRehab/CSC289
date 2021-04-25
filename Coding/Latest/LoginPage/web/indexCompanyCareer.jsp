@@ -29,7 +29,6 @@
     <link rel="stylesheet" href="assetsJSP/css/popupLoginStyleSheet.css">
 </head> 
 <body>
-    
     <%--Navigation bar items--%>
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
         <div class="container"><img class="item-co-logo" src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60">&nbsp;&nbsp;&nbsp;<a class="home-main" href="indexMainPage.jsp">Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
@@ -118,14 +117,11 @@
            
     </div>
     <div class="flex-container-section-2">            
-        <div class="flex-container-1">  
-              
-
+        <div class="flex-container-1">   
             <form>
                 <h4>Employment Opportunities</h4> 
                 <span class="navbar-text actions"> <a class="learn-btn-career" href="indexEmploymentOpportunities.jsp">Learn</a> </span>                           
             </form> 
-            
         </div>  
         <div class="flex-container-2">   
             <form>
@@ -136,13 +132,13 @@
         <div class="flex-container-3">   
             <form>
                 <h4>Remote Opportunities</h4> 
-                <span class="navbar-text actions"> <a class="learn-btn-career" href="ohNo.jsp">Learn</a> </span>
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp">Learn</a> </span>
             </form> 
         </div>
         <div class="flex-container-4">   
             <form>
                 <h4>Apprentice Opportunities</h4> 
-                <span class="navbar-text actions"> <a class="learn-btn-career" href="ohNo.jsp" >Learn</a> </span>
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" >Learn</a> </span>
             </form> 
         </div>       
     </div>                    
@@ -156,8 +152,8 @@
         </div>
          
     </div>
-<div>    
-    <div id="contact-us-form" class="modal fade" role="dialog">
+         
+        <div id="contact-us-form" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
@@ -210,51 +206,50 @@
                 </div>
                      
                 <div class="row">
-                    <input class="contact-sub-btn" type="submit" value="Submit">
+                    <input type="submit" value="Submit">
                 </div>
             </form>
                 </div>
             </div>
         </div>  
            
-    </div>   
-</div>
+    </div>      
     <%--Displays conatct form--%>         
      
- <div><img class="image-main-1"  src="assetsJSP/css/images/mainPageBackgroundv2.png"></div>    
     <div class="footer-dark">
         <footer>
             <div class="container">
                 <div class="row">
-                     
+                    
                     <div class="col-sm-6 col-md-3 item">
                         <h3>About</h3>
                         <ul>
-                            <li><a href="indexAboutCompany.jsp">Company</a></li>
+                            <li><a href="ohNo.jsp">Company</a></li>
                             <li><a href="indexTeam.jsp">Team</a></li>
                             <li><a href="indexCompanyCareer.jsp">Careers</a></li>
                         </ul>
-                    </div>
-                    <div class="col-sm-6 col-md-3 item">
+                    </div>  
+                     <div class="col-sm-6 col-md-3 item">
                         <h3>Help</h3>
                         <ul>
-                            <li><a href="ohNo.jsp">Create Account(Pending)</a></li>
-                            <li><a href="ohNo.jsp">Remove Account(Pending)</a></li>
-                            <li><a href="indexCompanyCareer.jsp">Forgot Username/Password(Pending)</a></li>
-                         </ul>
+                            <li><a href="ohNo.jsp">Create Account</a></li>
+                            <li><a href="indexTeam.jsp">Remove Account</a></li>
+                            <li><a href="indexCompanyCareer.jsp">Forgot Username/Password</a></li>
+                        </ul>
                     </div>
-                     
                     <div class="col item social">
                         <h3>Connect With Us</h3>
                         <a  href="https://www.facebook.com/" target="blank"><i class="fa  fa-facebook"></i></a>
                         <a href="https://twitter.com/?lang=en" target="blank"><i class="fa  fa-twitter"></i></a>
                         <a href="https://myaccount.google.com/intro/profile" target="blank"><i class="fa  fa-google-plus"></i></a>
-                        <a href="https://www.youtube.com/" target="blank"><i class="fa  fa-youtube"></i></a></div>
-                        <p class="copyright">&nbsp;© 2021 KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p>
+                        <a href="https://www.youtube.com/" target="blank"><i class="fa  fa-youtube"></i></a>
+                    </div>
+                    <div class="flex-container-contact">    
+                    <div><a class="contact-us-btn" href="indexAdminLogin.jsp" data-target="#contact-us-form" data-toggle="modal" >Contact us</a></div>     
+                    </div> 
                 </div>
-                
+                 
             </div>
-             
         </footer>
     </div>
     <script src="assets/js/jquery.min.js"></script>
