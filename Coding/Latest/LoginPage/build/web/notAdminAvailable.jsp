@@ -16,7 +16,7 @@
         manifest-src 'self'; media-src 'self';  
         worker-src 'none';">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assetsJSP/css/userAccountErrorStyleSheet.css">
+        <link rel="stylesheet" href="assetsJSP/css/errorPageStyleSheet.css">
         <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
         <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
         <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
@@ -24,7 +24,6 @@
     </head>  
     <body>
         <header class="error">
-            <h1>Admin Account Required</h1>
             <%-- Set paragraph to display message--%>
             <br>
             <p><i class="fas fa-exclamation-triangle"></i>An admin is not currently logged in.<i class="fas fa-exclamation-triangle"></i><br><br>
