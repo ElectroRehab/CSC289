@@ -30,9 +30,11 @@
         <link rel="stylesheet" href="assetsJSP/mainPageCSS/styles.css">
     </head>
     <body>
-<%
+        
+<%/*
     ReadSessions r = new ReadSessions();
     r.getPost(request, response, session);
+*/
 %>
         <div class="flex-container">
         <div class="login-clean-admin">          
@@ -75,10 +77,10 @@
         </div> 
         </div >
         <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
-             <div class="container"><img class="item-co-logo" src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60">&nbsp;&nbsp;&nbsp;<a class="home-main" href="index.jsp">K&O</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navcol-1">              
-                    <span class="navbar-text actions"> <a class="home-system-logout" href="indexAdminLogin.jsp"data-target="#admin-login" data-toggle="modal" >System Logout</a></span> 
-                 </div>
+            <div class="container"><img class="item-co-logo" src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60">&nbsp;&nbsp;&nbsp;<a class="home-main" href="index.jsp">Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-1">                
+                     
+                </div>
             </div>
         </nav> 
         <div id="admin-login" class="modal fade" role="dialog">

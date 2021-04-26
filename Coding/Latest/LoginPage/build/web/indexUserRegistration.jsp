@@ -44,7 +44,7 @@
     r.getPost(request, response, session);
 %>
        <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
-            <div class="container"><img src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60"><a class="user-login" href="indexUserLogin.jsp">Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><img src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60"><a class="home-main" href="indexUserLogin.jsp">Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav mr-auto">                                    
                     
