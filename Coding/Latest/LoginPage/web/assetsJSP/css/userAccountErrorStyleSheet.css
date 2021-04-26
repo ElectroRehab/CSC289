@@ -20,7 +20,7 @@ nav{
     background-size: cover; 
     background-repeat: no-repeat;
     position: static ;  
-    color: white;    
+    color: red;    
 }
 nav a.active{
 	  
@@ -57,13 +57,13 @@ nav a{
 }
 .error h1{
     color: red;
-    margin: 100px;
+    margin: 0px;
     padding:0px;
     position: absolute;
-    top:5%;
-    left:75%;
-    font-size: 50px;
-    font-family: Didot, serif;
+    top:2%;
+    left:47%;
+    font-size: 100px;
+    font-family: Didot, serif;    
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     
 } 
@@ -71,20 +71,9 @@ nav a{
     margin: 0px;
     padding:0px;
     position: absolute;
-    top:30%;
-    left:75%;
-    font-size: 40px;
-    color: red;
-    text-align: center;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-}
-.error b{
-    margin: 0px;
-    padding:0px;
-    position: absolute;
-    top:82%;
-    left:10%;
-    font-size: 30px;
+    top:25%;
+    left:25%;
+    font-size: 50px;
     color: red;
     text-align: center;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
@@ -95,7 +84,7 @@ nav a{
     padding:0px;
     position: absolute;
     top:45%;
-    left:14%; 
+    left:12%; 
     font-size: 35px;
     text-align: left;
     
@@ -110,5 +99,3 @@ nav a{
     text-align: left;
     
 }
- 
-

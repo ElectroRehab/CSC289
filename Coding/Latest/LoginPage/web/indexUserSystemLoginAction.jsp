@@ -24,6 +24,7 @@
 <%
     HashSHA512Encryption hashText = new HashSHA512Encryption();
     int sqlInt = 0;
+    String user = "";
     String adminID=request.getParameter("adminID");
     
     String pinNum=request.getParameter("pinNum");
@@ -53,9 +54,18 @@
             ps.setString(2,pinNum );    
             ResultSet rs = ps.executeQuery();    
             if (rs.next()){
-                t.ReadTitles(1);
-                session.setAttribute(t.getSQLTitles().toString(), adminID);
-                response.sendRedirect("indexUserLogin.jsp");              
+                t.ReadTitles(13);
+                user = rs.getString((t.getSQLTitles()));
+                t.ReadTitles(21);
+                if(user.contains(t.getSQLTitles().toString())){
+                    response.sendRedirect("notAdminError.jsp");
+                }
+                else{
+                    t.ReadTitles(1);
+                    session.setAttribute(t.getSQLTitles().toString(), adminID);
+                    response.sendRedirect("indexUserLogin.jsp");
+                }
+                              
             }
             else{
                 response.sendRedirect("errorSystemsLogin.jsp");
