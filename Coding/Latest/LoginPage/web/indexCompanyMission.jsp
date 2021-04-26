@@ -41,7 +41,7 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav mr-auto">                    
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Access </a>
-                        <div class="dropdown-menu">  <a class="dropdown-item" href="indexAdminLogin.jsp" data-target="#admin-login" data-toggle="modal">Admin Login</a></div>
+                        <div class="dropdown-menu"> <a class="dropdown-item" href="indexAdminLogin.jsp" data-target="#admin-login" data-toggle="modal">Admin Portal</a><a class="dropdown-item" href="indexAdminClockInAction.jsp" data-target="#clock-in" data-toggle="modal" >Clock-In</a><a class="dropdown-item" href="indexSystemLogoutAction.jsp" data-target="#clock-out" data-toggle="modal" >Clock-Out</a></div>
                     </li>
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Create Account </a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="indexAdminRegistration.jsp" data-target="#login" data-toggle="modal">Create Admin Account</a><a class="dropdown-item" href="indexUserRegistration.jsp">Create User Account</a></div>
@@ -53,58 +53,7 @@
             </div>
         </div>
     </nav>
-<%--Displays admin login menu to user//////////////////////////////////--%>
-    <div id="admin-login" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-    
-        <div class="modal-content">
-            <div class="modal-body">
-                <button data-dismiss="modal" class="close">&times;</button>
-            
-                <form action="indexAdminLoginAction.jsp" method="post" >
-                    <div ><h2>Admin Login</h2></div>              
-                
-                    <div class="form-group" >                  
-                        <input class="form-control" type="text" name="adminID" placeholder="Scan ID"><br>
-                    </div>   
-                    <div class="form-group">
-                        <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
-                    </div>  
-                    <div class="form-group">
-                        <button class="home-popup-login" type="submit">Login</button>             
-                    </div> 
-             
-                </form>
-            </div>
-        </div>
-    </div>  
-    </div>
- <%--Displays admin login menu to user//////////////////////////////////--%>
-      <div id="login" class="modal fade" role="dialog">
-        <div class="modal-dialog">
-    
-        <div class="modal-content">
-            <div class="modal-body">
-                <button data-dismiss="modal" class="close">&times;</button>
-            
-                <form action="indexAdminLoginRegistrationAction.jsp" method="post" >
-                    <div ><h1>Admin Login Required</h1></div>              
-                
-                    <div class="form-group" >                  
-                        <input class="form-control" type="text" name="adminID" placeholder="Scan ID"><br>
-                    </div>   
-                    <div class="form-group">
-                        <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
-                    </div>  
-                    <div class="form-group">
-                        <button class="home-popup-login" type="submit">Login</button>             
-                    </div> 
-             
-                </form>
-            </div>
-        </div>
-    </div>  
-    </div>
+ 
  <%--Displays Main Background Image--%>
     <div><img class="image-main"  src="assetsJSP/css/images/mainPageBackgroundv3.png"</div>
 <%--Displays Information About the Company--%>
@@ -157,6 +106,135 @@
             </div>
         </footer>
     </div>
+    <%--Modal Controllers----------------------------------------------------------------///////--%>
+     <div id="admin-login" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    
+        <div class="modal-content">
+            <div class="modal-body">
+                <button data-dismiss="modal" class="close">&times;</button>
+            
+                <form action="indexAdminLoginAction.jsp" method="post" >
+                    <div ><h2>Admin Login</h2></div>              
+                
+                    <div class="form-group" >                  
+                        <input class="form-control" type="text" name="adminID" placeholder="Scan Admin ID"><br>
+                    </div>   
+                    <div class="form-group">
+                        <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
+                    </div>  
+                    <div class="form-group">
+                        <button class="home-popup-login" type="submit">Login</button>             
+                    </div> 
+             
+                </form>
+            </div>
+        </div>
+    </div>  
+    </div>
+    <div id="login" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    
+        <div class="modal-content">
+            <div class="modal-body">
+                <button data-dismiss="modal" class="close">&times;</button>
+            
+                <form action="indexAdminLoginRegistrationAction.jsp" method="post" >
+                    <div ><h2>Admin Login Required</h2></div>              
+                
+                    <div class="form-group" >                  
+                        <input class="form-control" type="text" name="adminID" placeholder="Scan Admin ID"><br>
+                    </div>   
+                    <div class="form-group">
+                        <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
+                    </div>  
+                    <div class="form-group">
+                        <button class="home-popup-login" type="submit">Login</button>             
+                    </div> 
+             
+                </form>
+            </div>
+        </div>
+    </div>  
+    </div>
+     <div id="logout" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    
+        <div class="modal-content">
+            <div class="modal-body">
+                <button data-dismiss="modal" class="close">&times;</button>
+            
+                <form action="indexSystemLogoutAction.jsp" method="post" >
+                    <div ><h2>System Logout</h2></div>              
+                
+                    <div class="form-group" >                  
+                        <input class="form-control" type="text" name="adminID" placeholder="Scan Admin ID"><br>
+                    </div>   
+                    <div class="form-group">
+                        <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
+                    </div>  
+                    <div class="form-group">
+                        <button class="home-popup-login" type="submit">Logout</button>             
+                    </div> 
+                    <div ><h3>Admin Required!</h3></div> 
+             
+                </form>
+            </div>
+        </div>
+    </div>  
+    </div> 
+    <div id="clock-in" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    
+        <div class="modal-content">
+            <div class="modal-body">
+                <button data-dismiss="modal" class="close">&times;</button>
+            
+                <form action="indexAdminClockInAction.jsp" method="post" >
+                    <div ><h2>Clock-In</h2></div>              
+                
+                    <div class="form-group" >                  
+                        <input class="form-control" type="text" name="adminID" placeholder="Scan Admin ID"><br>
+                    </div>   
+                    <div class="form-group">
+                        <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
+                    </div>  
+                    <div class="form-group">
+                        <button class="home-popup-login" type="submit">Logout</button>             
+                    </div> 
+                    <div ><h3>Admin Required!</h3></div> 
+             
+                </form>
+            </div>
+        </div>
+    </div>  
+    </div> 
+     <div id="clock-out" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+    
+        <div class="modal-content">
+            <div class="modal-body">
+                <button data-dismiss="modal" class="close">&times;</button>
+            
+                <form action="indexSystemLogoutAction.jsp" method="post" >
+                    <div ><h2>Clock-Out</h2></div>              
+                
+                    <div class="form-group" >                  
+                        <input class="form-control" type="text" name="adminID" placeholder="Scan Admin ID"><br>
+                    </div>   
+                    <div class="form-group">
+                        <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
+                    </div>  
+                    <div class="form-group">
+                        <button class="home-popup-login" type="submit">Logout</button>             
+                    </div> 
+                    <div ><h3>Admin Required!</h3></div> 
+             
+                </form>
+            </div>
+        </div>
+    </div>  
+    </div>  
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>

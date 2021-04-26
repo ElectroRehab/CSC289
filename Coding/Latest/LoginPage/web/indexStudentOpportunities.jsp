@@ -36,9 +36,7 @@
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Access </a>
                         <div class="dropdown-menu"> <a class="dropdown-item" href="indexAdminLogin.jsp" data-target="#admin-login" data-toggle="modal">Admin Login</a></div>
                     </li>
-                    <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Create Account </a>
-                        <div class="dropdown-menu"><a class="dropdown-item" href="indexAdminRegistration.jsp" data-target="#login" data-toggle="modal">Create Admin Account</a><a class="dropdown-item" href="indexUserRegistration.jsp">Create User Account</a></div>
-                    </li>
+                     
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Info </a>
                         <div class="dropdown-menu"><a class="dropdown-item" href="indexAboutCompany.jsp">About</a><a class="dropdown-item" href="indexCompanyMission.jsp">Mission</a><a class="dropdown-item" href="indexContact.jsp">Contact</a></div>
                     </li>                    
@@ -91,9 +89,21 @@
             </div>
         </div>  
     </div>
+    <%--Displays admin login with popup form--%>
+    <div id="covid-info" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>***Due to the Covid-19 pandemic, internship positions may be limited. Ensure to apply in a timely manner or else the position you were looking to apply for, is taken.</p>
+                </div>
+            </div>
+        </div>  
+    </div>
      <%--Title Section--%>
     <div class="flex-container-title">
-        <div class="flex-column-title">                
+        <div class="flex-column-title">    
+            <span class="navbar-text actions"> <a class="covid-19" href="indexAdminLogin.jsp" data-target="#covid-info" data-toggle="modal" >**Covid-19 Information</a> </span>
+
             <div class="career-title-stu"><h1>Student Employment</h1></div>
         </div>        
     </div>  
@@ -104,7 +114,7 @@
             <h1>Student Opportunities</h1> 
             <p>Here at K&O, we understand the importance of college students gaining experience prior to graduating. If you are currently in the
             process of obtaining an undergraduate, Bachelors, Masters, or PhD, K&O has positions available for students to gain work related experience.
-            We offer a variety of interships throughout the year, targeting a students specific area of learning. Interships are available during the 
+            We offer a variety of interships throughout the year, targeting a students specific area of learning. Internships are available during the 
             summer only and typically last 3-4 months.</p>
         </div> 
         <%--

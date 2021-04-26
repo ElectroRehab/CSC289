@@ -38,7 +38,13 @@ and open the template in the editor.
     font-size: 1vw;
     color: black;
 }
-
+ .image-main-career{
+    margin:-170px 0px 0px 0px;  
+    background-size:  cover;
+    width:100%;
+    height:35vw ;
+    
+}
 
 .image-phone{
     opacity: .1;
@@ -332,9 +338,8 @@ and open the template in the editor.
     
     display: inline ;
     float: top;        
-    height: 12vw;
-     
-    width: 25vw;
+    height: 21vw;  
+    width: 45vw;
 }
 .image-worker-1-emp{ 
     padding:0;

@@ -251,3 +251,26 @@ input[type=submit]:hover {
   border-radius: 5px;
   border: 3px solid  #000; 
 }
+.covid-19:hover {    
+  background: crimson;
+  background: linear-gradient(to bottom,#f7f9fc,#36b9cc);
+  padding: 12px 20px; 
+  color: #fff;
+  text-decoration: none; 
+  border-radius: 5px;
+  font-size: 1.1vw;
+   
+}
+.covid-19{   
+  margin:0;
+  font-family: microsoft, himalayan;
+  text-align: center;
+  padding: 12px 20px;
+  text-decoration: none; 
+   box-shadow: 10px 10px 5px grey;
+  color:  #000;
+  font-size: 1.1vw;
+  font-weight: bold;
+  transition: all .5s;   
+    
+}

@@ -11,11 +11,12 @@
     <head>
              
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
-        <meta charset="utf-8">
+         <%--Allows for screen responsiveness for other devices--%>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">       
+         <%--Allows for screen responsiveness for other devices--%>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-        <meta http-equiv="Content-Security-Policy" content="default-src;  
-         
+        <%--Controls the content security policy for the webpage--%>
+        <meta http-equiv="Content-Security-Policy" content="default-src;           
         script-src 'self'  'sha256-JE0280krcqkShSI9tiB7uYMolH2Mp4kLOi+tnmU+JI4='    
         ;style-src 'report-sample' 'self' 'unsafe-inline' 
         https://cdnjs.cloudflare.com https://fonts.googleapis.com; 
@@ -24,8 +25,7 @@
         frame-src 'self';
         manifest-src 'self'; media-src 'self'; 
         worker-src 'none';">
-        
-         
+        <%--Linked stylesheets control the display output of the entire webpage--%> 
         <link rel="stylesheet" href="assetsJSP/css/registrationStyleSheet.css">        
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assetsJSP/mainPageCSS/Navigation-with-Button.css">
@@ -43,15 +43,17 @@
     ReadSessions r = new ReadSessions();
     r.getPost(request, response, session);
 %>
-       <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+        <%--Navigation Menu--%>
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
             <div class="container"><img src="assetsJSP/css/images/CompanyLogo.png" height="60" width="60"><a class="home-main" href="indexUserLogin.jsp">Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav mr-auto">                                    
-                    
-                    </ul><span class="navbar-text actions"> <a class="user-login" href="indexUserLogin.jsp">User Log In</a></span>
+                    </ul><span class="navbar-text actions"> <a class="user-login" href="indexUserLogin.jsp">Clock-In</a></span>
+                    <span class=" "> <a class="home-system-logout" href="index.jsp"data-target="#user-logout" data-toggle="modal" >Portal Logout</a></span> 
                 </div>
             </div>
         </nav>
+        <%--Main page background image--%>
         <div ><img class="image-reg" src="assetsJSP/css/images/mainPageBackgroundv3.png"</div>      
         <p id="random_number"></p>
     <%
@@ -62,65 +64,83 @@
         // Link integers into one 12 character string barcode. 
         String linked = Long.toString(first) + 
                 Long.toString(second);
-    %>         
-    <div class="form-container" >                          
+    %>  
+        <%--User registration form--%>
+        <div class="form-container" >                          
             <h1 class="reg-form-title">Complete the User Registration Form</h1>
-           <form onsubmit="return validationForm()" action="indexUserRegistrationAction.jsp" method="post" >                 
-            <div class="section-one">
-                <div class="form-group">
-                    <input class="form-control" type="text" name="fname" placeholder="Enter first name" required="" id="holder"><br>                     
-                </div>
-                <div class="form-group">
-                    <input class="form-control" type="text" name="address" placeholder="Enter address" required=""><br>  
-                </div>
-                <div class="form-group">
-                     <input class="form-control" type="text" name="state" placeholder="Enter state" required=""><br>      
-                </div>
-                <div class="form-group">
-                   <input class="form-control" type="text" name="mobileNo" placeholder="Enter Phone Number" required=""><br>
-                </div>
-                <div class="form-group">
-                  <div class="pass-inst "><p> 
-                     Create Pin#</p></div>
-                  <input class="form-control" name="password_confirm"  type="password" placeholder="Enter pin" id="plainText1"  required="required"  />
-               </div>
-               <div class="form-group">
-                    <input class="form-control" name="password_Check"   type="password" placeholder="Re-enter pin" id="plainText2"  required="required"  />
-                </div>                             
-                     </div>  
-               <div class="section-two">
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="lname" placeholder="Enter last name" required=""><br> 
-                    </div>   
-                
-                    <div class="form-group">
-                        <input class="form-control" type="text" name="city" placeholder="Enter city" required=""><br> 
+                <form onsubmit="return validationForm()" action="indexUserRegistrationAction.jsp" method="post" >                 
+                    <div class="section-one">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="fname" placeholder="Enter first name" required="" id="holder"><br>                     
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="address" placeholder="Enter address" required=""><br>  
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="state" placeholder="Enter state" required=""><br>      
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="mobileNo" placeholder="Enter Phone Number" required=""><br>
+                        </div>
+                        <div class="form-group">
+                            <div class="pass-inst "><p>Create Pin#</p></div>
+                                <input class="form-control" name="password_confirm"  type="password" placeholder="Enter pin" id="plainText1"  required="required"  />
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="password_Check"   type="password" placeholder="Re-enter pin" id="plainText2"  required="required"  />
+                        </div>                             
                     </div>  
-                    <div class="form-group">
-                     
-                        <input class="form-control" type="text" name="zipcode" placeholder="Enter zip code" required=""><br>
-                    </div>  
-                    <div class="form-group">
-                        
-                     <input class="form-control" type="text" name="email" placeholder="Enter email" required=""><br>   
-                    </div>  
-                    <div class="form-group">                    
-                       <div class="pass-inst "><p> 
-                     Unique ID#</p></div>
-                       <input class="form-control" type="text" name="rand_num" value="<%out.print(linked);%>" readonly="readonly">
-                    </div>                    
+                    <div class="section-two">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="lname" placeholder="Enter last name" required=""><br> 
+                        </div>   
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="city" placeholder="Enter city" required=""><br> 
+                        </div>  
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="zipcode" placeholder="Enter zip code" required=""><br>
+                        </div>  
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="email" placeholder="Enter email" required=""><br>   
+                        </div>  
+                        <div class="form-group">                    
+                            <div class="pass-inst "><p> 
+                            Unique ID#</p></div>
+                            <input class="form-control" type="text" name="rand_num" value="<%out.print(linked);%>" readonly="readonly">
+                        </div>                    
                         <button type="submit" class="form-submit-button">Confirm</button>     
-                </div>              
-            </form>       
-    </div>
-               
-    <div class="flex-container">             
-        <footer>            
-            <div class = "sticky-footer">           
-                <p>&copy; KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p>
-            </div>
-        </footer>              
-    </div>
+                    </div>              
+                </form>       
+        </div> 
+        <div class="flex-container">             
+            <footer>            
+                <div class = "sticky-footer">           
+                    <p>&copy; KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p>
+                </div>
+            </footer>              
+        </div>
+        <div id="user-logout" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                 <div class="modal-content">
+                    <div class="modal-body">
+                        <button data-dismiss="modal" class="close">&times;</button>
+                            <form action="indexUserSystemLogoutAction.jsp" method="post" >
+                                <div ><h2>System Logout</h2></div>              
+                
+                                <div class="form-group" >                  
+                                    <input class="form-control" type="text" name="userID" placeholder="Scan User ID"><br>
+                                </div>   
+                                <div class="form-group">
+                                    <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
+                                </div>  
+                                <div class="form-group">
+                                    <button class="home-popup-login" type="submit">Logout</button>             
+                                </div>  
+                            </form>
+                    </div>
+                </div>
+            </div>  
+        </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
