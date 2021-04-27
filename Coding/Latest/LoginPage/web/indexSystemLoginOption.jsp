@@ -28,6 +28,7 @@
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assetsJSP/css/popupLoginStyleSheet.css"> 
         <link rel="stylesheet" href="assetsJSP/mainPageCSS/styles.css">
+        <link rel="stylesheet" href="assetsJSP/Navigation-with-Button/styles.css">
     </head>
     <body>
         

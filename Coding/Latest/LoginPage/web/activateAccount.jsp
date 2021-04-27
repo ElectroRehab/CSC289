@@ -49,6 +49,7 @@
                 </div>
             </div>
         </nav>
+        <div>
         <div><img class="image-reg" src="assetsJSP/css/images/mainPageBackgroundv3.png"></div>
         <p id="random_number"></p>        
         <div class="form-container" >                          
