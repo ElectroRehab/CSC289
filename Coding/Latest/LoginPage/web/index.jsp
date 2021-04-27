@@ -27,7 +27,8 @@
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assetsJSP/mainPageCSS/Navigation-with-Button.css">
         <link rel="stylesheet" href="assetsJSP/mainPageCSS/styles.css">
-        <link rel="stylesheet" href="assetsJSP/mainPageCSS/styles.css">
+        
+        
        
     </head>       
     <body>

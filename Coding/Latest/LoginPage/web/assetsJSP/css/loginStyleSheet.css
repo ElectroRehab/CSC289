@@ -12,7 +12,15 @@ and open the template in the editor.
    color: red !important;
  
 }
-
+.form-control::-webkit-input-placeholder {
+  color:  #000;
+ font-size: 22px;  
+}
+.form-control:focus::-webkit-input-placeholder {
+  font-weight: bold;
+   
+  color: #fff;
+} 
 * {
   box-sizing: border-box;
 }
