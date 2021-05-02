@@ -70,6 +70,7 @@
                 sqlInt = 1;
                 t.ReadTitles(sqlInt);
                 session.setAttribute(t.getSQLTitles().toString(), adminID);
+                session.setMaxInactiveInterval(1*60);
             }
             else{
                 response.sendRedirect("notAdminError.jsp");
