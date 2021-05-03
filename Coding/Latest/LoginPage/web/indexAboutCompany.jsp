@@ -69,9 +69,7 @@
                     <div class="col-sm-6 col-md-3 item">
                         <h3>Help</h3>
                         <ul>
-                            <li><a href="ohNo.jsp">Create Account(Pending)</a></li>
-                            <li><a href="ohNo.jsp">Remove Account(Pending)</a></li>
-                            <li><a href="indexCompanyCareer.jsp">Forgot Username/Password(Pending)</a></li>
+                            <li><a href="indexReferAdmin.jsp">Account Help</a></li>
                             <li><a href="https://drive.google.com/uc?export=downloads&id=1apJITNAdvz2fENDHv_0nAczogpJ6hXhC" download="k&omanual">K&O Manual(Download Doc.)</a></li>
                         </ul>
                     </div>                   

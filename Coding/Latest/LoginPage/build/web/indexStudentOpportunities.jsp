@@ -368,7 +368,7 @@
                     <div class="col-sm-6 col-md-3 item">
                         <h3>About</h3>
                         <ul>
-                            <li><a href="ohNo.jsp">Company</a></li>
+                            <li><a href="indexAboutCompany.jsp">Company</a></li>
                             <li><a href="indexTeam.jsp">Team</a></li>
                             <li><a href="indexCompanyCareer.jsp">Careers</a></li>
                         </ul>
@@ -376,10 +376,8 @@
                      <div class="col-sm-6 col-md-3 item">
                         <h3>Help</h3>
                         <ul>
-                            <li><a href="ohNo.jsp">Create Account</a></li>
-                            <li><a href="indexTeam.jsp">Remove Account</a></li>
-                            <li><a href="indexCompanyCareer.jsp">Forgot Username/Password</a></li>
-                        </ul>
+                            <li><a href="indexReferAdmin.jsp">Account Help</a></li>
+                         </ul>
                     </div>
                     <div class="col item social">
                         <h3>Connect With Us</h3>

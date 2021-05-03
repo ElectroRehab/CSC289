@@ -58,7 +58,7 @@
                 user = rs.getString((t.getSQLTitles()));
                 t.ReadTitles(21);
                 if(user.contains(t.getSQLTitles().toString())){
-                    response.sendRedirect("notAdminError.jsp");
+                    response.sendRedirect("indexUserLogin.jsp");
                 }
                 else{
                     t.ReadTitles(1);

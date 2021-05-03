@@ -259,7 +259,7 @@
                     </div>
                 </div>       
                 <div class="row">
-                    <input type="submit" value="Submit">
+                    <input type = "button" class = "res-sub-btn"  value="Submit"> 
                 </div>
             </form>
                 </div>
@@ -342,7 +342,7 @@
                     </div>
                 </div>       
                 <div class="row">
-                    <input type="submit" value="Submit">
+                    <input type = "button" class = "res-sub-btn"  value="Submit"> 
                 </div>
             </form>
                 </div>
@@ -423,8 +423,8 @@
                         <input type="file" id="myFile" name="filename">
                     </div>
                 </div>       
-                <div class="row">
-                    <input type="submit" value="Submit">
+                 <div class="row">
+                    <input type = "button" class = "res-sub-btn"  value="Submit"> 
                 </div>
             </form>
                 </div>
@@ -506,8 +506,8 @@
                         <input type="file" id="myFile" name="filename">
                     </div>
                 </div>       
-                <div class="row">
-                    <input type="submit" value="Submit">
+                 <div class="row">
+                    <input type = "button" class = "res-sub-btn"  value="Submit"> 
                 </div>
             </form>
                 </div>
@@ -521,7 +521,7 @@
                 <div class="modal-body">
                     <button data-dismiss="modal" class="close">&times;</button>
             <form action=" ">
-                <h2>Currently, all positions are filled. Feel free to contact the company with questions or concerns. </h2>
+                <h4>Currently, all positions are filled. Feel free to contact the company with questions or concerns. </h4>
                 <div class="row">
                     
                 </div>            
@@ -539,7 +539,7 @@
                     <div class="col-sm-6 col-md-3 item">
                         <h3>About</h3>
                         <ul>
-                            <li><a href="ohNo.jsp">Company</a></li>
+                            <li><a href="indexAboutCompany.jsp">Company</a></li>
                             <li><a href="indexTeam.jsp">Team</a></li>
                             <li><a href="indexCompanyCareer.jsp">Careers</a></li>
                         </ul>
@@ -547,10 +547,8 @@
                      <div class="col-sm-6 col-md-3 item">
                         <h3>Help</h3>
                         <ul>
-                            <li><a href="ohNo.jsp">Create Account</a></li>
-                            <li><a href="indexTeam.jsp">Remove Account</a></li>
-                            <li><a href="indexCompanyCareer.jsp">Forgot Username/Password</a></li>
-                        </ul>
+                            <li><a href="indexReferAdmin.jsp">Account Help</a></li>
+                         </ul>
                     </div>
                     <div class="col item social">
                         <h3>Connect With Us</h3>

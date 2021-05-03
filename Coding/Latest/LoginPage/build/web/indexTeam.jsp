@@ -69,23 +69,22 @@
         <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 col-md-3 item">
-                        <h3>Services</h3>
-                        <ul>
-                            <li><a href="#">Web design</a></li>
-                            <li><a href="#">Development</a></li>
-                            <li><a href="#">Hosting</a></li>
-                        </ul>
-                    </div>
+                     
                     <div class="col-sm-6 col-md-3 item">
                         <h3>About</h3>
                         <ul>
-                            <li><a href="ohNo.jsp">Company</a></li>
+                            <li><a href="indexAboutCompany.jsp">Company</a></li>
                             <li><a href="indexTeam.jsp">Team</a></li>
                             <li><a href="indexCompanyCareer.jsp">Careers</a></li>
                         </ul>
                     </div>                  
-                    
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Help</h3>
+                        <ul>
+                            <li><a href="indexReferAdmin.jsp">Account Help</a></li>
+                             
+                        </ul>
+                    </div>
                     <div class="col item social">
                         <h3>Connect With Us</h3>
                         <a  href="https://www.facebook.com/" target="blank"><i class="fa  fa-facebook"></i></a>
