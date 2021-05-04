@@ -48,11 +48,7 @@
             ps.setString(2,status);               
             ps.setString(3,userID);           
             ps.executeUpdate();
-            sqlInt = 14;
-            s.ReadSQL(sqlInt);
-            ps = con.prepareStatement(s.getSQLAll()); 
-            ps.setString(1,userID);  
-            ps.executeUpdate();       
+            
             response.sendRedirect("index.jsp");            
             //Close connections
             ps.close();        
