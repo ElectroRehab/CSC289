@@ -58,6 +58,7 @@
                 user = rs.getString((t.getSQLTitles()));
                 t.ReadTitles(21);
                 if(user.contains(t.getSQLTitles().toString())){
+                    System.out.println(user + "Answer");
                     response.sendRedirect("indexUserLogin.jsp");
                 }
                 else{

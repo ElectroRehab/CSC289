@@ -3,6 +3,7 @@
     Created on : Apr 26, 2021, 8:17:59 AM
     Author     : Anthony
 --%>
+<%@page import="readfile.ReadTitles"%>
 <%@page import="readfile.ConnectDB"%>
 <%@page import="readfile.ReadSQL"%>
 <%@page import="readfile.ReadFile"%>
@@ -40,6 +41,7 @@
             dbc.ConnectDB();
             Connection con = dbc.getConnections();
             // Create object
+            ReadTitles t = new ReadTitles();
             ReadSQL s = new ReadSQL();
             sqlInt = 5;
             s.ReadSQL(sqlInt);
@@ -49,12 +51,18 @@
             ps.setString(3,userID);           
             ps.executeUpdate();
             
+            t.ReadTitles(1);
+            session.removeAttribute(t.getSQLTitles().toString());
             response.sendRedirect("index.jsp");            
             //Close connections
             ps.close();        
             con.close();
         }
-        catch(Exception e){     
+        catch(Exception e){
+            // Create object
+            ReadTitles t = new ReadTitles();
+            t.ReadTitles(1);
+            session.removeAttribute(t.getSQLTitles().toString());
             out.println(e); 
         }   
     }

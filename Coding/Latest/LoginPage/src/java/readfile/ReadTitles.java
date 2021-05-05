@@ -72,6 +72,9 @@ public class ReadTitles {
         else if(p == 21){
             sqlAll = "user";
         }
+        else if(p == 22){
+            sqlAll = "admin";
+        }
         else{
             sqlAll = "NULL";
         }        
