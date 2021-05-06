@@ -180,7 +180,7 @@
                         <input class="form-control"  type="password" name="pinNum" placeholder="Enter pin"  required=""><br>                    
                     </div>  
                     <div class="form-group">
-                        <button class="home-popup-login" type="submit">Logout</button>             
+                        <button class="home-popup-login" type="submit">Login</button>             
                     </div> 
                     <div ><h3>Admin Required!</h3></div> 
              

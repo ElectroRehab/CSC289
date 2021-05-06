@@ -29,9 +29,13 @@
     Timestamp timeIn = new java.sql.Timestamp(date.getTime());
     // Starting Time Format
     String timeOut = "00:00:00";
+    //
+    String adminTime = "23:59:59";
+    // User
+    String user = "";
     //Get parameters from login form
     String adminID=request.getParameter("adminID");    
-    String pinCode=request.getParameter("pinCode");
+    String pinCode=request.getParameter("pinNum");
     //Declare and initialize status variable
     String status = "In";    
     //Display error page if input is not a proper input
@@ -111,18 +115,38 @@
             // Iterate through database to set new fields
             ResultSet rlst = p.executeQuery();
             if(rlst.next()){
-                sqlInt = 4;
-                s.ReadSQL(sqlInt);
-                p = con.prepareStatement(s.getSQLAll());
-                p.setString(1,adminID);
-                p.setTimestamp(2,timeIn); 
-                p.setString(3,timeOut); 
-                p.setString(4,pinCode); 
-                p.setString(5,status);  
-                p.setString(6,adminID);  
-                p.setString(7,pinCode);      
-                p.executeUpdate();  
+                t.ReadTitles(13);
+                user = rlst.getString((t.getSQLTitles()));
+                t.ReadTitles(22);
+                if(user.contains(t.getSQLTitles().toString())){
+                    sqlInt = 4;
+                    s.ReadSQL(sqlInt);
+                    p = con.prepareStatement(s.getSQLAll());
+                    p.setString(1,adminID);
+                    p.setString(2,adminTime); 
+                    p.setString(3,adminTime); 
+                    p.setString(4,pinCode); 
+                    p.setString(5,status);  
+                    p.setString(6,adminID);  
+                    p.setString(7,pinCode);      
+                    p.executeUpdate();
                 response.sendRedirect("indexAdminLoginSuccess.jsp");              
+                }
+                else{
+                    sqlInt = 4;
+                    s.ReadSQL(sqlInt);
+                    p = con.prepareStatement(s.getSQLAll());
+                    p.setString(1,adminID);
+                    p.setTimestamp(2,timeIn); 
+                    p.setString(3,timeOut); 
+                    p.setString(4,pinCode); 
+                    p.setString(5,status);  
+                    p.setString(6,adminID);  
+                    p.setString(7,pinCode);      
+                    p.executeUpdate();
+                    response.sendRedirect("indexAdminLoginSuccess.jsp"); 
+                }
+                
             }     
             else{
                 
