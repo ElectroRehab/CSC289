@@ -32,6 +32,16 @@
                 <a href="indexMainPage.jsp">Home</a> 
             </div>
 	</nav>
-                  
+         <div class="container-fluid">
+        <div > 
+            <div class="flex-container-error">
+            
+                <h1> <b>Under Construction</b></h1>
+                    <div class="flex-column-error">                
+                        <p>Refer to your Systems Administrator for guidance.</p>
+                    </div>         
+            </div>        
+        </div>  
+    </div>          
     </body>
 </html>

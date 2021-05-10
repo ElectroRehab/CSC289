@@ -24,7 +24,7 @@
         <link rel="stylesheet" href="assetsJSP/mainPageCSS/Footer-Dark.css">
         <link rel="stylesheet" href="assetsJSP/mainPageCSS/Navigation-with-Button.css">
         <link rel="stylesheet" href="assetsJSP/mainPageCSS/styles.css">
-        <link rel="stylesheet" href="assetsJSP/css/careersStyleSheet.css">
+        <link rel="stylesheet" href="assetsJSP/mainPageCSS/mainPage.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Login</title>
     </head>
@@ -37,7 +37,19 @@
              
         </div>
     </nav> 
-       
-          <div><img class="image-ohNo"  src="assetsJSP/css/images/25511.jpg"></div>         
+     <div ><img class="image-ohNo"  src="assetsJSP/css/images/25511.jpg"</div>
+    <div class="container-fluid">
+        <div > 
+            <div class="flex-container-error">
+            
+                <h1> <b>Under Construction</b></h1>
+                    <div class="flex-column-error">                
+                        <p>Refer to your Systems Administrator for guidance.</p>
+                    </div>         
+            </div>        
+        </div>  
+    </div>
+          
+          
     </body>
 </html>

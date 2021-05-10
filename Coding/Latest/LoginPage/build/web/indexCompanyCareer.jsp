@@ -130,13 +130,13 @@
         <div class="flex-container-3">   
             <form>
                 <h4>Remote Opportunities</h4> 
-                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp">Learn</a> </span>
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="ohNo.jsp">Learn</a> </span>
             </form> 
         </div>
         <div class="flex-container-4">   
             <form>
                 <h4>Apprentice Opportunities</h4> 
-                <span class="navbar-text actions"> <a class="learn-btn-career" href="indexAdminLogin.jsp" >Learn</a> </span>
+                <span class="navbar-text actions"> <a class="learn-btn-career" href="ohNo.jsp" >Learn</a> </span>
             </form> 
         </div>       
     </div>                    
@@ -156,7 +156,7 @@
             <div class="modal-content">
                 <div class="modal-body">
                     <button data-dismiss="modal" class="close">&times;</button>
-                        <form class="contact-form" action=" ">
+            <form class="contact-form" action=" ">
                 <h2>Contact Us</h2>
                 <div class="row">
                     <div class="col-25">
@@ -204,7 +204,7 @@
                 </div>
                      
                 <div class="row">
-                    <input type="submit" value="Submit">
+                    <input type = "button" class = "res-sub-btn"  value="Submit"> 
                 </div>
             </form>
                 </div>

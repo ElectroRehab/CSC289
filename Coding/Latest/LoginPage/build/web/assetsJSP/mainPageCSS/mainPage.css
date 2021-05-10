@@ -58,6 +58,24 @@ and open the template in the editor.
     margin:25px;
     width:auto;  
 }
+.flex-container-error{
+    position: absolute;      
+    left: 5%;
+    top:15%;    
+    display: compact;
+    max-width: 100%;
+    height: auto;
+    padding:25px;
+    margin:25px;
+    width:auto;  
+    text-align: center;
+}
+.flex-container-error h1{    
+    font-size: 4vw;
+    text-align: center;
+    font-family: microsoft, himalayan;
+    color:red ;     
+}
 .flex-container-about h1{    
     font-size: 4vw;
     text-align: center;
@@ -66,6 +84,12 @@ and open the template in the editor.
 }
 .flex-column-about p{       
     font-size: 2.2vw;
+    text-align: center;
+    font-family: microsoft, himalayan;
+    color:  #000;
+}
+.flex-column-error p{       
+    font-size: 4vw;
     text-align: center;
     font-family: microsoft, himalayan;
     color:  #000;

@@ -146,20 +146,21 @@
         </div>
    
     </div>
+    
     <%--Section 3 containers--%>
     <div class="flex-container-section-3">  
         <div class="flex-container-1-image">    
             <form>
                 <%--Photo by <a href="https://unsplash.com/@priscilladupreez?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Priscilla Du Preez</a> on <a href="https://unsplash.com/s/photos/college-job?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                 --%>
-                <div><img class="image-worker1"  src="assetsJSP/css/images/priscilla-du-preez-XkKCui44iM0-unsplash.jpg">      </div>   
+                <div><img class="image-worker-1-emp"  src="assetsJSP/css/images/priscilla-du-preez-XkKCui44iM0-unsplash.jpg">      </div>   
             </form>                
         </div>   
         <div class="flex-container-2-image">    
             <form>
                 <%--Attributed Image Source: Photo by <a href="https://unsplash.com/@austindistel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Austin Distel</a> on <a href="https://unsplash.com/s/photos/working?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
                 --%>
-                <div><img class="image-worker1"  src="assetsJSP/css/images/jodyhongfilms-sI1mbxJFFpU-unsplash.jpg"></div>   
+                <div><img class="image-worker-2-emp"  src="assetsJSP/css/images/jodyhongfilms-sI1mbxJFFpU-unsplash.jpg"></div>   
             </form>                
         </div>
         <div class="flex-container-3-image">    
@@ -167,18 +168,15 @@
                 <%--Attributed Image Source:Photo by <a href="https://unsplash.com/@austindistel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Austin Distel</a> on <a href="https://unsplash.com/s/photos/working?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
    
                 --%>
-                <div><img class="image-worker1"  src="assetsJSP/css/images/austin-distel-wD1LRb9OeEo-unsplash.png"></div>   
+                <div><img class="image-worker-3-emp"  src="assetsJSP/css/images/austin-distel-wD1LRb9OeEo-unsplash.png"></div>   
             </form>                
         </div>
     </div>
-    <%--Section 4 containers--%>
-    <div class="flex-container-section-4">  
-            
-    </div>  
+    
     <%--//////////////////////////////////////////////////////////////////////
     Displays Application/resume upload internship--%>
     
-    <div id="inter-form" class="modal fade" role="dialog">
+    <div id="intern-form" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body">
@@ -250,7 +248,7 @@
                         <input type="file" id="myFile" name="filename">
                     </div>
                 </div>       
-                <div class="row">
+                <div class="submit-btn">
                     <input type="submit" value="Submit">
                 </div>
             </form>
@@ -387,9 +385,9 @@
                         <a href="https://www.youtube.com/" target="blank"><i class="fa  fa-youtube"></i></a>
                     </div>
                 </div>
-                <p class="copyright">&nbsp;© 2021 KandOPersonnelManagementSystems.com | Designed by Jon King/Anthony Orengo</p>
+                
             </div>
-        </footer>
+         </footer>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
